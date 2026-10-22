@@ -1,0 +1,1620 @@
+{
+  "base": null,
+  "files": {
+    "https://cdn.jsdelivr.net/gh/fmz200/wool_scripts@main/Surge/module/blockAds.module": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "广告拦截&净化合集（奶思）",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-blockads.module",
+      "sha256": "d75a30e3410fccc4269c2749cdc430f2c6ef5b092bca1bc342279642f9918423",
+      "size": 471930
+    },
+    "https://cdn.jsdelivr.net/gh/fmz200/wool_scripts@main/Surge/module/split/partF/FanQieNovel.sgmodule": {
+      "changed": true,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "番茄小说（奶思）",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-fanqienovel.sgmodule",
+      "sha256": "129d92fd687247e1b76c978a47d09b1bcdf5cb15b230a60ab4f66b02e5ae483a",
+      "size": 2496
+    },
+    "https://cdn.jsdelivr.net/gh/fmz200/wool_scripts@main/Surge/module/split/partQ/XianYu.sgmodule": {
+      "changed": true,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "闲鱼（奶思）",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-xianyu.sgmodule",
+      "sha256": "65ea571cb060edd046f209a2a6aa0d5711701499e305d7603890f65d7ca94acc",
+      "size": 4877
+    },
+    "https://fastly.jsdelivr.net/gh/sub-store-org/Sub-Store@master/config/Egern.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "Sub-Store",
+      "ok": true,
+      "path": "modules/sub-store-org-sub-store-egern.yaml",
+      "sha256": "446a1fb17a23c1511aa810141551a5a16d4d91b8595117d63293167a866aaeae",
+      "size": 3731
+    },
+    "https://ghproxy.net/https://ghproxy.net/https://github.com/BiliUniverse/ADBlock/releases/latest/download/BiliBili.ADBlock.sgmodule": {
+      "changed": true,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "哔哩哔哩去广告（BiliUniverse）",
+      "ok": true,
+      "path": "modules/ghproxy.net-bilibili.adblock.sgmodule",
+      "sha256": "fd99a40673a9f7a02f16ae9ae754a8f88a31c863dbf5d825b4e0ef2818109d68",
+      "size": 33880
+    },
+    "https://ghproxy.net/https://github.com/NSRingo/MapKit/releases/download/v4.6.1/iRingo.Maps.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "iRingo.Maps",
+      "ok": true,
+      "path": "modules/nsringo-mapkit-iringo.maps.yaml",
+      "sha256": "99d90cb716ad8fc681993e317604d631283fdf1cc70411e95e3d8328a64ea044",
+      "size": 9691
+    },
+    "https://ghproxy.net/https://github.com/NSRingo/WeatherKit/releases/download/v3.3.2/iRingo.WeatherKit.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "iRingo.WeatherKit",
+      "ok": true,
+      "path": "modules/nsringo-weatherkit-iringo.weatherkit.yaml",
+      "sha256": "8a67e8b7ed2cc93a6c5d3ba810166e501e829d9be53db75b811257d4bc539013",
+      "size": 9363
+    },
+    "https://raw.githubusercontent.com/ClydeTime/BiliBili/main/modules/BiliBili.Modified.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "BiliBili: Modified（皮肤）",
+      "ok": true,
+      "path": "modules/clydetime-bilibili-bilibili.modified.sgmodule",
+      "sha256": "00ac35889a7346c8cea4c413f23488428a8e2a675779d334135fa329d7d08b48",
+      "size": 1158
+    },
+    "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AdBlack.png": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "icon",
+      "label": "🛑 仿冒Beats",
+      "ok": true,
+      "path": "icons/koolson-qure-adblack.png",
+      "sha256": "d8ea9dcb03c4b1401159d8292eb2cfb44f7b2156075cf53b96a31ed6367ddccd",
+      "size": 14533
+    },
+    "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "icon",
+      "label": "🍎 Apple 换区",
+      "ok": true,
+      "path": "icons/koolson-qure-apple.png",
+      "sha256": "89bfe107f21dd109d93f8d58671be06e0ad34a9f672ba96d228c2b3c3b89dfba",
+      "size": 4838
+    },
+    "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_TV.png": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "icon",
+      "label": "🍎 AppleTV",
+      "ok": true,
+      "path": "icons/koolson-qure-apple_tv.png",
+      "sha256": "4b949572c3d8a25fce945c2ebeec213f4212f6001ffa54e6bffd6ea8b8edebd1",
+      "size": 8382
+    },
+    "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "icon",
+      "label": "🎯 AI",
+      "ok": true,
+      "path": "icons/koolson-qure-chatgpt.png",
+      "sha256": "2779f53f26cda315cc5624de87c51e51e6598210674875dce5271ef2a2d91691",
+      "size": 20153
+    },
+    "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Discord.png": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "icon",
+      "label": "🎯 Discord",
+      "ok": true,
+      "path": "icons/koolson-qure-discord.png",
+      "sha256": "7395cd4efb07f64eebf34eff0daae83404610b345a36f4e399fb0f0b0324d06d",
+      "size": 12217
+    },
+    "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney+.png": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "icon",
+      "label": "🎯 Disney+",
+      "ok": true,
+      "path": "icons/koolson-qure-disney.png",
+      "sha256": "f1505cb0a5d8380a08344ee323c08fa861b3fea53dbd86b1d73ac4a56209cd94",
+      "size": 9769
+    },
+    "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "icon",
+      "label": "🎯 开发者",
+      "ok": true,
+      "path": "icons/koolson-qure-github.png",
+      "sha256": "9fb913b9abee0f0152a9acc6772e89762a071f5a9bd706420f5768e96cb24481",
+      "size": 14031
+    },
+    "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google.png": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "icon",
+      "label": "🎯 Google",
+      "ok": true,
+      "path": "icons/koolson-qure-google.png",
+      "sha256": "c815cd27d60bff0af3e65704e837dcacb9f6d46be42a2ac1a5b70c3e2e41c15c",
+      "size": 6646
+    },
+    "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hijacking.png": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "icon",
+      "label": "🛑 劫持站",
+      "ok": true,
+      "path": "icons/koolson-qure-hijacking.png",
+      "sha256": "ad4c87797533265abefd136db5058818ea6247aefc9bf1e5b8cda480a1463d77",
+      "size": 10706
+    },
+    "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Instagram.png": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "icon",
+      "label": "🎯 Instagram",
+      "ok": true,
+      "path": "icons/koolson-qure-instagram.png",
+      "sha256": "7bd303f5ae4b771f97764cd15a7388268096795329192996277d60cfa830338f",
+      "size": 16709
+    },
+    "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "icon",
+      "label": "🎯 Netflix",
+      "ok": true,
+      "path": "icons/koolson-qure-netflix.png",
+      "sha256": "a190c314b964c6e2efb6a00028ee4c2b28159f16d2280189d8a97a3cdc9e62a0",
+      "size": 3875
+    },
+    "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "icon",
+      "label": "🎯 Spotify",
+      "ok": true,
+      "path": "icons/koolson-qure-spotify.png",
+      "sha256": "af656084c22d2409c989b20c89a4526af114aeb55b0e3b97484a40feff304ffb",
+      "size": 17767
+    },
+    "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "icon",
+      "label": "🎯 游戏平台",
+      "ok": true,
+      "path": "icons/koolson-qure-steam.png",
+      "sha256": "dcc4adb21cc434c02df2dd15512c10a8838e46fe033c520e7eb51d0769876e17",
+      "size": 15992
+    },
+    "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TVB.png": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "icon",
+      "label": "📺 港台日韩",
+      "ok": true,
+      "path": "icons/koolson-qure-tvb.png",
+      "sha256": "f2d5f52be112aa3d8b13d3b1c43065657150fd586d03aeaf878fdbfe81aa0e8d",
+      "size": 12145
+    },
+    "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "icon",
+      "label": "🎯 Telegram",
+      "ok": true,
+      "path": "icons/koolson-qure-telegram.png",
+      "sha256": "1af4c3abe4f3be8f1fa1677302aa40e7fb509b89707fbd79f07d209c36ba970e",
+      "size": 13559
+    },
+    "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "icon",
+      "label": "🎯 TikTok",
+      "ok": true,
+      "path": "icons/koolson-qure-tiktok.png",
+      "sha256": "a60f7e5520fc58e894b7dbc596972787c1d1403ee1251cee1cad700c0847c587",
+      "size": 8365
+    },
+    "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "icon",
+      "label": "🎯 社交媒体",
+      "ok": true,
+      "path": "icons/koolson-qure-twitter.png",
+      "sha256": "e36247f6e948f6bcf4f60d4e8f5fa82e6684444ecc4ede973b2067f8bdd5cd3f",
+      "size": 10369
+    },
+    "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "icon",
+      "label": "🎯 YouTube",
+      "ok": true,
+      "path": "icons/koolson-qure-youtube.png",
+      "sha256": "1ff428e8f81e5b959cd7a1181f9f7279315e5d04de3b052886fc60834c28529d",
+      "size": 9092
+    },
+    "https://raw.githubusercontent.com/Masaiki/GeoIP2-CN/release/Country.mmdb": {
+      "changed": true,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "geoip",
+      "label": "GeoIP 数据库",
+      "ok": true,
+      "path": "geoip/masaiki-geoip2-cn-country.mmdb",
+      "sha256": "12eb9390f68709635f8da75878ccdd226ca46c1adde52ce65037acd79dbccb6e",
+      "size": 245702
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Google搜索重定向.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "Google搜索重定向",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-963a6279a5.sgmodule",
+      "sha256": "7e16f643110a793d06842a2093fc2806ee14e18510835e67ff917e6b91cc403b",
+      "size": 591
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/HTTPDNS拦截器.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "HTTPDNS拦截器（QingR）",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-d83c73fd10.sgmodule",
+      "sha256": "fdf1eeb4b2c0e72eb170fcd5acfeaa110a073fdd045d6ccba3393f7395a1676b",
+      "size": 10219
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Line去广告.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "Line 去广告",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-8e7947cca1.sgmodule",
+      "sha256": "6d14da02f94fdff75b3c74e4c048165fa256e4143f0905517d5272177ae68759",
+      "size": 3489
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/QQ音乐去广告.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "QQ音乐去广告",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-e3e6a509ee.sgmodule",
+      "sha256": "ce292f4816f65ddc910fd904da6cb149ad013102e3fd5a70dc43ab34cae845fd",
+      "size": 1134
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Reddit去广告.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "Reddit 去广告",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-20afaa609d.sgmodule",
+      "sha256": "e48c7bd372334095b9c6e753aece57c7f935def1653945a9a4c7497b37870bea",
+      "size": 1213
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Spotify去广告.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "Spotify 去广告",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-3a8e25edf3.sgmodule",
+      "sha256": "192f47da65a7f142dbfd9677fe48069d7e0fb5cfc40defe171b9d0c51d81db7b",
+      "size": 1383
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/TikTok多地区解锁.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "TikTok多地区解锁",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-a3bca07c08.sgmodule",
+      "sha256": "4c716c495abe16cae91584532bd7aa19ca3ea98ae2ecedc8f5d09512891333d4",
+      "size": 979
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/京东去广告.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "京东去广告",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-552a3ebf4c.sgmodule",
+      "sha256": "8ce577fd1d91ba5971607748b2354310dc20df3c554a881a3d29e56c4c02ce37",
+      "size": 1814
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/什么值得买去广告.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "什么值得买去广告",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-23535eb7c4.sgmodule",
+      "sha256": "ab005cda34de60a15bd66435979649c0de880d9e2fe9b46fb4afac422d3e3deb",
+      "size": 6091
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/优酷视频去广告.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "优酷视频去广告",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-fd8f1d6463.sgmodule",
+      "sha256": "ed82fbe519c1ccd0b096f429058420f52157f99b4bf7db447bcc2c3c1c28f751",
+      "size": 2803
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/可莉广告过滤器.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "可莉广告过滤器（QingR）",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-5c68ff24c5.sgmodule",
+      "sha256": "01f30897c91531fee9220a453d3ea277eaac59cc55b69ea238de6e6b2d51770e",
+      "size": 12637
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/喜马拉雅去广告.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "喜马拉雅去广告",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-5ed1abf4f7.sgmodule",
+      "sha256": "5ea2c795921716e43dd68c046068e817d1470d3c94904eeb0f5fba6367befedd",
+      "size": 5195
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/大麦去广告.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "大麦去广告",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-78a00c4c8d.sgmodule",
+      "sha256": "06a9081b53f2effb2a0ad414a2175ba99273de44151e4d7143e2c75d9a41708a",
+      "size": 1394
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/夸克去广告.sgmodule": {
+      "changed": false,
+      "error": "TimeoutError: The read operation timed out",
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "夸克去广告",
+      "ok": false,
+      "path": "modules/qingrex-loonkisssurge-141c00f2c5.sgmodule",
+      "sha256": "a2cac8a658b4eff096966752c36f727c8631729ebc653afa9a64a0f0f158bc35",
+      "size": 85590,
+      "stale": true
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/小红书去广告.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "小红书去广告",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-7d16c2cb03.sgmodule",
+      "sha256": "c721c55908eea28a6c55b40ce649ad7980dbdc5332c4fe54e6173809811f38dc",
+      "size": 5313
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/小黑盒去广告.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "小黑盒去广告",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-e48e70ad60.sgmodule",
+      "sha256": "d1d6d79b0652950a3f950926e6727eb20e80ea5c4d25d2771d7faf68817e2e17",
+      "size": 908
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/广告平台拦截器.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "广告平台拦截器（QingR）",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-7a0baa8f65.sgmodule",
+      "sha256": "f9eb1e97d4c58d97c3d6831aa8f1c937897baa030607131f5b52e6060946f012",
+      "size": 22469
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/得物去广告.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "得物去广告",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-66bd848355.sgmodule",
+      "sha256": "d7c12aca3b36accf71df0f76401df20af5f214ea382184a8ff6e187054dc6f40",
+      "size": 2496
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/微信公众号去广告.sgmodule": {
+      "changed": false,
+      "error": "URLError: <urlopen error _ssl.c:993: The handshake operation timed out>",
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "微信公众号去广告",
+      "ok": false,
+      "path": "modules/qingrex-loonkisssurge-e5887ee928.sgmodule",
+      "sha256": "af61e39efcd1669bfa6bacfc70bf662ffe8a57e3ca306b2df440de2ecccd54b5",
+      "size": 820,
+      "stale": true
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/微信外部链接解锁.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "微信外部链接解锁",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-bdc1982d38.sgmodule",
+      "sha256": "bc6cb7b590ae196411d73ca2f120b7bffcce2936884b19d3d3ced1f153715039",
+      "size": 1018
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/微信小程序去广告.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "微信小程序去广告",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-8b16e6165c.sgmodule",
+      "sha256": "5e6f36260e314a37548e40b008f2c6c11edd5d8a679f1f2dcd9e764dfa6b49de",
+      "size": 22339
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/微博去广告.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "微博去广告",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-72a58128f9.sgmodule",
+      "sha256": "cc1fcb56d3a970c8d928892808d9e835d9173636508ead49954c72f5677ebc79",
+      "size": 7727
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/快手去广告.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "快手去广告",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-07bcee1573.sgmodule",
+      "sha256": "d1f9eaf543a0f097384f3eff755203999b5de281b4e81e2dc9c7f520076ad367",
+      "size": 3052
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/拼多多去广告.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "拼多多去广告",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-b4c876a670.sgmodule",
+      "sha256": "fbc5c8f8d21e8b5a4f0704f2cb39de4c14016b66ab8de41fc793aafcf9e27cdb",
+      "size": 7102
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/汽水音乐去广告.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "汽水音乐去广告",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-4ea3beb1f3.sgmodule",
+      "sha256": "afd0c19a5f0bd15f94a8d55980d2ec91fa2afee2ac5a8154070c4a89e7805ef1",
+      "size": 4184
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/淘宝去广告.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "淘宝去广告",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-1b1c4d943d.sgmodule",
+      "sha256": "60f0d96e614961c994c0915c13624484bdbb342fb22bdea46c0e5c48e1185c6e",
+      "size": 3249
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/滴滴出行去广告.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "滴滴出行去广告",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-cd599bca1e.sgmodule",
+      "sha256": "a0d74f67b419a5ebcdee85780639a00fa71d3a4cc105bd8f5718ed2fb5748fa9",
+      "size": 5399
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/爱奇艺去广告.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "爱奇艺去广告",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-01077c91f5.sgmodule",
+      "sha256": "b4421b21f85bbec8fa3711af26019a9688b2b04cd9d1d464a6fb6e118e8efa61",
+      "size": 5686
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/知乎去广告.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "知乎去广告",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-d2c56876c9.sgmodule",
+      "sha256": "3059f89a94d0f227c302606fcb872e75bb76678dbfcefee570de71d34ae10b1f",
+      "size": 7626
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/芒果TV去广告.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "芒果TV去广告",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-6dd4f9989f.sgmodule",
+      "sha256": "40c8a8ddad039712ba4fdcc83d859d607921eba604ce3744b76012b5525091c5",
+      "size": 7198
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/贴吧去广告.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "贴吧去广告",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-333395eec1.sgmodule",
+      "sha256": "b77898e045eb21ede5097ad78a2e779e2db28ff09aee1274cb488239c745c897",
+      "size": 2744
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/起点读书去广告.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "起点读书去广告",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-a2c8126ef6.sgmodule",
+      "sha256": "d01d1b6e27b528a6da7686c4f5b0a11586351ec8f3d540a87a4ec0010c3c7c26",
+      "size": 3853
+    },
+    "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/酷安去广告.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "酷安去广告",
+      "ok": true,
+      "path": "modules/qingrex-loonkisssurge-06636481f2.sgmodule",
+      "sha256": "afc6ac4e99a5566975013fd39798f1e4fe0c31fabb5dd9389c4f94f92775decc",
+      "size": 2031
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/abema.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "ABEMA",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-abema.yaml",
+      "sha256": "dfb8c811693e5b182b045e3dc22811b7cfe96c1534101de9a97e4f50e14a0a36",
+      "size": 411
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/adrules.yaml": {
+      "changed": true,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "广告拦截-adrules",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-adrules.yaml",
+      "sha256": "ff2dc075178ab792f6894a221753ec69c38cc5905425776f710352fa32cc626a",
+      "size": 4819690
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/ai.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "AI服务",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-ai.yaml",
+      "sha256": "1ae40bb77858727719d52af035632eab8faa08e1a4b647c4f52217cb3d4b60b0",
+      "size": 4781
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/apple-cn.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "Apple中国区",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-apple-cn.yaml",
+      "sha256": "318d081a0bad23d3757f880f9081657fa478be07912eef765fd2a9bbaf927f48",
+      "size": 4520
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/apple-proxy.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "Apple换区服务",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-apple-proxy.yaml",
+      "sha256": "dad640114fa6d4c4111c2ef0b62fed7c302ad21f4b7b62fc81df474080fdb655",
+      "size": 1052
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/apple-tv.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "AppleTV",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-apple-tv.yaml",
+      "sha256": "e39eca7aba3436fa5840036c3a952a34e0174dc55eb3139811111c81a6ba0020",
+      "size": 231
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/apple.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "Apple服务",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-apple.yaml",
+      "sha256": "fa3b9f3425eb807e9bcc6dc0bc80e8177be987fd844a1dfc8669735b2cdbfb7f",
+      "size": 31591
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/bahamut.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "巴哈姆特",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-bahamut.yaml",
+      "sha256": "2b11040afdc731ec56b9ba98c6e6c58735b562653ecae8fd2404c33e6be56338",
+      "size": 127
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/bilibili.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "哔哩哔哩",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-bilibili.yaml",
+      "sha256": "d243072d1139e01fcabde0be9b67d951314ba9aafeae2822436862b001e6260c",
+      "size": 3228
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/cn.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "国内域名",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-cn.yaml",
+      "sha256": "26be8dfaeca5bb2ebcbd38b30e29f4b98951a7f7f1a6f21d5e990f44f6ea2162",
+      "size": 1585163
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/cncidr.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "国内IP",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-cncidr.yaml",
+      "sha256": "faad166027577d729942cec7ac9e3bd6c96439424ee0d8070d1dad3863598081",
+      "size": 363864
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/crypto.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "加密货币",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-crypto.yaml",
+      "sha256": "56f8f8ee5cd609d962a9603fa72b84db2d74e6ac3f277168f7056dcc86c1f90c",
+      "size": 6384
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/disney.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "Disney+",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-disney.yaml",
+      "sha256": "f5337f70507095b47a126f404c57e8521484fd944c030725abc262cdc44f4ca6",
+      "size": 4380
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/dmca.yaml": {
+      "changed": true,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "下载与Tracker",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-dmca.yaml",
+      "sha256": "c859195a60eafe80eadae28f6a211f1617d0704ee838327ff5786de6dfaf05e6",
+      "size": 27256
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/dmm.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "DMM",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-dmm.yaml",
+      "sha256": "083349803e283acbfaf9d9644f7ebe00629f9499b08df61a5ce5828ec7466d71",
+      "size": 504
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/douyin.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "抖音",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-douyin.yaml",
+      "sha256": "6685fc60737c10433d05abd6b0111a9dfe522408e85c5847fd6b0fd5ed9facd0",
+      "size": 865
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/ecommerce.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "电商",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-ecommerce.yaml",
+      "sha256": "93c2e5830e57c6dac82a8b00e2921c1469447f32366510e2af5571a021eb3173",
+      "size": 24941
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/forum.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "海外论坛",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-forum.yaml",
+      "sha256": "2f76c797f53c51d7b9f0e9adb14c8865874626dcf1232f6aeeaee28689b4e8dc",
+      "size": 1648
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/games-cn.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "国产游戏",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-games-cn.yaml",
+      "sha256": "b73edb752cddeb5d0b3a543a8d1976a409f464a8a47a9b61a5d7c653870898ad",
+      "size": 2111
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/games.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "海外游戏平台",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-games.yaml",
+      "sha256": "2561e5296359ef2da7c902c8a3e9282e0295028a3aa18a60460f6d50dc4823bc",
+      "size": 19801
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/gfw.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "GFW列表",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-gfw.yaml",
+      "sha256": "378457b4725f85e925488bc80ad2e9c72c7db95da8077485f55166d80acaf7e9",
+      "size": 113786
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/gits.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "Git平台",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-gits.yaml",
+      "sha256": "f542ca0d03dede177cf24c4b0ba15e9b295c9fb00bff8753c6306f4e258c8c21",
+      "size": 2193
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/google.yaml": {
+      "changed": true,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "Google系",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-google.yaml",
+      "sha256": "e064c6a24ee4970239dcd8a2c31e255ad3b72c91da835b882e72ef51e62240a4",
+      "size": 213089
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/hbo.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "HBO / Max",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-hbo.yaml",
+      "sha256": "ef89811e1dd03330d16d9e2ee8ba22b0672b610cbab0ffc1cef52086d4b5fddc",
+      "size": 1560
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/httpdns.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "HTTPDNS拦截",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-httpdns.yaml",
+      "sha256": "6447d0e5603c40e2aa65a1c19d8be073eb194b2b25ad0360808f833ff22fa455",
+      "size": 2398
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/hulu.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "Hulu",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-hulu.yaml",
+      "sha256": "f751aa0a27872876496abd86df92f4b0ab6fe2645d53216291739a64ba58cf0c",
+      "size": 999
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/iplocation-direct.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "IP检测-直连",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-iplocation-direct.yaml",
+      "sha256": "567fb0927f0cd154e11221d0a70f0ec72ef19076f9f1dcbe5a4469c91c92dee4",
+      "size": 471
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/iplocation-proxy.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "IP检测-代理",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-iplocation-proxy.yaml",
+      "sha256": "bf579b127e3f86e812369d1afe2e1c7d6226d1426670f481a48b99af1fa8e487",
+      "size": 2923
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/microsoft-cn.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "微软中国区",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-microsoft-cn.yaml",
+      "sha256": "38aa1537109baaffa27f667749b45ee566ff3e15d6d4fd1fac62aae32c5fb5c0",
+      "size": 4367
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/microsoft.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "Microsoft服务",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-microsoft.yaml",
+      "sha256": "afd399941f449c5beb24e7bf7de25ddf24e4b33b1ff8fb8abcd237f27b434e38",
+      "size": 14094
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/mytvsuper.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "myTV SUPER",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-mytvsuper.yaml",
+      "sha256": "d14b48a7fcc11fcb8cf618db47bae4638e78165fda9d83ce4cd33f7b1b1c1e02",
+      "size": 165
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/netflix.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "Netflix",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-netflix.yaml",
+      "sha256": "8a2538adbfaf0029ecbdc39c8b4ae5cd07fec389cacb39dd7a92d0c10050d084",
+      "size": 20981
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/niconico.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "Niconico",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-niconico.yaml",
+      "sha256": "e692ed7d765d2c1e212ba9939c123c4e0cff95f683090a84db0157cfecf0bb62",
+      "size": 158
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/onedrive.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "OneDrive",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-onedrive.yaml",
+      "sha256": "f028b9f63b289a29961b356d18f763c3c9a4931797dc04dfc937963c601b96c0",
+      "size": 376
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/paypal.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "PayPal",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-paypal.yaml",
+      "sha256": "91f85ea9e83a59055fe272ad35f0f25b5c23a067355543e6ead47655ba70483c",
+      "size": 4719
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/primevideo.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "Prime Video",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-primevideo.yaml",
+      "sha256": "dc542eed1ae41b4577afc82aa59c74a10d0433f83686faf9daebdc9e47bbb4e8",
+      "size": 768
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/private.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "内网",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-private.yaml",
+      "sha256": "10ddb70e7850b342447cd3986f79f7d533d4745ccd89cd09736f4f5926529662",
+      "size": 3167
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/proxy.yaml": {
+      "changed": true,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "代理全集",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-proxy.yaml",
+      "sha256": "a3abb4035a1e1df7ff2f886b3b71b918c38a3f0098ed0aae5ade080a6dead698",
+      "size": 496748
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/socialmedia-cn.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "国内社交",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-socialmedia-cn.yaml",
+      "sha256": "f14279b3a58fa48cb25d8a2d4048e77df83f7516a72dea1c8a355c98c6232f64",
+      "size": 936
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/socialmedia.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "海外社交",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-socialmedia.yaml",
+      "sha256": "bd02aa5b70232881efcd3cfe1e6732742fec2fcd4e77eba645b7e7e06cae7c76",
+      "size": 14873
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/speedtest.yaml": {
+      "changed": true,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "测速服务",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-speedtest.yaml",
+      "sha256": "0785d841b3273420d7563b93f89143007fa372ccc7e896d6f29d90aa16e16375",
+      "size": 228426
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/spotify.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "Spotify",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-spotify.yaml",
+      "sha256": "a36c92d479a3933ec12610fe57c7f6aa656ab760448b9a56613db7ad432e6ca9",
+      "size": 781
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/talkatone.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "Talkatone",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-talkatone.yaml",
+      "sha256": "a4e6f59815f64663cf3c63b7a5a37c1c1adb35dee000760182f10f2e0a4b3784",
+      "size": 304
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/tiktok.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "TikTok",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-tiktok.yaml",
+      "sha256": "0aff2aac97ac9ce50f0c10bd27e89e8d02b1a52edb55276c21ed2540644b022b",
+      "size": 2983
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/tld-proxy.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "顶级域名代理",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-tld-proxy.yaml",
+      "sha256": "2e0d30a3d62ada96ab0c62d0bb974ee00955a3d4b4c2ce9e0ef10c58f0dcb1e7",
+      "size": 6856
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/twitch.yaml": {
+      "changed": true,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "Twitch",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-twitch.yaml",
+      "sha256": "c2bf611141100146f55df031fc8d1a3a9b86eeecd08ed546f7232effa9c9f332",
+      "size": 1313
+    },
+    "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/egern/youtube.yaml": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "YouTube",
+      "ok": true,
+      "path": "rules/quixoticheart-rule-set-youtube.yaml",
+      "sha256": "4fbe719d8ccb21c4c7beaa39306d0cb62337d8cbbca1fa8e47ce6de1048ad577",
+      "size": 2930
+    },
+    "https://raw.githubusercontent.com/anyehttp/quantumult-x/main/headers/wyy-surge.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "网易云 SVIP 解锁（暗夜）",
+      "ok": true,
+      "path": "modules/anyehttp-quantumult-x-wyy-surge.sgmodule",
+      "sha256": "fe375e98e14ab6f24f52aedaaffac2e03d872b99813bc578f1c7c9455ece3416",
+      "size": 4401
+    },
+    "https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.surge.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "BoxJs",
+      "ok": true,
+      "path": "modules/chavyleung-scripts-boxjs.rewrite.surge.sgmodule",
+      "sha256": "dde7ad18fbb504638983b1363525ed8f64adeb9b2c5521889624038ec8fbd8e0",
+      "size": 577
+    },
+    "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/ADLite.list": {
+      "changed": true,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "广告精简-ADLite",
+      "ok": true,
+      "path": "rules/deezertidal-shadowrocket-rules-adlite.list",
+      "sha256": "f362a179ed1098fed89b8d45430956cd30e913ef67d856f899950ecd97bc1736",
+      "size": 1960401
+    },
+    "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/AdvertisingLite.list": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "广告联盟-AdvertisingLite",
+      "ok": true,
+      "path": "rules/deezertidal-shadowrocket-rules-advertisinglite.list",
+      "sha256": "01062a10192f12307b4b739e019a69e5446198f6de033a3aacee9e22139bb1eb",
+      "size": 12426
+    },
+    "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Beats.list": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "仿冒Beats",
+      "ok": true,
+      "path": "rules/deezertidal-shadowrocket-rules-beats.list",
+      "sha256": "2bb6baf261360f8c41a30a7bee39c993ca0e35acb67cce83eb5d1e37a1948ff3",
+      "size": 25183
+    },
+    "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Discord.list": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "Discord",
+      "ok": true,
+      "path": "rules/deezertidal-shadowrocket-rules-discord.list",
+      "sha256": "706943aeceae3cd4b5054de90f4323014c1fcb85af64308d8e492d764f912893",
+      "size": 918
+    },
+    "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Facebook.list": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "Facebook",
+      "ok": true,
+      "path": "rules/deezertidal-shadowrocket-rules-facebook.list",
+      "sha256": "02969a9cf7cf0ec10d8266cab49ca31eaad71f852691eaf28a23c76b235d95bc",
+      "size": 17192
+    },
+    "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Hanime1.list": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "成人-Hanime1",
+      "ok": true,
+      "path": "rules/deezertidal-shadowrocket-rules-hanime1.list",
+      "sha256": "b057de7df834f54b52976f27d9237301cb2359f6ce2172a21b0a31a7531acc2c",
+      "size": 75
+    },
+    "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Hijacking.list": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "劫持站",
+      "ok": true,
+      "path": "rules/deezertidal-shadowrocket-rules-hijacking.list",
+      "sha256": "b976714a9cecf0e3da92fdf2857db1076d689497fd0e4b2b6309e61b480a1a55",
+      "size": 6546
+    },
+    "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Instagram.list": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "Instagram",
+      "ok": true,
+      "path": "rules/deezertidal-shadowrocket-rules-instagram.list",
+      "sha256": "0d97aa6e4a5a0993f8bb51926c5b45340f6c846d632a75b1dd76ff21ef6e844c",
+      "size": 109
+    },
+    "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Javdb.list": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "成人-Javdb",
+      "ok": true,
+      "path": "rules/deezertidal-shadowrocket-rules-javdb.list",
+      "sha256": "aef7bb994ff7d3bf290bfccfee53db842f87ae392156825100bd479ad4b97263",
+      "size": 79
+    },
+    "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Line.list": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "Line",
+      "ok": true,
+      "path": "rules/deezertidal-shadowrocket-rules-line.list",
+      "sha256": "04adf414d0851507d976bb50fe0578bcf2dcb494017ca876a32f90e5e63abeed",
+      "size": 770
+    },
+    "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/LinkedIn.list": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "LinkedIn",
+      "ok": true,
+      "path": "rules/deezertidal-shadowrocket-rules-linkedin.list",
+      "sha256": "e9dc817d462b58fed3d8c79addfeb6722c6b66508e22550d475f9b3c0904feaa",
+      "size": 339
+    },
+    "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Reddit.list": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "Reddit",
+      "ok": true,
+      "path": "rules/deezertidal-shadowrocket-rules-reddit.list",
+      "sha256": "b6275951a9cfe706af430cf94c4f4844d0c0696067e1a2314db4e1487264837e",
+      "size": 271
+    },
+    "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Telegram.list": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "Telegram",
+      "ok": true,
+      "path": "rules/deezertidal-shadowrocket-rules-telegram.list",
+      "sha256": "a2d776b5b39a7d838c80109ff19a138f6a9d163685ac43c0a4ea380994d8f378",
+      "size": 1125
+    },
+    "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Twitter.list": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "Twitter",
+      "ok": true,
+      "path": "rules/deezertidal-shadowrocket-rules-twitter.list",
+      "sha256": "371a1ead914bfa4ff5ff4ca338111d6e088517cf4792dd0bd43448b9331d1eb8",
+      "size": 925
+    },
+    "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Whatsapp.list": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "rule_set",
+      "label": "WhatsApp",
+      "ok": true,
+      "path": "rules/deezertidal-shadowrocket-rules-whatsapp.list",
+      "sha256": "dc7dcb400e6ff0a52d6172ddc9d5f5e0132c423f3651995f50368faf117505e7",
+      "size": 548
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/XWebAds.module": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "X 网页版去广告",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-xwebads.module",
+      "sha256": "858a6d01cefdb013ea99328c6d383b6bff04426d8f8d6abc734ee52258a8a595",
+      "size": 1048
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/part1/12306.sgmodule": {
+      "changed": true,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "12306",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-12306.sgmodule",
+      "sha256": "756ab3b4697a69dc4ee9d83512bebe849e4ab9ed3d5cfff9443907dcc04613c5",
+      "size": 589
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partA/Alibaba.sgmodule": {
+      "changed": true,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "阿里巴巴（1688）",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-alibaba.sgmodule",
+      "sha256": "889288f32ed2e2b7aeb53504749d3a4d851963acc05f8aefa627d75aa5484278",
+      "size": 3303
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partA/AlibabaCloudDrive.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "阿里云盘",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-alibabaclouddrive.sgmodule",
+      "sha256": "edf4ea6204e13317288ab05b36d730903589189b3662db726b7e6b0d41be4076",
+      "size": 1204
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partB/BaiduNetdisk.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "百度网盘",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-baidunetdisk.sgmodule",
+      "sha256": "f785fb7bc8c5f0efa1c3b206786718b6769636ea9660b952f77e13cfdd337aa7",
+      "size": 1607
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partC/CaiNiaoGuoGuo.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "菜鸟裹裹",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-cainiaoguoguo.sgmodule",
+      "sha256": "0af44dbeb0e2b4f7019f5c5df98b886995b81033607cbb6235eff3c890923cf2",
+      "size": 3363
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partD/Dcar.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "懂车帝",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-dcar.sgmodule",
+      "sha256": "70f39e24103e366759537af48fb80c180c385d32fe34c70ac538991cf613306a",
+      "size": 410
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partD/DianPing.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "大众点评",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-dianping.sgmodule",
+      "sha256": "c2e74e7c7c973ffa551628b337c288dfe9f0412ea9dc9ae1504ac525ec3cc9cd",
+      "size": 2628
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partD/Douban.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "豆瓣",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-douban.sgmodule",
+      "sha256": "156a34ab59e07c64fa3cdb892cc36c23f6d06bfd0f9c0374a3545cdf0dae53b5",
+      "size": 1008
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partD/DouyuLive.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "斗鱼直播",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-douyulive.sgmodule",
+      "sha256": "9101507e85f7f4cc5c75d0f009b93ae0b35d36bb257b3948bc628bb638e642b8",
+      "size": 1448
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partD/TikTok.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "TikTok 去广告",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-tiktok.sgmodule",
+      "sha256": "373618a37a3a87ffa19031a24e5625a6f2e85d038e8f248f16b38c5370264dca",
+      "size": 398
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partE/Eleme.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "饿了么",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-eleme.sgmodule",
+      "sha256": "ce153d0f5c1e72608a4ad500ab32ded5364b204fb49b5ea4fec9bf9f2dfb16fb",
+      "size": 1574
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partF/Facebook.sgmodule": {
+      "changed": true,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "Facebook",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-facebook.sgmodule",
+      "sha256": "cfa0b9fe659165ff1576518978ddd17b04b3ab132f364f064939ca89188564f8",
+      "size": 438
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partF/Fliggy.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "飞猪",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-fliggy.sgmodule",
+      "sha256": "e8f822ad33d379c997f812e6da47c4966379e2f724ab6719ef80ae44b35bfd18",
+      "size": 845
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partG/AutoNavi.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "高德地图",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-autonavi.sgmodule",
+      "sha256": "79c65ca0ff9a010e43635d3f15007e098c9f655d44e32989ae2be3c48a694383",
+      "size": 1337
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partH/HangLvZongHeng.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "航旅纵横",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-hanglvzongheng.sgmodule",
+      "sha256": "0f745491133a109664187afbbf58170979305d5752dad0c0178f12c0191a1b97",
+      "size": 955
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partH/Hema.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "盒马",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-hema.sgmodule",
+      "sha256": "4846f5a675fe3b8d824248563de65dbe0a638afc5e133ac65b443008e1234e7b",
+      "size": 1664
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partH/HuyaLive.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "虎牙直播",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-huyalive.sgmodule",
+      "sha256": "ab317c86bc2de739f28d12f54f0ed4897eebdd89124fd19adfc416b3260884a7",
+      "size": 1113
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partK/KFC.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "肯德基",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-kfc.sgmodule",
+      "sha256": "a33b6de03564ffa14a1e70e2346aab0db688e59a5818db18309f276c03297703",
+      "size": 691
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partM/McDonalds.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "麦当劳",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-mcdonalds.sgmodule",
+      "sha256": "2615e123bb16a83fa01c6eff2e786c5da5288813c3666717ab57645d5c63582a",
+      "size": 467
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partM/Meituan.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "美团",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-meituan.sgmodule",
+      "sha256": "3cea369e9ff0f5593344ecffdc67f0516964ba3a0d98863c2425aa8fb5685549",
+      "size": 708
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partQ/Autohome.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "汽车之家",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-autohome.sgmodule",
+      "sha256": "8862e0bdb01650cbe1b8a4038b8d5d7d6953ece1827457781b0595b1af81dadd",
+      "size": 1904
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partQ/Qunar.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "去哪儿",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-qunar.sgmodule",
+      "sha256": "34e66b8f84d15edf39ce71a7c93c1958b64ccbbbc90389789c2b89ca1ebe6b76",
+      "size": 725
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partT/Thunder.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "迅雷",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-thunder.sgmodule",
+      "sha256": "01105453e54889a8abcb45f91143272e38c8bfed21c989a490c730cedff7909f",
+      "size": 1317
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partT/TongChengTravel.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "同程旅行",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-tongchengtravel.sgmodule",
+      "sha256": "0be89e7cbbe11e0bcb3740810cf9cb4728aa61ec9d9ffa00f94a94fd2bbf7fe0",
+      "size": 1695
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partT/Twitter.sgmodule": {
+      "changed": true,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "Twitter（X）",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-twitter.sgmodule",
+      "sha256": "2dbbbf2f0d9734810a88ccfaa86abb0b0933cb43d926eeafd0aff0ab4196882f",
+      "size": 573
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partW/NetEaseCloudMusic.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "网易云音乐去广告",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-neteasecloudmusic.sgmodule",
+      "sha256": "e6eb44b1db27d67877b6de247f6227cb02240c83117ac9108a4029203405906d",
+      "size": 4368
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partW/NetEaseDashen.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "网易大神",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-neteasedashen.sgmodule",
+      "sha256": "9ede0d4729000a7fb915b0d6240f4b2adcca89b31a96639f294c13c50f518eab",
+      "size": 1350
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partW/NetEaseMail.sgmodule": {
+      "changed": true,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "网易邮箱大师",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-neteasemail.sgmodule",
+      "sha256": "cf777163258b7f2bafccc17b489df4fff5b6a1141d868f86ce91c9b7a3654739",
+      "size": 1345
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partX/Ctrip.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "携程",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-ctrip.sgmodule",
+      "sha256": "48413d721260c4532f37dd2032c11ffa5fbc9483318d25ca33ce2416a2849aa1",
+      "size": 1017
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/split/partY/YouTube.sgmodule": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "YouTube 去广告（Maasea）",
+      "ok": true,
+      "path": "modules/fmz200-wool_scripts-youtube.sgmodule",
+      "sha256": "b3a06a07d88842c228cd9cd4be99fc7e4aab92bf37eec7816ed5a9e72b7db649",
+      "size": 972
+    },
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/WhatsApp.png": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "icon",
+      "label": "🎯 WhatsApp",
+      "ok": true,
+      "path": "icons/fmz200-wool_scripts-whatsapp.png",
+      "sha256": "db9445bc48a4f919ab9b0573d8090d919d8eaac6d9afe0b95f6bdeaf2a929fc8",
+      "size": 23163
+    },
+    "https://raw.githubusercontent.com/jadkg/egern/refs/heads/main/哔哩哔哩.module": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "哔哩哔哩画质解锁（jadkg）",
+      "ok": true,
+      "path": "modules/jadkg-egern-b3e3f89adb.module",
+      "sha256": "0ae03dee7078024a7e33b2ebda894a3929b61b69031c843288359954351fffb9",
+      "size": 529
+    },
+    "https://raw.githubusercontent.com/jadkg/egern/refs/heads/main/墨鱼去开屏.module": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "module",
+      "label": "墨鱼去开屏（jadkg）",
+      "ok": true,
+      "path": "modules/jadkg-egern-bfffde50c6.module",
+      "sha256": "d3da2a070cace26c76b823a22f6ff64a569540cbbf200e4e6b5124b37d285dc1",
+      "size": 71472
+    },
+    "https://raw.githubusercontent.com/jnlaoshu/MySelf/master/Egern/Widget/NetworkInfo.js": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "script",
+      "label": "网络信息",
+      "ok": true,
+      "path": "scripts/jnlaoshu-myself-networkinfo.js",
+      "sha256": "4d1a3c73fe70c4c57e7be9dfcbd43df2d103c59d8b5298f9e1ae213f211f1aab",
+      "size": 16341
+    },
+    "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/reddit.png": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "icon",
+      "label": "🎯 Reddit",
+      "ok": true,
+      "path": "icons/lige47-quanx-icon-rule-reddit.png",
+      "sha256": "33b9ef123b242b00c2534ee26e4efeabdf60e0cae93d9d9a56c2ba4757cb224b",
+      "size": 5203
+    },
+    "https://raw.githubusercontent.com/lylywayr/NetWork-Module/refs/heads/main/Egern/%E7%BD%91%E7%BB%9C%E8%AF%8A%E6%96%AD%E9%9B%B7%E8%BE%BE/%E7%BD%91%E7%BB%9C%E8%AF%8A%E6%96%AD%E9%9B%B7%E8%BE%BE.js": {
+      "changed": false,
+      "fetched_at": "2026-10-22T10:01:54Z",
+      "kind": "script",
+      "label": "网络诊断雷达",
+      "ok": true,
+      "path": "scripts/lylywayr-network-module-e7-bd-91-e7-bb-9c-e8-af-8a-e6-96-ad-e9-9b-b7-e8-be-be.js",
+      "sha256": "5d9956ee59df4a224a4279ab6a5d17b48e8025d58892a2fee4c5c1bd7960d4e2",
+      "size": 104440
+    }
+  },
+  "generated_at": "2026-10-22T10:01:54Z"
+}
