@@ -81,7 +81,8 @@
 ```
 curated/
 ├── README.md                     ← 本文件
-├── Profile.yaml                  ← ★ 完整可用的 Egern 配置（19 组 / 57 规则 / 52 模块）
+├── Profile.yaml                  ← ★ 完整可用的 Egern 配置（20 组 / 305 规则 / 64 模块）
+├── 对比-v9.9与新配置.md            ← 与上一版精修配置的逐项对比
 ├── manifest.json                 ← 机器可读的精选清单（App → 文件 → 理由 → 现成 URL）
 ├── modules/
 │   ├── 00-override.yaml          ← 自建：优先级补丁（Egern 原生 YAML，推荐）
@@ -107,14 +108,14 @@ curated/
 |---|---|
 | 全局 | `block_quic: true`（QUIC 是"规则不生效"第一大原因）、`hijack_dns`（防 HTTPDNS 绕过）、`include_apns`（防推送断） |
 | DNS | 国内/国外双上游 + `cn-full.yaml` 参与 DNS 分流 + `proxy_nameservers` 防环路 + `block_ips` 只滤 3 个最保险的 |
-| 策略组 | 19 个：订阅 → 兜底 → 5 个地区组 → 广告拦截开关 → AI/流媒体/TikTok/社交/Google/Microsoft/Apple/开发/支付/游戏/国内 |
-| 规则 | 57 条（55 个规则集），9 层，每层都标了"为什么在这个位置" |
+| 策略组 | 20 个：订阅 → 兜底 → 5 个地区组 → 广告拦截开关 → AI/流媒体/TikTok/社交/Telegram/Google/Microsoft/Apple/开发/支付/游戏/国内 |
+| 规则 | 305 条（57 个规则集 + 246 条手写白名单），每层都标了"为什么在这个位置" |
 | MITM | 只写 excludes（12 条银行/政务），其余由模块自动合并 |
-| 模块 | 52 个，全部启用，每个都标了覆盖度 / 外链 JS / MITM 台数 |
+| 模块 | 64 个（57 个默认启用），每个都标了覆盖度 / 外链 JS / MITM 台数 |
 
 **唯一要改的**：`policy_groups` → `订阅` → `urls` 里的订阅链接。
 
-首次导入约需拉取 12 MB（55 个规则集 + 52 个模块，其中 ad-full 一个文件 7.7 MB），建议在 Wi-Fi 下导入。
+首次导入约需拉取 12.3 MB（57 个规则集 + 64 个模块，其中 ad-full 一个文件 7.7 MB），建议在 Wi-Fi 下导入。
 
 ### `modules/00-override.module`
 

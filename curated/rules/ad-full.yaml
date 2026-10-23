@@ -1,4 +1,4 @@
-# 广告拦截总表（5 份并集）
+# 广告拦截总表（8 份并集）
 # 由 curated/tools/build.py 生成，勿手改。
 # 来源：
 #   - shunt-rules/loon/AdvertisingTest.lsr
@@ -6,10 +6,16 @@
 #   - quixoticheart-egern/adrules.yaml
 #   - yfamilys/AntiAD.list
 #   - loonkit/AdBlock.list
+#   - shunt-rules/loon/Privacy.lsr
+#   - deezertidal-shadowrocket-rules-hijacking.list
+#   - deezertidal-shadowrocket-rules-beats.list
+#   - deezertidal-shadowrocket-rules-adlite.list
+#   - deezertidal-shadowrocket-rules-advertisinglite.list
+#   - quixoticheart-rule-set-adrules.yaml
 #
-# 5 份广告表互相大量重叠但都不互相包含：AdvertisingTest 独有 22,057、adrules 独有 24,808、AdGuard 独有 28,175、AntiAD 独有 13,610、AdBlock 独有 12,691。取全并集是唯一能做到不漏的方式。另修正了原表里把 IP 写成 DOMAIN 的条目（这些在 Egern 里永远匹配不到）。
+# 8 份广告/追踪/劫持表互相大量重叠但都不互相包含。实测：AdvertisingTest 独有 22,057、adrules 独有 24,808、AdGuard 独有 28,175、AntiAD 独有 13,610、AdBlock 独有 12,691、Privacy 独有 11,000+、Hijacking 186、Beats 714。取全并集是唯一能做到不漏的方式。另修正了原表里把 IP 写成 DOMAIN 的条目（这些在 Egern 里永远匹配不到）。
 #
-# 条目：domain_set 23937 / domain_suffix_set 356920 / domain_keyword_set 287 / ip_cidr_set 664
+# 条目：domain_set 23943 / domain_suffix_set 357300 / domain_keyword_set 289 / domain_wildcard_set 375 / domain_regex_set 4 / ip_cidr_set 670
 no_resolve: true
 domain_set:
 - 00-gov.cn
@@ -8688,6 +8694,7 @@ domain_set:
 - geo-targetly.com
 - geo.kaloo.ga
 - geo.vortex.data.microsoft.com.akadns.net
+- geo2.adobe.com
 - geoaddicted.net
 - geobanner.blacksexmatch.com
 - geobanner.fuckbookhookups.com
@@ -9640,6 +9647,7 @@ domain_set:
 - hmecfqhj.com
 - hmgozryqbc.com
 - hmjtutipevtmg.com
+- hmma.baidu.com
 - hmmmcjgho.com
 - hmongcash.com
 - hmora.fred-build.tk
@@ -17730,6 +17738,7 @@ domain_set:
 - safe-click.net
 - safebrowsing.g.applimg.com
 - safebrowsing.googleapis.com
+- safebrowsing.urlsec.qq.com
 - safeken.com
 - safelinktracker.com
 - safelistextreme.com
@@ -19984,6 +19993,7 @@ domain_set:
 - track-re01.com
 - track-server-100.com
 - track-web.net
+- track.58.com
 - track.atgstores.com
 - track.byzon.swelen.net
 - track.crumobiapps.com
@@ -20027,6 +20037,7 @@ domain_set:
 - tracking.edvisors.com
 - tracking.fits.me
 - tracking.interweave.com
+- tracking.intl.miui.com
 - tracking.klickthru.com
 - tracking.maxcdn.com
 - tracking.plattformad.com
@@ -20042,6 +20053,7 @@ domain_set:
 - trackinglabs.com
 - trackkas.com
 - tracklab.club
+- tracklog.58.com
 - trackmethod.com
 - trackmytarget.com
 - trackmyusers.com
@@ -23950,10 +23962,6 @@ domain_set:
 - zzxlukodff.com
 - zzxosget.com
 domain_suffix_set:
-- -ad-sign.byteimg.com
-- -ad.a.yximgs.com
-- -applog.fqnovel.com
-- -datareceiver.aki-game.net
 - 0.101tubeporn.com
 - 0.avmarket.rs
 - 0.code.cotsta.ru
@@ -24892,6 +24900,7 @@ domain_suffix_set:
 - 1008691.com
 - 10086yule.com
 - 10090dfs.com
+- 100beatscheap.com
 - 100cpc.com
 - 100ea.com
 - 100fenlm.cn
@@ -25726,7 +25735,6 @@ domain_suffix_set:
 - 1630422306.rsc.cdn77.org
 - 16327739.xyz
 - 1632j6.cn
-- 163487*.qmgmw.com
 - 163ren.com
 - 1640831964042.se-life.cn
 - 16425bafe4.com
@@ -26283,6 +26291,7 @@ domain_suffix_set:
 - 1mb71rr5oo.com
 - 1ml8jjlv3vxulm23xnv.cfd
 - 1mob.com
+- 1monsterbeatsbydreus.com
 - 1mp.mobi
 - 1mpi.com
 - 1mrmsp0ki.de
@@ -26527,8 +26536,16 @@ domain_suffix_set:
 - 2011.l5eamr17d.com
 - 2012.8684.com
 - 2012ui.com
+- 2013beatsbydrdreonline.com
+- 2013beatsbydrdreshop.com
+- 2013beatsbydreshop.com
+- 2013beatshdcybermonday.com
+- 2013cheapestbeats.com
+- 2013newbeatsworld.com
 - 2013pan.cn
+- 2013pascherbeatsbydre.com
 - 2013sh.com
+- 2014cheapbeatsbydre.com
 - 20150930.cf
 - 2016.bkill.net
 - 2016.sina.cn
@@ -26751,6 +26768,7 @@ domain_suffix_set:
 - 23dhj4q.com
 - 23dsf.top
 - 23dx6xe42.com
+- 23elon.pro
 - 23hssicm9.de
 - 23hxl5rkz4r87pymvlkf5.cyou
 - 23j1p9497we2k5cqf4.rest
@@ -27113,6 +27131,7 @@ domain_suffix_set:
 - 2bd1f18377.com
 - 2bd77addac.com
 - 2be2a18b8c.com
+- 2beatsdre.com
 - 2ben92aml.com
 - 2beno.com
 - 2beon.co.kr
@@ -27123,6 +27142,7 @@ domain_suffix_set:
 - 2bj55uyh2985epfme.cfd
 - 2bps53igop02.com
 - 2bqlkznz.xyz
+- 2buybeatsbydre.com
 - 2bwiihrajn.com
 - 2byuf.cn
 - 2c0a5.xyz
@@ -27184,6 +27204,7 @@ domain_suffix_set:
 - 2df0b2e308.com
 - 2dfdea8c5a.com
 - 2dpt.com
+- 2drdrebeats.com
 - 2e0828e7d8.com
 - 2e27bf1f09307aeb.com
 - 2e30f1d69a.55320fa45d.com
@@ -28544,6 +28565,7 @@ domain_suffix_set:
 - 40images25.com
 - 40nao7anx6.com
 - 40nuggets.com
+- 40shopping.com
 - 40vhwswtr6.com
 - 40voxia.net
 - 40xbfzk8.com
@@ -28934,6 +28956,7 @@ domain_suffix_set:
 - 4bc588417b.com
 - 4bcc6h75ic9yu5h9nhwnv.cyou
 - 4bds.xyz
+- 4beatsbydre.com
 - 4bfx0u.com
 - 4bind2.cfd
 - 4bo5t8fzd.com
@@ -29764,6 +29787,7 @@ domain_suffix_set:
 - 5bd3cec305.com
 - 5bd5e3203751.com
 - 5be7319a8b.com
+- 5beatsbydre.com
 - 5bess6df0.com
 - 5bf0fdacd2.apps.iocnt.de
 - 5bf177fbac.938b97e5ba.com
@@ -33275,7 +33299,6 @@ domain_suffix_set:
 - 9z1qqvxtpe3moebx255vx2.cfd
 - 9z6p1shhsh.top
 - 9z9hhznbqzp5ut4i8n.rest
-- a*.chajiaotong.com
 - a-94interdads.com
 - a-ads.com
 - a-affiliate.net
@@ -35999,6 +36022,7 @@ domain_suffix_set:
 - aaae5b9ee0.d3aa46b2e8.com
 - aaaesme.cn
 - aaaf.info
+- aaagradeheadphones.com
 - aaakr.abodemoney.com
 - aaalian.com
 - aaam.fr
@@ -36133,12 +36157,12 @@ domain_suffix_set:
 - aamt.today.com
 - aamv.vip
 - aamxzlsywu.com
-- aan.amazon.*
 - aan.amazon.co.jp
 - aan.amazon.co.uk
 - aan.amazon.com
 - aan.bellemaison.jp
 - aan8bq.ru
+- aanaan.com
 - aanalytics.adelaide.edu.au
 - aanalytics.panduit.com
 - aanetwork.vn
@@ -36574,6 +36598,7 @@ domain_suffix_set:
 - abcdcfasda.gushiwen.cn
 - abcdespanol.com
 - abcessunaided.rest
+- abcheadphones.com
 - abchina.fr
 - abchygmsaftnrr.xyz
 - abciwvjp.com
@@ -36626,6 +36651,7 @@ domain_suffix_set:
 - abeacon.cn
 - abeacon.com
 - abeagle-public.buzzfeed.com
+- abeatsbydrdre.com
 - abedbrings.com
 - abeddisagreeable.com
 - abederemoras.top
@@ -37331,8 +37357,6 @@ domain_suffix_set:
 - abzkyjlkzazew.top
 - abzoyyjybskvna.com
 - abzvzlfuqxzua.site
-- ac*.786ip.com
-- ac*.faxingchina.com
 - ac-3.mix.tokyo
 - ac-chatbot.freebie-ac.jp
 - ac-crerteil.fr
@@ -37987,7 +38011,6 @@ domain_suffix_set:
 - acqurxrkscfq.com
 - acqvzaqhsdmap.online
 - acqxgk1an3.com
-- acr-*-prd.samsungcloud.tv
 - acrabakasaka.com
 - acraniahueybedlam.cfd
 - acrawlsmarten.help
@@ -38407,10 +38430,6 @@ domain_suffix_set:
 - aczridptoo.com
 - aczrxebflhpkx.online
 - acztihozztf.in
-- ad*.ettoday.net
-- ad*.zonaplus.tv
-- ad-*.amazonaws.com
-- ad-*.appacc.dbankedge.cn
 - ad-1258444056.cos.accelerate.myqcloud.com
 - ad-411.com
 - ad-a.juicyad.com
@@ -38485,9 +38504,6 @@ domain_suffix_set:
 - ad-goi.com
 - ad-guardian.com
 - ad-hatena.com
-- ad-host-backup-*.*.aliyuncs.com
-- ad-host-backup-*.aliyuncs.com
-- ad-host-backup-*.s3.*.amazonaws.com
 - ad-hub.it
 - ad-im-cmg.streamguys1.com
 - ad-img.diyidan.net
@@ -38578,7 +38594,6 @@ domain_suffix_set:
 - ad-web-ad.com
 - ad-wheel.com
 - ad-x.co.uk
-- ad.*.xiaomi.com
 - ad.001zb.com
 - ad.10010.com
 - ad.1111cpc.com
@@ -38881,7 +38896,6 @@ domain_suffix_set:
 - ad.kisscartoon.nz
 - ad.kisscartoon.sh
 - ad.kisscartoon.su
-- ad.kisstvshow.*
 - ad.kisstvshow.es
 - ad.kisstvshow.ru
 - ad.kmib.co.kr
@@ -39343,7 +39357,6 @@ domain_suffix_set:
 - adapd.com
 - adapex.io
 - adapf.com
-- adapi*.boomplaymusic.com
 - adapi.about.co.kr
 - adapi.inlcorp.com
 - adapi.izuiyou.com
@@ -39351,7 +39364,6 @@ domain_suffix_set:
 - adapi.tuyensinh247.com
 - adapi.yynetwk.com
 - adappi.co
-- adapt-beacon.awsprodops.movetv.com
 - adapt.tv
 - adaptationbodilypairs.com
 - adaptationmargarineconstructive.com
@@ -39799,7 +39811,6 @@ domain_suffix_set:
 - adcoonfer.com
 - adcore.lenovomm.com
 - adcount.yoka.com
-- adcounter*.uptolike.ru
 - adcounter.theglobeandmail.com
 - adcovery.com
 - adcqeihfrivogpt.xyz
@@ -39810,7 +39821,6 @@ domain_suffix_set:
 - adcron.com
 - adcrowd.com
 - adcryp.to
-- adcs-*.myappsget.com
 - adcs-ap.myappsget.com
 - adcs-ue.myappsget.com
 - adcs.basspro.ca
@@ -40322,7 +40332,6 @@ domain_suffix_set:
 - adhunt.net
 - adhunter.media
 - adhvz.cn
-- adi*.cnool.net
 - adi.cnool.net
 - adi.ni.com
 - adi.vcmedia.vn
@@ -40746,7 +40755,6 @@ domain_suffix_set:
 - admgr.qingting.fm
 - admhbl.xyz
 - admi49236.check-out.shop
-- admicro*.vcmedia.vn
 - admicro.vn
 - admicro1.vcmedia.vn
 - admidadsp.com
@@ -40865,7 +40873,6 @@ domain_suffix_set:
 - admngronline.com
 - admo.tv
 - admoai.com
-- admob-app-id-*.firebaseio.com
 - admob-cn.com
 - admob-gmats.uc.r.appspot.com
 - admob.com
@@ -41478,18 +41485,6 @@ domain_suffix_set:
 - adru.net
 - adrun.ru
 - adrunnr.com
-- ads*-adnow.com
-- ads*-normal*.zijieapi.com
-- ads*-normal-*.zijieapi.com
-- ads*-normal-lq.zijieapi.com
-- ads*.bojijulebu.com
-- ads*.depositfiles.com
-- ads*.depositfiles.org
-- ads*.dfiles.eu
-- ads*.dfiles.ru
-- ads*.textra.me
-- ads*.zijieapi.com
-- ads-*-nfl.yinzcam.com
 - ads-4u.com
 - ads-6686.top
 - ads-816899299.ap-southeast-1.elb.amazonaws.com
@@ -41538,7 +41533,6 @@ domain_suffix_set:
 - ads-delivery.gunosy.com
 - ads-delivery.milenarmedia.pt
 - ads-dev.pinterest.com
-- ads-dmp-collect.*.karrotmarket.com
 - ads-dot-fbc-web-2018.uc.r.appspot.com
 - ads-drcn.platform.hihonorcloud.com
 - ads-elsevier.net
@@ -41610,8 +41604,6 @@ domain_suffix_set:
 - ads-video-qc.xhscdn.com
 - ads-wordego.azureedge.net
 - ads-yallo-production.imgix.net
-- ads.*.kugou.com
-- ads.*.yahoo.com
 - ads.123net.jp
 - ads.1mindrama.net
 - ads.1mobile.com
@@ -42099,7 +42091,6 @@ domain_suffix_set:
 - ads.linuxjournal.com
 - ads.live365.com
 - ads.livenation.com
-- ads.livetv*.me
 - ads.livetvcdn.net
 - ads.lmmob.com
 - ads.lot-tissimo.com
@@ -42892,7 +42883,6 @@ domain_suffix_set:
 - adserver-ad.321mh.com
 - adserver-e7.com
 - adserver-espnet.sportszone.net
-- adserver.*.yahoodns.net
 - adserver.100free.com
 - adserver.3digit.de
 - adserver.71i.de
@@ -43091,7 +43081,6 @@ domain_suffix_set:
 - adservice.aliexpress.com
 - adservice.click
 - adservice.com
-- adservice.google.*
 - adservice.google.be
 - adservice.google.ca
 - adservice.google.cn
@@ -43143,7 +43132,6 @@ domain_suffix_set:
 - adsfast.com
 - adsfcdn.com
 - adsfile.qq.com
-- adsfilebssdlbig.*.kugou.com
 - adsfilebssdlbig.ali.kugou.com
 - adsfilebssdlbig.tx.kugou.com
 - adsfileretry.service.kugou.com
@@ -43869,7 +43857,6 @@ domain_suffix_set:
 - adv.yandex.ru
 - adv.yo.cz
 - adv.zdnet.co.kr
-- adv0*.msa.cdn.mediaset.net
 - adv2.downsave.com
 - adv225489.ru
 - adv457895.ru
@@ -43985,7 +43972,6 @@ domain_suffix_set:
 - adversolutions.com
 - adverster.com
 - adversting.riamedia.com.ua
-- advert*.livesportmedia.eu
 - advert-admin.vnay.vn
 - advert-api-sandbox.wb.ru
 - advert-api-sandbox.wildberries.ru
@@ -44274,8 +44260,6 @@ domain_suffix_set:
 - adwstats.com
 - adwx6vcj.com
 - adwylmendxmum.website
-- adx-*.dbankedge.cn
-- adx-*.op.dbankcloud.com.edgekey.net
 - adx-ad.smart-tv.cn
 - adx-api.hupu.com
 - adx-api.jinmo.tech
@@ -44485,6 +44469,7 @@ domain_suffix_set:
 - aeaeantimbers.cyou
 - aeafrkms.laveen.nl
 - aeaklaujzvoos.site
+- aeasyshop.com
 - aeb92e4b9d.com
 - aebadu.com
 - aebbiydssbbkdo.com
@@ -44577,7 +44562,6 @@ domain_suffix_set:
 - aelxock.cn
 - aelyjabjzxcrg.online
 - aem-analytics.nortonrosefulbright.com
-- aem-collector-*.kgslb.com
 - aem-collector.daumkakao.io
 - aem-kakao-collector.onkakao.net
 - aem-target.allianz.be
@@ -44821,7 +44805,6 @@ domain_suffix_set:
 - afeuvqrsswz.com
 - afevxr.guydemarle.com
 - afewe611.cn
-- aff*.kolektiva.net
 - aff-handler.com
 - aff-jp.dxlive.com
 - aff-online.com
@@ -45784,7 +45767,6 @@ domain_suffix_set:
 - agatanoxally.cyou
 - agatarainpro.com
 - agatesquelt.cfd
-- agatha-log-service-*.a.run.app
 - agathacd.com
 - agathazanna.com
 - agathisdented.com
@@ -46916,6 +46898,7 @@ domain_suffix_set:
 - airlogs.ru
 - airlytics.airlock.twcmobile.weather.com
 - airmailmalacca.qpon
+- airmay.com
 - airoboteth.vip
 - airoogen.net
 - airoupha.xyz
@@ -47053,8 +47036,6 @@ domain_suffix_set:
 - aiztl.eloquii.com
 - aizyzx.suzannekalan.com
 - aj0453.top
-- aj1*.online
-- aj1*.xyz
 - aj1052.online
 - aj1058.online
 - aj1070.online
@@ -47068,8 +47049,6 @@ domain_suffix_set:
 - aj1907.online
 - aj1913.online
 - aj1985.online
-- aj2*.bid
-- aj2*.online
 - aj2031.online
 - aj2073.online
 - aj2178.online
@@ -47092,7 +47071,6 @@ domain_suffix_set:
 - aj2635.bid
 - aj2663.bid
 - aj2756.top
-- aj3*.bid
 - aj4j.icu
 - aj8a3f.com
 - ajacoehkzhvla.website
@@ -47250,6 +47228,7 @@ domain_suffix_set:
 - ajskgbnmafymf.space
 - ajsrjwcgr.com
 - ajszcymkv.com
+- ajtalk.com
 - ajtatwvaml.com
 - ajtbrefuw.com
 - ajtctiiiaz.com
@@ -47278,7 +47257,6 @@ domain_suffix_set:
 - ajvnragtua.com
 - ajvzis.triumph.com
 - ajvznxaox.com
-- ajx*.online
 - ajx130.online
 - ajxukah.cn
 - ajxx98.online
@@ -47801,6 +47779,7 @@ domain_suffix_set:
 - albbwlhyjotcs.website
 - albdbsk.xyz
 - albdg.smartassproducts.net
+- albeats.com
 - albeedunged.shop
 - albeejurare.top
 - albeitinflame.com
@@ -48068,7 +48047,6 @@ domain_suffix_set:
 - alhypnoom.com
 - ali-ad.a.yximgs.com
 - ali-bestshop.ru
-- ali-bj-pcdn-*.biliapi.net
 - ali-crm.ru
 - ali-p2p-v2.pull.yximgs.com
 - ali-p2p.pull.yximgs.com
@@ -49604,7 +49582,6 @@ domain_suffix_set:
 - an.yesnetwork.com
 - an1.hfyy120.cn
 - an9ynwsct.com
-- ana*.inews24.com
 - ana.3751chat.com
 - ana.bandi.so
 - ana.chat.shalove.net
@@ -49770,13 +49747,10 @@ domain_suffix_set:
 - analyticbz.com
 - analyticcdn.globalmailer.com
 - analyticcdn.wlmediahub.com
-- analytics*.prezly.com
-- analytics-*-nfl.yinzcam.com
 - analytics-1.cavai.com
 - analytics-2.aasaam.com
 - analytics-3.aasaam.com
 - analytics-active.net
-- analytics-ad-*.kgslb.com
 - analytics-adv.ozon.ru
 - analytics-alv.google.com
 - analytics-api-s.cloudinary.com
@@ -49848,7 +49822,6 @@ domain_suffix_set:
 - analytics-proxy-501188673100.us-central1.run.app
 - analytics-proxy.springboard.com
 - analytics-rhwg.rhcloud.com
-- analytics-rollout-*.amazonaws.com
 - analytics-s4.com
 - analytics-scripts.cablelabs.com
 - analytics-sdk.yle.fi
@@ -49874,12 +49847,10 @@ domain_suffix_set:
 - analytics-ttp2.tiktokw.eu
 - analytics-union.sandai.net
 - analytics-union.xunlei.com
-- analytics-v*.eip.telegraph.co.uk
 - analytics-v2.wetransfer.com
 - analytics-wcms.joins.net
 - analytics-webhook.doximity.com
 - analytics-wpt.smhi.se
-- analytics.*.sky.com
 - analytics.126.com
 - analytics.126.net
 - analytics.163.com
@@ -51761,7 +51732,6 @@ domain_suffix_set:
 - analyze.yahooapis.com
 - analyzecorona.com
 - analyzee.io
-- analyzer*.fc2.com
 - analyzer.fc2.com
 - analyzer2.fc2.com
 - analyzer51.fc2.com
@@ -52255,6 +52225,7 @@ domain_suffix_set:
 - annpounjsphun.online
 - annrdf.com
 - annrgyvv.xyz
+- annstores.net
 - annuaire-autosurf.com
 - annual-gamers-choice.com
 - annual-spend.com
@@ -52815,6 +52786,7 @@ domain_suffix_set:
 - aokqftjypnrrg.website
 - aokrbjfklqvsd.space
 - aoktqivqhm.com
+- aokwholesale.net
 - aokxcojgnjjkv.online
 - aokxjkrmw.net
 - aol.spb.su
@@ -53110,7 +53082,6 @@ domain_suffix_set:
 - aphtn.dsw.ca
 - aphxav.green-acres.it
 - aphycolourses.info
-- api-*.hismarttv.com
 - api-2-0.spot.im
 - api-access.pangolin-sdk-toutiao2.com
 - api-access.pangolin-sdk-toutiao3.com
@@ -54628,7 +54599,6 @@ domain_suffix_set:
 - apiosstocked.top
 - apiostopfull.qpon
 - apiouthyperlinks.net
-- apiproxy-log-nlb-1f304af4d3ac01a4.elb.us-east-*.amazonaws.com
 - apiramirez.ecomacademy.jp
 - apirasutexruk.website
 - apirelay.ru
@@ -54779,7 +54749,6 @@ domain_suffix_set:
 - app-adforce.jp
 - app-ads-services.com
 - app-analysislog.sto.cn
-- app-analytics-*.snapchat.com
 - app-analytics-cn.huami.com
 - app-analytics-ru.huami.com
 - app-analytics-services-att.com
@@ -55887,7 +55856,6 @@ domain_suffix_set:
 - appads.in
 - appale.fr
 - appalspowters.com
-- appanalysis*.banggood.com
 - appanalysis.banggood.com
 - apparatus49.top
 - apparatusditchtulip.com
@@ -56007,7 +55975,6 @@ domain_suffix_set:
 - applausesuch.com
 - applausetint.com
 - appldagabaagend.cyou
-- apple-*.le.com
 - apple-vn.shop
 - apple.analnoe24.com
 - apple.arabtoons.net
@@ -56160,7 +56127,6 @@ domain_suffix_set:
 - applixir.com
 - applk.cn
 - applocus.com
-- applog*.matrix.easebar.com
 - applog-perf.uc.cn
 - applog.camera360.com
 - applog.lc.quark.cn
@@ -58573,7 +58539,6 @@ domain_suffix_set:
 - aszswyd.cn
 - aszwpglgletyf.online
 - aszyzwbjs.com
-- at*.doubanio.com
 - at-adserver.alltop.com
 - at-af.outfit7.com
 - at-cddc.actu-juridique.fr
@@ -59220,7 +59185,6 @@ domain_suffix_set:
 - attpmhuguafrl.space
 - attqbruefzfsc.space
 - attr-2p.com
-- attr-logs.*.amazonaws.com
 - attr-shift.dotabuff.com
 - attracta.com
 - attraction85.com
@@ -59358,6 +59322,7 @@ domain_suffix_set:
 - aucaikse.com
 - aucauzakrou.com
 - aucdn.net
+- aucheapbeats.com
 - auchletcecal.cfd
 - auchoahy.net
 - auchoocm.com
@@ -59446,8 +59411,11 @@ domain_suffix_set:
 - audioad.zenomedia.com
 - audioadx.com
 - audioarctic.com
+- audiobeatsau.com
+- audiobeatsbydre.com
 - audiobenasty.shop
 - audiomob.com
+- audiomonsterbeatsonline.com
 - audionews.fm
 - audionex.saudeeprazer.com.br
 - audiosech.xyz
@@ -59702,6 +59670,9 @@ domain_suffix_set:
 - aurgoast.com
 - aurhgaees.com
 - auriclelureful.click
+- auricularemonsterbeats.com
+- auricularesbeatsbaratosshop.com
+- auricularesbeatsmarkt.com
 - aurineborneocoopted.cfd
 - auristquipu.help
 - auristscreeky.click
@@ -59725,6 +59696,7 @@ domain_suffix_set:
 - aus.amexforbusiness.com.au
 - ausaas.cn
 - ausagauw.net
+- ausbeatsbydrdre.com
 - auschtpdyijht.site
 - ausclh.castlery.com
 - ausculttaraf.top
@@ -59761,7 +59733,6 @@ domain_suffix_set:
 - autdjng.cn
 - auteboon.net
 - autecyspatha.cyou
-- auth-*.hismarttv.com
 - auth-code-verif.beer
 - auth-google.site
 - auth-srv.launchthatapps.com
@@ -60660,7 +60631,6 @@ domain_suffix_set:
 - awzokxgaycznr.website
 - awzpvorsyltel.website
 - awzvpbg.com
-- ax.*.ifeng.com
 - ax.120ask.com
 - ax.amnezia.org
 - ax.babe.today
@@ -62261,6 +62231,7 @@ domain_suffix_set:
 - bafybeiffpkay6l7heq55epccneb563p5chjzclxnso3vkozyorphlz6ana.ipfs.w3s.link
 - bafyiwdcpkbkk.online
 - bafyotramage.qpon
+- bag-glasses1.com
 - bag.emberpurse.com
 - bagabeshear.shop
 - bagaboo-bags.fr
@@ -62750,6 +62721,7 @@ domain_suffix_set:
 - bandedoppidum.cfd
 - bandelcot.com
 - bandengpea.cyou
+- bandgirlz.com
 - bandhorindwelt.cfd
 - bandhuninoxnonuse.cyou
 - bandicoot.mohit.dev
@@ -62858,7 +62830,6 @@ domain_suffix_set:
 - banner-media.ru
 - banner-online.nl
 - banner-rotation.com
-- banner.*.tccapis.com
 - banner.0catch.com
 - banner.101xp.com
 - banner.3ddownloads.com
@@ -63508,8 +63479,6 @@ domain_suffix_set:
 - batcherbuoying.shop
 - batcherg.com
 - batchhermichermicsecondly.com
-- batchlogging*-eu.truecaller.com
-- batchlogging*-noneu.truecaller.com
 - batchlogging4.truecaller.com
 - batchoamseeglo.net
 - batcoroadlinescorporation.com
@@ -63667,6 +63636,7 @@ domain_suffix_set:
 - baxofalis.com
 - baxotjdtesah.com
 - baxoulqfwfwcg.site
+- baxsound.com
 - baxt.mobi
 - baxtel.fr
 - baxtoneloppet.cfd
@@ -63822,6 +63792,7 @@ domain_suffix_set:
 - bbeljxm2dvwnfib.ru
 - bbepv.com
 - bbes.xyz
+- bbestmall.com
 - bbeyay41026.cn
 - bbfabeagadcfbjfbgh.ru
 - bbfasycx.com
@@ -64299,7 +64270,6 @@ domain_suffix_set:
 - bdcode.qinglue.com
 - bdcode.youke.com
 - bdcode1.haodou.com
-- bdcpro*.techweb.com.cn
 - bdcrihraly.com
 - bdcse.xyz
 - bdcuudklnavrn.net
@@ -64392,7 +64362,6 @@ domain_suffix_set:
 - bdl.xefyr.com
 - bdlexn.xyz
 - bdli.jacopomtl.com
-- bdlm*.hc360.com
 - bdlm.120askimages.com
 - bdlm1.hc360.com
 - bdlmggcs1.familydoctor.com.cn
@@ -64627,7 +64596,6 @@ domain_suffix_set:
 - beaconimages.netflix.net
 - beaconin2.notinote.me
 - beaconix.net
-- beacons*.gvt3.com
 - beacons-prod.fubo.tv
 - beacons-wxm0dh1cst4.stackpathdns.com
 - beacons.ads.fubo.tv
@@ -64718,20 +64686,283 @@ domain_suffix_set:
 - beat.yourtv.jp
 - beataekilts.help
 - beataverity.shop
+- beatbd.com
+- beatbydre2013.com
+- beatbydreheadphonesonsale.com
+- beatbydrekopen.com
+- beatbydremonster.com
+- beatbydreuk2014.com
 - beatchucknorris.com
+- beatdrdres.com
 - beateechafed.com
+- beatfactoryoutlets.com
 - beatforumsubstitute.com
 - beatifulapplabland.com
 - beatifulllhistory.com
 - beatingbytes.com
 - beatiperact.shop
 - beatlesachagefley.cyou
+- beatmonstersaustralia.net
 - beatricecandanceyd.com
 - beatricecathy.com
 - beatriceeatr.com
 - beatricenba.com
+- beats-by-dre-australia.com
+- beats-bydrdre.net
+- beats-bydre-mall.com
+- beats-bydrecheapsale.com
+- beats-bydreoutletonline.com
+- beats-bydreoutletsale.com
+- beats-bydreoutletsale.net
+- beats-bydreoutletssale.net
+- beats-bydrestore.com
+- beats-bydreuk.com
+- beats-deal.com
+- beats-dre-us.com
+- beats-headphones-buy-cheap.com
+- beats-headphones.us
+- beats-sale.com
+- beats-seller.com
+- beats-soaho.com
+- beats1.cc
+- beats1.cn
+- beats1.com.cn
+- beats1.tv
+- beats123.com
+- beats2.com.cn
+- beats4.cn
+- beats4.net
+- beats4outlets.com
+- beats4salecheap.com
+- beatsallsale.com
+- beatsaudifonos.com
+- beatsaudiobydre.com
+- beatsaudiobydre.net
+- beatsaudios.net
+- beatsbeatsmonster.com
+- beatsbestdeals.com
+- beatsblackfridaydeals.net
+- beatsblackfridayretails.com
+- beatsboxingdayuksale.com
+- beatsbydrdre-headphones.com
+- beatsbydrdre-officials5.com
+- beatsbydrdre-online.com
+- beatsbydrdre-onsale.com
+- beatsbydrdre-store.com
+- beatsbydrdre-store.us
+- beatsbydrdre4sale.com
+- beatsbydrdrebiz.com
+- beatsbydrdrecustom.com
+- beatsbydrdredanmark.com
+- beatsbydrdremall.com
+- beatsbydrdreoutlet.com
+- beatsbydrdres.com
+- beatsbydrdresale.net
+- beatsbydrdrestore.com
+- beatsbydrdreus.com
+- beatsbydre-beatsheadphone.com
+- beatsbydre-chen.com
+- beatsbydre-club.com
+- beatsbydre-headphones.com
+- beatsbydre-headphonesshop.com
+- beatsbydre-mall.com
+- beatsbydre-outlet.com
+- beatsbydre-outletsale.net
+- beatsbydre-outletstore.com
+- beatsbydre-sell.com
+- beatsbydre-store.com
+- beatsbydre-studio.com
+- beatsbydre-us.com
+- beatsbydre.jp
+- beatsbydre2081.com
+- beatsbydre411.com
+- beatsbydre4usales.com
+- beatsbydreauofficial.com
+- beatsbydreausale.net
+- beatsbydreaustralia-sale.com
+- beatsbydreaustraliaonline.com
+- beatsbydreaustraliaonlines.com
+- beatsbydreaustraliasales.com
+- beatsbydrebeatsby.com
+- beatsbydreblackfriday2013.com
+- beatsbydreblackfridaypro.com
+- beatsbydreboxingdayca.com
+- beatsbydrecasquesfr.com
+- beatsbydrecheap-outletstore.com
+- beatsbydrecheaper.com
+- beatsbydrecheaponlinesales.com
+- beatsbydrecolors.com
+- beatsbydrecustomwireless.com
+- beatsbydrecybermondaydeals2013.com
+- beatsbydrecybermondaydeals2013.net
+- beatsbydredanmarks.com
+- beatsbydredealsblackfriday.com
+- beatsbydredealscybermonday.com
+- beatsbydrediscount.com
+- beatsbydrediscountonline.net
+- beatsbydredr.com
+- beatsbydreexecutivesale.com
+- beatsbydreformall2013-nl.com
+- beatsbydreforsalesonline.com
+- beatsbydreforshop2013-nl.com
+- beatsbydreforstore.com
+- beatsbydreforyououtlet.com
+- beatsbydrefr.com
+- beatsbydrefrcasquepascher.com
+- beatsbydrefriday.com
+- beatsbydregot.com
+- beatsbydrehd.com
+- beatsbydrehd.net
+- beatsbydreheadphones-nz.com
+- beatsbydreheadphonesolo.com
+- beatsbydrehut.com
+- beatsbydreinexpensive.com
+- beatsbydreireland-sales.com
+- beatsbydreirelandonlines.com
+- beatsbydreirelandsale.com
+- beatsbydreirelandsonline.com
+- beatsbydremall2013.com
+- beatsbydremonsteraustralia.com
+- beatsbydrenls.com
+- beatsbydrenorge1.net
+- beatsbydreofficialdanmark.com
+- beatsbydreoksale.com
+- beatsbydreol.com
+- beatsbydreonlie2013-nl.com
+- beatsbydreonlines-ireland.com
+- beatsbydreonlines-uk.com
+- beatsbydreonlinesale-nz.com
+- beatsbydreoordopjes.com
+- beatsbydreoslo.com
+- beatsbydreoutletsale.com
+- beatsbydreoutletscheap.com
+- beatsbydrerealstore.com
+- beatsbydres-shop.com
+- beatsbydresale-uk.com
+- beatsbydresalemall2013.com
+- beatsbydresaleonlines-nz.com
+- beatsbydresales.us
+- beatsbydresalesonline-australia.com
+- beatsbydresdanmark.net
+- beatsbydreshop-uk.com
+- beatsbydreshops.net
+- beatsbydresingapores.com
+- beatsbydresingaporesale.com
+- beatsbydresold.com
+- beatsbydresolohdonline-canada.com
+- beatsbydresonline-nz.com
+- beatsbydrespeakers.com
+- beatsbydressale.com
+- beatsbydressolo.com
+- beatsbydresstudio.com
+- beatsbydrestorevip.com
+- beatsbydrestudio-australia.com
+- beatsbydrestudio.com
+- beatsbydretoutlet.com
+- beatsbydreuk.com
+- beatsbydreuk.net
+- beatsbydreus.com
+- beatsbydrevipde.com
+- beatsbydrew.com
+- beatsbydrsmonsterinusa.com
+- beatsbymusic.net
+- beatsbysdrbre.com
+- beatsbysdrdres.com
+- beatscasque-france.com
+- beatscheap-nz.com
+- beatscheap-uk.com
+- beatscheapforsale.com
+- beatscollection2014.com
+- beatscustomblackfriday.com
+- beatsdanmark2013.com
 - beatsderout.com
+- beatsdrdre-headphones.com
+- beatsdrdre-it.com
+- beatsdrdre-solo.com
+- beatsdrdre2014.com
+- beatsdrdrecuffie.net
+- beatsdrdrekaufenschweiz.net
+- beatsdrdreneon.com
+- beatsdre-monster.com
+- beatsdre.net
+- beatsdre4cheap.com
+- beatsdrecheap.com
+- beatsdredreheadphones.com
+- beatsdreforsale.com
+- beatsdreinau.com
+- beatsdremonster-uk.com
+- beatsdrenewcolorful4usale.com
+- beatsdreoutletsale.com
+- beatsdresale2013.com
+- beatsdresalestore.com
+- beatsdresolo2013.com
+- beatsdreus.com
+- beatsearbudsheadphoness.com
+- beatselectronic.net
+- beatselectronics.com
+- beatsep.cn
+- beatsep.com
+- beatsep.net
+- beatsfacstore.com
+- beatsfactoroutlets.com
+- beatsfactorycollection.com
+- beatsfactoryoutles.com
+- beatsforcheap-usa.com
+- beatsforme.com
+- beatsfranceofficiel.com
+- beatsheadphones-discount.com
+- beatsheadphones1.com
+- beatsheadphones2u.com
+- beatsheadphonesale.com
+- beatsheadphonesdealer.com
+- beatsheadphonesforcheap.net
+- beatsheadphonesonline.com
+- beatsheadphoness.com
+- beatsheadphonestudio.com
+- beatsheadphonesusamall.com
+- beatshopuk.com
 - beatsightcab.com
+- beatsincanada.com
+- beatsinsingapore.com
+- beatsireland.net
+- beatsjoy.com
+- beatsmonstersales.com
+- beatsmusic.com
+- beatsmusic.wang
+- beatsneon.com
+- beatsnzsale.com
+- beatsodre.com
+- beatsofdre-usa.com
+- beatsonblackfriday2013.com
+- beatsone.net
+- beatsoutlet.net
+- beatsoutletanytime.com
+- beatsoutletonlines.com
+- beatspascher-bydre.com
+- beatspascher-fr.net
+- beatspascher.net
+- beatspaschers.net
+- beatspillnewcolor.com
+- beatspills.com
+- beatspromonsterjp.com
+- beatspromotions.com
+- beatssales.com
+- beatssaleus.com
+- beatssaustraliabuy.com
+- beatssbyaustralia.com
+- beatssbydredanmark.com
+- beatsshop-uk.com
+- beatsshop-usa.com
+- beatsshopstore.com
+- beatssingapores.com
+- beatssingaporeshop.com
+- beatsstudiohodetelefoner.com
+- beatsstudiosite.com
+- beatstoreusa.com
+- beatsua.com
+- beatswholesale.us
+- beatswirelesscheap.com
+- beatswirelesscuffie.com
 - beauapparatus.com
 - beauartisticleaflets.com
 - beauismflavous.com
@@ -64940,7 +65171,6 @@ domain_suffix_set:
 - beegotou.net
 - beegrenugoz.com
 - beegruwhoazoa.net
-- beehiiv-adnetwork-production.s*.amazonaws.com
 - beehiveavertconfessed.com
 - beehivefestivesolve.com
 - beehivematty.top
@@ -65067,6 +65297,7 @@ domain_suffix_set:
 - beggingoppida.space
 - beggingrivulet.com
 - begiddl.bythint.uno
+- begin-trade.com
 - beginagency.cyou
 - beginbonaire.cfd
 - beginfrightsuit.com
@@ -65774,6 +66005,7 @@ domain_suffix_set:
 - bestareuneaved.cfd
 - bestaryua.com
 - bestaybuzzed.website
+- bestbeats4u.com
 - bestbiddingnovel.com
 - bestbitbank.co
 - bestbitcoinbank.net
@@ -65897,6 +66129,7 @@ domain_suffix_set:
 - bestsafefast.com
 - bestsecurepractice.com
 - bestshockers.com
+- bestshoesale2014.net
 - bestshoesboot.com
 - bestsizeservice.top
 - bestsmartvpn.com
@@ -66868,7 +67101,6 @@ domain_suffix_set:
 - bhzejltg.info
 - bhzsid.deghishop.it
 - bi-events-collector.spot.im
-- bi-eventtracker-*.amazonaws.com
 - bi-metrics.aramuz.net
 - bi-report.maxnapps.com
 - bi-tracker-global.rivergame.net
@@ -67233,6 +67465,7 @@ domain_suffix_set:
 - biijyuaeuzssw.online
 - biinnjyohmrk.com
 - biirmjnw.icu
+- biitii.com
 - bijisdikvmufo.online
 - bijitsoa.com
 - bijkemraly.com
@@ -67459,6 +67692,7 @@ domain_suffix_set:
 - binomo.com
 - binomo.in
 - binomo.info
+- binomo.vip
 - binomo1.com
 - binomo2.zendesk.com
 - binomoidr.com
@@ -67963,7 +68197,6 @@ domain_suffix_set:
 - bjk08251ip.com
 - bjk08260ip.com
 - bjk08261ip.com
-- bjkedv*.xyz
 - bjkejdex.com
 - bjknycplkbyse.site
 - bjkoi.incommonbeauty.com
@@ -68019,7 +68252,6 @@ domain_suffix_set:
 - bjshimgqbc.com
 - bjsncykyjctsbjxzx.cn
 - bjsr03odzu.com
-- bjsvp*.space
 - bjsvp35.space
 - bjtag.littlespoon.com
 - bjtel.cn
@@ -68283,6 +68515,8 @@ domain_suffix_set:
 - blackenterprise.black.news
 - blackentrue.com
 - blackfalcon5.net
+- blackfridaydrebeatsnew.com
+- blackfridaydrebeatsshop.com
 - blackhat.be
 - blackhattoolz.com
 - blackhead35.com
@@ -68768,6 +69002,7 @@ domain_suffix_set:
 - bloodyfrighten.com
 - blooks.info
 - bloom331.top
+- bloommicroventures.com
 - bloomreach.co
 - bloomsend.com
 - bloomsgoas.com
@@ -70113,6 +70348,7 @@ domain_suffix_set:
 - bookodus.xyz
 - bookofkisl.com
 - bookofsex.com
+- bookonsky.net
 - bookpdf.services
 - bookpostponemoreover.com
 - bookprobe.com
@@ -70368,6 +70604,7 @@ domain_suffix_set:
 - boss-www.com
 - boss.berlinonline.de
 - boss.openapp.link
+- bossae.com
 - bossageagree.com
 - bossboymormyr.help
 - bossdescendentrefer.com
@@ -71249,6 +71486,8 @@ domain_suffix_set:
 - brandarium.net
 - brandclik.com
 - branddnewcode1.me
+- brandeasygo.com
+- brandelectronic.com
 - branding.catalystb2b.com
 - brandlabs.ai
 - brandlock.io
@@ -71257,6 +71496,7 @@ domain_suffix_set:
 - brandnewsnorted.com
 - brandomatic.ru
 - brandonalister.com
+- brandproducts1688.com
 - brandreachsys.com
 - brands.cambrio.com
 - brands.datahc.com
@@ -71264,6 +71504,7 @@ domain_suffix_set:
 - brands.lookfantastic.com
 - brands.newst.dnsabr.com
 - brands.picklebutnotcucumber.com
+- brands098.com
 - brandscallioncommonwealth.com
 - brandsfive.com
 - brandshow.58.com
@@ -71963,7 +72204,6 @@ domain_suffix_set:
 - browsekeeper.com
 - browsepantartful.com
 - browser-fp.production.linktr.ee
-- browser-intake-*-datadoghq.com
 - browser-intake-datadoghq.com
 - browser-intake-datadoghq.eu
 - browser-intake-ddog-gov.com
@@ -73268,6 +73508,7 @@ domain_suffix_set:
 - businesstremendoushad.com
 - businessupdater.com
 - businessvideonews.com
+- businesswebwise.com
 - busions.com
 - buskerreshoes.website
 - busketmating.qpon
@@ -73427,6 +73668,7 @@ domain_suffix_set:
 - buy-cialis-online.iscool.nl
 - buy-cialis.splinder.com
 - buy-fioricet.hut1.ru
+- buy-from-shanghai.com
 - buy-hydrocodone.aca.ru
 - buy-hydrocodone.este.ru
 - buy-lortab-online.iscool.nl
@@ -73452,8 +73694,14 @@ domain_suffix_set:
 - buyagift.fr
 - buyairabreeze-ss.topashopo.com
 - buyandfun.review
+- buybeatsbydre-uk.com
+- buybeatsheadphonesbydre.com
 - buyblotch.com
 - buyboxershort3contactshop.click
+- buycheapbeatsbus.com
+- buycheapbeatsbydre.com
+- buycheapbeatsbydreshop.com
+- buycheapbeatsdreuk.com
 - buycheaphost.net
 - buycialisonline.7h.com
 - buycleanlix-ss.olladeals.com
@@ -73461,6 +73709,7 @@ domain_suffix_set:
 - buycredifence-ss.checkoutera.com
 - buydee.org
 - buydelief-ss.olladeals.com
+- buydrdrebeatbox.com
 - buydubuy.com
 - buyduro-ss.checkoutera.com
 - buyeasy.by
@@ -73485,10 +73734,12 @@ domain_suffix_set:
 - buylortabonline.7h.com
 - buylumenlight-ss.checkoutera.com
 - buymaxfield.com
+- buyminibeatbox.com
 - buynanopolix-ss.dealshopa.com
 - buynurafix-ss.offeroshop.com
 - buynuroclean-sst.dealshopa.com
 - buyomnihear-ss.checkoutera.com
+- buyonlineheadphones.com
 - buyorselltnhomes.com
 - buypaxilonline.7h.com
 - buypbq.parsley.kr
@@ -73502,6 +73753,7 @@ domain_suffix_set:
 - buysellads.com
 - buysellads.net
 - buyseoblog.com
+- buyshoponly.com
 - buysleepzee-ss.primeshopers.com
 - buysyngas-ss.primeshopers.com
 - buyt.in
@@ -73624,6 +73876,7 @@ domain_suffix_set:
 - buzzard.donotresearch.net
 - buzzard.ficabo.com.au
 - buzzardcraizey.com
+- buzzardflapper.com
 - buzzazone.com
 - buzzbuttons.com
 - buzzcity.net
@@ -74105,6 +74358,7 @@ domain_suffix_set:
 - byazjr.vangils.eu
 - byb.bybenson.com
 - bybastiodoner.com
+- bybeatsdre.com
 - bybmahbyaidix.com
 - bybmfntv.xyz
 - bybnjqlujudhm.site
@@ -74131,6 +74385,7 @@ domain_suffix_set:
 - bydhemo.dibyter.uno
 - bydonline.com
 - bydpbpjtbsfta.online
+- bydrebeats.com
 - bydst.com
 - bydurantr.com
 - bydusclopsa.com
@@ -74419,7 +74674,6 @@ domain_suffix_set:
 - bzzmlqkljyer.top
 - bzzoedvaxpaeu.space
 - bzzvahnd.chapeudeviagem.com.br
-- c*hit.zerkalo.io
 - c-123milhas.shop
 - c-4fambt.com
 - c-5uwzmx78pmca09x24aiux2euavx2ekwu.g00.msn.com
@@ -75804,6 +76058,7 @@ domain_suffix_set:
 - can.cleaningpros.ca
 - canaanlungee.com
 - canaceetalipot.cyou
+- canada-beatsbydre.com
 - canada.deloitte-digital-engage.adobesandbox.com
 - canada.postcanadakxcif.top
 - canada.postcanadantwb.top
@@ -77202,6 +77457,7 @@ domain_suffix_set:
 - cashpartners.eu
 - cashprom.ru
 - cashreportz.com
+- cashspacex.org
 - cashstaging.me
 - cashthat.com
 - cashtrafic.com
@@ -77243,6 +77499,20 @@ domain_suffix_set:
 - caspervisiveogor.cyou
 - caspion.com
 - caspionlog.appspot.com
+- casque-fr.com
+- casquebeatsbydrdresolohd.com
+- casquebeatsdocteurdre.com
+- casquebeatsdre2013.com
+- casquebeatsenligne.com
+- casquebeatsfracheter.com
+- casquebeatsmer.net
+- casquebeatsofficiel-fr.com
+- casquebeatspascher2013.com
+- casquebeatssolo.net
+- casquedrdrebeatssfr.com
+- casquemonsterbeats.com
+- casquemonsterbeatsbydre2013.com
+- casquesbeatsaudio.com
 - casquesnookie.top
 - cassatabayard.com
 - cassatp.pacificregister.com
@@ -78230,7 +78500,6 @@ domain_suffix_set:
 - cdmnmrgwdltpe.site
 - cdmxgkjxfwpww.online
 - cdmyeg.xyz
-- cdn-*.gravityfield.ai
 - cdn-10049480.file.myqcloud.com
 - cdn-4k-webp.site
 - cdn-99-pic.cc
@@ -78987,7 +79256,6 @@ domain_suffix_set:
 - cdzimeijia.com
 - cdzjqz.gratis.com.tr
 - cdzobd.ateliergs.fr
-- ce-global-track-*.amazonaws.com
 - ce-is-gtm.byu.edu
 - ce-marketing.fr
 - ce.adsdomaintracking.com
@@ -80281,7 +80549,6 @@ domain_suffix_set:
 - chassirsaud.com
 - chastehandkerchiefclassified.com
 - chasterkonyak.com
-- chat*-ce.chatdealer.jp
 - chat-o-live.com
 - chat-server.maverickpreviews.com
 - chat.amplify.ai
@@ -80385,6 +80652,8 @@ domain_suffix_set:
 - cheakjovz.com
 - cheap-adipex.hut1.ru
 - cheap-ads.net
+- cheap-beats-by-dre.net
+- cheap-beatsbydre.com
 - cheap-celebration.pro
 - cheap-dump.pro
 - cheap-jewelry-online.com
@@ -80393,12 +80662,52 @@ domain_suffix_set:
 - cheap-web-hosting-here.blogspot.com
 - cheap-xanax-here.blogspot.com
 - cheapapartmentsaroundme.com
+- cheapbagshoes.com
+- cheapbeats.us
+- cheapbeats365.com
+- cheapbeats4sale.net
+- cheapbeatsaustraliasale.com
+- cheapbeatsbus.com
+- cheapbeatsbydr.com
+- cheapbeatsbydrdrepro.com
+- cheapbeatsbydre-au.com
+- cheapbeatsbydre99.com
+- cheapbeatsbydrefau.com
+- cheapbeatsbydremall.com
+- cheapbeatsbydremonster.com
+- cheapbeatsbydrenz.net
+- cheapbeatsbydreonsale.com
+- cheapbeatsbydreoutlet-nz.com
+- cheapbeatsbydreoutlet.com
+- cheapbeatsbydreoutlets2013.com
+- cheapbeatsbydresale.com
+- cheapbeatsbydreshop.com
+- cheapbeatsbydrestudioedition.com
+- cheapbeatsbydrestudioutlet.com
+- cheapbeatsdrdresolo.com
+- cheapbeatsdrestudios.com
+- cheapbeatsheadphone2014.com
+- cheapbeatsheadphones.us
+- cheapbeatsie.com
+- cheapbeatsla.com
+- cheapbeatssale4u.com
+- cheapbeatsshopbydre.com
 - cheapcinema.club
 - cheapcoveringpearl.com
+- cheapcustombeatsbydre.com
+- cheapdrdrebeats8.com
+- cheapdrdrebeatsca.com
+- cheapdrebeats8.net
 - cheapenleaving.com
+- cheaperbeatsbydresale.com
 - cheaperelbows.com
 - cheaperredressrationally.com
+- cheapestbeatsdrdre.com
 - cheaphat.pro
+- cheapheadphonesland.com
+- cheapheadphonessale.com
+- cheapheadsetmall.com
+- cheapheadsetshop.com
 - cheapiefriseur.cfd
 - cheaplow.pro
 - cheaplycreateproprietor.com
@@ -80406,9 +80715,19 @@ domain_suffix_set:
 - cheaplyovernew.cfd
 - cheaplyregainthrift.com
 - cheapmachinerywail.com
+- cheapmonsterbeatsbydrdre.com
+- cheapmonsterbeatsheadsets.com
+- cheapmonsterbeatssale.com
+- cheapmonsterbeatsusa.us
+- cheapmonstersbeatsonsale.com
+- cheapnewbeatsbydre.com
 - cheappollution.pro
 - cheapromaunt.com
+- cheapsalemonster.com
+- cheapshoesvip.com
 - cheaptop.ru
+- cheapwireless04.com
+- cheapwirelessbeats.com
 - cheapxanax.hut1.ru
 - cheat-on.com
 - cheateecronus.com
@@ -80560,6 +80879,7 @@ domain_suffix_set:
 - cheersdeerpawn.com
 - cheerseeftapps.com
 - cheersoolrato.net
+- cheerwholesale.us
 - cheery-orange.pro
 - cheery-pain.pro
 - cheeryburn.pro
@@ -80824,6 +81144,7 @@ domain_suffix_set:
 - chiffrerums.top
 - chiglees.com
 - chigogloaweth.net
+- chihair-straightener.com
 - chihiro.nostalgie.fr
 - chihuahuadoorstoppond.com
 - chihuoguo.me
@@ -80909,6 +81230,7 @@ domain_suffix_set:
 - chinabiwin.hk
 - chinachooses.com
 - chinaciaf.org
+- chinaclothesstore.com
 - chinacontraryintrepid.com
 - chinacsky.com
 - chinae.mobi
@@ -81539,6 +81861,7 @@ domain_suffix_set:
 - cialis.4.p2l.info
 - cialis.ourtablets.com
 - ciarde.fun
+- ciattackers.com
 - ciattedrof.ru
 - ciazdymfepv.com
 - cibariarodolph.help
@@ -81947,7 +82270,6 @@ domain_suffix_set:
 - cj-cy.com
 - cj.com
 - cj.qidian.com
-- cj1*.online
 - cj1.256.cc
 - cj2015.drywear.dk
 - cj23z881ptx1nqwctfhlt5ybtxzw8uz.cfd
@@ -83086,7 +83408,6 @@ domain_suffix_set:
 - clickguardian.co.uk
 - clickhere.ru
 - clickhereforcellphones.com
-- clickhouse-collector.*.prod.plat.agency
 - clickhubs.com
 - clicki.cn
 - clickidate.site
@@ -83219,7 +83540,6 @@ domain_suffix_set:
 - clicksotrk.com
 - clickspring.net
 - clickstatsview.earnmoneycasinos.com
-- clickstream-*.homedepot.com
 - clickstream.co.za
 - clickstream.cresendo.net
 - clickstream.sberbank.ru
@@ -83310,7 +83630,6 @@ domain_suffix_set:
 - client.midosoo.com
 - client.rave-api.com
 - client.rottne.com
-- client.rum.*.amazonaws.com
 - client.show.qq.com
 - client.sidesearch.lycos.com
 - client.smartpushedm.com
@@ -83642,7 +83961,6 @@ domain_suffix_set:
 - clodyields.com
 - cloesfleing.com
 - cloffdigeny.click
-- clog*.yuanfudao.com
 - clog.geniex.com
 - clog.go.com
 - clog.lghv.net
@@ -84115,6 +84433,7 @@ domain_suffix_set:
 - cm65.com
 - cm8.co-motion.ca
 - cm8.lycos.com
+- cma88.vip
 - cmacnumpcaoe.com
 - cmads.sv.publicus.com
 - cmads.us.publicus.com
@@ -84174,6 +84493,7 @@ domain_suffix_set:
 - cmgjqqu.cn
 - cmgpeeexadmwb.site
 - cmh2pw.com
+- cmhalq.com
 - cmhmpr.lolaliza.com
 - cmhokiknvamu.xyz
 - cmhomlaipa.com
@@ -84607,6 +84927,7 @@ domain_suffix_set:
 - cnscdj.com
 - cnshef.com
 - cnshiw2.com
+- cnshopin.com
 - cnsjx.net
 - cnskyline.top
 - cnstats.cdev.eu
@@ -85297,7 +85618,6 @@ domain_suffix_set:
 - collationuppermodel.com
 - colleable.info
 - collecl.cc
-- collect-elb-*.amazonaws.com
 - collect-metrics.aquro.com
 - collect-vsl.safetias.online
 - collect.4gtv.tv
@@ -85592,10 +85912,6 @@ domain_suffix_set:
 - collectiveaudience.co
 - collectivequestioningcompartment.com
 - collectloopblown.com
-- collector*.ex.co
-- collector-*.luigisbox.com
-- collector-*.px-cdn.net
-- collector-*.px-client.net
 - collector-1.ex.co
 - collector-analytics.efigence.com
 - collector-api.99designs.com
@@ -85840,6 +86156,7 @@ domain_suffix_set:
 - com-auth.site
 - com-bank.xyz
 - com-cloud.co
+- com-coordinates.info
 - com-eonsun-owl-user.oss-cn-hangzhou.aliyuncs.com
 - com-eonsun-owl.oss-cn-hangzhou.aliyuncs.com
 - com-online.website
@@ -88142,6 +88459,7 @@ domain_suffix_set:
 - coollyadmissibleclack.com
 - coolmirage.com
 - coolmobile.es
+- coolmonster.net
 - coolnay.com
 - coolnesswagplead.com
 - coolnovelties.co.uk
@@ -88796,7 +89114,6 @@ domain_suffix_set:
 - countenancedrykeeper.com
 - countenancepeculiaritiescollected.com
 - countenancetiring.com
-- counter*-yadro*-ru.unblocked.lol
 - counter-city.de
 - counter-go.de
 - counter-gratis.com
@@ -89253,6 +89570,7 @@ domain_suffix_set:
 - cozknoyqklnjd.online
 - cozmuskets.qpon
 - cozovoids.shop
+- cozydrdrebeats.com
 - cozydusk.com
 - cozyforestglade.com
 - cozyhillside.com
@@ -89636,6 +89954,7 @@ domain_suffix_set:
 - cqcaoltqtarmz.space
 - cqccwsdgaphae.site
 - cqcktg.adlerwerbegeschenke.de
+- cqcorea.com
 - cqcounter.com
 - cqcpazetvhaso.website
 - cqcsvgiryffsf.online
@@ -90058,7 +90377,6 @@ domain_suffix_set:
 - createsgummous.com
 - createssque.club
 - creationpartnershipputrescent.com
-- creative*.bidease.com
 - creative-bars1.com
 - creative-bunny.bidease.com
 - creative-cdn.appgrowth.com
@@ -91718,6 +92036,7 @@ domain_suffix_set:
 - cufcw.com
 - cuferxmtvifnu.com
 - cuffedpil.cfd
+- cuffiesaldi.com
 - cuffinliever.shop
 - cuffleverdunshipman.cyou
 - cuffyfoxery.cyou
@@ -92205,6 +92524,12 @@ domain_suffix_set:
 - customapi.top
 - customarydesolate.com
 - customaryprevention.com
+- custombeatsbydrebuy.com
+- custombeatsdeals.com
+- custombeatsforcheap.com
+- custombeatsny.com
+- custombeatssbydreus.com
+- customdrdrebeats.com
 - customer-engagement.verintsystemsinc.com
 - customer-security.online
 - customer.autos
@@ -92229,7 +92554,6 @@ domain_suffix_set:
 - customerconversio.com
 - customerevents.dradis.netflix.com
 - customerevents.netflix.com
-- customerevents.us-east-*.internal.dradis.netflix.com
 - customerexperience.verintsystemsinc.com
 - customeriomail.codecademy.com
 - customeriomail.com
@@ -92247,6 +92571,9 @@ domain_suffix_set:
 - customersupport.click
 - customfingerprints.bablosoft.com
 - customize.titanfactorydirect.com
+- customizedbeatbydre.com
+- customizedbeatsbydre.com
+- customizedbeatsdre.com
 - customizerbox.com
 - customsalternative.com
 - customsboysint.com
@@ -92875,6 +93202,7 @@ domain_suffix_set:
 - cyberfaery.com
 - cyberfluxer.com
 - cyberlink.pro
+- cybermondaybeats4sale.com
 - cybermonitor.com
 - cybernetentertainment.com
 - cyberpanel.fr
@@ -93104,7 +93432,6 @@ domain_suffix_set:
 - cz4444.cn
 - cz5f.top
 - cz9k8b.top
-- cza*.crazygames.com
 - cza.crazygames.com
 - czabtzbcciqyn.space
 - czamfgpnexsxo.vip
@@ -93278,8 +93605,6 @@ domain_suffix_set:
 - czzdf.com
 - czzhejnrhgtsc.site
 - czzpv.iowtomatoes.co.uk
-- d*.ruiwen.com
-- d*.xinshipu.com
 - d-064.com
 - d-1.co
 - d-agency.net
@@ -96236,6 +96561,7 @@ domain_suffix_set:
 - dane.maratonska49.pl
 - dane.pryncypalna66.pl
 - dane.scortea.pl
+- danemarket.com
 - danesbasques.shop
 - daneshin.ir
 - danesuffocate.com
@@ -96295,6 +96621,7 @@ domain_suffix_set:
 - dankjbdw.xelvin.nl
 - danksvgpkxvmh.online
 - dankulavius.com
+- danmarkbeatsbydrdre.com
 - danmeneldur.com
 - danmounttablets.com
 - dannockquenda.shop
@@ -99135,7 +99462,6 @@ domain_suffix_set:
 - data-sst.florianhorsefood.nl
 - data-stream.level.agency
 - data-stream.lindenwood.edu
-- data-track*.yingxiong.com
 - data-track.yingxiong.com
 - data-us.hilo.com
 - data-www-weaver.wanted.co.kr
@@ -102495,8 +102821,6 @@ domain_suffix_set:
 - datacollect.cisco.com
 - datacollection.adelaideuni.edu.au
 - datacollection.sharmusic.com
-- datacollector-*.dt.dbankcloud.cn
-- datacollector-*.dt.hicloud.com
 - datacollector-dra.dt.dbankcloud.cn
 - datacollector-dra.dt.hicloud.com
 - datacoral.com
@@ -103461,6 +103785,7 @@ domain_suffix_set:
 - dcsvf.xtratuf.com
 - dcsxv.com
 - dct.mango-office.ru
+- dctbeatsbydre.com
 - dctkmqbrppqef.space
 - dctkubltpbtt.com
 - dctracking.com
@@ -103835,6 +104160,7 @@ domain_suffix_set:
 - deals.ledgertranscript.com
 - deals.macupdate.com
 - deals.tamwenak.com
+- dealsbeatsblackfriday.com
 - dealsfor.life
 - dealspure.com
 - dealswarm.com
@@ -105295,6 +105621,7 @@ domain_suffix_set:
 - detailsinspiration-data.com
 - detailyesgrip.com
 - detainstockingskaleidoscope.com
+- detaliczny.com
 - detaph.com
 - detarbureaux.qpon
 - detarkepisworsle.cyou
@@ -105531,8 +105858,6 @@ domain_suffix_set:
 - deviatetracking.com
 - device-api.asnapieu.com
 - device-messaging-na.amazon.com
-- device-metrics-*.amazon.com
-- device-metrics-us*.amazon.com
 - device-metrics-us-2.amazon.com
 - device-metrics-us.amazon.com
 - device-provisioning.googleapis.com
@@ -107559,6 +107884,8 @@ domain_suffix_set:
 - discount.s3blog.org
 - discount63.top
 - discountads.net
+- discountbeatsbydre-us.com
+- discountbeatsstore.com
 - discountclick.com
 - discounthoneywell.com
 - discountminds.com
@@ -107617,7 +107944,6 @@ domain_suffix_set:
 - discovermustystarter.com
 - discovernative.com
 - discovertrail.net
-- discovery-ios-*.ertelecom.ru
 - discovery-script.newspic.kr
 - discovery.newspic.kr
 - discoveryad.castoola.tv
@@ -107833,7 +108159,6 @@ domain_suffix_set:
 - dispersereversewanderer.com
 - displacecanes.com
 - displaceprivacydemocratic.com
-- display-ad-*.kgslb.com
 - display.360totalsecurity.com
 - display.adhudong.com
 - display.cdnbucket.com
@@ -108185,7 +108510,6 @@ domain_suffix_set:
 - dj.1688.com
 - dj.renren.com
 - dj09j5u.cn
-- dj1*.online
 - dj1.baidu.com
 - dj2550.com
 - dj4odketdva9s.cloudfront.net
@@ -108360,6 +108684,7 @@ domain_suffix_set:
 - dkasffredf.xyz
 - dkattqczpqtsi.site
 - dkaudw.celltrionbeauty.com
+- dkbeatsbydre.com
 - dkbgcxltwljdua.com
 - dkbicq.elektramat.nl
 - dkbplndtgstzj.site
@@ -108795,7 +109120,6 @@ domain_suffix_set:
 - dlzuocvcjdqvq.space
 - dlzxazsvocjfy.online
 - dlzxjk.cn
-- dm*.yxlady.com
 - dm-event.net
 - dm-hl.toutiao.com
 - dm-target.fishersci.com
@@ -109093,7 +109417,6 @@ domain_suffix_set:
 - dmzls.safe-installation.com
 - dmztm.varley.com
 - dmzzshfbluwnn.website
-- dn*.ixinwei.com
 - dn-growing.qbox.me
 - dn.cydno.co.uk
 - dn.dailyneed.org
@@ -110925,6 +111248,7 @@ domain_suffix_set:
 - drbbzzs.xyz
 - drbccw04ifva6.cloudfront.net
 - drbcvhhcqdec.com
+- drbeatsukmart.com
 - drbsliemurknv.website
 - drbtcjprbqkhj.site
 - drbwugautcgh.com
@@ -110942,6 +111266,25 @@ domain_suffix_set:
 - drdevelopmentcolor.com
 - drdgpyhytqtnh.website
 - drdnuabuibrgt.site
+- drdre-beats.com
+- drdrebeats-chen.com
+- drdrebeats-headphone.com
+- drdrebeats-usa.com
+- drdrebeatsale.com
+- drdrebeatsbillig.com
+- drdrebeatsdesale.com
+- drdrebeatsdiscount.com
+- drdrebeatsforu.com
+- drdrebeatsretail2013.com
+- drdrebeatssale7.com
+- drdrebeatsuk.com
+- drdrefnac.com
+- drdreheadphonebeats.com
+- drdreheadphonekey.com
+- drdreheadphonesusstore.com
+- drdremonster-beats.com
+- drdremonsterdre.com
+- drdreprobeatssale.com
 - drdwy.com
 - dre.dreamkue.com
 - dre81lzpy0s7q.cloudfront.net
@@ -111006,6 +111349,34 @@ domain_suffix_set:
 - drearyflower.pro
 - drearymessage.pro
 - drearypassport.com
+- drebeats-australia.com
+- drebeats-france.com
+- drebeats-monster.com
+- drebeats-monsteraustralia.com
+- drebeats-monsterusa.com
+- drebeats-singapore.com
+- drebeats-singapore.net
+- drebeats-singaporecheap.com
+- drebeats-singaporecheap.net
+- drebeats-solo.com
+- drebeats-studio.com
+- drebeatsaustralia-cheap.com
+- drebeatsaustralia-cheap.net
+- drebeatsbuy.com
+- drebeatsbydreoutlet.com
+- drebeatscanada.com
+- drebeatsdeutschland.net
+- drebeatsforsaleus.com
+- drebeatsheadphones-nz.com
+- drebeatshome.com
+- drebeatsoldes.com
+- drebeatsoutletstore.com
+- drebeatspill.com
+- drebeatssite.com
+- drebeatssolocybermondaysale.com
+- drebeatsstudio2013.com
+- drebeatstudio.com
+- drebyby.com
 - drebz4f.shop
 - drecentreshu.info
 - drechecelosia.qpon
@@ -111025,6 +111396,7 @@ domain_suffix_set:
 - drem.site
 - dremdwbfeofrb.site
 - dremlloves.com
+- dremonsterbeatsoutlets.com
 - dremp.xyz
 - drenastheycam.com
 - drenchdeprivation.com
@@ -111035,6 +111407,8 @@ domain_suffix_set:
 - drepanevealy.uno
 - drepjwyjagsl.com
 - dreport.meituan.net
+- dreprobeats.com
+- dreprofy.com
 - dress.stylooutfitsbd.com
 - dressceaseadapt.com
 - dressedfund.com
@@ -112283,6 +112657,7 @@ domain_suffix_set:
 - dtscdn.com
 - dtscout.com
 - dtsedge.com
+- dtsell.com
 - dtsjajmvjdghy.website
 - dtspdlfgfnmfa.online
 - dtssrv.com
@@ -114887,6 +115262,7 @@ domain_suffix_set:
 - earnvids05032026.shop
 - earopro-ss.checkoutera.com
 - earphonescharornament.com
+- earphonescheapest.com
 - earphonespulse.com
 - earplugmolka.com
 - earringprecaution.com
@@ -115466,6 +115842,7 @@ domain_suffix_set:
 - eburnahornito.shop
 - ebusgamgwrxig.site
 - ebutiseemedlikeal.xyz
+- ebuyheadphones.com
 - ebuyy.shop
 - ebuzzing.com
 - ebuzzing.it
@@ -115691,7 +116068,6 @@ domain_suffix_set:
 - ecomgxh.kuwo.cn
 - ecomicrolab.com
 - ecomm.events
-- ecommerce-events*.adscale.com
 - ecommerce-events.adscale.com
 - ecommerce.datatrics.com
 - ecommerce.fluidofactory.com
@@ -116928,7 +117304,6 @@ domain_suffix_set:
 - efklkkkvkukf.com
 - efkwuqgwfkloq.website
 - eflbruwqt.ru
-- eflbundles.*.com.tr
 - eflewandatnig.org
 - eflewroundand.com
 - efljvtbtvlypv.online
@@ -117530,7 +117905,6 @@ domain_suffix_set:
 - eizzih.com
 - ej.progresas.lt
 - ej.tincheldeluce.com
-- ej1*.online
 - ej2ugx2kar.eload.io
 - ej65.xyz
 - ej8f5vk381.com
@@ -121531,6 +121905,7 @@ domain_suffix_set:
 - esauwoan.com
 - esawbynaavjmi.online
 - esawuervlpptj.com
+- esbeatsbydrebuy.com
 - esbeginnyweakel.org
 - esblddalwqvfj.space
 - esbqetmmejjtksa.xyz
@@ -122046,6 +122421,7 @@ domain_suffix_set:
 - ethaistoothi.com
 - ethalojo.com
 - ethandataserver.love
+- etheadphones.com
 - etheappyrince.com
 - etheappyrincea.info
 - etheappyrincerta.com
@@ -122821,8 +123197,6 @@ domain_suffix_set:
 - event-tracking.deliverr.com
 - event-tracking.hellohealthgroup.com
 - event-us.ssp.taxssp.com
-- event.*.karrotmarket.com
-- event.*.shoplive.cloud
 - event.aieverythingabudhabi.com
 - event.aieverythingegypt.com
 - event.aimailhome.io
@@ -122970,9 +123344,7 @@ domain_suffix_set:
 - eventremised.shop
 - eventrhina.com
 - eventriansieusao.com
-- events-*.op.hicloud.com
 - events-analytics.hotstar.com
-- events-api*.outfit7.com
 - events-api.gazetadopovo.com.br
 - events-api.lyrebirdstudio.net
 - events-api.negocedespros.com
@@ -123757,7 +124129,6 @@ domain_suffix_set:
 - ex1tp.com
 - ex6.ru
 - ex8.lostporntube.com
-- exaapi.com
 - exaccess.ru
 - exacdn.com
 - exact.purify-waters.com
@@ -124944,7 +125315,6 @@ domain_suffix_set:
 - f-counter.net
 - f-emc.ngsp.gov.vn
 - f-hgwmesh.buzz
-- f-log-*.grammarly.io
 - f-log-at.grammarly.io
 - f-log-extension.grammarly.io
 - f-log-mobile-ios.grammarly.io
@@ -125486,8 +125856,6 @@ domain_suffix_set:
 - fadrewols.com
 - fadrovoo.xyz
 - fadrvppkhuhdhs.com
-- fads*s.com
-- fads*z.com
 - fads315.com
 - fadsabs.com
 - fadsans.com
@@ -125827,6 +126195,7 @@ domain_suffix_set:
 - famobmf.com
 - famoot.com
 - famorlymal.com
+- famosascalvas.com
 - famountsuref.site
 - famoury.com
 - famous-line.pro
@@ -125934,7 +126303,6 @@ domain_suffix_set:
 - fanonzuni.cfd
 - fanossheol.shop
 - fanpapers.com
-- fanpingbi*.gaokao.com
 - fanplayr.com
 - fanqianbb.com
 - fans.bestvogue.com
@@ -126080,8 +126448,6 @@ domain_suffix_set:
 - farmmandatehaggard.com
 - farmoutuvulas.qpon
 - farmyengrail.top
-- faro-collector-*.grafana-ops.net
-- faro-collector-prod-*.grafana.net
 - faro-collector-prod-eu-west-0.grafana.net
 - faroff-age.pro
 - faroff-painting.pro
@@ -129081,6 +129447,7 @@ domain_suffix_set:
 - findmatchhub.com
 - findmenow.info
 - findmy-status.com
+- findmybeats.com
 - findnam.xyz
 - findnewline.com
 - findnsave.idahostatesman.com
@@ -129342,7 +129709,6 @@ domain_suffix_set:
 - firearmtire.com
 - firebanner.com
 - firebasedynamiclinks.googleapis.com
-- firebaselogging-*.googleapis.com
 - firebaselogging-pa.googleapis.com
 - firebaselogging.googleapis.com
 - fireboxarborer.com
@@ -130700,8 +131066,6 @@ domain_suffix_set:
 - fluoxetine.1.p2l.info
 - fluqualificationlarge.com
 - flurrdid.top
-- flurry.agentportal-*.yahoodns.net
-- flurry.agentportal.*.yahoodns.net
 - flurry.cachefly.net
 - flurry.com
 - flurryad.com
@@ -132709,6 +133073,7 @@ domain_suffix_set:
 - fqzouodvgiqub.website
 - fqzwlexhffkpg.website
 - fqzxecinpjuws.space
+- fr-beatsbydrestore.com
 - fr-fr.siemensplmevents.com
 - fr-go.experian.com
 - fr-go.kelkoogroup.net
@@ -132790,6 +133155,7 @@ domain_suffix_set:
 - fran.pro
 - france.alphabet.com
 - francebootball.fr
+- francecasquebeatssolde.com
 - francegave.com
 - francelbleu.fr
 - franceswaps.com
@@ -132888,6 +133254,7 @@ domain_suffix_set:
 - frbyvuxzvmqpb.com
 - frbzojrsotdov.space
 - frc.redcross.fi
+- frcasquesbeats.com
 - frchavvati.com
 - frcinpdv.com
 - frcjf.myshoptopia.com
@@ -132962,6 +133329,7 @@ domain_suffix_set:
 - fredlx.skinnypig.xyz
 - fredmoresco.com
 - free-4paid.com
+- free-aa.com
 - free-adult-games.com
 - free-box.fr
 - free-cdn.oss-cn-shanghai.aliyuncs.com
@@ -132977,6 +133345,7 @@ domain_suffix_set:
 - free-hit-counters.net
 - free-money.host.sk
 - free-rc.com
+- free-sns.com
 - free-surfers.com
 - free-website-hit-counters.com
 - free-website-statistics.com
@@ -133201,6 +133570,7 @@ domain_suffix_set:
 - frequestabure.site
 - frereadayobq.com
 - frescozoilean.cfd
+- freser.info
 - fresh-kind.com
 - fresh-video.com
 - fresh-watch.pro
@@ -133373,6 +133743,7 @@ domain_suffix_set:
 - friscobarchan.help
 - friseurash.com
 - friseurataraxy.cfd
+- frishoes.com
 - frisiansnoutedpuka.cyou
 - friskbiscuit.com
 - friskerweed.cfd
@@ -135780,8 +136151,6 @@ domain_suffix_set:
 - gadmagckfy.com
 - gadnsohyud.com
 - gadqsrxurvtd.com
-- gads*s.com
-- gads*z.com
 - gads.goldebet.bet.br
 - gads.homecompany-moebel.com
 - gadsabs.com
@@ -136097,6 +136466,7 @@ domain_suffix_set:
 - gameanalytics.com
 - gamebaidoithuong2021.com
 - gameball.co
+- gamebeforethegame.com
 - gamebooster.lionmobi.com
 - gamebox.kugou.com
 - gamecenter.iqiyi.com
@@ -136903,7 +137273,6 @@ domain_suffix_set:
 - gbwlffzxdydoz.space
 - gbwnpchivh.com
 - gbwzrcymfmvym.bid
-- gbxreport-*.wf.com
 - gbxvvcynqbzxb.site
 - gbycurodiydutdb.xyz
 - gbylaoajzugbgj.com
@@ -137113,7 +137482,6 @@ domain_suffix_set:
 - gcvns12jp.com
 - gcvrairjrposm.website
 - gcvxhwgvpwpyv.online
-- gcw*.2liang.cn
 - gcwbg.l2wf6uxn3jgfj6yf.cyou
 - gcwccvwzrzdvv.site
 - gcwdq.com
@@ -137814,9 +138182,6 @@ domain_suffix_set:
 - geolantis.fr
 - geolcornin.cfd
 - geolid.com
-- geoloc*.9cd47096ab1495d8d3b18667f6a52b9c.com
-- geoloc*.geo20120530.com
-- geoloc*.geostats.ovh
 - geoloc.yospace.com
 - geolocation-db.com
 - geolocation.forbes.com
@@ -137858,7 +138223,6 @@ domain_suffix_set:
 - geosvc.globalmailer.com
 - geotags.refinery89.com
 - geotargetly-1a441.appspot.com
-- geotargetly-api-*.com
 - geotargetly.co
 - geotg.jp
 - geoticcardoon.shop
@@ -137969,7 +138333,6 @@ domain_suffix_set:
 - gesturasmirkly.qpon
 - gesvfvfhhb6.fun
 - gesymphone.site
-- get*bannerads-6egeg2u34q-du.a.run.app
 - get-ads.ru
 - get-answers-fast.com
 - get-beta.kabbee.com
@@ -138240,6 +138603,7 @@ domain_suffix_set:
 - getdirectbonus.com
 - getdispadsshop.com
 - getdownloadfree.cfd
+- getdrebeatssale.com
 - getdrip.com
 - getegroup.com
 - getelem.ru
@@ -140809,6 +141173,7 @@ domain_suffix_set:
 - gmmxpyzumnqaa.store
 - gmn.gloo.com
 - gmnagxbisjn.com
+- gmnetworks.net
 - gmnflbjlrkizf.website
 - gmnrndtdliili.website
 - gmodmp.jp
@@ -142417,6 +142782,7 @@ domain_suffix_set:
 - gobanspagodas.com
 - gobbedctn.com
 - gobbinsantos.store
+- gobeatsye.com
 - gobetweencomment.com
 - gobetweengroan.com
 - gobetweenlenient.com
@@ -142438,6 +142804,7 @@ domain_suffix_set:
 - gobovoul.net
 - gobreadthpopcorn.com
 - gobsfip.cfd
+- gobuyonlinestore.net
 - gobxihrdqncew.website
 - gobzonet.ru
 - gocarosel.com
@@ -142825,6 +143192,7 @@ domain_suffix_set:
 - goods.tudou.com
 - goods2you.net
 - goodsdunelocated.com
+- goodsdunk.net
 - goodsmoke.pro
 - goodsscoop.com
 - goodsstor.vip
@@ -144786,7 +145154,6 @@ domain_suffix_set:
 - gsclvurjec.xyz
 - gscohm.xyz
 - gscontxt.net
-- gscounters.*.gigya.com
 - gscounters.gigya.com
 - gscounters.us1.gigya.com
 - gscsahv011.com
@@ -145168,7 +145535,6 @@ domain_suffix_set:
 - gtlinfrastructurelimited.com
 - gtlmblpvpirgj.site
 - gtlp.net.cn
-- gtlpa*.com
 - gtlpaj.com
 - gtlwwaitjya.com
 - gtlykyvizfrui.space
@@ -152731,7 +153097,6 @@ domain_suffix_set:
 - hadmvmqe.com
 - hadrealshoemaker.com
 - hadronid.net
-- hads*s.com
 - hadsabz.com
 - hadsans.com
 - hadsanz.com
@@ -153961,7 +154326,6 @@ domain_suffix_set:
 - hb4muqyf.ujoxqluovwwvy79p5rz2h.cyou
 - hb8a.top
 - hb94dnbe.de
-- hba*.hepsiburada.com
 - hba.hebammen.at
 - hbaazk.bukalapak.com
 - hbadkrburmtwfe.com
@@ -154548,9 +154912,22 @@ domain_suffix_set:
 - headlongrelic.com
 - headphonedecomposeexcess.com
 - headphonedilution.com
+- headphonepubs.com
+- headphones-cool.com
+- headphones-dre.com
+- headphones-outlet-online.com
 - headphones.xn--clinicadentalcariena-k7b.com
+- headphonesbeatsaudio.com
+- headphonesbeatsbydre.com
+- headphoneses.com
+- headphoneshome.com
+- headphoneshotsales.com
+- headphonesol.com
+- headphonesretailer.com
 - headphonesshout.com
+- headphonessupply.com
 - headphoneveryoverdose.com
+- headphonezip.com
 - headquarterinsufficientmaniac.com
 - headquarterscrackle.com
 - headquartersexually.com
@@ -154558,6 +154935,7 @@ domain_suffix_set:
 - headquartersimpartialsexist.com
 - heads-ak.spotify.com.edgesuite.net
 - heads-fa.spotify.com
+- headset987.com
 - headsets4business.co.uk
 - headshot.monster
 - headsroutestocking.com
@@ -155032,6 +155410,7 @@ domain_suffix_set:
 - hellocdn.top
 - hellogalaxy.cn
 - hellohang.love
+- hellokittybeats.com
 - hellominimshanging.com
 - hellomobile.fr
 - helloreverb.com
@@ -156188,12 +156567,14 @@ domain_suffix_set:
 - high.useoxepay.com.br
 - highad.de
 - highathel.com
+- highbolt.net
 - highconvertingformats.com
 - highcpmcreativeformat.com
 - highcpmgate.com
 - highcpmrevenuegate.com
 - highcpmrevenuenetwork.com
 - highcpms.com
+- highdefinitionbeatsbydre.com
 - highdirtysubsided.com
 - higher.dwebsi.tk
 - highercldfrev.com
@@ -156449,6 +156830,7 @@ domain_suffix_set:
 - hiorange1.jobui.com
 - hip-97166b.com
 - hipaa.wellsense.org
+- hipaa6020.com
 - hipals.com
 - hipanditlastedallth.com
 - hiperdex.com
@@ -156482,6 +156864,7 @@ domain_suffix_set:
 - hipunaux.com
 - hipvaeciaqqtrhy.xyz
 - hipyevyvqxrmm.website
+- hipzoom.net
 - hipzpktsyugcu.website
 - hiqidi.com
 - hiqrnyn.cn
@@ -157487,7 +157870,6 @@ domain_suffix_set:
 - hmzv.m7hp6rnw1wtitj4incmuf48mt57.cyou
 - hmzxoegngasft.site
 - hn-button.herokuapp.com
-- hn-ping*.hashnode.com
 - hn163fck.com
 - hn1l.online
 - hn1l.site
@@ -158031,6 +158413,7 @@ domain_suffix_set:
 - homzpacwnosnk.online
 - honanssolon.cyou
 - honapply.vn
+- honawalaan.com
 - honcode.ch
 - hondajd.cn
 - hondaskashga.shop
@@ -158433,12 +158816,6 @@ domain_suffix_set:
 - hospitalsky.online
 - hospitapollen.cfd
 - hosrqzpxezdou.online
-- host*.carl-ras.dk
-- host*.ncoi.nl
-- host*.nti.nl
-- host*.polaroid.com
-- host*.rigbyandpeller.com
-- host*.rvshare.com
 - host-195-103-203-106.business.telecomitalia.it
 - host-62-113-112-127.hosted-by-vdsina.ru
 - host-95-230-215-65.business.telecomitalia.it
@@ -158492,7 +158869,6 @@ domain_suffix_set:
 - hosting-controlpr.tk
 - hosting.scently.nl
 - hosting24.com
-- hostingcloud.*.wasm
 - hostingcloud.racing
 - hostingcloud.science
 - hostingcloud.trade
@@ -158536,6 +158912,7 @@ domain_suffix_set:
 - hotbbuvifu.cc
 - hotbcivuya.today
 - hotbdugixi.today
+- hotbeatsonsale.com
 - hotbedsleafdom.com
 - hotbgabori.com
 - hotbgapare.com
@@ -158612,6 +158989,7 @@ domain_suffix_set:
 - hotlog.ru
 - hotloss.com
 - hotmod.eu
+- hotmonsterbeats.com
 - hotnews1.me
 - hotngay.vn
 - hotpics.mom
@@ -158662,6 +159040,7 @@ domain_suffix_set:
 - hotterenvisage.com
 - hotterpareusunshent.cfd
 - hottest-girls-online.com
+- hottestheadphonesonline.com
 - hottestlemma.cfd
 - hottesvideosapps.com
 - hottiecopygjedost.cfd
@@ -159266,6 +159645,7 @@ domain_suffix_set:
 - hrro55g56.com
 - hrrsimgjcllyz.site
 - hrryumrafhzjs.site
+- hrsaz.com
 - hrsbozehjgtsm.space
 - hrscompetepickles.com
 - hrscouchoutbreak.com
@@ -159452,7 +159832,6 @@ domain_suffix_set:
 - hst.hey-sign.de
 - hst2-invite.ander.ai
 - hstagsmhbdvtk.site
-- hstats*.hepsiburada.com
 - hstats.askmiso.com
 - hstats.hepsiburada.com
 - hstatstest.hepsiburada.com
@@ -159587,7 +159966,6 @@ domain_suffix_set:
 - htlvni.atperrys.com
 - htlvvqlcqvq.com
 - htlwbn.icu
-- htm*.hepsiburada.com
 - htm1.ch
 - htmass.com
 - htmgrl.jollyroom.no
@@ -160577,7 +160955,6 @@ domain_suffix_set:
 - hw-p2p-pull.video-voip.com
 - hw-p2p-v2.pull.yximgs.com
 - hw-p2p.pull.yximgs.com
-- hw-sh-pcdn-*.biliapi.net
 - hw-t.hypers.com.cn
 - hw.6ihuxf4e7o9zw3ibl3ggtkm81twjkiq.cyou
 - hw.zuimeitianqi.com
@@ -161814,6 +162191,9 @@ domain_suffix_set:
 - ibeat-analytics.com
 - ibeat.indiatimes.com
 - ibeating.top
+- ibeats-uk.com
+- ibeatsbydre.cc
+- ibeatsbydre.com
 - ibeeckaidse.net
 - ibeelten.net
 - ibeiling.cn
@@ -162748,7 +163128,6 @@ domain_suffix_set:
 - ifeib.com
 - ifej.cn
 - ifejrspiegttfym.com
-- ifengad.*.ifeng.com
 - ifengad.3g.ifeng.com
 - ifethbrzb.com
 - ifeuddaywa.com
@@ -163031,6 +163410,7 @@ domain_suffix_set:
 - igokedropit.net
 - igoognou.xyz
 - igor.rottner-trezory.sk
+- igoshopping.net
 - igozxvjvaehwt.site
 - igp06.gameloft.com
 - igpnpnmbommga.website
@@ -163768,6 +164148,7 @@ domain_suffix_set:
 - illfatedsnail.com
 - illfriendship.com
 - illfvowjayo.com
+- illianacomputerrecycling.com
 - illicitdandily.cam
 - illiciteatable.com
 - illicium.web.money
@@ -165211,6 +165592,7 @@ domain_suffix_set:
 - imonitor.dhgate.com
 - imoniummusicry.com
 - imonomy.com
+- imonsterbeats.com
 - imoodrikauch.net
 - imoote.xyz
 - imorajqpyrpdm.site
@@ -165482,8 +165864,6 @@ domain_suffix_set:
 - impruads.com
 - imprvdosrv.com
 - impseeineclots.com
-- impservice*.yodao.com
-- impservice*.youdao.com
 - impservice-test.dictapp.youdao.com
 - impservice.chnl.youdao.com
 - impservice.dict.youdao.com
@@ -165734,6 +166114,7 @@ domain_suffix_set:
 - incentivemountdisprove.com
 - incentivenebulous.com
 - incentivesnetwork.net
+- incentivetravelgifts.com
 - inception27.com
 - incessanteffectmyth.com
 - incessantfinishdedicated.com
@@ -168302,7 +168683,6 @@ domain_suffix_set:
 - instaflrt.com
 - instagram.astv.ru
 - instagramfollowbutton.com
-- install*.zonastat.com
 - install-adblockers.com
 - install-adblocking.com
 - install-check.com
@@ -169171,6 +169551,7 @@ domain_suffix_set:
 - ioeq5cead.icu
 - iofeguoyhemey.space
 - iofeth.pulsee.it
+- ioffergift.com
 - iofferphoto.com
 - ioffers.icu
 - iofifoybjqkow.online
@@ -169594,7 +169975,6 @@ domain_suffix_set:
 - iptmgi.akan.co.kr
 - iptmih.hifi-regler.de
 - iptrack.io
-- iptracker-lb-*.amazonaws.com
 - iptrauaktnua.com
 - iptuy.cn
 - iptvdeals.com
@@ -170214,6 +170594,7 @@ domain_suffix_set:
 - isl.caminos.click
 - isl.punchh.com
 - islamclick.ru
+- islamiccenterofnewlondon.com
 - islamiclyricallyvariable.com
 - islamiyaat.com
 - islandgeneric.com
@@ -170426,6 +170807,7 @@ domain_suffix_set:
 - itagpro-sst.dealshopa.com
 - itaisabirs.com
 - itakrid.icu
+- italiabeatsbydrdre.com
 - italianadirectory.com
 - italianbeepimpediment.com
 - italianexpecting.com
@@ -171712,8 +172094,6 @@ domain_suffix_set:
 - j93557g.com
 - j94.cc
 - j98bl7jrcx5pz6rxv.cfd
-- ja*.apppure.net
-- ja*.gamersky.com
 - ja-jp-a8.etudehouse.com
 - ja-jp.siemensplmevents.com
 - ja.chushou.tv
@@ -174352,6 +174732,7 @@ domain_suffix_set:
 - jkasn.com
 - jkaztwupdrdvz.store
 - jkbdpp.xyz
+- jkbeats.com
 - jkbewmebyqjyl.top
 - jkbewmebyqkoq.top
 - jkbewmebyqqyj.top
@@ -176048,7 +176429,6 @@ domain_suffix_set:
 - jrzrqi0au.com
 - jrzslkcsswbga.website
 - jrzwrjgxhzotx.site
-- js*.abolezi.com
 - js-1.pchome.net
 - js-ad.a.yximgs.com
 - js-api.net
@@ -176056,8 +176436,6 @@ domain_suffix_set:
 - js-cloud.com
 - js-collector.icewood.net
 - js-delivr.com
-- js.*2023*.live
-- js.*2023*.xyz
 - js.05sun.com
 - js.139y.com
 - js.1688988.com
@@ -178619,7 +178997,6 @@ domain_suffix_set:
 - kbojzkrkqwskx.site
 - kbopnpiyhomtd.space
 - kborst.modivo.sk
-- kbox-analytics-prod.s*.amazonaws.com
 - kbpdm.manscaped.com
 - kbpdm.manscaped.io
 - kbpijqva.com
@@ -179949,6 +180326,7 @@ domain_suffix_set:
 - kickoffo.site
 - kickougeetsu.net
 - kickoutpawky.com
+- kickshatchannel.com
 - kickupcurtesy.cyou
 - kickupsblackey.cyou
 - kickxiawan.cfd
@@ -181604,6 +181982,7 @@ domain_suffix_set:
 - koawipheela.xyz
 - koawuraisi.net
 - kob.adxkj.com
+- kobbeatssbydredk.com
 - kobcgj.getneuromd.com
 - kobeden.com
 - kobel.services
@@ -181850,6 +182229,7 @@ domain_suffix_set:
 - kopehngtragen.com
 - kopetaweedle.com
 - kopeukasrsiha.com
+- kopfhorergunstigshop.com
 - kopisusu.co.id
 - kopllowmotha.com
 - kopmsfmihhrlg.store
@@ -186239,6 +186619,7 @@ domain_suffix_set:
 - leechiboojeshu.net
 - leechiza.net
 - leechservals.qpon
+- leecountytimes.com
 - leedagauluz.net
 - leedbrott.com
 - leedoash.com
@@ -186907,6 +187288,7 @@ domain_suffix_set:
 - lexph.com
 - lexrqreuosm.com
 - lexu.goggendorf.at
+- lexuemei.com
 - lexvek.gap.ae
 - lexyhome.com
 - leyf5q4rk.com
@@ -189571,7 +189953,6 @@ domain_suffix_set:
 - liveleadtracking.com
 - livelihoodpracticaloperating.com
 - livelumber.com
-- lively-collect-elb-*.amazonaws.com
 - lively-spirit.pro
 - livelybreast.cfd
 - livelycontributorvariations.com
@@ -189581,7 +189962,6 @@ domain_suffix_set:
 - livelyoffers.club
 - livelyreward.com
 - livelytusk.com
-- liveme-sensors-collect2-*.amazonaws.com
 - livemonitor.huan.tv
 - livenjujuist.cfd
 - livenmahomet.help
@@ -189628,7 +190008,6 @@ domain_suffix_set:
 - livesurf.ru
 - livetech.shopee.com.br
 - livetex.ru
-- livetracker.*.pangea-cms.com
 - livetrafficfeed.com
 - livetus.com
 - livetwo.space
@@ -197035,21 +197414,6 @@ domain_suffix_set:
 - loftyeliteseparate.com
 - loftyknifeeducate.com
 - lofvkxaqsw.com
-- log*-*.tiktokv.com
-- log*-misc-lf.amemv.com
-- log*-misc-lq.amemv.com
-- log*-normal-*.tiktokv.us
-- log*-normal-lq.toutiaoapi.com
-- log*-normal-useast1a.lemon8-app.com
-- log*.aliyuncs.com
-- log*.boomplaymusic.com
-- log*.byteoversea.com
-- log*.vietnamplus.vn
-- log*.zijieapi.com
-- log-*.epicdn.me
-- log-*.isnssdk.com
-- log-*.previewnetworks.com
-- log-*.zadn.vn
 - log-185a61e7.bendigobank.com.au
 - log-2ffe60ee.westpac.com.au
 - log-ads.r7.com
@@ -197099,9 +197463,7 @@ domain_suffix_set:
 - log-upload-os.hoyoverse.com
 - log-upload-os.mihoyo.com
 - log-upload.mihoyo.com
-- log-v*-boot.capcutapi.com
 - log-v2-boot.capcutapi.com
-- log-va*.capcutapi.com
 - log-va.tiktokv.com
 - log-video.baotintuc.vn
 - log-vietnamplus-vn.cdn.ampproject.org
@@ -197519,7 +197881,6 @@ domain_suffix_set:
 - logg4u.cnnd.vn
 - logg9r.io
 - loggatsiyo.cfd
-- logger-*.dailymotion.com
 - logger.applovefrom.com
 - logger.baofeng.com
 - logger.bzu.kr
@@ -197748,7 +198109,6 @@ domain_suffix_set:
 - logr-ingest.com
 - logrcv.adseyeservice.com
 - logrcv.yunxish.com
-- logreport-global-dual.cool*cloud.com
 - logreport-global-dual.coolbcloud.com
 - logreport-global-dual.coolhcloud.com
 - logretrieve.duetapp.net
@@ -197756,7 +198116,6 @@ domain_suffix_set:
 - logriancesenius.com
 - logrocket.io
 - logru.vietnamplus.vn
-- logs-*.rebxgame.com
 - logs-01.loggly.com
 - logs-api.shoprunner.com
 - logs-bigdata.yeehaw.com.cn
@@ -197777,7 +198136,6 @@ domain_suffix_set:
 - logs.chelaile.net.cn
 - logs.classdojo.com
 - logs.cnfol.com
-- logs.collector.*.cloud.solarwinds.com
 - logs.dashlane.com
 - logs.datadoghq.com
 - logs.docnhanh.com.vn
@@ -197820,7 +198178,6 @@ domain_suffix_set:
 - logscafef.channelvn.net
 - logsdk.kwai-pro.com
 - logsdk.qq.com
-- logservice-*.platform.dbankcloud.cn
 - logservice-dra.platform.hicloud.com
 - logservice.hicloud.com
 - logservice1.dbankcloud.cn
@@ -197834,7 +198191,6 @@ domain_suffix_set:
 - logsoc.ru
 - logsoutfittick.com
 - logsss.com
-- logstash-*.radio-canada.ca
 - logstash-3.radio-canada.ca
 - logstat.caixin.com
 - logstat.kugou.com
@@ -198458,6 +198814,7 @@ domain_suffix_set:
 - loveameng.top
 - loveamikoi.com
 - loveamorly.com
+- lovebeatsdr.com
 - lovecam.com.br
 - lovecar.net.cn
 - loveclaw.com
@@ -198477,6 +198834,7 @@ domain_suffix_set:
 - lovely.adforpv.site
 - lovelybingo.com
 - lovelydrum.com
+- lovemarca.com
 - lovemateforyou.com
 - loveme.com
 - lovemimori.com
@@ -199466,6 +199824,7 @@ domain_suffix_set:
 - lsjne.com
 - lsjvqovgx.com
 - lskfoejs.brandwerk-digital.com
+- lskg.shop
 - lskillsexkcerl.com
 - lskmipb.icu
 - lskug.outdoorcookingpros.com
@@ -199540,7 +199899,6 @@ domain_suffix_set:
 - lsyliel.top
 - lszjuj.chemnitzer-jobanzeiger.de
 - lszydrtzsh.com
-- lt*.tritondigital.com
 - lt.angelfire.com
 - lt.lytrangbds.com
 - lt.tritondigital.com
@@ -199838,6 +200196,7 @@ domain_suffix_set:
 - luckyforworlds.com
 - luckyhalo.info
 - luckyhomie.com
+- luckyissue.com
 - luckyorange.com
 - luckyorange.net
 - luckypapa.xyz
@@ -200972,6 +201331,7 @@ domain_suffix_set:
 - lyz.radio366.com
 - lyzenoti.pro
 - lyzon.com.cn
+- lyzsxx.com
 - lyztdz.com
 - lyzvbjmeybyqj.top
 - lz-pub-ads.com
@@ -202279,7 +202639,6 @@ domain_suffix_set:
 - madriokn.xyz
 - madriyelowd.com
 - madrogueindulge.com
-- mads*z.com
 - mads-fe.amazon.com
 - mads.amazon.com
 - mads.aol.com
@@ -202752,6 +203111,7 @@ domain_suffix_set:
 - maipoted.com
 - maiptica.com
 - maiqi.xyz
+- mairbeats.com
 - mairbeets.com
 - mairdumont.com
 - mairedined.space
@@ -202846,6 +203206,7 @@ domain_suffix_set:
 - makecatholicmanner.com
 - makeding.com
 - makeencampmentamoral.com
+- makeeu.com
 - makefeagreata.com
 - makeitmedia.fr
 - makeitworkfaster.life
@@ -202947,6 +203308,7 @@ domain_suffix_set:
 - malletthingluxury.com
 - mallettraumatize.com
 - malleusvialed.com
+- mallheadphone.com
 - mallinitially.com
 - mallioras.openapp.link
 - malljazz.com
@@ -203320,7 +203682,6 @@ domain_suffix_set:
 - maphatinso.net
 - maphonortea.com
 - maphuahin.com
-- mapi-log.qoo*.jp
 - mapi.apptimize.com
 - mapi.datarudder.com
 - mapi.juniorneves.com.br
@@ -206011,10 +206372,8 @@ domain_suffix_set:
 - mato.rov.dufr.digital
 - matokeassyria.com
 - matomo-cdn-bunny.ramsalt.com
-- matomo-demo-*.amazonaws.com
 - matomo-prod.cgorod.pw
 - matomo-production-3e7d.up.railway.app
-- matomo.*.vn
 - matomo.1viemeilleure.eu
 - matomo.3dpcs.eu
 - matomo.a1.by
@@ -206493,7 +206852,6 @@ domain_suffix_set:
 - mausk.shopbeam.com
 - mausolemiskal.top
 - mautic-learn.teky.edu.vn
-- mautic.*.vn
 - mautic.200lab.io
 - mautic.bdev.co.th
 - mautic.com
@@ -206752,6 +207110,7 @@ domain_suffix_set:
 - mbdreznrfirq.com
 - mbdspduyqevqd.website
 - mbdswyvxjqupq.online
+- mbeats-tech.com
 - mbeiax.lojarafarillo.com.br
 - mbekgac.xyz
 - mbelia.underarmour.co.uk
@@ -206775,6 +207134,7 @@ domain_suffix_set:
 - mbgbomrshrecpwj.xyz
 - mbgrgkhawfpyo.website
 - mbgufryceqkoap.com
+- mbheadphone.com
 - mbhgnrcwhnatt.online
 - mbi3.kuicr.kyoto-u.ac.jp
 - mbibf.healthbeauty-trends.com
@@ -207045,21 +207405,14 @@ domain_suffix_set:
 - mcrertpgdjbvj.com
 - mcrfncrswbeka.com
 - mcrzrxwrtpr.com
-- mcs-*.lemon8-app.com
-- mcs-*.lemon8-app.us
-- mcs-*.tiktok.com
 - mcs-ie.tiktokw.eu
 - mcs-ie2.tiktokw.eu
-- mcs-normal-*.capcutapi.com
 - mcs-sg.tiktok.com
 - mcs-v2-boot.capcutapi.com
-- mcs-va-*.tiktokv.com
 - mcs-va-useast2a.tiktokv.com
 - mcs-va.capcutapi.com
 - mcs-va.tiktok.com
 - mcs-va.tiktokv.com
-- mcs.*.tiktok.com
-- mcs.*.tiktokv.com
 - mcs.capcutapi.us
 - mcs.delvenetworks.com
 - mcs.snssdk.com
@@ -209230,7 +209583,6 @@ domain_suffix_set:
 - metrepeaches.com
 - metretaunplan.cfd
 - metri.abreu.pt
-- metric*.rediff.com
 - metric-agent.i10c.net
 - metric-android-am.road404.com
 - metric-nonssl.nomura.co.jp
@@ -213392,6 +213744,7 @@ domain_suffix_set:
 - microwavedisguises.com
 - microwavemay.com
 - microwinds.de
+- micstl.com
 - mid-round.com
 - mid5in.top
 - midan.io
@@ -214233,7 +214586,6 @@ domain_suffix_set:
 - mistakeenforce.com
 - mistakeidentical.com
 - mistakenunderstandresponse.com
-- mistat.*.xiaomi.com
 - mistat.xiaomi.com
 - mistellovigermvalse.cyou
 - misterbangingfancied.com
@@ -215176,6 +215528,7 @@ domain_suffix_set:
 - mmoladtcec.com
 - mmomo.me
 - mmondi.com
+- mmonsterheadphones.net
 - mmoplayerz.com
 - mmoptional.com
 - mmopzfxoouggx.site
@@ -215524,7 +215877,6 @@ domain_suffix_set:
 - moawgsfidoqm.com
 - moawhoumahow.com
 - moaxsgkqkivml.site
-- mob*.novanewsapp.com
 - mob.bz.mgtv.com
 - mob.com
 - mob.lowtid.fun
@@ -215591,7 +215943,6 @@ domain_suffix_set:
 - mobi.yanosik.pl
 - mobi24.net
 - mobiads.ru
-- mobiadvert*.livesportmedia.eu
 - mobibiobi.com
 - mobiclean.xyz
 - mobicont.com
@@ -215689,7 +216040,6 @@ domain_suffix_set:
 - mobileadvertise.de
 - mobileadvertiser.yanosik.pl
 - mobileadx.ru
-- mobileanalytics.*.amazonaws.com
 - mobileanalytics.us-east-1.amazonaws.com
 - mobileandroidapi.punchh.com
 - mobileapi.mobiquitynetworks.com
@@ -216210,23 +216560,13 @@ domain_suffix_set:
 - momyjw.jobninja.com
 - momzersatorii.top
 - momzs.com
-- mon*-*.tiktokv.com
-- mon*-*.tiktokv.us
-- mon*-misc-lf.fqnovel.com
-- mon*-misc.fqnovel.com
-- mon*.tiktokv.us
-- mon-*.lemon8-app.com
-- mon-*.lemon8-app.us
-- mon-*.tiktokv.com
 - mon-com-01.com
 - mon-com-net.com
 - mon-conertisseur.fr
 - mon-pagerank.com
 - mon-sg.byteintlapi.com
 - mon-sg.capcutapi.com
-- mon-v*-boot.capcutapi.com
 - mon-v2-boot.capcutapi.com
-- mon-va*.capcutapi.com
 - mon-va.byteoversea.com
 - mon-va.capcutapi.com
 - mon-va.tiktokv.com
@@ -216278,6 +216618,7 @@ domain_suffix_set:
 - monastydru.org
 - monauleaser.com
 - monawa3ate.org
+- monbeats2013.com
 - monbonsai.info
 - monbureaunumeriques.fr
 - moncatfgtgdul.website
@@ -216482,11 +216823,72 @@ domain_suffix_set:
 - monsoonlassi.com
 - monstat.com
 - monstelenius.com
+- monster-beats-by-dr-dre.com
+- monster-beats-headphones.com
+- monsterbeats-cheap.com
+- monsterbeats-headphone.com
+- monsterbeats-onsale.com
+- monsterbeats-solo.com
+- monsterbeats-solo.net
+- monsterbeats365buy.com
+- monsterbeats8beatsbydre.com
+- monsterbeatsale.com
+- monsterbeatsalestore.com
+- monsterbeatsau.com
+- monsterbeatsbydrdre-nz.com
+- monsterbeatsbydrdre-usa.com
+- monsterbeatsbydrdrecanada.com
+- monsterbeatsbydrdrestudio.com
+- monsterbeatsbydre-nz.com
+- monsterbeatsbydre-usa.com
+- monsterbeatsbydre2015.com
+- monsterbeatsbydreaustraliacheap.com
+- monsterbeatsbydrebilligde.com
+- monsterbeatsbydrefactory.com
+- monsterbeatsbydrenew.com
+- monsterbeatsbydres.com
+- monsterbeatsbydreshop.com
+- monsterbeatscasques.com
+- monsterbeatscommunity.com
+- monsterbeatsdrdrecheap.com
+- monsterbeatsfactory.net
+- monsterbeatsfinland.com
+- monsterbeatsforsale.com
+- monsterbeatsheadphone.com
+- monsterbeatsheadphones.net
+- monsterbeatshere.com
+- monsterbeatsitaly.com
+- monsterbeatsmall.com
+- monsterbeatsnegozi.net
+- monsterbeatsok.com
+- monsterbeatsonlinestoreuk.com
+- monsterbeatsoutlet.us
+- monsterbeatspascher.net
+- monsterbeatsru.com
+- monsterbeatssales.com
+- monsterbeatssalg.com
+- monsterbeatsshops.net
+- monsterbeatsstore.com
+- monsterbeatssydneyaustralia.com
+- monsterbeatstang.com
+- monsterbeatstienda.com
+- monsterbeatstudio.com
+- monsterbydrebeat.com
+- monstercasquebeatspascher.net
+- monstercheapbeatss.com
+- monsterdrebeats-canada.net
+- monsterdrebeats-usa.com
+- monsterdrebeats-usa.net
 - monsteredward.com
+- monsterheadphone.net
 - monsterjokes.com
 - monstermemes.com
 - monsterofnews.com
 - monsterpops.com
+- monsterproduct.net
+- monstersbeatbydres.com
+- monstersdebea.com
+- monstershopcheapbeats.net
 - monsterstocks.net
 - monstersupr.help
 - monstrous-boyfriend.pro
@@ -216775,6 +217177,7 @@ domain_suffix_set:
 - morefreecamsecrets.com
 - morefriendly.com
 - moregamers.com
+- moreheadphones.com
 - morehitserver.com
 - morehkvqnxtlo.site
 - moreinfo.onnowdigital.com
@@ -217870,6 +218273,7 @@ domain_suffix_set:
 - ms1.morganstanley.com
 - ms11.net
 - ms3t.club
+- ms4dre.com
 - ms758.com
 - ms994.com
 - msacsjzzitwgt.space
@@ -218071,8 +218475,6 @@ domain_suffix_set:
 - mss.bsxl.nl
 - mss.pvclaminaat.nl
 - mssdhde.cn
-- mssdk*.capcutapi.com
-- mssdk*.zijieapi.com
 - mssdk-boot.capcutapi.com
 - mssdk-boot.cpacutapi.com
 - mssdk-bu.bytedance.com
@@ -218182,7 +218584,6 @@ domain_suffix_set:
 - mta.qq.com
 - mtabdil.com
 - mtaeeslwsfxjw.club
-- mtag-*.wedevs.com
 - mtag.markopolo.ai
 - mtaitdupf.com
 - mtakpfquym.com
@@ -219918,6 +220319,9 @@ domain_suffix_set:
 - mybasilsoup.com
 - mybbc-analytics.files.bbci.co.uk
 - mybdrttnqbrh.com
+- mybeatsbydrestudio.com
+- mybeatsbydreuk.com
+- mybeatscheapbydre.com
 - mybest.app
 - mybestautologin567.com
 - mybestcpm.com
@@ -220024,6 +220428,7 @@ domain_suffix_set:
 - myfeed.thalesgroup.com
 - myfeng.cn
 - myfenxi.com
+- myferrariheadphones.com
 - myfidevs.io
 - myfiltration.eaton.com
 - myfinance.com
@@ -220556,8 +220961,6 @@ domain_suffix_set:
 - mzzxfib.com
 - mzzynb.talisajewellery.co.uk
 - mzzzpvllsjxpy.online
-- n*adserv.com
-- n*adserv.xyz
 - n-analytics.io
 - n-cdn.areyouahuman.com
 - n-core-pipe.com
@@ -221014,6 +221417,7 @@ domain_suffix_set:
 - namelymagnanimitycube.com
 - namelymutiny.com
 - namemek.com
+- namemybeats.com
 - nameoaj.xyz
 - namesakecapricorntotally.com
 - namesakedisappointmentpulverize.com
@@ -222304,6 +222708,7 @@ domain_suffix_set:
 - neblotech.com
 - nebnfvbsgosfp.site
 - nebojflzhifre.site
+- neborder.com
 - nebsefte.net
 - nebuksaipaush.net
 - nebula.donnezvotrevoiture.org
@@ -222463,6 +222868,8 @@ domain_suffix_set:
 - negotiaterealm.com
 - negotiatetime.com
 - negotiationmajestic.com
+- negozimonsterbeats.com
+- negoziomonsterbeats.com
 - negrineoakwood.com
 - negrinesubbias.cyou
 - negritasecants.shop
@@ -222535,7 +222942,6 @@ domain_suffix_set:
 - nellmeeten.com
 - nellthirteenthoperative.com
 - nelo2-col.linecorp.com
-- nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi
 - nelp-defender.pro
 - nelreerdu.net
 - nelreports.net
@@ -223176,6 +223582,8 @@ domain_suffix_set:
 - newarrivals.club
 - newartreview.com
 - newaugads.com
+- newbeatsblackfriday.com
+- newbemany.com
 - newbie.com
 - newbiquge.org
 - newbluetrue.xyz
@@ -223196,9 +223604,11 @@ domain_suffix_set:
 - newdomain.center
 - newdonate.com
 - newdosug.eu
+- newdrediscount.com
 - neweggstats.com
 - newelsthallicplover.cyou
 - newerfinnip.shop
+- newestbeatsbydre.com
 - newestchalk.com
 - newestizar.qpon
 - newfeatureview.perfectionholic.com
@@ -223241,6 +223651,7 @@ domain_suffix_set:
 - newlyinfluenza.com
 - newlyleisure.com
 - newlypredata.com
+- newlysprung.net
 - newlywedexperiments.com
 - newmail.pronpic.org
 - newmarads.com
@@ -223251,6 +223662,8 @@ domain_suffix_set:
 - newmetrics.formacionenmercados.com
 - newmetrics.master-inmobiliario.net
 - newmonads.com
+- newmonst1erbeatsto1re.com
+- newmonsterbeatsheadphones.com
 - newms-shop.su
 - newmytrp.com
 - newnet.qsrch.com
@@ -223516,6 +223929,7 @@ domain_suffix_set:
 - newscaffe.net
 - newscatalanaoccidente.com
 - newscgp.com
+- newschristmasshopping.com
 - newscode.online
 - newscompiler.com
 - newscover.co.kr
@@ -223828,6 +224242,7 @@ domain_suffix_set:
 - nfkxplkiid.com
 - nfl9j.com
 - nfldgbt.xyz
+- nflhotsalejerseys.com
 - nflightiesmurtone.com
 - nfliiqxnaadkx.online
 - nflks.cn
@@ -224357,6 +224772,7 @@ domain_suffix_set:
 - nicerisle.com
 - nicervultur.cfd
 - nicesearches.com
+- nicesshop.net
 - nicesthoarfrostsooner.com
 - nicestsame.com
 - nicetruck.pro
@@ -230334,6 +230750,7 @@ domain_suffix_set:
 - offer.slgnt.eu
 - offer.timenterprise.it
 - offer.vyapay.com
+- offerairjordanlebron.com
 - offercookerychildhood.com
 - offerdanced.com
 - offerentsentedo.com
@@ -230433,6 +230850,10 @@ domain_suffix_set:
 - official.olymptrade-my.com
 - official.your-wellness.online
 - officialbanisters.com
+- officialbeatsbydreshop.com
+- officialbeatsbydrestore.com
+- officialdrdre.com
+- officialheadphone.com
 - officialkmspico.com
 - officiallyflabbyperch.com
 - officialplenty.com
@@ -230637,6 +231058,7 @@ domain_suffix_set:
 - ogaewcqgj.com
 - ogaku.site
 - ogamamniota.qpon
+- ogameblog.com
 - oganilglk.cyou
 - ogaqholiwkolr.website
 - ogavbmwsqvhjq.online
@@ -231276,6 +231698,7 @@ domain_suffix_set:
 - ojktwzisvpb.com
 - ojkuuxvlhvday.website
 - ojldhncdcnrok.online
+- ojlkimed.vip
 - ojllcpefclund.store
 - ojlsxt.pigment.co.kr
 - ojm4.palladiumhotelgroup.com
@@ -232582,6 +233005,7 @@ domain_suffix_set:
 - onaudience.com
 - onaugan.com
 - onautcatholi.xyz
+- onbeatsbydresale.com
 - onbfqhjqgifas.website
 - onblixch.com
 - onbnicomv.com
@@ -232965,6 +233389,7 @@ domain_suffix_set:
 - onlinekey.biz
 - onlinekino.pl
 - onlinemediahelper.com
+- onlinemonsterbeatsonsale.com
 - onlinepbx.ru
 - onlineporno.fun
 - onlinepromogift.com
@@ -233072,6 +233497,8 @@ domain_suffix_set:
 - onrunningshop.com
 - onrvyrdwqpiwn.online
 - onsafelink.com
+- onsalekey.com
+- onsaletrend.com
 - onsandindeedth.com
 - onsbir.paul-valentine.com
 - onscormation.info
@@ -233813,7 +234240,6 @@ domain_suffix_set:
 - opnbwg.com
 - opner.co
 - opnik.walkfulton.com
-- opnked*.xyz
 - opnmeg.fixami.be
 - opnobbohq.com
 - opnodufzrclmth.com
@@ -234406,7 +234832,6 @@ domain_suffix_set:
 - order.weaversofireland.com
 - order.weider.de
 - order.workweargiant.co.uk
-- orderana*.spankbang.com
 - orderdata.tryorder.com
 - orderedbewhore.com
 - orderfritter.com
@@ -235801,6 +236226,7 @@ domain_suffix_set:
 - outlayomnipresentdream.com
 - outlayreliancevine.com
 - outlet-alfresco.com
+- outletbeatsshop.com
 - outletdoorstepconnected.com
 - outletfishingrestoration.com
 - outletpeople.com
@@ -236970,7 +237396,6 @@ domain_suffix_set:
 - ozznarazdtz.com
 - ozzpnf.loberon.ch
 - ozzruxazcoxc.com
-- p*-ad-sign.byteimg.com
 - p-advg.com
 - p-analytics.life
 - p-aw2-adapt-beacon.awsprodops.movetv.com
@@ -237173,7 +237598,6 @@ domain_suffix_set:
 - p23jac.top
 - p24.hu
 - p243xhjej2wycgfi458h89.cyou
-- p26.gejulm*.com
 - p269vhygzowkotz4.cfd
 - p2ads.com
 - p2cdn.com
@@ -237200,7 +237624,6 @@ domain_suffix_set:
 - p2poolmining.com
 - p2poolmining.net
 - p2ptun.qq.com
-- p2pup*.gamedl.qq.com
 - p2pupdate.gamedl.qq.com
 - p2pupgrade.gamedl.qq.com
 - p2pvod-ws.douyucdn.cn
@@ -238103,7 +238526,6 @@ domain_suffix_set:
 - pangolin-hl.snssdk.com
 - pangolin-lf.snssdk.com
 - pangolin-lq.snssdk.com
-- pangolin-sdk-toutiao*.com
 - pangolin-sdk-toutiao-b.com
 - pangolin-sdk-toutiao.com
 - pangolin-sdk-toutiao1.com
@@ -239359,6 +239781,7 @@ domain_suffix_set:
 - pascal1.science
 - pascal3.science
 - paschalisaiah.help
+- pascherbeatsmonster.com
 - pasco.cc
 - pascualpecked.top
 - paseecoocm.net
@@ -239680,6 +240103,7 @@ domain_suffix_set:
 - paulinruntime.digital
 - paulomatosconsultores.com.br
 - paulosabbanelliapi.expressacustica.com.br
+- paulsimon-music.com
 - paulsnetwork.com
 - paulty.com
 - paulusacor.uno
@@ -241039,6 +241463,7 @@ domain_suffix_set:
 - perfectgrandmother.com
 - perfectionministerfeasible.com
 - perfectionwatching.com
+- perfectkickz.net
 - perfectlywent.com
 - perfectmarket.com
 - perfectmovie.pro
@@ -241288,6 +241713,7 @@ domain_suffix_set:
 - personaly.click
 - personantaeus.top
 - personaserver.com
+- personeelsland.com
 - personifyallege.com
 - personifyproposition.com
 - personnelsuperiority.com
@@ -242685,8 +243111,10 @@ domain_suffix_set:
 - pickling.picklesfinance.com
 - pickmenideafulge.cyou
 - pickmicro.com
+- picknicekicks.net
 - pickoffbib.shop
 - pickpocketornamenthurried.com
+- pickshoesclothes.com
 - pickupnationalityinexhaustible.com
 - pickuppestsyndrome.com
 - pickupracist.com
@@ -242881,7 +243309,6 @@ domain_suffix_set:
 - piilvhtu.cn
 - piilzpumrozlb.space
 - piiqrmvymwue.world
-- pijama.*.elasticbeanstalk.com
 - pijapue.org
 - pijenfcpgsham.space
 - pijenvbko.com
@@ -242940,6 +243367,7 @@ domain_suffix_set:
 - pillar.ivyleagueadmissionsecrets.com
 - pillar.ucadmissionsecrets.com
 - pillarscorbeau.cfd
+- pillbeatsblackfridaysale.com
 - pillerybloomed.cfd
 - pillerycetin.website
 - pilleryhoodoo.cyou
@@ -243041,8 +243469,6 @@ domain_suffix_set:
 - pinetq.com
 - pinfoldmendigo.qpon
 - pinformer.sinoptik.ua
-- ping*.bidease.com
-- ping*.qq.com
 - ping-admin.ru
 - ping-dot-acp-magento.appspot.com
 - ping-fast.com
@@ -243455,7 +243881,6 @@ domain_suffix_set:
 - pivxkeppgtc.life
 - piwfhzzby.com
 - piwhbfgyj.com
-- piwik.*.vn
 - piwik.bluegras.de
 - piwik.com-online.com
 - piwik.digineo.de
@@ -243659,7 +244084,6 @@ domain_suffix_set:
 - pixel.zumby.io
 - pixel6.wp.pl
 - pixeladszone.top
-- pixelapi-*.cs.mysamba.tv
 - pixelapi.mariafloratelie.com
 - pixelappcollector.thesun.co.uk
 - pixelcounter.marca.com
@@ -244595,7 +245019,6 @@ domain_suffix_set:
 - playdraught.com
 - playedsophomore.com
 - player-analytics.mp.lura.live
-- player-feedback*.glomex.*
 - player-feedback-v1.glomex.com
 - player-feedback.p7s1video.net
 - player-metrics.instaread.co
@@ -245446,6 +245869,7 @@ domain_suffix_set:
 - pocitadlo.cz
 - pocitadlo.sk
 - pocketads.pl
+- pocketbiketrader.com
 - pocketenvironmental.com
 - pocketfaucet.com
 - pocketgolf.host
@@ -245695,7 +246119,6 @@ domain_suffix_set:
 - polarclient.net
 - polardemeanour.com
 - polarichip.com
-- polaris*-normal-*.zijieapi.com
 - polaris.truevault.com
 - polaris.zijieapi.com
 - polarismagnet.com
@@ -246699,7 +247122,6 @@ domain_suffix_set:
 - povtbi.automovilesalhambra.es
 - povtswuewziqa.space
 - pow46ru6c.com
-- powa-ingest-prod-*.video-player.arcpublishing.com
 - powchro.com
 - powderencouraged.com
 - powderjourney.com
@@ -246721,6 +247143,9 @@ domain_suffix_set:
 - poweradblocker.com
 - powerain.biz
 - powerapp.download
+- powerbeats2wireless.com
+- powerbeatsbydrdre.com
+- powerbeatsbydre.com
 - powerbiz.co
 - powerclear.lionmobi.com
 - powerclick.about.co.kr
@@ -247360,7 +247785,6 @@ domain_suffix_set:
 - prearmsspreed.shop
 - preaverastheny.cfd
 - prebazwnvwmej.website
-- prebid-cache*.ifunny.co
 - prebid-server-canary.ifunny.co
 - prebid-server.newsbreak.com
 - prebid.loopmertb.com
@@ -247676,6 +248100,7 @@ domain_suffix_set:
 - prerollads.ign.com
 - presage.io
 - presageology.cyou
+- presale-friday.pro
 - presatisfy.com
 - presbanise.pw
 - presco.ai
@@ -248548,8 +248973,6 @@ domain_suffix_set:
 - prod-sb-appanalytics-us1.servicebus.windows.net
 - prod-sponsoredads.mkt.zappos.com
 - prod-ue1-metrics.hingeprod.net
-- prod.*.analytics.console.aws.a2z.com
-- prod.*.publishers.advertising.a2z.com
 - prod.adjoe-programmatic.com
 - prod.adjoe.zone
 - prod.cm.publishers.advertising.a2z.com
@@ -248608,7 +249031,6 @@ domain_suffix_set:
 - productdownload.pro
 - producthub.info
 - production-adkviewtrackingtagserver.ap-northeast-1.elasticbeanstalk.com
-- production-adserver-*.amazonaws.com
 - production-link-ccontact.focuscura.com
 - production-public.tubi.io
 - production-tracking.riviu.co
@@ -248871,7 +249293,6 @@ domain_suffix_set:
 - promisspacay.space
 - promizer.com
 - promkinic.shop
-- promo-*.vercel.app
 - promo-banner.ru
 - promo-bc.com
 - promo-images.ttpsdk.info
@@ -248933,6 +249354,7 @@ domain_suffix_set:
 - promokrot.com
 - promolayer.io
 - promomobilsuzukijakarta.com
+- promonsterbeatsbydre.com
 - promontory32.com
 - promopassage.com
 - promoreclame.info
@@ -249167,6 +249589,7 @@ domain_suffix_set:
 - prostopartnerka.ru
 - prostosite.club
 - prostrikemagazine.com
+- prostudiobeatscybersale.com
 - prosumsit.com
 - prosvive.prostavive.online
 - protagcdn.com
@@ -251861,7 +252284,6 @@ domain_suffix_set:
 - pwyszrmgegrpk.website
 - pwzrfznosfblpi.com
 - pwzxkpphqoeby.store
-- px*.mediahills.ru
 - px-broke.com
 - px-cloud.net
 - px.8yfpe8h8ym534jk7g8.cyou
@@ -251954,7 +252376,6 @@ domain_suffix_set:
 - pxkvpx.euro-fh.de
 - pxkwnp.mortoglou.gr
 - pxkxvpermnaxe.store
-- pxl-*.ozone.ru
 - pxl-mailtracker.com
 - pxl.host
 - pxl.indeed.com
@@ -254403,8 +254824,6 @@ domain_suffix_set:
 - qmzikvkk.business
 - qmzwcrordyc.com
 - qmzwzz.headout.com
-- qn-*pcdn.cdn.huya.com
-- qn-*pcdn.cdn.msstatic.com
 - qn-5.com
 - qn-cdnfile1pcdn.msstatic.com
 - qn-fileserverpcdn.cdn.huya.com
@@ -254694,7 +255113,6 @@ domain_suffix_set:
 - qpaglxxudbhyd.website
 - qpaju.equimea.de
 - qpastswynfzcb.space
-- qpb*.sohu.com
 - qpb.sohu.com
 - qpb0.sohu.com
 - qpb1.sohu.com
@@ -255552,7 +255970,6 @@ domain_suffix_set:
 - quandoi-viettel.com
 - quandrer.link
 - quangablock.cyou
-- quangcao-*.epicdn.me
 - quangcao.24h.com.vn
 - quangcao.baovannghe.com.vn
 - quangcao.fff.com.vn
@@ -258221,6 +258638,7 @@ domain_suffix_set:
 - rbrxg.com
 - rbrzcu.green-acres.gr
 - rbsfckgfwpgnr.site
+- rbsgr.com
 - rbsifiqnyrhfd.space
 - rbsiwzkxqrfkw.site
 - rbsodzgoy.xyz
@@ -258669,7 +259087,6 @@ domain_suffix_set:
 - reach.ironmountain.com
 - reach.jensenprecast.com
 - reach.terumo-bct.com
-- reachableads-av.*.amazonaws.com
 - reachableads.com
 - reachadv.it
 - reacheffecti.work
@@ -260911,8 +261328,6 @@ domain_suffix_set:
 - report-uri.com
 - report-uri.io
 - report-zt.allmusic.com
-- report.*.gbqofs.io
-- report.*.qq.com
 - report.1-1.io
 - report.23video.com
 - report.alhalalcosmetics.de
@@ -261018,7 +261433,9 @@ domain_suffix_set:
 - reprosbabis.help
 - reprovems.com
 - repruggob.com
+- repsneakermall.com
 - repsrowedpay.com
+- repswing.com
 - reptfe.com
 - reptile.delopoulos.gr
 - reptile.o-lit.fr
@@ -261118,7 +261535,6 @@ domain_suffix_set:
 - rerynjua.com
 - reryodzat.com
 - reryt111.fun
-- res*.pinpai8.cn
 - res-ad-kr.kajicam.com
 - res-ad.kajicam.com
 - res-backup.com
@@ -265600,7 +266016,6 @@ domain_suffix_set:
 - rtarbunmsttpihj.xyz
 - rtas.videocc.net
 - rtau9pif4.com
-- rtb-*.anysex.com
 - rtb-1.jizzberry.com
 - rtb-1.mylust.com
 - rtb-1.xcafe.com
@@ -266083,7 +266498,6 @@ domain_suffix_set:
 - rtbget.com
 - rtbhouse.com
 - rtbidder.net
-- rtbimp-loadbalancer-*.amazonaws.com
 - rtbinternet.com
 - rtbiq.com
 - rtbix.com
@@ -266416,8 +266830,6 @@ domain_suffix_set:
 - rtl1.net
 - rtlfqocrotlhz.website
 - rtlnvpbehccde.site
-- rtlog*.tiktokv.com
-- rtlog*.tiktokv.us
 - rtlog.byteoversea.com
 - rtlog.isnssdk.com
 - rtlog.tiktokv.com
@@ -266848,8 +267260,6 @@ domain_suffix_set:
 - rulroompaulooth.net
 - rultiltougnengo.net
 - rulwph.xyz
-- rum*.a.trbcdn.net
-- rum*.cdnvideo.ru
 - rum-collector.leaderint.workers.dev
 - rum-ingress-coralogix.com
 - rum-metrics.bunny.net
@@ -269975,7 +270385,10 @@ domain_suffix_set:
 - sale.eknojoresirat.shop
 - sale0home.com
 - sale1k.com
+- salebeatslasteststyle4you.com
 - salebestever.su
+- saleblackfridaydrebeats.com
+- salecheaphandbags.com
 - salecycle.com
 - salefile.googlecode.com
 - salekxvjerzxc.site
@@ -270126,7 +270539,6 @@ domain_suffix_set:
 - salweysends.qpon
 - salzburg.semsea.at
 - salzwerk.viessmann.de
-- sam*.baby-kingdom.com
 - sam.conversaoempresarial.com
 - sam.manager-magazin.de
 - sam.montano.se
@@ -270158,7 +270570,6 @@ domain_suffix_set:
 - samcenter-vn.com
 - samdamone.top
 - samdddgljiurj.online
-- same*.stockstar.com
 - same-building.com
 - same-curve.pro
 - same-feature.pro
@@ -270182,6 +270593,7 @@ domain_suffix_set:
 - same02.jrj.com.cn
 - same03.jrj.com.cn
 - samealliedgunfire.com
+- samebags.com
 - samedoor.pro
 - samekhsscaups.shop
 - samelagura.uno
@@ -270707,6 +271119,7 @@ domain_suffix_set:
 - santtacklingallas.org
 - santtacklingallaso.com
 - santuao.xyz
+- sanvaras.com
 - sanya1.com
 - sanynouncem.org
 - sanywnnlhmual.space
@@ -271966,6 +272379,7 @@ domain_suffix_set:
 - scnkzannzapes.site
 - scnokjnvvuxlvb.com
 - scnon.perpetualtraffic.com
+- scnshop.cc
 - scnt.rambler.ru
 - scoala1gherla.ro
 - scobbypseudo.guru
@@ -272424,7 +272838,6 @@ domain_suffix_set:
 - sd.skillsup.fr
 - sd.taptap.com
 - sd.viktorsfarmor.dk
-- sd.yhzzzs*.com
 - sd0053.shop
 - sd01you.com
 - sd062.com
@@ -274301,7 +274714,6 @@ domain_suffix_set:
 - sensors.snaptube.app
 - sensors.umetrip.com.cn
 - sensors.yodo1api.com
-- sensorsdata*.read.duokan.com
 - sensorsdata-datasink.stardust-tv.com
 - sensorsdata.cn
 - sensorsdata.glowapp.vip
@@ -278735,7 +279147,6 @@ domain_suffix_set:
 - servingshade.com
 - servingsurroundworldwide.com
 - serviziopostale.site
-- servo-report.keepstreams.*
 - servo.vetro.dk
 - servojocote.com
 - servote.de
@@ -283244,11 +283655,13 @@ domain_suffix_set:
 - shoemakerlosecommission.com
 - shoemanlarinae.cfd
 - shoepacpretone.website
+- shoers.com
 - shoes.app-xae.xiaomi.com
 - shoes.duha.world
 - shoesammonia.com
 - shoeskeleton.com
 - shoessaucepaninvoke.com
+- shoestop2.com
 - shofarisrael.top
 - shofoxeebsow.net
 - shofteph.com
@@ -283331,6 +283744,7 @@ domain_suffix_set:
 - shop-cart.app
 - shop-cdn.coccoc.com
 - shop-eu.varietyfoods.co.uk
+- shop-headphones.net
 - shop-pharmaccie.fr
 - shop-rnib.org
 - shop.actev.ca
@@ -283484,12 +283898,14 @@ domain_suffix_set:
 - shopbacgautv.com
 - shopback.net
 - shopbangbang.xyz
+- shopbeatsdre.com
 - shopbehantv.net
 - shopbekyff.com
 - shopbloxfruit.click
 - shopbloxfruit.com
 - shopboxshopping.com
 - shopbreakfast.com
+- shopbydre.com
 - shopcao10sao.com
 - shopcardvnmb.byethost7.com
 - shopccv.pro
@@ -283507,6 +283923,7 @@ domain_suffix_set:
 - shopcuaminhchill.vn
 - shopcuamon.com
 - shopcuchuoi.online
+- shopcustomizedbeats.com
 - shopdangym.net
 - shopdat09.com
 - shopdata.pyrasied.com
@@ -283516,6 +283933,7 @@ domain_suffix_set:
 - shopdieulinh.com
 - shopdoitien.com
 - shopdotkich.net
+- shopdrebeats.com
 - shopdta.com
 - shopducmomtiktok.com
 - shopducmomtv.com
@@ -283741,6 +284159,7 @@ domain_suffix_set:
 - shopmeowbg.com
 - shopmetric.rediff.com
 - shopmobaviet.net
+- shopmonsterbeats.com
 - shopmonthtravel.com
 - shopmsuong.com
 - shopmsuong.net
@@ -283815,6 +284234,7 @@ domain_suffix_set:
 - shopphh.com
 - shopphimgiare.com
 - shopphucgmff.tk
+- shopping-days.net
 - shopping-offer.com
 - shopping.cellpure.co.jp
 - shoppingads.cn
@@ -283825,6 +284245,7 @@ domain_suffix_set:
 - shoppinglifestyle.biz
 - shoppingminds.net
 - shoppingpartners2.futurenet.com
+- shoppinguheadphones.com
 - shoppjj.com
 - shoppkk.com
 - shopplaytogether.vn
@@ -292408,9 +292829,12 @@ domain_suffix_set:
 - sndzrfmkqawfk.online
 - sneakedbiopsy.com
 - sneakedsonlessupknell.cyou
+- sneaker666.com
 - sneakerfemdissour.cyou
 - sneakerorblike.com
+- sneakerpage.net
 - sneakersisverige.com
+- sneakerskick.com
 - sneakersq5.com
 - sneakintriguecasting.com
 - sneakkodkod.cfd
@@ -292876,7 +293300,6 @@ domain_suffix_set:
 - societypromisedanyhow.com
 - sociocast.com
 - sociomantic.com
-- sock*-goguardian.pusher.com
 - socke7.com
 - sockerkirombo.qpon
 - socket.streamable.com
@@ -293227,6 +293650,7 @@ domain_suffix_set:
 - soloqmyl.tefcold.sk
 - solosduetstrios.com
 - solosegment.com
+- solostudioksale.com
 - solsticeblack.com
 - solsvenuleboasted.cfd
 - soltaixa.com
@@ -293985,6 +294409,7 @@ domain_suffix_set:
 - sosnews.ru
 - soso.mymederback.com
 - soso.ws
+- soso7778.com
 - sosoabassirayonny.cfd
 - sosohmmen.club
 - sosohus.ink
@@ -294397,7 +294822,6 @@ domain_suffix_set:
 - sp8668vn.com
 - sp96878.com
 - sp9hb5jy81iw.ru
-- spa-tracker*.spapi.io
 - spa-tracker.spapi.io
 - spa.admissions.ucdenver.edu
 - spa.arabtoons.net
@@ -294660,6 +295084,7 @@ domain_suffix_set:
 - specialstatement.com
 - specialtaskevents.com
 - specialty75.com
+- specialtyheadphones.com
 - specialtymet.com
 - specialtypin.com
 - specialtysanitaryinaccessible.com
@@ -294997,6 +295422,7 @@ domain_suffix_set:
 - spirebaboon.com
 - spiredilution.com
 - spireprideleaf.com
+- spiritclubs.com
 - spiritdeserted.com
 - spirited-degree.pro
 - spiritedcall.pro
@@ -300536,7 +300962,6 @@ domain_suffix_set:
 - ssootnhnblbmcs.com
 - ssorsophicla.info
 - ssotlctvjiuei.site
-- ssp*.rtb.beeline.ru
 - ssp-ad.momento.dev
 - ssp-api.mobadvent.com
 - ssp-partner.alibaba.com
@@ -310673,7 +311098,6 @@ domain_suffix_set:
 - staserv.csp.hugomattos.com
 - stashedbhumij.life
 - stassaxouwa.com
-- stat*.1internet.tv
 - stat-58home.58che.com
 - stat-analytics.mediavitrina.ru
 - stat-c.maxthon.com
@@ -310726,7 +311150,6 @@ domain_suffix_set:
 - stat-well.com
 - stat-y.xywy.com
 - stat-z.xywy.com
-- stat.*.v-56.com
 - stat.10jqka.com.cn
 - stat.123credit.com
 - stat.1688.com
@@ -311087,7 +311510,6 @@ domain_suffix_set:
 - stathound.com
 - stati.bid
 - stati.in
-- static*.365inews.com
 - static-addtoany-com.cdn.ampproject.org
 - static-ads.akamaized.net
 - static-assets.vanvast.nl
@@ -311743,9 +312165,6 @@ domain_suffix_set:
 - statowl.com
 - statpipe.ru
 - statredpic.ru
-- stats*.credit-cooperatif.coop
-- stats*.videonow.ru
-- stats-*.p2pnow.ru
 - stats-001.sitiosimple.com
 - stats-a.maxthon.com
 - stats-api.skylum.com
@@ -311767,8 +312186,6 @@ domain_suffix_set:
 - stats-sdk.tange365.com
 - stats-sg.ganymede.eu
 - stats-ssl.mdanderson.org
-- stats.*.ronghub.com
-- stats.*.rongnav.com
 - stats.101-lab.com
 - stats.123c.vn
 - stats.1und1-drillisch.de
@@ -312667,7 +313084,6 @@ domain_suffix_set:
 - stats.manz.at
 - stats.maonta.com
 - stats.mappl.tv
-- stats.mapple.*
 - stats.marienhoehe-norderney.de
 - stats.markenuwe.de
 - stats.marketsmith.com
@@ -313501,7 +313917,6 @@ domain_suffix_set:
 - stats1.tune.pk
 - stats1.wpmudev.com
 - stats1x1.kapaza.be
-- stats2.*.fdnames.com
 - stats2.algo.at
 - stats2.allure.com
 - stats2.architecturaldigest.com
@@ -314237,7 +314652,6 @@ domain_suffix_set:
 - stliom.vidaxl.cz
 - stlkh.janeiredale.com
 - stlkrzlm.movingapt.com
-- stlog*-local.kakao.com
 - stlog.d.dmkt-sp.jp
 - stlog.dmarket.docomo.ne.jp
 - stlpyypg.com
@@ -314885,6 +315299,7 @@ domain_suffix_set:
 - straightlength.pro
 - straightmenu.com
 - straightnest.com
+- straightouttasomewhere.com
 - straightpart.pro
 - straighttangerine.cz.cc
 - straindrinks.com
@@ -315359,6 +315774,7 @@ domain_suffix_set:
 - studio.innovativemediagroupllc.com
 - studio.joinsalut.com
 - studioalkaline.com
+- studiobeatsbydrdre.com
 - studiogioeli.it
 - studioibi.ibijus.com
 - studiomugnaini.eu
@@ -315419,7 +315835,6 @@ domain_suffix_set:
 - stumsagas.digital
 - stumtererum.com
 - stumzejwltkwl.online
-- stun.*.kugou.com
 - stun.douyucdn.cn
 - stun.hitv.com
 - stun.kugou.com
@@ -316312,6 +316727,7 @@ domain_suffix_set:
 - sultrymomentarily.com
 - sultrytraffic.com
 - sulvo.co
+- sulwerphoto.com
 - sulxddttj.com
 - sumaiya.sumaiyahairtonic.com
 - sumarketing.co.uk
@@ -316429,6 +316845,7 @@ domain_suffix_set:
 - sunglassescontrary.com
 - sunglassesexpensive.com
 - sunglassesmentallyproficient.com
+- sunglassessale2014.com
 - sungong1987.com
 - sungtoaz.club
 - sunhd.info
@@ -316564,6 +316981,7 @@ domain_suffix_set:
 - supercounters.com
 - supercutestuff.com
 - superdeos.com
+- superearsenjoy.com
 - superfastcdn.com
 - superfastcomputer.ru
 - superfasti.co
@@ -316698,6 +317116,7 @@ domain_suffix_set:
 - supply.bi.serviceplan.com
 - supply.hornylust.com
 - supply.upjers.com
+- supplybestjerseys.com
 - supplyframe.com
 - supplyreward.com
 - support-data.com
@@ -317019,6 +317438,7 @@ domain_suffix_set:
 - sustaindenim.com
 - sustainstores.website
 - sustainsuspenseorchestra.com
+- sustainthesound.com
 - sustoordougn.net
 - susumufrits.com
 - susurrmucific.qpon
@@ -317187,6 +317607,7 @@ domain_suffix_set:
 - svem.cc
 - sverd.net
 - sverghesegeolp.ajo2us.adobevlab.com
+- sverigebeatsbydrdre.com
 - sverowkatguzh.site
 - svetoborka.link
 - svetyivanrilski.com
@@ -318735,6 +319156,7 @@ domain_suffix_set:
 - szbpf.cn
 - szbvhslrhfuni.site
 - szbxm.cn
+- szcheapmonsterheadphones.com
 - szciifmbhbmcx.space
 - szcmcs.com
 - szdaqi88.com
@@ -318857,6 +319279,7 @@ domain_suffix_set:
 - szvr.com
 - szvukrkrtmody.com
 - szwdbeeejcoif.space
+- szwinnertechnology.com
 - szwjzl.cn
 - szwrfefyffnaf.space
 - szwsesc.cn
@@ -318874,8 +319297,6 @@ domain_suffix_set:
 - szzero.livechatvalue.com
 - szzhwaaxhnnrx.com
 - szzzpqcuxqq.com
-- t*.playdigo.live
-- t*.zcvh.net
 - t-abi.hypers.com.cn
 - t-ads.xiaohongshu.com
 - t-adx.52qumao.com
@@ -320427,7 +320848,6 @@ domain_suffix_set:
 - tag-adtrue-com-1341320338.us-west-2.elb.amazonaws.com
 - tag-demo.mention-me.com
 - tag-manager.playbuzz.com
-- tag-v*.kuzen.io
 - tag.aftvnews.com
 - tag.airportshuttleiceland.com
 - tag.akbteam.com
@@ -321335,6 +321755,7 @@ domain_suffix_set:
 - takecontrol.allergyinsider.com
 - takeforme.xyz
 - takegerman.com
+- takegoto.com
 - takehotprizzes3.live
 - takelnk.com
 - takemallelectric.com
@@ -322628,7 +323049,6 @@ domain_suffix_set:
 - tblcontent.com
 - tbli.ir
 - tblnreehmapc.com
-- tblog-*.kgslb.com
 - tblsbzfxvamuk.website
 - tbm.snssdk.com
 - tbm09.com
@@ -323728,7 +324148,6 @@ domain_suffix_set:
 - telemetry-cii.api.playstation.com
 - telemetry-coverage.mozilla.org
 - telemetry-in.battle.net
-- telemetry.*.pvp.net
 - telemetry.acronis.com
 - telemetry.adobe.io
 - telemetry.algolia.com
@@ -325031,6 +325450,7 @@ domain_suffix_set:
 - the-binary-trader.biz
 - the-counter.net
 - the-lead-tracker.com
+- the-monster-beats.com
 - the-ozone-project.com
 - the-people-group.com
 - the.checkfox.de
@@ -325066,6 +325486,9 @@ domain_suffix_set:
 - thebaicidylls.com
 - thebank247.ga
 - thebannerexchange.com
+- thebeatsbydre.com
+- thebeatsbydre.net
+- thebeatsheadphonesale.com
 - thebestdates.net
 - thebestgame2020.com
 - thebestknifes.fr
@@ -325481,6 +325904,7 @@ domain_suffix_set:
 - thetrendytales.com
 - thetreuntalle.com
 - thetreuntalle.pro
+- theuab.net
 - theupgradedata.com
 - theuseful.com
 - theuseful.net
@@ -325520,7 +325944,6 @@ domain_suffix_set:
 - theyt786ku.cfd
 - theythourbonusgain.life
 - theyunm.com
-- thezbpe5*.xyz
 - thfmjivkqizya.space
 - thfoglmtoxooy.online
 - thfpnn.leben-style.jp
@@ -328238,13 +328661,9 @@ domain_suffix_set:
 - tnbmdavwrgygn.online
 - tnbqibghgkfsh.online
 - tnbyhwawsh.com
-- tnc*.tiktokv.com
-- tnc*.tiktokv.us
-- tnc*.zijieapi.com
 - tnc-boot.capcutapi.com
 - tnc-sg.capcutapi.com
 - tnc-v2-boot.capcutapi.com
-- tnc-va*.capcutapi.com
 - tnc0-aliec2.zijieapi.com
 - tnc0-alisc1.zijieapi.com
 - tnc0-bjlgy.zijieapi.com
@@ -328252,8 +328671,6 @@ domain_suffix_set:
 - tnc100-bjlgy.snssdk.com
 - tnc11-alisc1.snssdk.com
 - tnc11-bjlgy.snssdk.com
-- tnc16-*.byteoversea.com
-- tnc16-*.hypic.com
 - tnc16-alisg.isnssdk.com
 - tnc16-normal-us-ttp.capcutapi.us
 - tnc16-useast1a.isnssdk.com
@@ -329095,6 +329512,9 @@ domain_suffix_set:
 - topazfaugh.com
 - topbananaad.com
 - topbanger.com
+- topbeatsbydrdreoutlet.com
+- topbeatsdealer.com
+- topbeatsforsale.com
 - topbestgames.com
 - topbestscoreapp.com
 - topbetfast.com
@@ -331539,8 +331959,6 @@ domain_suffix_set:
 - traccoon.intellectsoft.net
 - tracdelight.com
 - tracdelight.io
-- trace-*.free-reels.com
-- trace-*.hungrypanda.co
 - trace-2000.com
 - trace-flow.ru
 - trace.51jingying.com
@@ -331587,7 +332005,6 @@ domain_suffix_set:
 - tracing-http.megamarket.tech
 - tracing.roblox.com
 - tracing.yelp.com
-- track-*.hungrypanda.co
 - track-abroad.ostad.app
 - track-acton.healthengine.com.au
 - track-campaing.club
@@ -331618,7 +332035,6 @@ domain_suffix_set:
 - track-victoriadates.com
 - track-visit.monday.com
 - track-web.net
-- track.*.roku.com
 - track.10am-club.de
 - track.10bet.com
 - track.17goforward.com
@@ -333518,8 +333934,6 @@ domain_suffix_set:
 - trackid.globoid.globo.com
 - trackier.com
 - trackimpression.com
-- tracking*.euroads.fi
-- tracking-*.trnox.com
 - tracking-1611167402.us-east-1.elb.amazonaws.com
 - tracking-3-9f58.trnox.com
 - tracking-adnet.vivo.com.cn
@@ -333559,12 +333973,10 @@ domain_suffix_set:
 - tracking-thirdparty.i2w.io
 - tracking-uat.veritas.com
 - tracking-user-behavior.meeyland.com
-- tracking-v*.a.run.app
 - tracking-web.smobgame.com
 - tracking-widget.fillr.com
 - tracking-www.yourtourguidetours.com
 - tracking-zy.com
-- tracking.*.miui.com
 - tracking.10e20.com
 - tracking.10gb.vn
 - tracking.196189.com
@@ -335610,6 +336022,7 @@ domain_suffix_set:
 - tradesoul.cn
 - tradetooth.com
 - tradetracker.net
+- tradevip1.com
 - tradineseveni.club
 - trading-ad.net
 - trading21s.com
@@ -338987,6 +339400,7 @@ domain_suffix_set:
 - tteodxsfaqto.com
 - tteojtlqlxrev.com
 - tterforiwasin.org
+- tteshop.com
 - ttfgames.cn
 - ttfkof.xyz
 - ttfoetfeswjwn.space
@@ -339592,7 +340006,6 @@ domain_suffix_set:
 - tuowknbkbwfve.online
 - tuoxintrade.cn
 - tupian6666.com
-- tupian888.*.bcebos.com
 - tupian88888.com
 - tupian9999.com
 - tupiglanseghu.net
@@ -340294,7 +340707,6 @@ domain_suffix_set:
 - twngcpbidder.lb.engagecore.com
 - twngyyzvhzaqtj.com
 - twnrydt.com
-- two-gun-volley.pages.dev
 - two.abayaelegance.com
 - two.cm.com
 - two.fsylr.com
@@ -341254,7 +341666,6 @@ domain_suffix_set:
 - ub.finanzfrage.net
 - ub1.job592.com
 - ub6weu52p.com
-- ubacollect-*.cloud.dbankcloud.cn
 - ubadzufyfjcd.com
 - ubaii.com
 - ubaisaftoksult.net
@@ -341345,6 +341756,7 @@ domain_suffix_set:
 - ubnduamnwmdoi.site
 - ubntrooters.serveuser.com
 - ubnvnkue.com
+- ubnw.net
 - ubnwujaioruel.com
 - uboiujkzwbp.com
 - ubonhvgfmfprv.online
@@ -341412,7 +341824,6 @@ domain_suffix_set:
 - ubzmzxtdosgdh.online
 - ubzsvgyo.com
 - ubztowsnyurmy.space
-- uc*.atobo.com
 - uc-ap.yodo1api.com
 - uc-baidu.cc
 - uc.haoyunyuan.cc
@@ -342927,14 +343338,7 @@ domain_suffix_set:
 - uloadeeksurvey.space
 - uloaludu.xyz
 - uloathoagna.net
-- ulog*.*
-- ulog*.gifshow.com
-- ulog*.kwai-pro.com
-- ulog*.kwaipros.com
-- ulog-*.ksapisrv.com
 - ulog-sdk.gifshow.com
-- ulog.*.ksapisrv.com
-- ulog.*.kwai-pro.com
 - ulog.imap.baidu.com
 - ulog.ksapisrv.com
 - ulog.kwai-pro.com
@@ -343073,7 +343477,6 @@ domain_suffix_set:
 - umagccwbbjlne.space
 - umahvvivrpbfx.online
 - umai.labinno-construction.ch
-- umami-*.sufrah.net
 - umami-blond-beta.vercel.app
 - umami-bqgsqm3jn-alexs-projects-8df20223.vercel.app
 - umami-now.cyber-folks.pl
@@ -343939,7 +344342,6 @@ domain_suffix_set:
 - unioladeseret.com
 - uniolaicecaps.com
 - uniomrtvmnf.com
-- union*.365inews.com
 - union-httpdns.gslb.yy.com
 - union-mlog.bigda.com
 - union-record.oss-cn-zhangjiakou.aliyuncs.com
@@ -344491,6 +344893,7 @@ domain_suffix_set:
 - unstophubbly.cfd
 - unstoutgolfs.com
 - unstripsawmont.com
+- unstyle.us
 - unsub.crm-edm.thsrc.com.tw
 - unsub.markadsmal.islandsbanki.is
 - unsub.westpacdev.test.cjmadobe.com
@@ -345756,7 +346159,6 @@ domain_suffix_set:
 - us-microsoft-store.com
 - us-now.experian.com
 - us-west-2.kinesis.hpanalytics.net
-- us.*.qwadro.com
 - us.a1.yimg.com
 - us.bannyat.com
 - us.bksn.se
@@ -345787,6 +346189,7 @@ domain_suffix_set:
 - us4post.com
 - us5fzonaco.ru
 - us99.pro
+- usa-beatsbydreheadphonesonsale.net
 - usa.bravo-dog.com
 - usa.cc
 - usa.ltqeducacao.com.br
@@ -345852,7 +346255,6 @@ domain_suffix_set:
 - usdspxxgwqqzn.online
 - usdtrating.top
 - use-cr.svr-algorix.com
-- use-trk*.bluevoox.com
 - use-trk.monetune.com
 - use.fvr.to
 - use.hetzner.com
@@ -346261,7 +346663,6 @@ domain_suffix_set:
 - utihriethlv.com
 - utiiamqdsku.com
 - utijs.xyz
-- util-*.simply-hentai.com
 - util.nphoto.net
 - utility.baidu.cn
 - utility.baidu.com
@@ -347713,8 +348114,8 @@ domain_suffix_set:
 - uzyzsowhwgmmv.online
 - uzzidxlvnq.com
 - uzzxkatxegdzh.website
-- v*-ad.video.yximgs.com
 - v-collector.dp.aws.charter.com
+- v-has.com
 - v-links.net
 - v-pack.net
 - v-support.free.bg
@@ -348121,7 +348522,6 @@ domain_suffix_set:
 - valencia-beacons.xumo.com
 - valencytecoma.top
 - valentin.cool-shoe.com
-- valentine.xhamster.*
 - valentinosverige.com
 - valeofoodsgroup.com
 - valepoking.com
@@ -351333,6 +351733,7 @@ domain_suffix_set:
 - vioxx.1.p2l.info
 - vioyta.yeppon.it
 - vioytuituunmsr.com
+- vip-beats.com
 - vip-datings.life
 - vip-dien-mayxanh.com
 - vip-dienmayxanh.com
@@ -351368,6 +351769,7 @@ domain_suffix_set:
 - vipapi.me
 - vipavkacrfujf.online
 - vipbanner.de
+- vipbeatsbydre.com
 - vipblogers.ru
 - vipcaptcha.live
 - vipcard-vib.com
@@ -351384,6 +351786,7 @@ domain_suffix_set:
 - vipfanyongwang.com
 - vipfastmoney.com
 - vipgooshop.com
+- vipheadphones.com
 - viphirsaick.net
 - viphostindustries.info
 - vipicmou.net
@@ -351403,6 +351806,7 @@ domain_suffix_set:
 - vipmomo79.club
 - vipoasis.shop
 - vipon.fr
+- vipshoes2.com
 - vipshopee.cc
 - vipshopee.com
 - vipsj.zgallerie.com
@@ -354932,7 +355336,6 @@ domain_suffix_set:
 - vzzun.boxlunch.com
 - vzzurxxvdeeke.space
 - vzzvfpvwyyhfvo.com
-- w*.*skwai.com
 - w-api.baomoi.com
 - w-chat.xf.cz
 - w-gbttkri.global
@@ -355893,6 +356296,7 @@ domain_suffix_set:
 - wasc.kaufland.ro
 - wasc.thecompanystore.com
 - wasdczhepg.com
+- wasdj.com
 - wasentdemstuh.online
 - wasfilledwi.com
 - wasghz.lametayel.co.il
@@ -357533,7 +357937,6 @@ domain_suffix_set:
 - weblog.zdnet.co.kr
 - weblog2.eseoul.go.kr
 - weblogger-dynamic-lb.playdom.com
-- weblogger-wss.cool*cloud.com
 - weblogiklan.com
 - webls.net
 - weblytics.io
@@ -359323,6 +359726,10 @@ domain_suffix_set:
 - wholeingredient.com
 - wholenicenews.com
 - wholepagecache.com
+- wholesale-exporter1.com
+- wholesalediscountpurses.com
+- wholesalefine.com
+- wholesaleonlinemart.com
 - wholescience.pro
 - wholeshopping.pro
 - wholesomehealthshop.com
@@ -361646,6 +362053,7 @@ domain_suffix_set:
 - worldactualstories.com
 - worldbestposts.com
 - worldbusiness.life
+- worldcoinpay.com
 - worldcommonwords.com
 - worldcommunitygrid.fr
 - worldcoolfeed.com
@@ -362522,7 +362930,6 @@ domain_suffix_set:
 - wsktql.mopar.eu
 - wslbahe.top
 - wslits.cn
-- wslog-global-dual.cool*cloud.com
 - wslog-global-dual.coolccloud.com
 - wslog.chinanetcenter.com
 - wslqgslkuv.com
@@ -364081,6 +364488,7 @@ domain_suffix_set:
 - www.eventflavor.com
 - www.everestgroupcorp.com
 - www.everifymatch.com
+- www.exaapi.com
 - www.exactpharm.com
 - www.exambased.com
 - www.exasrv.com
@@ -365311,7 +365719,6 @@ domain_suffix_set:
 - www.xpdyqax.cn
 - www.xtremetechcr.com
 - www.xvideoslive.com
-- www.xxmh*.com
 - www.xxxnations.com
 - www.xxxtoolbar.com
 - www.yabovip2030.com
@@ -368134,7 +368541,6 @@ domain_suffix_set:
 - xlnvvbk.xyz
 - xlnwabndmqn.com
 - xlnxslfcq.com
-- xlog*-*.tiktokv.com
 - xlog-va.byteoversea.com
 - xlog-va.musical.ly
 - xlog-va.tiktokv.com
@@ -371349,7 +371755,6 @@ domain_suffix_set:
 - xxyzwtsylw.com
 - xxzccpsbdybmx.website
 - xxztetqagxksa.site
-- xy-*pcdn.msstatic.com
 - xy-cdnfile1pcdn.msstatic.com
 - xy-fileserverpcdn.cdn.huya.com
 - xy-livewebbs2pcdn.msstatic.com
@@ -371787,7 +372192,6 @@ domain_suffix_set:
 - y9rtbzrt648fuikwyrvpgqehjl1.cfd
 - y9wgxd5oy7pi.shop
 - y9yfexnb72pw5goz.cfd
-- ya*.dwstatic.com
 - ya-counter.ru
 - ya88s1yk.com
 - yaacdn.top
@@ -373129,7 +373533,6 @@ domain_suffix_set:
 - yhrvpvbcfbuj.com
 - yhsbgm.icu
 - yhsegbkmhvrgx.space
-- yhsfsdv*.com
 - yhsfsdv03.com
 - yhskfe.klipsch.com
 - yhslqeecgm.com
@@ -374470,6 +374873,7 @@ domain_suffix_set:
 - yourmailservice.com
 - yourmarketingemail.com
 - yourmilliondollarsidehustle.com
+- yourmonsterbeats.com
 - yourmy.monster
 - yournames.click
 - yourniceposts.com
@@ -374978,7 +375382,6 @@ domain_suffix_set:
 - yscuspceqmprq.site
 - ysdhe.com
 - ysdk.qq.com
-- ysdm*.ys137.com.cn
 - ysdtufmmswzwh.online
 - ysdvkaxb.com
 - yseemjov.com
@@ -376329,7 +376732,6 @@ domain_suffix_set:
 - zabanit.xyz
 - zabavazaodrasle.com
 - zabbix.symanteprotection.com
-- zabdybod*.club
 - zabhoggkgm.com
 - zabianunmoral.qpon
 - zabkvvqzulvwe.online
@@ -376389,7 +376791,6 @@ domain_suffix_set:
 - zahlen.tours-finder.com
 - zahlenbitte.jmwiarda.de
 - zahn.net.anwalt.de
-- zahrvfbd*.xyz
 - zahrvfbd.xyz
 - zahvrkdkeulsy.site
 - zahvzj.fxpro.ru.com
@@ -376582,7 +376983,6 @@ domain_suffix_set:
 - zappy.co.za
 - zapr.in
 - zapunited.com
-- zaqlovh*.xyz
 - zaqptv2bo.xyz
 - zaqxmbjhdyvmx.website
 - zaqxwnwwtx.com
@@ -376686,9 +377086,6 @@ domain_suffix_set:
 - zayzjuetnoavs.website
 - zazaruniri.com
 - zazerygu.pro
-- zazgbqg*.xyz
-- zazgiyoh*.world
-- zazgiyoh*.xyz
 - zazlluqbstvzk.website
 - zazlpkapqlrai.website
 - zazmunokpvzi.com
@@ -376702,8 +377099,6 @@ domain_suffix_set:
 - zbbqhdnef.com
 - zbbuttbhoybvc.space
 - zbbvhj.xyz
-- zbc6hy*.live
-- zbc6hye*.xyz
 - zbc6hyepls.xyz
 - zbc6hyip.xyz
 - zbcnfjuttikis.online
@@ -376824,8 +377219,6 @@ domain_suffix_set:
 - zccfnakbucamq.site
 - zcchbviygqkke.com
 - zccho692lukzqvq3b5.cfd
-- zcchyr*.xyz
-- zcchyw*.xyz
 - zcck60eqyw.world
 - zcck60qyw.xyz
 - zcck60wqyw.xyz
@@ -377919,7 +378312,6 @@ domain_suffix_set:
 - zhiyaowan.cn
 - zhiyaspa.com
 - zhiyuanteam.com
-- zhizhizhizhi.oss-*.aliyuncs.com
 - zhizhunbao.top
 - zhizhuzhijia.cn
 - zhizi.qq.com
@@ -380935,6 +381327,7 @@ domain_keyword_set:
 - allyes
 - analysys
 - analytics
+- analytics.
 - android.bugly.qq.com
 - anybest.
 - ap.51y5.net
@@ -380943,6 +381336,7 @@ domain_keyword_set:
 - api.sobot.com
 - apiinit.amap.com
 - apimg.qunliao.info
+- app-analytics
 - app-log.
 - app.51y5.net
 - applog.
@@ -381158,6 +381552,387 @@ domain_keyword_set:
 - ynuf.alipay.com
 - zjtoolbar
 - zymerget
+domain_wildcard_set:
+- *-ad-sign.byteimg.com
+- *-ad.a.yximgs.com
+- *-applog.fqnovel.com
+- *-datareceiver.aki-game.net
+- *.exaapi.com
+- *adapt-beacon.awsprodops.movetv.com
+- *stun.kugou.com
+- *two-gun-volley.pages.dev
+- 163487*.qmgmw.com
+- a*.chajiaotong.com
+- a*.smlog.co.kr
+- aan.amazon.*
+- ac*.786ip.com
+- ac*.faxingchina.com
+- acr-*-prd.samsungcloud.tv
+- ad*.ettoday.net
+- ad*.zonaplus.tv
+- ad-*.amazonaws.com
+- ad-*.appacc.dbankedge.cn
+- ad-host-backup-*.*.aliyuncs.com
+- ad-host-backup-*.aliyuncs.com
+- ad-host-backup-*.s3.*.amazonaws.com
+- ad.*.360.cn
+- ad.*.xiaomi.com
+- ad.kisstvshow.*
+- adapi*.boomplaymusic.com
+- adcounter*.uptolike.ru
+- adcs-*.myappsget.com
+- adi*.cnool.net
+- admicro*.vcmedia.vn
+- admob-app-id-*.firebaseio.com
+- ads*-adnow.com
+- ads*-normal*.zijieapi.com
+- ads*-normal-*.zijieapi.com
+- ads*-normal-lq.zijieapi.com
+- ads*.bojijulebu.com
+- ads*.depositfiles.com
+- ads*.depositfiles.org
+- ads*.dfiles.eu
+- ads*.dfiles.ru
+- ads*.production-public.tubi.io
+- ads*.textra.me
+- ads*.zijieapi.com
+- ads-*-nfl.yinzcam.com
+- ads-dmp-collect.*.karrotmarket.com
+- ads.*.kugou.com
+- ads.*.yahoo.com
+- ads.livetv*.me
+- adserver.*.yahoodns.net
+- adservice.google.*
+- adsfilebssdlbig.*.kugou.com
+- adv0*.msa.cdn.mediaset.net
+- advert*.livesportmedia.eu
+- adx-*.dbankedge.cn
+- adx-*.op.dbankcloud.com.edgekey.net
+- aem-collector-*.kgslb.com
+- aff*.kolektiva.net
+- agatha-log-service-*.a.run.app
+- aj1*.online
+- aj1*.xyz
+- aj2*.bid
+- aj2*.online
+- aj3*.bid
+- ajx*.online
+- ali-bj-pcdn-*.biliapi.net
+- ana*.inews24.com
+- analytics*.clickdimensions.com
+- analytics*.prezly.com
+- analytics-*-nfl.yinzcam.com
+- analytics-ad-*.kgslb.com
+- analytics-rollout-*.amazonaws.com
+- analytics-v*.eip.telegraph.co.uk
+- analytics.*.sky.com
+- analyzer*.fc2.com
+- api*.amplitude.com
+- api*.batmobil.net
+- api*.moengage.com
+- api-*.hismarttv.com
+- apiproxy-log-nlb-1f304af4d3ac01a4.elb.us-east-*.amazonaws.com
+- app-analytics-*.snapchat.com
+- appanalysis*.banggood.com
+- apple-*.le.com
+- applog*.matrix.easebar.com
+- at*.doubanio.com
+- attr-logs.*.amazonaws.com
+- auth-*.hismarttv.com
+- ax.*.ifeng.com
+- banner.*.tccapis.com
+- bapi-*.moengage.com
+- batchlogging*-eu.truecaller.com
+- batchlogging*-noneu.truecaller.com
+- bdcpro*.techweb.com.cn
+- bdlm*.hc360.com
+- beacons*.gvt3.com
+- beehiiv-adnetwork-production.s*.amazonaws.com
+- bi-eventtracker-*.amazonaws.com
+- bjkedv*.xyz
+- bjsvp*.space
+- browser-intake-*-datadoghq.com
+- c*hit.zerkalo.io
+- cdn-*.gravityfield.ai
+- ce-global-track-*.amazonaws.com
+- chat*-ce.chatdealer.jp
+- cj1*.online
+- clickhouse-collector.*.prod.plat.agency
+- clickstream-*.homedepot.com
+- client.rum.*.amazonaws.com
+- clog*.yuanfudao.com
+- collect-elb-*.amazonaws.com
+- collector*.ex.co
+- collector-*.luigisbox.com
+- collector-*.px-cdn.net
+- collector-*.px-client.net
+- collector-*.px-cloud.net
+- collector-*.pxchk.net
+- collector-*.tvsquared.com
+- collector-*.us.tvsquared.com
+- counter*-yadro*-ru.unblocked.lol
+- creative*.bidease.com
+- cs*.mp3bars.com
+- customerevents.us-east-*.internal.dradis.netflix.com
+- cza*.crazygames.com
+- d*.ruiwen.com
+- d*.xinshipu.com
+- data-track*.yingxiong.com
+- datacollector-*.dt.dbankcloud.cn
+- datacollector-*.dt.hicloud.com
+- device-metrics-*.amazon.com
+- device-metrics-us*.amazon.com
+- discovery-ios-*.ertelecom.ru
+- display-ad-*.kgslb.com
+- dj1*.online
+- dm*.yxlady.com
+- dn*.ixinwei.com
+- ecommerce-events*.adscale.com
+- eflbundles.*.com.tr
+- ej1*.online
+- eum*.instana.io
+- event.*.karrotmarket.com
+- event.*.shoplive.cloud
+- events*.cre.ma
+- events-*.op.hicloud.com
+- events-api*.outfit7.com
+- f-log-*.grammarly.io
+- fads*s.com
+- fads*z.com
+- fanpingbi*.gaokao.com
+- faro-collector-*.grafana-ops.net
+- faro-collector-prod-*.grafana.net
+- firebaselogging-*.googleapis.com
+- flurry.agentportal-*.yahoodns.net
+- flurry.agentportal.*.yahoodns.net
+- fp-*it*.fengkongcloud.com
+- fra-*.braze.eu
+- gads*s.com
+- gads*z.com
+- gbxreport-*.wf.com
+- gcw*.2liang.cn
+- geoloc*.9cd47096ab1495d8d3b18667f6a52b9c.com
+- geoloc*.geo20120530.com
+- geoloc*.geostats.ovh
+- geoloc*.geovisite.ovh
+- geotargetly-api-*.com
+- get*bannerads-6egeg2u34q-du.a.run.app
+- gscounters.*.gigya.com
+- gtlpa*.com
+- hads*s.com
+- hba*.hepsiburada.com
+- hn-ping*.hashnode.com
+- host*.carl-ras.dk
+- host*.ncoi.nl
+- host*.nti.nl
+- host*.polaroid.com
+- host*.rigbyandpeller.com
+- host*.rvshare.com
+- hostingcloud.*.wasm
+- hstats*.hepsiburada.com
+- htm*.hepsiburada.com
+- hw-sh-pcdn-*.biliapi.net
+- iad-*.braze.com
+- ifengad.*.ifeng.com
+- impservice*.yodao.com
+- impservice*.youdao.com
+- install*.zonastat.com
+- iptracker-lb-*.amazonaws.com
+- ja*.apppure.net
+- ja*.gamersky.com
+- js*.abolezi.com
+- js.*2023*.live
+- js.*2023*.xyz
+- jtbo*.nqxvevk.cn
+- kbox-analytics-prod.s*.amazonaws.com
+- lively-collect-elb-*.amazonaws.com
+- liveme-sensors-collect2-*.amazonaws.com
+- livetracker.*.pangea-cms.com
+- log*-*.tiktokv.com
+- log*-misc-lf.amemv.com
+- log*-misc-lq.amemv.com
+- log*-normal-*.tiktokv.us
+- log*-normal-lq.toutiaoapi.com
+- log*-normal-useast1a.lemon8-app.com
+- log*.aliyuncs.com
+- log*.boomplaymusic.com
+- log*.byteoversea.com
+- log*.vietnamplus.vn
+- log*.zijieapi.com
+- log-*.epicdn.me
+- log-*.isnssdk.com
+- log-*.previewnetworks.com
+- log-*.zadn.vn
+- log-v*-boot.capcutapi.com
+- log-va*.capcutapi.com
+- logger-*.dailymotion.com
+- logreport-global-dual.cool*cloud.com
+- logs-*.rebxgame.com
+- logs.collector.*.cloud.solarwinds.com
+- logservice-*.platform.dbankcloud.cn
+- logstash-*.radio-canada.ca
+- lt*.tritondigital.com
+- mads*z.com
+- mapi-log.qoo*.jp
+- marketplace-*.hyprmx.com
+- matomo-demo-*.amazonaws.com
+- matomo.*.vn
+- mautic.*.vn
+- mcs-*.lemon8-app.com
+- mcs-*.lemon8-app.us
+- mcs-*.tiktok.com
+- mcs-normal-*.capcutapi.com
+- mcs-va-*.tiktokv.com
+- mcs.*.tiktok.com
+- mcs.*.tiktokv.com
+- mediate-ios-*.hyprmx.com
+- metric*.rediff.com
+- mistat.*.xiaomi.com
+- mob*.novanewsapp.com
+- mobiadvert*.livesportmedia.eu
+- mobileanalytics.*.amazonaws.com
+- mon*-*.tiktokv.com
+- mon*-*.tiktokv.us
+- mon*-misc-lf.fqnovel.com
+- mon*-misc.fqnovel.com
+- mon*.tiktokv.us
+- mon-*.lemon8-app.com
+- mon-*.lemon8-app.us
+- mon-*.tiktokv.com
+- mon-v*-boot.capcutapi.com
+- mon-va*.capcutapi.com
+- mssdk*.capcutapi.com
+- mssdk*.zijieapi.com
+- mtag-*.wedevs.com
+- n*adserv.com
+- n*adserv.xyz
+- nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi
+- opnked*.xyz
+- orderana*.spankbang.com
+- p*-ad-sign.byteimg.com
+- p26.gejulm*.com
+- p2pup*.gamedl.qq.com
+- pangolin-sdk-toutiao*.com
+- pijama.*.elasticbeanstalk.com
+- ping*.bidease.com
+- ping*.qq.com
+- piwik.*.vn
+- pixel*.production-public.tubi.io
+- pixel-*.convertagain.net
+- pixelapi-*.cs.mysamba.tv
+- player-feedback*.glomex.*
+- polaris*-normal-*.zijieapi.com
+- powa-ingest-prod-*.video-player.arcpublishing.com
+- prebid-cache*.ifunny.co
+- prod.*.analytics.console.aws.a2z.com
+- prod.*.publishers.advertising.a2z.com
+- production-adserver-*.amazonaws.com
+- promo-*.vercel.app
+- px*.mediahills.ru
+- pxl-*.ozone.ru
+- qn-*pcdn.cdn.huya.com
+- qn-*pcdn.cdn.msstatic.com
+- qpb*.sohu.com
+- quangcao-*.epicdn.me
+- reachableads-av.*.amazonaws.com
+- report.*.gbqofs.io
+- report.*.qq.com
+- res*.pinpai8.cn
+- rtb-*.anysex.com
+- rtbimp-loadbalancer-*.amazonaws.com
+- rtlog*.tiktokv.com
+- rtlog*.tiktokv.us
+- rum*.a.trbcdn.net
+- rum*.cdnvideo.ru
+- s*.skencituer.com
+- sam*.baby-kingdom.com
+- same*.stockstar.com
+- sd.yhzzzs*.com
+- sdk-*.moengage.com
+- sdk.fra-*.braze.eu
+- sensorsdata*.read.duokan.com
+- servo-report.keepstreams.*
+- sock*-goguardian.pusher.com
+- spa-tracker*.spapi.io
+- ssp*.rtb.beeline.ru
+- st-*.dynamicyield.com
+- stat*.1internet.tv
+- stat.*.v-56.com
+- static*.365inews.com
+- stats*.credit-cooperatif.coop
+- stats*.videonow.ru
+- stats-*.p2pnow.ru
+- stats.*.ronghub.com
+- stats.*.rongnav.com
+- stats.mapple.*
+- stats2.*.fdnames.com
+- stlog*-local.kakao.com
+- stun.*.kugou.com
+- t*.playdigo.live
+- t*.zcvh.net
+- tag-v*.kuzen.io
+- tblog-*.kgslb.com
+- telemetry*.transcend.io
+- telemetry.*.pvp.net
+- thezbpe5*.xyz
+- tnc*.tiktokv.com
+- tnc*.tiktokv.us
+- tnc*.zijieapi.com
+- tnc-va*.capcutapi.com
+- tnc16-*.byteoversea.com
+- tnc16-*.hypic.com
+- trace-*.free-reels.com
+- trace-*.hungrypanda.co
+- track-*.hungrypanda.co
+- track.*.roku.com
+- tracking*.euroads.fi
+- tracking-*.trnox.com
+- tracking-v*.a.run.app
+- tracking.*.miui.com
+- trk*.vidible.tv
+- tupian888.*.bcebos.com
+- ubacollect-*.cloud.dbankcloud.cn
+- uc*.atobo.com
+- ulog*.*
+- ulog*.gifshow.com
+- ulog*.kwai-pro.com
+- ulog*.kwaipros.com
+- ulog-*.ksapisrv.com
+- ulog.*.ksapisrv.com
+- ulog.*.kwai-pro.com
+- umami-*.sufrah.net
+- union*.365inews.com
+- us.*.qwadro.com
+- use-trk*.bluevoox.com
+- util-*.simply-hentai.com
+- v*-ad.video.yximgs.com
+- v*.denakop.com
+- valentine.xhamster.*
+- w*.*skwai.com
+- weblogger-wss.cool*cloud.com
+- wslog-global-dual.cool*cloud.com
+- www.xxmh*.com
+- xlog*-*.tiktokv.com
+- xy-*pcdn.msstatic.com
+- ya*.dwstatic.com
+- yhsfsdv*.com
+- ysdm*.ys137.com.cn
+- zabdybod*.club
+- zahrvfbd*.xyz
+- zaqlovh*.xyz
+- zazgbqg*.xyz
+- zazgiyoh*.world
+- zazgiyoh*.xyz
+- zbc6hy*.live
+- zbc6hye*.xyz
+- zcchyr*.xyz
+- zcchyw*.xyz
+- zhizhizhizhi.oss-*.aliyuncs.com
+domain_regex_set:
+- .*p2p.*qq.com
+- .*pcdn.*biliapi.net
+- .*pcdn.*youku.com
+- ^speed\.(coe|open)\.ad\.[a-z]{2,6}\.prod\.hosts\.ooklaserver\.net$
 ip_cidr_set:
 - 1.3.0.10/32
 - 101.124.19.122/32
@@ -381167,6 +381942,8 @@ ip_cidr_set:
 - 101.227.14.80/29
 - 101.227.200.0/22
 - 101.227.200.0/24
+- 101.227.200.11/32
+- 101.227.200.28/32
 - 101.227.97.240/32
 - 101.251.211.235/32
 - 101.35.204.35/32
@@ -381212,6 +381989,8 @@ ip_cidr_set:
 - 110.93.143.144/32
 - 111.11.208.2/32
 - 111.175.220.160/29
+- 111.175.220.163/32
+- 111.175.220.164/32
 - 111.175.221.58/32
 - 111.206.22.0/24
 - 111.3.78.103/32
@@ -381427,6 +382206,7 @@ ip_cidr_set:
 - 174.139.17.130/32
 - 174.139.53.195/32
 - 174.139.64.61/32
+- 175.6.223.15/32
 - 180.153.103.224/32
 - 180.166.52.24/32
 - 180.168.41.175/32
@@ -381597,6 +382377,7 @@ ip_cidr_set:
 - 221.130.193.224/32
 - 221.179.131.72/32
 - 221.179.140.0/24
+- 221.179.140.145/32
 - 221.179.183.0/24
 - 221.179.191.0/24
 - 221.179.46.190/32

@@ -35,6 +35,8 @@ def R(*p):
     return os.path.join(ROOT, "rules", *p)
 
 
+REGEX = set()          # domain_regex_set 条目（不能转成域名，原样保留）
+WILDCARD = set()       # 含 * 的条目，domain_suffix_set 不支持通配符，必须单列
 IPV4 = re.compile(r"^\d{1,3}(?:\.\d{1,3}){3}$")
 PRIVATE = re.compile(
     r"^(?:10\.|127\.|0\.|169\.254\.|192\.168\.|172\.(?:1[6-9]|2\d|3[01])\.|100\.(?:6[4-9]|[7-9]\d|1[01]\d|12[0-7])\.)"
@@ -74,12 +76,10 @@ def parse_ruleset(path):
         exact |= {v.lower() for v in sec.get("domain_set", [])}
         suffix |= {v.lower() for v in sec.get("domain_suffix_set", [])}
         keyword |= {v.lower() for v in sec.get("domain_keyword_set", [])}
+        REGEX.update(v for v in sec.get("domain_regex_set", []))
         for v in sec.get("ip_cidr_set", []) + sec.get("ip_cidr6_set", []):
             ip.add(v.lower())
-        for v in sec.get("domain_wildcard_set", []):
-            w = v.lower().lstrip("*").lstrip(".")
-            if w:
-                suffix.add(w)
+        WILDCARD.update(v.lower() for v in sec.get("domain_wildcard_set", []))
         return exact, suffix, keyword, ip
 
     for line in text.splitlines():
@@ -101,12 +101,22 @@ def parse_ruleset(path):
                 ip.add(v)
             continue
         if re.match(r"^[a-z0-9\*\-\.]+$", s) and "." in s:
-            suffix.add(s.lower())
+            (WILDCARD if "*" in s else suffix).add(s.lower())
     return exact, suffix, keyword, ip
 
 
 def normalize(exact, suffix, keyword, ip):
-    """把误写成 DOMAIN 的 IP 挪到 ip 集合；丢掉私网 IP"""
+    """把误写成 DOMAIN 的 IP 挪到 ip 集合；丢掉私网 IP；清洗脏数据"""
+    # 含 * 的进通配符集合；以 - 开头 / 以 . 结尾 / 无点的丢弃
+    for v in list(suffix | exact):
+        if "*" in v:
+            WILDCARD.add(v)
+            suffix.discard(v)
+            exact.discard(v)
+    for st in (exact, suffix):
+        for v in list(st):
+            if v.startswith(("-", ".")) or v.endswith(".") or ".." in v or "." not in v:
+                st.discard(v)
     for v in list(exact | suffix):
         if IPV4.match(v):
             exact.discard(v)
@@ -131,14 +141,17 @@ def write_yaml(path, title, sources, exact, suffix, keyword, ip, extra_comment=N
         lines += ["#", "# " + extra_comment]
     lines += [
         "#",
-        "# 条目：domain_set %d / domain_suffix_set %d / domain_keyword_set %d / ip_cidr_set %d"
-        % (len(exact), len(suffix), len(keyword), len(ip)),
+        "# 条目：domain_set %d / domain_suffix_set %d / domain_keyword_set %d / "
+        "domain_wildcard_set %d / domain_regex_set %d / ip_cidr_set %d"
+        % (len(exact), len(suffix), len(keyword), len(WILDCARD), len(REGEX), len(ip)),
         "no_resolve: true",
     ]
     for key, vals in (
         ("domain_set", exact),
         ("domain_suffix_set", suffix),
         ("domain_keyword_set", keyword),
+        ("domain_wildcard_set", WILDCARD),
+        ("domain_regex_set", REGEX),
         ("ip_cidr_set", ip),
     ):
         if vals:
@@ -152,11 +165,18 @@ def write_yaml(path, title, sources, exact, suffix, keyword, ip, extra_comment=N
 # ---------------------------------------------------------------- 1. 广告总表
 
 AD_SOURCES = [
-    "shunt-rules/loon/AdvertisingTest.lsr",
-    "shunt-rules/loon/AdGuardSDNSFilter.lsr",
-    "quixoticheart-egern/adrules.yaml",
-    "yfamilys/AntiAD.list",
-    "loonkit/AdBlock.list",
+    "shunt-rules/loon/AdvertisingTest.lsr",       # 318,626 覆盖最广
+    "shunt-rules/loon/AdGuardSDNSFilter.lsr",     # 109,050 DNS 过滤
+    "quixoticheart-egern/adrules.yaml",           # 211,106 Egern 原生
+    "yfamilys/AntiAD.list",                       # 303,395
+    "loonkit/AdBlock.list",                       #  77,213
+    "shunt-rules/loon/Privacy.lsr",               #  39,936 隐私追踪（v9.9 在用）
+    "deezertidal-shadowrocket-rules-hijacking.list",  # 劫持站
+    "deezertidal-shadowrocket-rules-beats.list",      # 仿冒 Beats
+    # 下面三份与上面同源但版本不同（root 里是更早的副本），互相有对方没有的条目
+    "deezertidal-shadowrocket-rules-adlite.list",
+    "deezertidal-shadowrocket-rules-advertisinglite.list",
+    "quixoticheart-rule-set-adrules.yaml",
 ]
 
 
@@ -181,11 +201,12 @@ def build_ad_full():
     dst = os.path.join(CUR, "rules", "ad-full.yaml")
     n = write_yaml(
         dst,
-        "广告拦截总表（5 份并集）",
+        "广告拦截总表（8 份并集）",
         AD_SOURCES,
         exact, suffix, keyword, ip,
-        "5 份广告表互相大量重叠但都不互相包含：AdvertisingTest 独有 22,057、adrules 独有 24,808、"
-        "AdGuard 独有 28,175、AntiAD 独有 13,610、AdBlock 独有 12,691。取全并集是唯一能做到不漏的方式。"
+        "8 份广告/追踪/劫持表互相大量重叠但都不互相包含。实测：AdvertisingTest 独有 22,057、"
+        "adrules 独有 24,808、AdGuard 独有 28,175、AntiAD 独有 13,610、AdBlock 独有 12,691、"
+        "Privacy 独有 11,000+、Hijacking 186、Beats 714。取全并集是唯一能做到不漏的方式。"
         "另修正了原表里把 IP 写成 DOMAIN 的条目（这些在 Egern 里永远匹配不到）。",
     )
     return n, dst
