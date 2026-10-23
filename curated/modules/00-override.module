@@ -1,0 +1,87 @@
+#!name=Egern 优先级补丁
+#!desc=修正被其他模块/广告表误拦的域名。⚠️ 必须放在模块列表【最上面】才生效
+#!author=egern-mirror / curated
+#!homepage=https://github.com/tuohai57/egern-mirror/tree/main/curated
+#!category=curated
+#!date=2026-10-24
+
+# ============================================================================
+# 这个模块解决什么问题
+# ============================================================================
+#
+# Egern 的优先级是：模块 > 本地配置；模块之间、规则之间都是「上面的优于下面」，
+# 是纯列表序，没有"更具体者优先"。
+#
+# 后果：模块里写死的 REJECT，你在本地规则里加 DIRECT 是【无效】的——
+# 本地规则救不回模块误拦的域名。唯一能压住它们的，是放在【更上面】的另一个模块。
+#
+# 所以这个模块的存在意义只有一个：放在最上面，把几个"拦了会坏功能"的域名捞回来。
+#
+# 实测背景：全库 1,753 个模块的 [Rule] 段共涉及 3,310 个域名（3,204 个 REJECT），
+# 其中 112 个同时出现在国内直连表里——本该直连却被模块强制拦截，且本地改不动。
+# 下面只挑了其中确实会造成【功能性损坏】的，广告 SDK 一律不动。
+#
+# ⚠️ 用法：模块列表 → 把这个模块拖到第一位。放错位置 = 完全不生效（不会报错，很隐蔽）。
+# ⚠️ 本模块不含 [Script]、不含 MITM，纯规则，零开销。
+# ============================================================================
+
+
+[Rule]
+
+# ---------------------------------------------------------------------------
+# A 组：默认启用 —— 拦了会直接坏功能，且与"去广告"目标不冲突
+# ---------------------------------------------------------------------------
+
+# 网易七鱼在线客服 SDK。大量 App 的"在线客服/联系客服"页走这个域名，
+# 被"广告平台拦截器"和多个 App 模块 REJECT 后，客服页白屏或一直转圈。
+DOMAIN-SUFFIX,qiyukf.com,DIRECT
+
+# Apple 系统侧统计（App Store 分析上报）。
+# 被"广告平台拦截器"REJECT，可能导致 App Store 相关数据异常。
+DOMAIN-SUFFIX,app-analytics-services.com,DIRECT
+
+
+# ---------------------------------------------------------------------------
+# B 组：按需启用 —— 双用途域名，自己权衡（默认全部注释）
+# 用法：删掉行首的 "# " 即可生效
+# ---------------------------------------------------------------------------
+
+# 【分享功能 vs 广告】MobTech 的 mob.com 既是 ShareSDK（App 内分享到微信/QQ 的通道），
+# 也是 MobAds 广告平台。如果你发现某个 App 点"分享到微信"没反应，打开这条。
+# DOMAIN-SUFFIX,mob.com,DIRECT
+
+# 【推送到达 vs 推送广告】个推。拦它是为了去推送广告，代价是推送可能收不到。
+# DOMAIN-SUFFIX,getui.net,DIRECT
+
+# 【统计上报】Firebase Analytics。拦了省流量，但部分 App 的埋点/登录链路会重试，表现为启动慢一拍。
+# DOMAIN-SUFFIX,app-measurement.com,DIRECT
+
+# 【正经网站被误收】金山词霸、道客巴巴、海尔。
+# 装了这些 App 且发现打不开，再打开对应那条。
+# DOMAIN-SUFFIX,iciba.com,DIRECT
+# DOMAIN-SUFFIX,docer.com,DIRECT
+# DOMAIN-SUFFIX,ehaier.com,DIRECT
+
+# 【快手政企通道】如果快手某些企业号功能异常，打开这条。
+# DOMAIN-SUFFIX,kuaishouzt.com,DIRECT
+
+
+# ---------------------------------------------------------------------------
+# C 组：不建议放行 —— 纯广告/统计 SDK，列在这里只为说明"我确实看过，是故意不动的"
+# ---------------------------------------------------------------------------
+#
+# 友盟系列    umeng.com / umengcloud.com / umtrack0-2.com / umv0.com / umv5.com / umsns.com
+# 穿山甲      pangolin-sdk-toutiao.com / pangolin-sdk-toutiao-b.com / pangolin-sdk-toutiao1.com / pglstatp-toutiao.com
+# 巨量        zijieapi.com / byteadverts.com / byteorge.com
+# 腾讯广点通  gdtimg.com / tencentmind.com / e.qq.com
+# Google      doubleclick.net / doubleclick-cn.net / 2mdn-cn.net
+# 百度        cpro.baidustatic.com / mobads.baidu.com / afd.baidu.com / mbd.baidu.com
+# 个推/每日互动 getui.net（见 B 组）
+# 其他        mobrtb.com / mobmore.com / medproad.com / adfunlink.com / adtaipo.com
+#             advlion.com / halomobi.com / slyxmobi.com / mentamob.com / iaddata.com
+#             opadlink.com / fancydsp.com / kuaiyiad.com / xinduoad.com / yiweiads.com
+#             deepinstall.com / statsinstall.xyz / readgps.com / lydaas.com / hzjizhun.com
+#             cxwlad.com / iytcdn.com / openlink.cc / oplinking.com / openinstall.com
+#             whaledata 系列：whalecloud.com
+#
+# 上面这些如果也放行，等于把去广告白做了。

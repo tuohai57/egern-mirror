@@ -1,0 +1,401 @@
+{
+  "_comment": "精选清单：由 curated/tools/build.py 从 1,753 个模块 / 2,276 个规则集的实测对比中生成",
+  "_generated": "2026-10-24",
+  "_repo": "https://github.com/tuohai57/egern-mirror",
+  "_base_url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/",
+  "_priority_note": "Egern 优先级：模块 > 本地配置；模块之间、规则之间均为「上面的优于下面」，纯列表序，没有更具体者优先。",
+  "module_order": [
+    "1. curated/modules/00-override.module（优先级补丁，必须最上）",
+    "2. 单 App 精细改写（loonlab / kelee，见 modules）",
+    "3. 墨鱼去开屏",
+    "4. 聚合包 blockAds.module",
+    "5. 广告平台拦截器",
+    "6. HTTPDNS 拦截器（最下）"
+  ],
+  "rule_order": [
+    "1. private / Lan -> DIRECT",
+    "2. AdvertisingTest + AdGuardSDNSFilter -> REJECT",
+    "3. apple-cn / microsoft-cn / socialmedia-cn / games-cn / douyin / bilibili -> DIRECT",
+    "4. ai / netflix / disney / youtube / spotify / socialmedia -> 策略组",
+    "5. cn-full.yaml -> DIRECT",
+    "6. Global.lsr -> PROXY",
+    "7. GEOIP,CN -> DIRECT",
+    "8. FINAL -> PROXY"
+  ],
+  "modules": [
+    {
+      "app": "知乎",
+      "path": "modules/loonlab/loonlab-plugin-10652bee.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/loonlab/loonlab-plugin-10652bee.lpx",
+      "coverage": 90,
+      "reason": "62 个接口，MITM 只 1 台；把 commercial_api 全量拦截注释掉了，改成逐接口精确删",
+      "source": "loonlab"
+    },
+    {
+      "app": "微博",
+      "path": "modules/loonlab/loonlab-plugin-ae197c04.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/loonlab/loonlab-plugin-ae197c04.lpx",
+      "coverage": 75,
+      "reason": "69 个接口，独有 62 个（kelee+rucu6+fmz200 三源合并）",
+      "source": "loonlab"
+    },
+    {
+      "app": "闲鱼",
+      "path": "modules/loonlab/loonlab-plugin-25d617c6.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/loonlab/loonlab-plugin-25d617c6.lpx",
+      "coverage": 88,
+      "reason": "28 个接口 vs fmz200 的 21",
+      "source": "loonlab"
+    },
+    {
+      "app": "腾讯视频",
+      "path": "modules/loonlab/loonlab-plugin-4d0e6c12.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/loonlab/loonlab-plugin-4d0e6c12.lpx",
+      "coverage": 71,
+      "reason": "29 个接口，0 台 MITM",
+      "source": "loonlab"
+    },
+    {
+      "app": "百度网盘",
+      "path": "modules/loonlab/loonlab-plugin-5a48a2c4.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/loonlab/loonlab-plugin-5a48a2c4.lpx",
+      "coverage": 100,
+      "reason": "17/17 全覆盖，其他源只有 8",
+      "source": "loonlab"
+    },
+    {
+      "app": "拼多多",
+      "path": "modules/loonlab/loonlab-plugin-78e0d6e2.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/loonlab/loonlab-plugin-78e0d6e2.lpx",
+      "coverage": 74,
+      "reason": "39 个接口，独有 16",
+      "source": "loonlab"
+    },
+    {
+      "app": "高德地图",
+      "path": "modules/loonlab/loonlab-plugin-2b9a2951.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/loonlab/loonlab-plugin-2b9a2951.lpx",
+      "coverage": 64,
+      "reason": "27 个接口，MITM 只 1 台",
+      "source": "loonlab"
+    },
+    {
+      "app": "网易云音乐",
+      "path": "modules/loonlab/loonlab-plugin-3339cf75.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/loonlab/loonlab-plugin-3339cf75.lpx",
+      "coverage": 69,
+      "reason": "11 个接口 vs 其他 8",
+      "source": "loonlab"
+    },
+    {
+      "app": "哔哩哔哩",
+      "path": "modules/loonlab/loonlab-plugin-98bc0fa0.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/loonlab/loonlab-plugin-98bc0fa0.lpx",
+      "coverage": 83,
+      "reason": "25 个接口，独有 1；有 4 个外链 JS，注意断链",
+      "source": "loonlab"
+    },
+    {
+      "app": "小红书",
+      "path": "modules/loonlab/loonlab-plugin-79651793.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/loonlab/loonlab-plugin-79651793.lpx",
+      "coverage": 56,
+      "reason": "覆盖最全，代价是 10 台 MITM + 3 个外链 JS",
+      "source": "loonlab"
+    },
+    {
+      "app": "酷安",
+      "path": "modules/loonlab/loonlab-plugin-db68e5cc.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/loonlab/loonlab-plugin-db68e5cc.lpx",
+      "coverage": 75,
+      "reason": "6 个接口 vs 4",
+      "source": "loonlab"
+    },
+    {
+      "app": "爱奇艺",
+      "path": "modules/fmz200/partA/iQIYI.sgmodule",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partA/iQIYI.sgmodule",
+      "coverage": 82,
+      "reason": "45 条域名 REJECT，0 脚本；代价是 api.iqiyi.com 整域被拦",
+      "source": "fmz200"
+    },
+    {
+      "app": "淘宝",
+      "path": "modules/fmz200/partT/Taobao.sgmodule",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partT/Taobao.sgmodule",
+      "coverage": 60,
+      "reason": "33 个独有接口，别家一个都没有",
+      "source": "fmz200"
+    },
+    {
+      "app": "京东",
+      "path": "modules/fmz200/partJ/JD.com.sgmodule",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partJ/JD.com.sgmodule",
+      "coverage": 63,
+      "reason": "17 个接口，独有 16",
+      "source": "fmz200"
+    },
+    {
+      "app": "快手",
+      "path": "modules/fmz200/partK/Kuaishou.sgmodule",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partK/Kuaishou.sgmodule",
+      "coverage": 69,
+      "reason": "9 个独有接口，其余源只有 4",
+      "source": "fmz200"
+    },
+    {
+      "app": "芒果TV",
+      "path": "modules/fmz200/partM/MangoTV.sgmodule",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partM/MangoTV.sgmodule",
+      "coverage": 65,
+      "reason": "30 个接口，MITM 只 1 台",
+      "source": "fmz200"
+    },
+    {
+      "app": "QQ音乐",
+      "path": "modules/fmz200/partQ/QQMusic.sgmodule",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partQ/QQMusic.sgmodule",
+      "coverage": 91,
+      "reason": "31 个接口，0 脚本",
+      "source": "fmz200"
+    },
+    {
+      "app": "汽水音乐",
+      "path": "modules/fmz200/partQ/QiShuiMusic.sgmodule",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partQ/QiShuiMusic.sgmodule",
+      "coverage": 61,
+      "reason": "独有 32 个接口",
+      "source": "fmz200"
+    },
+    {
+      "app": "喜马拉雅",
+      "path": "modules/fmz200/partX/Ximalaya.sgmodule",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partX/Ximalaya.sgmodule",
+      "coverage": 60,
+      "reason": "26 个接口，独有 5",
+      "source": "fmz200"
+    },
+    {
+      "app": "酷我音乐",
+      "path": "modules/fmz200/partK/KuwoMusic.sgmodule",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partK/KuwoMusic.sgmodule",
+      "coverage": 58,
+      "reason": "独有 17，别家 29%",
+      "source": "fmz200"
+    },
+    {
+      "app": "优酷",
+      "path": "modules/fmz200/partY/Youku.sgmodule",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partY/Youku.sgmodule",
+      "coverage": 100,
+      "reason": "29/29 全库唯一全覆盖，0 脚本",
+      "source": "fmz200"
+    },
+    {
+      "app": "得物",
+      "path": "modules/kelee/kelee-得物去广告-97b49486.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-%E5%BE%97%E7%89%A9%E5%8E%BB%E5%B9%BF%E5%91%8A-97b49486.lpx",
+      "coverage": 100,
+      "reason": "全覆盖，1 台 MITM",
+      "source": "kelee"
+    },
+    {
+      "app": "瑞幸咖啡",
+      "path": "modules/kelee/kelee-瑞幸咖啡去广告-1dfdd230.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-%E7%91%9E%E5%B9%B8%E5%92%96%E5%95%A1%E5%8E%BB%E5%B9%BF%E5%91%8A-1dfdd230.lpx",
+      "coverage": 100,
+      "reason": "全覆盖",
+      "source": "kelee"
+    },
+    {
+      "app": "米游社",
+      "path": "modules/kelee/kelee-米游社去广告-07b6df29.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-%E7%B1%B3%E6%B8%B8%E7%A4%BE%E5%8E%BB%E5%B9%BF%E5%91%8A-07b6df29.lpx",
+      "coverage": 100,
+      "reason": "全覆盖",
+      "source": "kelee"
+    },
+    {
+      "app": "小黑盒",
+      "path": "modules/kelee/kelee-小黑盒去广告-8ce70df1.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-%E5%B0%8F%E9%BB%91%E7%9B%92%E5%8E%BB%E5%B9%BF%E5%91%8A-8ce70df1.lpx",
+      "coverage": 100,
+      "reason": "全覆盖",
+      "source": "kelee"
+    },
+    {
+      "app": "马蜂窝",
+      "path": "modules/kelee/kelee-马蜂窝去广告-29fd2cad.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-%E9%A9%AC%E8%9C%82%E7%AA%9D%E5%8E%BB%E5%B9%BF%E5%91%8A-29fd2cad.lpx",
+      "coverage": 80,
+      "reason": "覆盖最高",
+      "source": "kelee"
+    },
+    {
+      "app": "淘票票",
+      "path": "modules/kelee/kelee-淘票票去广告-44e8648e.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-%E6%B7%98%E7%A5%A8%E7%A5%A8%E5%8E%BB%E5%B9%BF%E5%91%8A-44e8648e.lpx",
+      "coverage": 100,
+      "reason": "全覆盖",
+      "source": "kelee"
+    },
+    {
+      "app": "大麦",
+      "path": "modules/kelee/kelee-大麦去广告-236dbca2.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-%E5%A4%A7%E9%BA%A6%E5%8E%BB%E5%B9%BF%E5%91%8A-236dbca2.lpx",
+      "coverage": 100,
+      "reason": "全覆盖",
+      "source": "kelee"
+    },
+    {
+      "app": "起点读书",
+      "path": "modules/kelee/kelee-起点读书去广告-73c6e283.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-%E8%B5%B7%E7%82%B9%E8%AF%BB%E4%B9%A6%E5%8E%BB%E5%B9%BF%E5%91%8A-73c6e283.lpx",
+      "coverage": 100,
+      "reason": "全覆盖",
+      "source": "kelee"
+    },
+    {
+      "app": "百度文库",
+      "path": "modules/kelee/kelee-百度文库去广告-8212a3bd.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-%E7%99%BE%E5%BA%A6%E6%96%87%E5%BA%93%E5%8E%BB%E5%B9%BF%E5%91%8A-8212a3bd.lpx",
+      "coverage": 100,
+      "reason": "全覆盖",
+      "source": "kelee"
+    },
+    {
+      "app": "粉笔",
+      "path": "modules/kelee/kelee-粉笔去广告-17a03272.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-%E7%B2%89%E7%AC%94%E5%8E%BB%E5%B9%BF%E5%91%8A-17a03272.lpx",
+      "coverage": 80,
+      "reason": "覆盖最高",
+      "source": "kelee"
+    },
+    {
+      "app": "小象超市",
+      "path": "modules/kelee/kelee-小象超市去广告-8eec1458.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-%E5%B0%8F%E8%B1%A1%E8%B6%85%E5%B8%82%E5%8E%BB%E5%B9%BF%E5%91%8A-8eec1458.lpx",
+      "coverage": 100,
+      "reason": "全覆盖",
+      "source": "kelee"
+    },
+    {
+      "app": "叮咚买菜",
+      "path": "modules/kelee/kelee-叮咚买菜去广告-5622a746.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-%E5%8F%AE%E5%92%9A%E4%B9%B0%E8%8F%9C%E5%8E%BB%E5%B9%BF%E5%91%8A-5622a746.lpx",
+      "coverage": 88,
+      "reason": "覆盖最高",
+      "source": "kelee"
+    },
+    {
+      "app": "番茄小说",
+      "path": "modules/kelee/kelee-番茄小说去广告-da052ba7.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-%E7%95%AA%E8%8C%84%E5%B0%8F%E8%AF%B4%E5%8E%BB%E5%B9%BF%E5%91%8A-da052ba7.lpx",
+      "coverage": 62,
+      "reason": "0 台 MITM",
+      "source": "kelee"
+    },
+    {
+      "app": "12306",
+      "path": "modules/kelee/kelee-12306去广告-ffefab9b.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-12306%E5%8E%BB%E5%B9%BF%E5%91%8A-ffefab9b.lpx",
+      "coverage": 75,
+      "reason": "覆盖最高",
+      "source": "kelee"
+    },
+    {
+      "app": "夸克",
+      "path": "modules/kelee/kelee-夸克去广告-b2f31d98.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-%E5%A4%B8%E5%85%8B%E5%8E%BB%E5%B9%BF%E5%91%8A-b2f31d98.lpx",
+      "coverage": 50,
+      "reason": "各源持平，选最新",
+      "source": "kelee"
+    },
+    {
+      "app": "微信公众号",
+      "path": "modules/kelee/kelee-微信公众号去广告-5fbb442e.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%8E%BB%E5%B9%BF%E5%91%8A-5fbb442e.lpx",
+      "coverage": 100,
+      "reason": "全覆盖",
+      "source": "kelee"
+    },
+    {
+      "app": "微博轻享版",
+      "path": "modules/kelee/kelee-微博轻享版去广告-78f41ea7.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-%E5%BE%AE%E5%8D%9A%E8%BD%BB%E4%BA%AB%E7%89%88%E5%8E%BB%E5%B9%BF%E5%91%8A-78f41ea7.lpx",
+      "coverage": 82,
+      "reason": "覆盖最高",
+      "source": "kelee"
+    }
+  ],
+  "tools": [
+    {
+      "app": "聚合包（730 款 App 内容改写）",
+      "path": "modules/fmz200/_main/blockAds.module",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/_main/blockAds.module",
+      "reason": "2,993 条规则 + 1,470 条改写 + 255 个脚本；价值在改写不在规则"
+    },
+    {
+      "app": "墨鱼去开屏 2.0",
+      "path": "modules/loonlab/loonlab-2.0-305406a1.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/loonlab/loonlab-2.0-305406a1.lpx",
+      "reason": "2026-10-22 最新上游，461 条改写；导入异常退 modules/jadkg-egern-bfffde50c6.module"
+    },
+    {
+      "app": "广告平台拦截器",
+      "path": "modules/kelee/kelee-广告平台拦截器-2947d7df.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-%E5%B9%BF%E5%91%8A%E5%B9%B3%E5%8F%B0%E6%8B%A6%E6%88%AA%E5%99%A8-2947d7df.lpx",
+      "reason": "341 条域名，比 qingr 的 301 条多；纯 REJECT，放模块列表最下面"
+    },
+    {
+      "app": "HTTPDNS 拦截器",
+      "path": "modules/kelee/kelee-HTTPDNS拦截器-1565be1f.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-HTTPDNS%E6%8B%A6%E6%88%AA%E5%99%A8-1565be1f.lpx",
+      "reason": "73 条，比 qingr 新版 65 / 老版 60 都多"
+    },
+    {
+      "app": "微信小程序去广告",
+      "path": "modules/kelee/kelee-微信小程序去广告-a3e17aa9.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%8E%BB%E5%B9%BF%E5%91%8A-a3e17aa9.lpx",
+      "reason": "118 条改写，93 台 MITM——全库最重的模块，非必要不开"
+    },
+    {
+      "app": "优先级补丁（本仓库自建）",
+      "path": "curated/modules/00-override.module",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/curated/modules/00-override.module",
+      "reason": "修正被模块误拦的域名，必须放模块列表最上面"
+    }
+  ],
+  "rules": [
+    {
+      "layer": "广告 REJECT",
+      "path": "rules/shunt-rules/loon/AdvertisingTest.lsr",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/rules/shunt-rules/loon/AdvertisingTest.lsr",
+      "reason": "318,626 条，占 8 份广告表并集的 85.7%；Advertising.lsr 独有仅 3 条、yfamilys/ADLite 独有 0 条，都是纯子集"
+    },
+    {
+      "layer": "广告补充",
+      "path": "rules/shunt-rules/loon/AdGuardSDNSFilter.lsr",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/rules/shunt-rules/loon/AdGuardSDNSFilter.lsr",
+      "reason": "109,050 条，与上者并集后 +28,175 个域名（+8.8%），增量/体积比最高的一份"
+    },
+    {
+      "layer": "国内直连",
+      "path": "curated/rules/cn-full.yaml",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/curated/rules/cn-full.yaml",
+      "reason": "本仓库合并版：域名 108,068 + IP 段 17,958 合到一个文件，避免只挂 cn.yaml 漏 IP"
+    },
+    {
+      "layer": "代理兜底",
+      "path": "rules/shunt-rules/loon/Global.lsr",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/rules/shunt-rules/loon/Global.lsr",
+      "reason": "35,888 条，占并集 60.2%；Proxy.lsr 独有 3 条、gfw.yaml 独有 0 条"
+    },
+    {
+      "layer": "分流骨架",
+      "path": "rules/quixoticheart-egern/",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/rules/quixoticheart-egern/",
+      "reason": "全库唯一 Egern 原生 YAML；有 25 个别人没有的结构件（apple-cn/apple-proxy、iplocation-direct/proxy、tld-proxy、private、cdn、httpdns、apns）"
+    }
+  ]
+}
