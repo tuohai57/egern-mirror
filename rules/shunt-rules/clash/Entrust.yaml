@@ -1,0 +1,10 @@
+# UpdateTime：2026-10-21 03:13:46
+# RuleCount：7
+payload:
+  - DOMAIN-SUFFIX,affirmtrust.com
+  - DOMAIN-SUFFIX,certificat2.com
+  - DOMAIN-SUFFIX,entrustdatacard.com
+  - DOMAIN-SUFFIX,trendmicro.com
+  - DOMAIN-SUFFIX,atos.net
+  - DOMAIN-SUFFIX,entrust.net
+  - DOMAIN-SUFFIX,myatos.net

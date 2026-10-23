@@ -1,0 +1,7 @@
+# UpdateTime：2026-10-21 03:13:19
+# RuleCount：5
+DOMAIN-SUFFIX, xiami.com
+DOMAIN-SUFFIX, xiami.fm
+DOMAIN-SUFFIX, xiami.net
+USER-AGENT, xiami*
+USER-AGENT, walkman*

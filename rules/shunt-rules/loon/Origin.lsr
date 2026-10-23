@@ -1,0 +1,9 @@
+# UpdateTime：2026-10-21 03:13:29
+# RuleCount：7
+DOMAIN, cloudsync-prod.s3.amazonaws.com
+DOMAIN, rtm.tnt-ea.com
+DOMAIN, eaasserts-a.akamaihd.net
+DOMAIN, origin-a.akamaihd.net
+DOMAIN, originasserts.akamaized.net
+DOMAIN-SUFFIX, ea.com
+DOMAIN-SUFFIX, origin.com

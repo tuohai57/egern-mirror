@@ -1,0 +1,5 @@
+# UpdateTime：2026-10-21 03:15:01
+# RuleCount：2
+payload:
+  - DOMAIN-SUFFIX,mail.icloud.com.cn
+  - DOMAIN-SUFFIX,mail.me.com

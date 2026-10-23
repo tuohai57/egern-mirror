@@ -1,0 +1,5 @@
+# UpdateTime：2026-10-21 03:17:23
+# RuleCount：3
+DOMAIN, servd-anthropic-website.b-cdn.net
+DOMAIN-SUFFIX, claude.ai
+DOMAIN-SUFFIX, anthropic.com

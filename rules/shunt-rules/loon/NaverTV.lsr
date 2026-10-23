@@ -1,0 +1,5 @@
+# UpdateTime：2026-10-21 03:13:21
+# RuleCount：3
+DOMAIN-SUFFIX, naver.com
+DOMAIN-SUFFIX, smartmediarep.com
+USER-AGENT, Naver%20TV*

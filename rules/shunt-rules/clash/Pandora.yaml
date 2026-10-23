@@ -1,0 +1,6 @@
+# UpdateTime：2026-10-21 03:14:51
+# RuleCount：3
+payload:
+  - DOMAIN-SUFFIX,pandora.com
+  - DOMAIN-SUFFIX,p-cdn.us
+  - USER-AGENT,Pandora*

@@ -1,0 +1,5 @@
+# UpdateTime：2026-10-21 03:13:44
+# RuleCount：2
+payload:
+  - DOMAIN-SUFFIX,ddimg.cn
+  - DOMAIN-SUFFIX,dangdang.com

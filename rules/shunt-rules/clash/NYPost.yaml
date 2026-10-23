@@ -1,0 +1,6 @@
+# UpdateTime：2026-10-21 03:14:48
+# RuleCount：3
+payload:
+  - DOMAIN-SUFFIX,nypost.com
+  - DOMAIN-SUFFIX,nypostreprints.com
+  - DOMAIN-SUFFIX,nypost.help

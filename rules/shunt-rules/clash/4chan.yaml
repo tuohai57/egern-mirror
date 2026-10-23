@@ -1,0 +1,6 @@
+# UpdateTime：2026-10-21 03:13:17
+# RuleCount：3
+payload:
+  - DOMAIN-SUFFIX,4cdn.org
+  - DOMAIN-SUFFIX,4chan.org
+  - DOMAIN-SUFFIX,4channel.org

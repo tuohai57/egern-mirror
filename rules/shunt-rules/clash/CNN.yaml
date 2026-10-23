@@ -1,0 +1,9 @@
+# UpdateTime：2026-10-21 03:13:56
+# RuleCount：6
+payload:
+  - DOMAIN-SUFFIX,cnnmoney.ch
+  - DOMAIN-SUFFIX,cnn.com
+  - DOMAIN-SUFFIX,cnnarabic.com
+  - DOMAIN-SUFFIX,cnnlabs.com
+  - DOMAIN-SUFFIX,cnn.io
+  - DOMAIN-SUFFIX,cnn.it

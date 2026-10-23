@@ -1,0 +1,6 @@
+# UpdateTime：2026-10-21 03:17:06
+# RuleCount：3
+payload:
+  - DOMAIN-SUFFIX,centv.cn
+  - DOMAIN-SUFFIX,cetv.cn
+  - DOMAIN-SUFFIX,centv.net.cn

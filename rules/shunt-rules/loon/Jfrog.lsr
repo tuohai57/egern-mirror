@@ -1,0 +1,5 @@
+# UpdateTime：2026-10-21 03:13:39
+# RuleCount：3
+DOMAIN-SUFFIX, bintray.com
+DOMAIN-SUFFIX, jfrog.com
+DOMAIN-SUFFIX, jfrog.org

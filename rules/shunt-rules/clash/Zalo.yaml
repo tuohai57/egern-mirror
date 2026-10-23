@@ -1,0 +1,5 @@
+# UpdateTime：2026-10-21 03:13:18
+# RuleCount：2
+payload:
+  - DOMAIN-SUFFIX,zaloapp.com
+  - DOMAIN-SUFFIX,zalo.me

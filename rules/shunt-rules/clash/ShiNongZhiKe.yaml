@@ -1,0 +1,6 @@
+# UpdateTime：2026-10-21 03:13:19
+# RuleCount：3
+payload:
+  - DOMAIN-SUFFIX,senseagro.com.cn
+  - DOMAIN-SUFFIX,senseagro.cn
+  - DOMAIN-SUFFIX,senseagro.com

@@ -1,0 +1,9 @@
+# UpdateTime：2026-10-21 03:17:19
+# RuleCount：6
+payload:
+  - DOMAIN-SUFFIX,zdassets.com
+  - DOMAIN-SUFFIX,zdusercontent.com
+  - DOMAIN-SUFFIX,zendesk.com
+  - DOMAIN-SUFFIX,zndsk.com
+  - DOMAIN-SUFFIX,zopim.com
+  - DOMAIN-SUFFIX,outbound.io

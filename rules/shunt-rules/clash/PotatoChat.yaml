@@ -1,0 +1,6 @@
+# UpdateTime：2026-10-21 03:17:42
+# RuleCount：3
+payload:
+  - IP-CIDR,13.251.24.0/24,no-resolve
+  - IP-CIDR,13.251.41.0/24,no-resolve
+  - IP-CIDR,17.252.156.0/23,no-resolve

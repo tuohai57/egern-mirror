@@ -1,0 +1,6 @@
+# UpdateTime：2026-10-21 03:17:25
+# RuleCount：3
+payload:
+  - DOMAIN-SUFFIX,dandanplay.com
+  - DOMAIN-SUFFIX,dandanplayer.com
+  - DOMAIN-SUFFIX,acplay.net

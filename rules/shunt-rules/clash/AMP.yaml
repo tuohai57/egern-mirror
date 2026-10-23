@@ -1,0 +1,8 @@
+# UpdateTime：2026-10-21 03:13:23
+# RuleCount：5
+payload:
+  - DOMAIN,amp.akamaized.net
+  - DOMAIN-SUFFIX,ampproject.com
+  - DOMAIN-SUFFIX,amp.dev
+  - DOMAIN-SUFFIX,ampproject.net
+  - DOMAIN-SUFFIX,ampproject.org

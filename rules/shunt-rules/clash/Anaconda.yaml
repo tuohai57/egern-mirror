@@ -1,0 +1,7 @@
+# UpdateTime：2026-10-21 03:17:22
+# RuleCount：4
+payload:
+  - DOMAIN-SUFFIX,anaconda.cloud
+  - DOMAIN-SUFFIX,anaconda.com
+  - DOMAIN-SUFFIX,conda.io
+  - DOMAIN-SUFFIX,anaconda.org

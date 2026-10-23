@@ -1,0 +1,6 @@
+# UpdateTime：2026-10-21 03:13:18
+# RuleCount：3
+payload:
+  - DOMAIN-SUFFIX,nikkei.com
+  - DOMAIN-SUFFIX,nikkei.co.jp
+  - DOMAIN-SUFFIX,nikkei.jp

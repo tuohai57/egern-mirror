@@ -1,0 +1,6 @@
+# UpdateTime：2026-10-21 03:15:14
+# RuleCount：4
+DOMAIN, gog.salesmanago.com
+DOMAIN-SUFFIX, gog.com
+DOMAIN-SUFFIX, gog-statics.com
+DOMAIN-SUFFIX, gog.qtlglb.com

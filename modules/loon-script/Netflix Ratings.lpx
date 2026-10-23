@@ -1,0 +1,14 @@
+#!name = Netflix Ratings
+#!desc = Netflix评分（IMDb、douban）
+#!author = yichahucha
+#!system = iOS, iPadOS, macOS
+#!loon_version = 3.5.1(984)
+#!homepage = https://github.com/Tartarus2014/Loon-Script
+#!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
+
+[Script]
+request if ${url} ~= /^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user\/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D/i then script("https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js") with tag="nf_rating.js"
+response if ${url} ~= /^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user\/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D/i then script("https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js") with tag="nf_rating.js", requires_body=true
+
+[MITM]
+hostname = ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com

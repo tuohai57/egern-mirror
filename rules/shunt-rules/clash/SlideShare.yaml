@@ -1,0 +1,6 @@
+# UpdateTime：2026-10-21 03:16:55
+# RuleCount：3
+payload:
+  - DOMAIN-SUFFIX,slideshare.com
+  - DOMAIN-SUFFIX,slidesharecdn.com
+  - DOMAIN-SUFFIX,slideshare.net

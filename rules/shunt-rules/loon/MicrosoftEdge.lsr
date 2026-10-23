@@ -1,0 +1,6 @@
+# UpdateTime：2026-10-21 03:13:45
+# RuleCount：4
+DOMAIN, msedge.api.cdp.microsoft.com
+DOMAIN, edge.microsoft.com
+DOMAIN, iecvlist.microsoft.com
+DOMAIN, edge.activity.windows.com

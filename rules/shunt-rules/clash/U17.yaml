@@ -1,0 +1,6 @@
+# UpdateTime：2026-10-21 03:13:23
+# RuleCount：3
+payload:
+  - DOMAIN-SUFFIX,u17.com
+  - DOMAIN-SUFFIX,u17i.com
+  - DOMAIN-SUFFIX,u17t.com

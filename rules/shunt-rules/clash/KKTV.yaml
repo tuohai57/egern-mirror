@@ -1,0 +1,9 @@
+# UpdateTime：2026-10-21 03:14:49
+# RuleCount：6
+payload:
+  - DOMAIN,theater-kktv.cdn.hinet.net
+  - DOMAIN,kktv-theater.kk.stream
+  - DOMAIN-SUFFIX,kktv.me
+  - DOMAIN-SUFFIX,kktv.com.tw
+  - USER-AGENT,KKTV*
+  - USER-AGENT,com.kktv.ios.kktv*

@@ -1,0 +1,11 @@
+#!name = embyUnlocked
+#!desc = Emby
+#!system = iOS,iPadOS,tvOS,macOS
+#!loon_version = 3.5.1(984)
+#!icon = https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Color/EMBY.png
+
+[Script]
+response if ${url} ~= /^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice/i then script("https://raw.githubusercontent.com/Tartarus2014/Script/master/Emby.js") with tag="embyUnlocked", requires_body=true
+
+[MITM]
+hostname = mb3admin.com

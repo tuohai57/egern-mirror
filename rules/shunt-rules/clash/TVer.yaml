@@ -1,0 +1,10 @@
+# UpdateTime：2026-10-21 03:13:20
+# RuleCount：7
+payload:
+  - DOMAIN-SUFFIX,edge.api.brightcove.com
+  - DOMAIN-SUFFIX,tver.co.jp
+  - DOMAIN-SUFFIX,dogatch.jp
+  - DOMAIN-SUFFIX,gorin.jp
+  - DOMAIN-SUFFIX,screens-lab.jp
+  - DOMAIN-SUFFIX,tver.jp
+  - USER-AGENT,TVer-Release*

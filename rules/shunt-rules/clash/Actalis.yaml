@@ -1,0 +1,5 @@
+# UpdateTime：2026-10-21 03:14:38
+# RuleCount：2
+payload:
+  - DOMAIN-SUFFIX,actalis.com
+  - DOMAIN-SUFFIX,actalis.it

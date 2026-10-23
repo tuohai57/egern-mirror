@@ -1,0 +1,6 @@
+# UpdateTime：2026-10-21 03:13:18
+# RuleCount：3
+payload:
+  - DOMAIN-SUFFIX,c4assets.com
+  - DOMAIN-SUFFIX,channel4.com
+  - USER-AGENT,All4*

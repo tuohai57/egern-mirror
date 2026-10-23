@@ -1,0 +1,17 @@
+#!name = Block OTA update for iOS and iPadOS
+#!desc = 屏蔽 iOS/iPadOS 系统更新，无 iPad 设备可在「主机名」添加「-mesu.apple.com」
+#!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
+#!homepage = https://github.com/Tartarus2014/Loon-Script
+#!author = ConnersHua
+#!system = iOS,iPadOS
+#!loon_version = 3.3.2(877)
+
+[Rule]
+DOMAIN,gdmf.apple.com,REJECT
+
+[URL Rewrite]
+# iPadOS
+request if ${url} ~= /^https:\/\/mesu\.apple\.com\/assets\/com_apple_MobileAsset_SoftwareUpdate\/com_apple_MobileAsset_SoftwareUpdate\.xml/i then reject(404)
+
+[MITM]
+hostname = mesu.apple.com

@@ -1,0 +1,6 @@
+# UpdateTime：2026-10-21 03:13:19
+# RuleCount：4
+DOMAIN, appleid.apple.com
+DOMAIN, gsa.apple.com
+DOMAIN, idmsa.apple.com
+DOMAIN, appleid.cdn-apple.com
