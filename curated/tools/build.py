@@ -166,6 +166,8 @@ def write_yaml(path, title, sources, exact, suffix, keyword, ip, extra_comment=N
 
 # ---------------------------------------------------------------- 1. 广告总表
 
+AD_STAMP = "20261024"   # 重建时改成当天日期，用来破 CDN 缓存
+
 AD_SOURCES = [
     "shunt-rules/loon/AdvertisingTest.lsr",       # 318,626 覆盖最广
     "shunt-rules/loon/AdGuardSDNSFilter.lsr",     # 109,050 DNS 过滤
@@ -224,7 +226,9 @@ def build_ad_full():
     exact = {d for d in exact if not any(p in suffix for p in parents(d))}
     suffix = {d for d in suffix if not any(p in suffix for p in parents(d))}
 
-    dst = os.path.join(CUR, "rules", "ad-full.yaml")
+    # 文件名带日期：jsDelivr 的 @main 分支别名有 12h 缓存，同名覆盖会长时间取到旧版。
+    # 每次重建换个日期名，等于换个 URL，必然取到新内容。
+    dst = os.path.join(CUR, "rules", "ad-full-%s.yaml" % AD_STAMP)
     n = write_yaml(
         dst,
         "广告拦截总表（8 份并集）",
