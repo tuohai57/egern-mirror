@@ -11,6 +11,8 @@
 # 实测背景：全库 1,753 个模块的 rules 共涉及 3,310 个域名（3,204 个 REJECT），
 # 其中 112 个同时出现在国内直连表里——本该直连却被模块强制拦截，且本地改不动。
 # 下面只捞回确实会造成【功能性损坏】的，广告 SDK 一律不动。
+# v10.3：A 组从 2 条扩到 6 条（补支付宝 HTTPDNS / Adobe 地区检测 / 百度 bdurl / 字节风控），
+# 这 4 条在 ad-exclude 里只管 DNS 层，模块层的精确 REJECT 必须靠本模块压住。
 #
 # 本模块不含 scriptings、不含 MITM，纯规则，零开销。
 # =============================================================================
@@ -39,6 +41,35 @@ rules:
       match: app-analytics-services.com
       policy: DIRECT
       name: Apple 系统统计
+
+  # ── v10.3 追加：审计发现的 4 条「白名单在 ad-exclude 里、但被模块精确 REJECT」──
+  # ad-exclude 只管 DNS 层；模块层的 REJECT 只能靠这个模块压住（它排第 0 位）。
+
+  # 支付宝 HTTPDNS 调度。被「HTTPDNS 拦截器」REJECT —— 这条最要紧，
+  # 拦掉后支付宝可能退回普通 DNS 或直接风控异常。
+  - domain_suffix:
+      match: amdc.alipay.com
+      policy: DIRECT
+      name: 支付宝 HTTPDNS 调度
+
+  # Adobe 地区检测。被「广告拦截&净化合集」REJECT，会影响 Adobe 激活/订阅校验。
+  - domain_suffix:
+      match: geo2.adobe.com
+      policy: DIRECT
+      name: Adobe 地区检测
+
+  # 百度统计/HTTPDNS 回退域。被爱奇艺、聚合包、广告平台拦截器三处 REJECT，
+  # 拦掉可能导致部分百度系 SDK 反复重试。
+  - domain_suffix:
+      match: dig.bdurl.net
+      policy: DIRECT
+      name: 百度 bdurl 回退
+
+  # 字节设备风控 SDK。被汽水音乐和聚合包 REJECT，可能影响登录风控。
+  - domain_suffix:
+      match: mssdk-bu.bytedance.com
+      policy: DIRECT
+      name: 字节设备风控
 
   # ---------------------------------------------------------------------------
   # B 组：按需启用 —— 双用途域名，自己权衡（默认 disabled）
