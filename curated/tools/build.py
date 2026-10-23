@@ -185,6 +185,7 @@ AD_SOURCES = [
 
 
 def build_ad_full():
+    WILDCARD.clear(); REGEX.clear()
     exact, suffix, keyword, ip = set(), set(), set(), set()
     for rel in AD_SOURCES:
         a, b, c, d = parse_ruleset(R(rel))
@@ -245,6 +246,7 @@ def build_ad_full():
 # ---------------------------------------------------------------- 2. 国内直连
 
 def build_cn_full():
+    WILDCARD.clear(); REGEX.clear()
     a1, b1, c1, d1 = parse_ruleset(R("quixoticheart-egern", "cn.yaml"))
     a2, b2, c2, d2 = parse_ruleset(R("quixoticheart-egern", "cncidr.yaml"))
     exact, suffix, keyword, ip = a1 | a2, b1 | b2, c1 | c2, d1 | d2
@@ -341,6 +343,18 @@ EXTRA = {
         ],
         "AWS / Oracle / Google Drive / iCloud 等云服务，quixoticheart 里没有独立分类。",
     ),
+    "meta": (
+        "Meta 全家桶（Facebook / Instagram / WhatsApp / Threads）",
+        [
+            "shunt-rules/loon/Facebook.lsr",
+            "shunt-rules/loon/Instagram.lsr",
+            "shunt-rules/loon/Whatsapp.lsr",
+            "shunt-rules/loon/Threads.lsr",
+        ],
+        "Facebook.lsr 546 条已经含 fbcdn / cdninstagram / whatsapp / threads / messenger，"
+        "再并上 Instagram / WhatsApp / Threads 三张专用表（WhatsApp 那张带 IP-CIDR 段，语音通话要用）。"
+        "单独成表是为了让 Meta 系统一走一个策略组，而不是散在社交媒体组里被日本节点抢走。",
+    ),
     "extra-game": (
         "游戏补充",
         [
@@ -359,6 +373,7 @@ EXTRA = {
 def build_extra():
     out = []
     for name, (title, sources, note) in EXTRA.items():
+        WILDCARD.clear(); REGEX.clear()
         exact, suffix, keyword, ip = set(), set(), set(), set()
         for rel in sources:
             a, b, c, d = parse_ruleset(R(rel))

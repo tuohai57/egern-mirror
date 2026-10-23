@@ -1,0 +1,36 @@
+# Apple Intelligence（Private Cloud Compute）分流表
+# 由 curated/tools/build.py 之外的脚本手工维护；来源见下方注释
+#
+# 为什么单独一张表：
+#   Apple Intelligence 的推理请求走 Private Cloud Compute（PCC），
+#   入口是 apple-relay.* 这几个中继域，加上 Siri 的 guzzoni.apple.com
+#   和 Spotlight/Siri 搜索的 *.smoot.apple.com。
+#   这些域在 quixoticheart 的 ai.yaml 和 apple-proxy.yaml 里都有，
+#   但两处都会被 Apple 组（默认 DIRECT）或 AI 组（原来日本优先）抢走，
+#   导致 Apple Intelligence 要么直连不通、要么走到非美区节点。
+#   所以单独一张表 + 单独一个策略组，排在整个 Apple 段之前。
+#
+# 使用前提：
+#   1. Apple ID 必须是美区（设置 → App Store → 切美区账号）
+#   2. 策略组「🍎 Apple Intelligence」选美国节点
+#   3. 「🍎 Apple 换区」也要切到美国，否则 App Store 还是中国区
+#
+# 来源：
+#   quixoticheart-egern/ai.yaml 里的 apple-relay.* / guzzoni / smoot 条目
+#   quixoticheart-egern/apple-proxy.yaml 里的 apple-relay.* / api-glb-sea.smoot 条目
+
+no_resolve: true
+
+domain_suffix_set:
+# PCC 中继：Apple Intelligence 的推理请求入口
+- apple-relay.apple.com
+- apple-relay.cloudflare.com
+- apple-relay.fastly-edge.com
+# Siri 后端
+- guzzoni.apple.com
+# Spotlight / Siri 搜索后端（含 api-glb-sea.smoot.apple.com 等区域入口）
+- smoot.apple.com
+
+domain_set:
+# relay 的 DNS 级入口（mask 域，必须精确匹配，不能加 suffix 否则会波及 iCloud Private Relay）
+- apple-relay.mask.apple-dns.net
