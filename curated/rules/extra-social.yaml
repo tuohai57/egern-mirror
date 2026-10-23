@@ -17,7 +17,7 @@
 #
 # quixoticheart 的 socialmedia.yaml 已有 Telegram/Twitter/Discord/Line/WhatsApp/FB/IG/LinkedIn，但缺 Reddit / Pinterest / Tumblr / Slack / Notion；这里补上并把前几个的完整域名并进来。
 #
-# 条目：domain_set 7 / domain_suffix_set 689 / domain_keyword_set 6 / domain_wildcard_set 365 / domain_regex_set 4 / ip_cidr_set 65
+# 条目：domain_set 7 / domain_suffix_set 689 / domain_keyword_set 6 / domain_wildcard_set 364 / domain_regex_set 4 / ip_cidr_set 65
 no_resolve: true
 domain_set:
 - api.imem.app
@@ -875,7 +875,6 @@ domain_wildcard_set:
 - firebaselogging-*.googleapis.com
 - flurry.agentportal-*.yahoodns.net
 - flurry.agentportal.*.yahoodns.net
-- fp-*it*.fengkongcloud.com
 - fra-*.braze.eu
 - gads*s.com
 - gads*z.com

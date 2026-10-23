@@ -11,7 +11,7 @@
 #
 # quixoticheart 的 gits.yaml 只有 75 条、基本只覆盖 GitHub；这里补 npm / Docker / GitLab / Dropbox / Cloudflare / Developer 全量分类。
 #
-# 条目：domain_set 3 / domain_suffix_set 167 / domain_keyword_set 1 / domain_wildcard_set 365 / domain_regex_set 4 / ip_cidr_set 22
+# 条目：domain_set 3 / domain_suffix_set 167 / domain_keyword_set 1 / domain_wildcard_set 364 / domain_regex_set 4 / ip_cidr_set 22
 no_resolve: true
 domain_set:
 - d1q6f0aelx0por.cloudfront.net
@@ -338,7 +338,6 @@ domain_wildcard_set:
 - firebaselogging-*.googleapis.com
 - flurry.agentportal-*.yahoodns.net
 - flurry.agentportal.*.yahoodns.net
-- fp-*it*.fengkongcloud.com
 - fra-*.braze.eu
 - gads*s.com
 - gads*z.com

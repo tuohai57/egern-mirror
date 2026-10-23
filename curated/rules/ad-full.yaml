@@ -15,7 +15,7 @@
 #
 # 8 份广告/追踪/劫持表互相大量重叠但都不互相包含。实测：AdvertisingTest 独有 22,057、adrules 独有 24,808、AdGuard 独有 28,175、AntiAD 独有 13,610、AdBlock 独有 12,691、Privacy 独有 11,000+、Hijacking 186、Beats 714。取全并集是唯一能做到不漏的方式。另修正了原表里把 IP 写成 DOMAIN 的条目（这些在 Egern 里永远匹配不到）。
 #
-# 条目：domain_set 23708 / domain_suffix_set 355932 / domain_keyword_set 252 / domain_wildcard_set 365 / domain_regex_set 4 / ip_cidr_set 670
+# 条目：domain_set 23707 / domain_suffix_set 355926 / domain_keyword_set 249 / domain_wildcard_set 364 / domain_regex_set 4 / ip_cidr_set 670
 no_resolve: true
 domain_set:
 - 00-gov.cn
@@ -14163,7 +14163,6 @@ domain_set:
 - nikkiscash.com
 - nile.works
 - niltutch.com
-- nim.qiyukf.com
 - nimiq-network.com
 - nimiq.agency
 - nimiq.com
@@ -54318,7 +54317,6 @@ domain_suffix_set:
 - app-analytics-cn.huami.com
 - app-analytics-ru.huami.com
 - app-analytics-services-att.com
-- app-analytics-services.com
 - app-analytics-v2.snapchat.com
 - app-analytics.huami.com
 - app-analytics.snapchat.com
@@ -91096,7 +91094,6 @@ domain_suffix_set:
 - ctrhfd.top
 - ctrhub.com
 - ctripatm.cn
-- ctripcorp.com
 - ctrkd.ilsole24ore.com
 - ctrl.groneck.net
 - ctrl.guenther.de
@@ -127158,7 +127155,6 @@ domain_suffix_set:
 - fengbalo.fun
 - fengbuy.com
 - fenggejiaju.com
-- fengkongcloud.com
 - fengkshuc.top
 - fengnimabia.com
 - fengousm.com
@@ -161781,7 +161777,6 @@ domain_suffix_set:
 - id5-sync.com
 - id528.com
 - id5a.top
-- id6.me
 - id6589.com
 - id9uep.ru
 - ida.cnool.net
@@ -182281,7 +182276,6 @@ domain_suffix_set:
 - kuaipaobiaoju.com
 - kuaishang.cn
 - kuaishang.com.cn
-- kuaishouzt.com
 - kuaituisss.com
 - kuaizip.com
 - kuaizitech.com
@@ -223913,7 +223907,6 @@ domain_suffix_set:
 - niltibse.net
 - niltutch.com
 - nilzq.xyz
-- nim.qiyukf.com
 - nim.sh
 - nimajl.top
 - nimaxrv.cn
@@ -379717,7 +379710,6 @@ domain_keyword_set:
 - afpapi.alimama.com
 - allyes
 - analysys
-- analytics
 - analytics.
 - anybest.
 - ap.51y5.net
@@ -379886,8 +379878,6 @@ domain_keyword_set:
 - track.tiara
 - tracker.kugou.com
 - trackercdnbj.kugou.com
-- tracking
-- traffic
 - trkcmb.business.hsbc.
 - trkgbm.business.hsbc.
 - trkhinv.business.hsbc.
@@ -380063,7 +380053,6 @@ domain_wildcard_set:
 - firebaselogging-*.googleapis.com
 - flurry.agentportal-*.yahoodns.net
 - flurry.agentportal.*.yahoodns.net
-- fp-*it*.fengkongcloud.com
 - fra-*.braze.eu
 - gads*s.com
 - gads*z.com

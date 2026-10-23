@@ -37,6 +37,8 @@ def R(*p):
 
 REGEX = set()          # domain_regex_set 条目（不能转成域名，原样保留）
 WILDCARD = set()       # 含 * 的条目，domain_suffix_set 不支持通配符，必须单列
+# 过于通用的英文词，会误伤正常域名（实例：traffic 命中 trafficmanager.cn）
+KEYWORD_BLOCK = {"traffic", "tracking", "analytics", "stats", "metrics", "telemetry"}
 IPV4 = re.compile(r"^\d{1,3}(?:\.\d{1,3}){3}$")
 PRIVATE = re.compile(
     r"^(?:10\.|127\.|0\.|169\.254\.|192\.168\.|172\.(?:1[6-9]|2\d|3[01])\.|100\.(?:6[4-9]|[7-9]\d|1[01]\d|12[0-7])\.)"
@@ -208,6 +210,7 @@ def build_ad_full():
         exact = {d for d in exact if not in_wl(d)}
         suffix = {d for d in suffix if not in_wl(d)}
         keyword = {k for k in keyword if not in_wl(k)}
+        keyword = {k for k in keyword if k not in KEYWORD_BLOCK}
         # 通配符条目（*-ad-sign.byteimg.com）也要按去掉 * 后的基域判断
         WILDCARD.difference_update(
             [w for w in list(WILDCARD) if in_wl(w.replace("*", "").strip("."))]

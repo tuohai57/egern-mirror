@@ -26,7 +26,7 @@
 #
 # quixoticheart 的 netflix/disney/hbo/hulu/primevideo/youtube/spotify/twitch 只有基础域名；这里补上它没有的 Paramount+ / Peacock / Discovery+ / ViuTV / LineTV / HBO Asia / Hulu 日美 / SoundCloud / Deezer / TIDAL / YouTube Music，并把这些服务的完整域名并进来。
 #
-# 条目：domain_set 61 / domain_suffix_set 560 / domain_keyword_set 10 / domain_wildcard_set 365 / domain_regex_set 4 / ip_cidr_set 1136
+# 条目：domain_set 61 / domain_suffix_set 560 / domain_keyword_set 10 / domain_wildcard_set 364 / domain_regex_set 4 / ip_cidr_set 1136
 no_resolve: true
 domain_set:
 - 44wilhpljf.execute-api.ap-southeast-1.amazonaws.com
@@ -813,7 +813,6 @@ domain_wildcard_set:
 - firebaselogging-*.googleapis.com
 - flurry.agentportal-*.yahoodns.net
 - flurry.agentportal.*.yahoodns.net
-- fp-*it*.fengkongcloud.com
 - fra-*.braze.eu
 - gads*s.com
 - gads*z.com

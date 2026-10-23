@@ -12,7 +12,7 @@
 #
 # AWS / Oracle / Google Drive / iCloud 等云服务，quixoticheart 里没有独立分类。
 #
-# 条目：domain_set 3 / domain_suffix_set 282 / domain_keyword_set 2 / domain_wildcard_set 365 / domain_regex_set 4 / ip_cidr_set 1534
+# 条目：domain_set 3 / domain_suffix_set 282 / domain_keyword_set 2 / domain_wildcard_set 364 / domain_regex_set 4 / ip_cidr_set 1534
 no_resolve: true
 domain_set:
 - lens.l.google.com
@@ -455,7 +455,6 @@ domain_wildcard_set:
 - firebaselogging-*.googleapis.com
 - flurry.agentportal-*.yahoodns.net
 - flurry.agentportal.*.yahoodns.net
-- fp-*it*.fengkongcloud.com
 - fra-*.braze.eu
 - gads*s.com
 - gads*z.com

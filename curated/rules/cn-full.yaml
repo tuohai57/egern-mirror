@@ -6,7 +6,7 @@
 #
 # 原方案要同时挂 cn.yaml（域名）和 cncidr.yaml（IP 段），只挂前者会让纯 IP 直连的流量掉到代理。
 #
-# 条目：domain_set 0 / domain_suffix_set 108068 / domain_keyword_set 0 / domain_wildcard_set 365 / domain_regex_set 4 / ip_cidr_set 17958
+# 条目：domain_set 0 / domain_suffix_set 108068 / domain_keyword_set 0 / domain_wildcard_set 364 / domain_regex_set 4 / ip_cidr_set 17958
 no_resolve: true
 domain_suffix_set:
 - 0.xn--czrs0t
@@ -108228,7 +108228,6 @@ domain_wildcard_set:
 - firebaselogging-*.googleapis.com
 - flurry.agentportal-*.yahoodns.net
 - flurry.agentportal.*.yahoodns.net
-- fp-*it*.fengkongcloud.com
 - fra-*.braze.eu
 - gads*s.com
 - gads*z.com

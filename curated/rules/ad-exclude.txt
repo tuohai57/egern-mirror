@@ -143,3 +143,18 @@ youku.com
 zhihu.com
 zhimg.com
 zjcdn.com
+# ── 2026-10-24 追加（审计发现，见 curated/对比-v9.9与新配置.md 第十节）──
+# 七鱼客服 SDK 的实际接口域（override 模块里放行的是 qiyukf.com 主域，不够）
+nim.qiyukf.com
+# Apple 系统统计（override 模块的目标域，必须在 DNS 层就排除，否则模块压不住）
+app-analytics-services.com
+# 数美风控 SDK，被广告表收录会可能影响登录风控
+fengkongcloud.com
+# 携程企业域
+ctripcorp.com
+# 快手政企通道
+kuaishouzt.com
+# 已在 bypass_tunnel_proxy 里，但 DNS 会先拒
+id6.me
+# Azure 流量管理（被 domain_keyword "traffic" 误伤，下面同时删掉这个关键词）
+trafficmanager.cn

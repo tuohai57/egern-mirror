@@ -10,7 +10,7 @@
 #
 # 外服游戏平台全量分类。国服 Steam 用单独的 SteamCN（走 DIRECT）。
 #
-# 条目：domain_set 12 / domain_suffix_set 288 / domain_keyword_set 3 / domain_wildcard_set 365 / domain_regex_set 4 / ip_cidr_set 1
+# 条目：domain_set 12 / domain_suffix_set 288 / domain_keyword_set 3 / domain_wildcard_set 364 / domain_regex_set 4 / ip_cidr_set 1
 no_resolve: true
 domain_set:
 - img-prod-cms-rt-microsoft-com.akamaized.net
@@ -469,7 +469,6 @@ domain_wildcard_set:
 - firebaselogging-*.googleapis.com
 - flurry.agentportal-*.yahoodns.net
 - flurry.agentportal.*.yahoodns.net
-- fp-*it*.fengkongcloud.com
 - fra-*.braze.eu
 - gads*s.com
 - gads*z.com
