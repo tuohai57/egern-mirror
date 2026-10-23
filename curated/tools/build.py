@@ -350,10 +350,13 @@ EXTRA = {
             "shunt-rules/loon/Instagram.lsr",
             "shunt-rules/loon/Whatsapp.lsr",
             "shunt-rules/loon/Threads.lsr",
+            "loon-script/Other_Muse.lsr",
         ],
         "Facebook.lsr 546 条已经含 fbcdn / cdninstagram / whatsapp / threads / messenger，"
         "再并上 Instagram / WhatsApp / Threads 三张专用表（WhatsApp 那张带 IP-CIDR 段，语音通话要用）。"
-        "单独成表是为了让 Meta 系统一走一个策略组，而不是散在社交媒体组里被日本节点抢走。",
+        "单独成表是为了让 Meta 系统一走一个策略组，而不是散在社交媒体组里被日本节点抢走。"
+        "另并入 loon-script/Other_Muse.lsr —— 那是上游给 Meta Muse AI（图像/视频生成）"
+        "做的专用表，含 meta.ai / muse.ai / metaaivm.com 三个后缀，Facebook.lsr 里没有。",
     ),
     "extra-game": (
         "游戏补充",
