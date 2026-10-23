@@ -17,7 +17,7 @@
 # 【必须自己改的地方】只有一个：policy_groups → 订阅 → urls 里的订阅链接
 #
 # ── 导入须知 ──────────────────────────────────────────────────────────────
-# · 首次启用要拉 48 个规则集 + 33 个模块，约 60 MB，请在 Wi-Fi 下导入并等它跑完
+# · 首次启用要拉 55 个规则集 + 52 个模块，实测约 12 MB（ad-full 一个文件就 7.7 MB）
 # · 地区组（香港/日本/美国…）靠 filter 正则挑节点。机场命名不规范就会挑不到，
 #   此时去改对应组的 filter，或者把用到它的业务组手动切到「兜底」
 # · 想让它自动更新，取消下面三行的注释并把 url 换成你自己的托管地址
@@ -25,6 +25,16 @@
 # auto_update:
 #   url: https://example.com/Profile.yaml
 #   interval: 86400
+#
+# ── 去广告做了三层，缺一层就会漏 ─────────────────────────────────────────
+#   第 1 层  DNS 层 reject    —— dns.forward 第一条，广告域名解析直接失败，连 TCP 都不建
+#   第 2 层  规则层 REJECT    —— ad-full.yaml 381,808 条，兜住"直接用 IP / 已缓存"的请求
+#   第 3 层  模块改写         —— 52 个模块，把 App 内的原生广告位（开屏/信息流/贴片/Banner）从 JSON 里删掉
+#   规则层只能拦域名，App 内嵌广告必须靠模块改写；两者缺一不可。
+#
+# ── 分流做到 9 层，共 55 个规则集 ────────────────────────────────────────
+#   私有/局域网/APNs → 广告 → 专项直连(7) → 专项代理(30) → 直连类(3)
+#   → 国内(cn-full) → 代理兜底(Global) → geoip CN → FINAL
 # =============================================================================
 
 
@@ -125,9 +135,17 @@ dns:
       - https://dns.google/dns-query
 
   # 按顺序匹配，第一条命中即用。
-  # 关键：cn-full.yaml 在这里也挂一份，让 DNS 层就把国内域名交给国内 DNS，
-  # 避免"国外 DNS 返回国内 CDN 的错误节点"导致国内 App 变慢。
+  #
+  # 第一条是"DNS 层直接拒绝广告域名"——这是去广告最狠也最省电的一招：
+  # 广告域名在解析阶段就返回空，App 拿不到 IP，连 TCP 都不会建。
+  # 它比规则层 REJECT 更早生效，规则层的 REJECT 退化成兜底（针对直接用 IP 的请求）。
+  #
+  # 后面两条把国内域名交给国内 DNS，避免"国外 DNS 返回国内 CDN 的错误节点"。
   forward:
+    - proxy_rule_set:
+        match: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/curated/rules/ad-full.yaml
+        value: reject
+        update_interval: 86400
     - domain_suffix:
         match: cn
         value: China
@@ -313,26 +331,34 @@ rules:
       policy: DIRECT
       update_interval: 86400
 
+  # APNs 推送通道必须直连。走代理会导致推送延迟甚至收不到，
+  # 而且 APNs 在国内本来就有节点，直连最快。
+  - rule_set:
+      name: APNs
+      match: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/rules/quixoticheart-egern/apns.yaml
+      policy: DIRECT
+      update_interval: 86400
+      no_resolve: true
+
   # ── 第 1 层：广告 ──────────────────────────────────────────────────────
   # 必须在所有 DIRECT 规则之前。若放到后面，广告域名会先被 DIRECT 掉，永远拦不住。
   #
-  # 选 AdvertisingTest 的依据：8 份广告表并集 371,659 条，它一家 318,626 条（85.7%）；
-  # Advertising.lsr 独有仅 3 条、yfamilys/ADLite 独有 0 条 —— 都是纯子集，不用挂。
+  # 用 curated 的 ad-full.yaml：5 份广告表全并集（381,808 条），
+  # 一个文件覆盖 100%，不用再纠结"挂哪几份、顺序怎么排"。
+  # 组成：domain_set 23,937 + domain_suffix_set 356,920 + domain_keyword_set 287 + ip_cidr_set 664
+  #
+  # 实测依据：这 5 份表互相大量重叠但都不互相包含——
+  #   AdvertisingTest 独有 22,057 / adrules 独有 24,808 / AdGuard 独有 28,175
+  #   AntiAD 独有 13,610 / AdBlock 独有 12,691
+  # 只挂其中任何一份都会漏掉 2-3 万个域名，这就是"还能看到广告"的根源。
   - rule_set:
-      name: 广告拦截
-      match: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/rules/shunt-rules/loon/AdvertisingTest.lsr
+      name: 广告拦截（总表）
+      match: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/curated/rules/ad-full.yaml
       policy: 广告拦截
       update_interval: 86400
+      no_resolve: true
 
-  # 补充 AdGuard 的 DNS 过滤表：只多 109,050 条就多拦 28,175 个域名（+8.8%），
-  # 是增量/体积比最高的一份。再加 adrules 要多 211,106 条才多 24,808 个，不划算。
-  - rule_set:
-      name: 广告补充（AdGuard DNS）
-      match: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/rules/shunt-rules/loon/AdGuardSDNSFilter.lsr
-      policy: 广告拦截
-      update_interval: 86400
-
-  # HTTPDNS 拦截：App 用 HTTPDNS 自己解析域名就能绕过你的规则，
+  # HTTPDNS 拦截：App 用 HTTPDNS 自己解析域名就能绕过你的规则和 DNS 层拦截，
   # 这 58 条域名必须拦。放在广告层内（43 条与广告表重叠，效果一致）。
   - rule_set:
       name: HTTPDNS 拦截
@@ -372,6 +398,12 @@ rules:
   - rule_set:
       name: 哔哩哔哩
       match: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/rules/quixoticheart-egern/bilibili.yaml
+      policy: DIRECT
+      update_interval: 86400
+  # Steam 中国区 CDN 必须直连，否则下载会绕道境外节点、速度掉到几百 KB/s
+  - rule_set:
+      name: Steam 中国区
+      match: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/rules/shunt-rules/loon/SteamCN.lsr
       policy: DIRECT
       update_interval: 86400
 
@@ -456,6 +488,14 @@ rules:
       match: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/rules/quixoticheart-egern/apple-tv.yaml
       policy: 流媒体
       update_interval: 86400
+  # 流媒体补充包：quixoticheart 没有的分类（Paramount+ / Peacock / Discovery+ /
+  # ViuTV / LineTV / HBO Asia / Hulu 日美 / SoundCloud / Deezer / TIDAL / YouTube Music），
+  # 并把上面这些服务的完整域名并进来
+  - rule_set:
+      name: 流媒体补充
+      match: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/curated/rules/extra-media.yaml
+      policy: 流媒体
+      update_interval: 86400
 
   - rule_set:
       name: TikTok
@@ -465,6 +505,13 @@ rules:
   - rule_set:
       name: 社交媒体
       match: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/rules/quixoticheart-egern/socialmedia.yaml
+      policy: 社交
+      update_interval: 86400
+  # 社交补充包：补 Reddit / Pinterest / Tumblr / Slack / Notion，
+  # 并把 Telegram / Twitter / Discord / Line / WhatsApp / FB / IG / LinkedIn 的完整域名并进来
+  - rule_set:
+      name: 社交补充
+      match: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/curated/rules/extra-social.yaml
       policy: 社交
       update_interval: 86400
   - rule_set:
@@ -492,10 +539,35 @@ rules:
       match: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/rules/quixoticheart-egern/apple-proxy.yaml
       policy: Apple
       update_interval: 86400
+  # 苹果通用表 1,569 条。必须排在 apple-cn 和 apple-proxy 之后，
+  # 否则它的大范围会把"苹果中国域名直连"和"苹果境外域名走代理"两个专项都吃掉
+  - rule_set:
+      name: 苹果-通用
+      match: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/rules/quixoticheart-egern/apple.yaml
+      policy: Apple
+      update_interval: 86400
   - rule_set:
       name: 代码托管
       match: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/rules/quixoticheart-egern/gits.yaml
       policy: 开发
+      update_interval: 86400
+  # 开发补充包：npm / Docker / GitLab / GitHub 全量 / Dropbox / Cloudflare / Developer
+  - rule_set:
+      name: 开发补充
+      match: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/curated/rules/extra-dev.yaml
+      policy: 开发
+      update_interval: 86400
+  # 外服游戏平台：Steam / Epic / PSN / Xbox / Nintendo / Riot
+  - rule_set:
+      name: 游戏平台
+      match: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/curated/rules/extra-game.yaml
+      policy: 游戏
+      update_interval: 86400
+  # 云服务：AWS / Oracle / Google Drive / iCloud
+  - rule_set:
+      name: 云服务
+      match: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/curated/rules/extra-cloud.yaml
+      policy: 兜底
       update_interval: 86400
   - rule_set:
       name: PayPal
@@ -692,7 +764,7 @@ modules:
   - name: "酷安"
     url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/loonlab/loonlab-plugin-db68e5cc.lpx
     update_interval: 86400
-    enabled: false         # 75% 覆盖，按需开
+    enabled: true          # 75% 覆盖，MITM 2 台
 
   # 以下 fmz200 的模块走"纯域名 REJECT + 0 脚本"路线，断网也不会失效
   - name: "淘宝"
@@ -723,14 +795,7 @@ modules:
     url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partX/Ximalaya.sgmodule
     update_interval: 86400
     enabled: true          # 60% 覆盖 + loonlab 的 16 个独有接口互补
-  - name: "芒果 TV"
-    url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partM/MangoTV.sgmodule
-    update_interval: 86400
-    enabled: false         # 65% 覆盖，按需开
-  - name: "汽水音乐"
-    url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partQ/QiShuiMusic.sgmodule
-    update_interval: 86400
-    enabled: false         # 61% 覆盖，32 个独有接口
+  # 芒果 TV / 汽水音乐 / 酷我 / 斗鱼 / 虎牙 / 美团 / WPS / 网易新闻 统一放在 6.6 段
 
   # ── 6.3 墨鱼去开屏（改写占比 99%，但 437 台 MITM）──────────────────────
   # 想省 MITM 就关掉这个，收益是"开屏广告消失"，代价是首包多几十毫秒
@@ -762,41 +827,138 @@ modules:
     update_interval: 86400
     enabled: true          # 73 条，比 qingr 新版 65 / 老版 60 都多
 
-  # ── 6.6 默认关闭（MITM 成本极高，需要时再开）──────────────────────────
-  # 微信小程序：118 条改写，但 93 台 MITM，是全库最重的单模块
+  # ── 6.6 全量补齐：凡是能看到的广告都要盖住 ──────────────────────────────
+  # 这一段是"完美去广告"的关键——规则层只能拦域名，App 内的原生广告位
+  # （开屏、信息流、贴片、Banner）必须靠模块改写 JSON 才能清掉。
+  # 全开之后 MITM 只增加 86 台（聚合包+墨鱼已经占了 1,141 台），几乎不花钱。
   - name: "微信小程序去广告"
     url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-微信小程序去广告-a3e17aa9.lpx
     update_interval: 86400
-    enabled: false
-  # 微信本体：173 改写 + 24 脚本 + 117 台 MITM
+    enabled: true          # 118 改写 / 93 台 MITM —— 小程序里的广告全靠它
   - name: "微信"
     url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/loonlab/loonlab-plugin-06771181.lpx
     update_interval: 86400
-    enabled: false
+    enabled: true          # 173 改写 / 24 脚本 / 117 台 MITM
+  - name: "百度贴吧"
+    url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/qingrex-loonkisssurge-333395eec1.sgmodule
+    update_interval: 86400
+    enabled: true          # 9 接口，各源最高
+  - name: "芒果 TV"
+    url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partM/MangoTV.sgmodule
+    update_interval: 86400
+    enabled: true          # 65% 覆盖
+  - name: "汽水音乐"
+    url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partQ/QiShuiMusic.sgmodule
+    update_interval: 86400
+    enabled: true          # 32 个独有接口
+  - name: "酷我音乐"
+    url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partK/KuwoMusic.sgmodule
+    update_interval: 86400
+    enabled: true          # 独有 17，别家 29%
+  - name: "斗鱼直播"
+    url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partD/DouyuLive.sgmodule
+    update_interval: 86400
+    enabled: true          # 全覆盖
+  - name: "虎牙直播"
+    url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partH/HuyaLive.sgmodule
+    update_interval: 86400
+    enabled: true          # 全覆盖
+  - name: "美团"
+    url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partM/Meituan.sgmodule
+    update_interval: 86400
+    enabled: true          # 全覆盖
+  - name: "WPS / 金山"
+    url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partJ/KingsoftSeries.sgmodule
+    update_interval: 86400
+    enabled: true          # 金山系全家桶
+  - name: "网易新闻"
+    url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-网易新闻去广告-827054a3.lpx
+    update_interval: 86400
+    enabled: true          # 80% 覆盖
   - name: "12306"
     url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-12306去广告-ffefab9b.lpx
     update_interval: 86400
-    enabled: false
+    enabled: true
   - name: "番茄小说"
     url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-番茄小说去广告-da052ba7.lpx
     update_interval: 86400
-    enabled: false
+    enabled: true
   - name: "夸克"
     url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-夸克去广告-b2f31d98.lpx
     update_interval: 86400
-    enabled: false
+    enabled: true
   - name: "得物"
     url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-得物去广告-97b49486.lpx
     update_interval: 86400
-    enabled: false
+    enabled: true
   - name: "叮咚买菜"
     url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-叮咚买菜去广告-5622a746.lpx
     update_interval: 86400
-    enabled: false
+    enabled: true
   - name: "豆瓣"
     url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-豆瓣去广告-84054182.lpx
     update_interval: 86400
-    enabled: false
+    enabled: true
+
+  # ── 6.7 长尾 App（kelee 全覆盖，1-3 台 MITM，几乎零成本）────────────────
+  - name: "瑞幸咖啡"
+    url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-瑞幸咖啡去广告-1dfdd230.lpx
+    update_interval: 86400
+    enabled: true
+  - name: "小象超市"
+    url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-小象超市去广告-8eec1458.lpx
+    update_interval: 86400
+    enabled: true
+  - name: "淘票票"
+    url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-淘票票去广告-44e8648e.lpx
+    update_interval: 86400
+    enabled: true
+  - name: "大麦"
+    url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-大麦去广告-236dbca2.lpx
+    update_interval: 86400
+    enabled: true
+  - name: "马蜂窝"
+    url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-马蜂窝去广告-29fd2cad.lpx
+    update_interval: 86400
+    enabled: true
+  - name: "米游社"
+    url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-米游社去广告-07b6df29.lpx
+    update_interval: 86400
+    enabled: true
+  - name: "小黑盒"
+    url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-小黑盒去广告-8ce70df1.lpx
+    update_interval: 86400
+    enabled: true
+  - name: "起点读书"
+    url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-起点读书去广告-73c6e283.lpx
+    update_interval: 86400
+    enabled: true
+  - name: "百度文库"
+    url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-百度文库去广告-8212a3bd.lpx
+    update_interval: 86400
+    enabled: true
+  - name: "粉笔"
+    url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-粉笔去广告-17a03272.lpx
+    update_interval: 86400
+    enabled: true
+  - name: "微信公众号"
+    url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-微信公众号去广告-5fbb442e.lpx
+    update_interval: 86400
+    enabled: true
+  - name: "微博轻享版"
+    url: https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-微博轻享版去广告-78f41ea7.lpx
+    update_interval: 86400
+    enabled: true
+
+  # ── 6.8 想瘦身就关这几个（按 MITM 台数排序，关掉的收益递减）──────────
+  # 全部启用的 MITM 总量约 1,227 台，其中：
+  #   聚合包        931 台  ← 关掉它，730 款 App 的内容改写全部失效
+  #   墨鱼去开屏    437 台  ← 关掉它，开屏广告会回来，但首包会快几十毫秒
+  #   微信小程序     93 台
+  #   微信本体      117 台
+  #   其余 28 个模块 合计只有 86 台
+  # 也就是说：真想省资源，只有"聚合包"和"墨鱼"这两个开关有意义，
+  # 关小模块基本不省任何东西、只会漏广告。
 
 
 # =============================================================================

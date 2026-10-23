@@ -3,15 +3,22 @@
 """
 curated/ 生成脚本
 
-从仓库自身的镜像文件生成三份"重写/修复"产物：
-  1. rules/cn-full.yaml   —— 把 quixoticheart 的 cn.yaml(域名) 与 cncidr.yaml(IP段) 合成单个 Egern 原生文件
-  2. rules/qingr-index.md —— 把 modules/qingr 下 506 个字面量百分号编码的文件名解码成可读索引
-  3. manifest.json        —— 精选模块清单（App -> 推荐文件 -> 理由）
+从仓库自身的镜像文件生成以下产物（输入只读，不修改任何镜像文件）：
 
-用法（在仓库根目录执行）：
+  rules/ad-full.yaml      广告拦截总表：5 份广告表取并集 + 修正 IP 写法 + 去重（Egern 原生 YAML）
+  rules/cn-full.yaml      国内直连：域名 + IP 段 合一（Egern 原生 YAML）
+  rules/extra-media.yaml  流媒体补充
+  rules/extra-social.yaml 社交补充
+  rules/extra-dev.yaml    开发补充
+  rules/extra-cloud.yaml  云服务补充
+  rules/extra-game.yaml   游戏补充
+  rules/qingr-index.md    modules/qingr 506 个编码文件名的解码索引
+  manifest.json           精选模块清单
+
+用法（仓库根目录）：
     python curated/tools/build.py
 
-依赖：仅标准库。输入只读，不修改任何镜像文件。
+依赖：仅标准库。
 """
 
 import json
@@ -24,8 +31,14 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 CUR = os.path.join(ROOT, "curated")
 
 
-def p(*parts):
-    return os.path.join(ROOT, *parts)
+def R(*p):
+    return os.path.join(ROOT, "rules", *p)
+
+
+IPV4 = re.compile(r"^\d{1,3}(?:\.\d{1,3}){3}$")
+PRIVATE = re.compile(
+    r"^(?:10\.|127\.|0\.|169\.254\.|192\.168\.|172\.(?:1[6-9]|2\d|3[01])\.|100\.(?:6[4-9]|[7-9]\d|1[01]\d|12[0-7])\.)"
+)
 
 
 def read(path):
@@ -33,70 +46,286 @@ def read(path):
         return f.read()
 
 
-# ---------------------------------------------------------------- 1. cn-full.yaml
-
-def build_cn_full():
-    """cn.yaml 只有 domain_suffix_set，没有 IP 段；cncidr.yaml 只有 ip_cidr_set。
-    只挂 cn.yaml 会导致"纯 IP 直连"的流量落到代理。合并成一个文件消除这个坑。"""
-    src_dom = p("rules", "quixoticheart-egern", "cn.yaml")
-    src_ip = p("rules", "quixoticheart-egern", "cncidr.yaml")
-
-    doms, ips = [], []
+def split_sections(text):
+    """把 Egern 原生 YAML 规则集拆成 {key: [values]}"""
+    out = {}
     cur = None
-    for line in read(src_dom).splitlines():
+    for line in text.splitlines():
         s = line.strip()
         if not s or s.startswith("#"):
             continue
-        m = re.match(r"^([a-z_]+):\s*$", s)
+        m = re.match(r"^([a-z_0-9]+)\s*:\s*$", s)
         if m:
             cur = m.group(1)
+            out.setdefault(cur, [])
+            continue
+        if s.startswith("- ") and cur:
+            out[cur].append(s[2:].strip().strip("'\""))
+    return out
+
+
+def parse_ruleset(path):
+    """把 Surge list 或 Egern YAML 都解析成 (exact, suffix, keyword, ip) 四个集合"""
+    exact, suffix, keyword, ip = set(), set(), set(), set()
+    text = read(path)
+
+    if re.search(r"^(domain_set|domain_suffix_set|domain_keyword_set|ip_cidr_set)\s*:", text, re.M):
+        sec = split_sections(text)
+        exact |= {v.lower() for v in sec.get("domain_set", [])}
+        suffix |= {v.lower() for v in sec.get("domain_suffix_set", [])}
+        keyword |= {v.lower() for v in sec.get("domain_keyword_set", [])}
+        for v in sec.get("ip_cidr_set", []) + sec.get("ip_cidr6_set", []):
+            ip.add(v.lower())
+        for v in sec.get("domain_wildcard_set", []):
+            w = v.lower().lstrip("*").lstrip(".")
+            if w:
+                suffix.add(w)
+        return exact, suffix, keyword, ip
+
+    for line in text.splitlines():
+        s = line.strip()
+        if not s or s.startswith("#") or s.startswith("//"):
             continue
         if s.startswith("- "):
-            v = s[2:].strip().strip("'\"")
-            if cur in ("domain_suffix_set", "domain_set"):
-                doms.append(v)
-    cur = None
-    for line in read(src_ip).splitlines():
-        s = line.strip()
-        if not s or s.startswith("#"):
-            continue
-        m = re.match(r"^([a-z_]+):\s*$", s)
+            s = s[2:].strip()
+        m = re.match(r"^([A-Z\-0-9]+)\s*,\s*([^,\s]+)", s)
         if m:
-            cur = m.group(1)
+            t, v = m.group(1), m.group(2).lower()
+            if t == "DOMAIN":
+                exact.add(v)
+            elif t == "DOMAIN-SUFFIX":
+                suffix.add(v)
+            elif t == "DOMAIN-KEYWORD":
+                keyword.add(v)
+            elif t in ("IP-CIDR", "IP-CIDR6"):
+                ip.add(v)
             continue
-        if s.startswith("- ") and cur == "ip_cidr_set":
-            ips.append(s[2:].strip().strip("'\""))
+        if re.match(r"^[a-z0-9\*\-\.]+$", s) and "." in s:
+            suffix.add(s.lower())
+    return exact, suffix, keyword, ip
 
-    seen = set()
-    doms = [d for d in doms if not (d in seen or seen.add(d))]
-    seen = set()
-    ips = [i for i in ips if not (i in seen or seen.add(i))]
 
-    out = [
-        "# 国内直连（域名 + IP 段 合一）",
+def normalize(exact, suffix, keyword, ip):
+    """把误写成 DOMAIN 的 IP 挪到 ip 集合；丢掉私网 IP"""
+    for v in list(exact | suffix):
+        if IPV4.match(v):
+            exact.discard(v)
+            suffix.discard(v)
+            if not PRIVATE.match(v):
+                ip.add(v + "/32")
+    for v in list(exact):
+        if PRIVATE.match(v):
+            exact.discard(v)
+    ip = {i for i in ip if not (IPV4.match(i.split("/")[0]) and PRIVATE.match(i.split("/")[0]))}
+    return exact, suffix, keyword, ip
+
+
+def write_yaml(path, title, sources, exact, suffix, keyword, ip, extra_comment=None):
+    lines = [
+        "# " + title,
         "# 由 curated/tools/build.py 生成，勿手改。",
-        "# 来源：rules/quixoticheart-egern/cn.yaml + cncidr.yaml",
-        "# 用途：挂在分流的 DIRECT 层，替代「需要同时挂两个文件」的原方案",
-        "#   domain_suffix_set: %d 条" % len(doms),
-        "#   ip_cidr_set:       %d 条" % len(ips),
-        "no_resolve: true",
-        "domain_suffix_set:",
+        "# 来源：",
     ]
-    out += ["- " + d for d in doms]
-    out.append("ip_cidr_set:")
-    out += ["- " + i for i in ips]
+    lines += ["#   - " + s for s in sources]
+    if extra_comment:
+        lines += ["#", "# " + extra_comment]
+    lines += [
+        "#",
+        "# 条目：domain_set %d / domain_suffix_set %d / domain_keyword_set %d / ip_cidr_set %d"
+        % (len(exact), len(suffix), len(keyword), len(ip)),
+        "no_resolve: true",
+    ]
+    for key, vals in (
+        ("domain_set", exact),
+        ("domain_suffix_set", suffix),
+        ("domain_keyword_set", keyword),
+        ("ip_cidr_set", ip),
+    ):
+        if vals:
+            lines.append(key + ":")
+            lines += ["- " + v for v in sorted(vals)]
+    with open(path, "w", encoding="utf-8", newline="\n") as f:
+        f.write("\n".join(lines) + "\n")
+    return len(exact) + len(suffix) + len(keyword) + len(ip)
 
+
+# ---------------------------------------------------------------- 1. 广告总表
+
+AD_SOURCES = [
+    "shunt-rules/loon/AdvertisingTest.lsr",
+    "shunt-rules/loon/AdGuardSDNSFilter.lsr",
+    "quixoticheart-egern/adrules.yaml",
+    "yfamilys/AntiAD.list",
+    "loonkit/AdBlock.list",
+]
+
+
+def build_ad_full():
+    exact, suffix, keyword, ip = set(), set(), set(), set()
+    for rel in AD_SOURCES:
+        a, b, c, d = parse_ruleset(R(rel))
+        exact |= a
+        suffix |= b
+        keyword |= c
+        ip |= d
+    exact, suffix, keyword, ip = normalize(exact, suffix, keyword, ip)
+
+    def parents(d):
+        parts = d.split(".")
+        for i in range(1, len(parts)):
+            yield ".".join(parts[i:])
+
+    exact = {d for d in exact if not any(p in suffix for p in parents(d))}
+    suffix = {d for d in suffix if not any(p in suffix for p in parents(d))}
+
+    dst = os.path.join(CUR, "rules", "ad-full.yaml")
+    n = write_yaml(
+        dst,
+        "广告拦截总表（5 份并集）",
+        AD_SOURCES,
+        exact, suffix, keyword, ip,
+        "5 份广告表互相大量重叠但都不互相包含：AdvertisingTest 独有 22,057、adrules 独有 24,808、"
+        "AdGuard 独有 28,175、AntiAD 独有 13,610、AdBlock 独有 12,691。取全并集是唯一能做到不漏的方式。"
+        "另修正了原表里把 IP 写成 DOMAIN 的条目（这些在 Egern 里永远匹配不到）。",
+    )
+    return n, dst
+
+
+# ---------------------------------------------------------------- 2. 国内直连
+
+def build_cn_full():
+    a1, b1, c1, d1 = parse_ruleset(R("quixoticheart-egern", "cn.yaml"))
+    a2, b2, c2, d2 = parse_ruleset(R("quixoticheart-egern", "cncidr.yaml"))
+    exact, suffix, keyword, ip = a1 | a2, b1 | b2, c1 | c2, d1 | d2
+    exact, suffix, keyword, ip = normalize(exact, suffix, keyword, ip)
     dst = os.path.join(CUR, "rules", "cn-full.yaml")
-    with open(dst, "w", encoding="utf-8", newline="\n") as f:
-        f.write("\n".join(out) + "\n")
-    return len(doms), len(ips), dst
+    n = write_yaml(
+        dst,
+        "国内直连（域名 + IP 段 合一）",
+        ["quixoticheart-egern/cn.yaml", "quixoticheart-egern/cncidr.yaml"],
+        exact, suffix, keyword, ip,
+        "原方案要同时挂 cn.yaml（域名）和 cncidr.yaml（IP 段），只挂前者会让纯 IP 直连的流量掉到代理。",
+    )
+    return n, dst
 
 
-# ---------------------------------------------------------------- 2. qingr-index.md
+# ---------------------------------------------------------------- 3. 补充规则集
+
+EXTRA = {
+    "extra-media": (
+        "流媒体补充",
+        [
+            "shunt-rules/loon/ParamountPlus.lsr",
+            "shunt-rules/loon/Peacock.lsr",
+            "shunt-rules/loon/DiscoveryPlus.lsr",
+            "shunt-rules/loon/ViuTV.lsr",
+            "shunt-rules/loon/LineTV.lsr",
+            "shunt-rules/loon/HBOAsia.lsr",
+            "shunt-rules/loon/HuluJP.lsr",
+            "shunt-rules/loon/HuluUSA.lsr",
+            "shunt-rules/loon/SoundCloud.lsr",
+            "shunt-rules/loon/Deezer.lsr",
+            "shunt-rules/loon/TIDAL.lsr",
+            "shunt-rules/loon/YouTubeMusic.lsr",
+            "shunt-rules/loon/AppleMusic.lsr",
+            "shunt-rules/loon/AppleTV.lsr",
+            "shunt-rules/loon/Netflix.lsr",
+            "shunt-rules/loon/Disney.lsr",
+            "shunt-rules/loon/HBO.lsr",
+            "shunt-rules/loon/Hulu.lsr",
+            "shunt-rules/loon/PrimeVideo.lsr",
+            "shunt-rules/loon/Spotify.lsr",
+            "shunt-rules/loon/YouTube.lsr",
+            "shunt-rules/loon/Twitch.lsr",
+        ],
+        "quixoticheart 的 netflix/disney/hbo/hulu/primevideo/youtube/spotify/twitch 只有基础域名；"
+        "这里补上它没有的 Paramount+ / Peacock / Discovery+ / ViuTV / LineTV / HBO Asia / Hulu 日美 / "
+        "SoundCloud / Deezer / TIDAL / YouTube Music，并把这些服务的完整域名并进来。",
+    ),
+    "extra-social": (
+        "社交补充",
+        [
+            "shunt-rules/loon/Reddit.lsr",
+            "shunt-rules/loon/Pinterest.lsr",
+            "shunt-rules/loon/Tumblr.lsr",
+            "shunt-rules/loon/Slack.lsr",
+            "shunt-rules/loon/Notion.lsr",
+            "shunt-rules/loon/Discord.lsr",
+            "shunt-rules/loon/Telegram.lsr",
+            "shunt-rules/loon/Twitter.lsr",
+            "shunt-rules/loon/LinkedIn.lsr",
+            "shunt-rules/loon/Facebook.lsr",
+            "shunt-rules/loon/Instagram.lsr",
+            "shunt-rules/loon/Whatsapp.lsr",
+            "shunt-rules/loon/Line.lsr",
+        ],
+        "quixoticheart 的 socialmedia.yaml 已有 Telegram/Twitter/Discord/Line/WhatsApp/FB/IG/LinkedIn，"
+        "但缺 Reddit / Pinterest / Tumblr / Slack / Notion；这里补上并把前几个的完整域名并进来。",
+    ),
+    "extra-dev": (
+        "开发补充",
+        [
+            "shunt-rules/loon/Developer.lsr",
+            "shunt-rules/loon/Npmjs.lsr",
+            "shunt-rules/loon/Docker.lsr",
+            "shunt-rules/loon/GitHub.lsr",
+            "shunt-rules/loon/GitLab.lsr",
+            "shunt-rules/loon/Dropbox.lsr",
+            "shunt-rules/loon/Cloudflare.lsr",
+        ],
+        "quixoticheart 的 gits.yaml 只有 75 条、基本只覆盖 GitHub；"
+        "这里补 npm / Docker / GitLab / Dropbox / Cloudflare / Developer 全量分类。",
+    ),
+    "extra-cloud": (
+        "云服务补充",
+        [
+            "shunt-rules/loon/Amazon.lsr",
+            "shunt-rules/loon/AmazonIP.lsr",
+            "shunt-rules/loon/AmazonTrust.lsr",
+            "shunt-rules/loon/Oracle.lsr",
+            "shunt-rules/loon/GoogleDrive.lsr",
+            "shunt-rules/loon/GoogleVoice.lsr",
+            "shunt-rules/loon/GoogleEarth.lsr",
+            "shunt-rules/loon/iCloud.lsr",
+        ],
+        "AWS / Oracle / Google Drive / iCloud 等云服务，quixoticheart 里没有独立分类。",
+    ),
+    "extra-game": (
+        "游戏补充",
+        [
+            "shunt-rules/loon/Steam.lsr",
+            "shunt-rules/loon/Epic.lsr",
+            "shunt-rules/loon/PlayStation.lsr",
+            "shunt-rules/loon/Xbox.lsr",
+            "shunt-rules/loon/Nintendo.lsr",
+            "shunt-rules/loon/Riot.lsr",
+        ],
+        "外服游戏平台全量分类。国服 Steam 用单独的 SteamCN（走 DIRECT）。",
+    ),
+}
+
+
+def build_extra():
+    out = []
+    for name, (title, sources, note) in EXTRA.items():
+        exact, suffix, keyword, ip = set(), set(), set(), set()
+        for rel in sources:
+            a, b, c, d = parse_ruleset(R(rel))
+            exact |= a
+            suffix |= b
+            keyword |= c
+            ip |= d
+        exact, suffix, keyword, ip = normalize(exact, suffix, keyword, ip)
+        dst = os.path.join(CUR, "rules", name + ".yaml")
+        n = write_yaml(dst, title, sources, exact, suffix, keyword, ip, note)
+        out.append((name, n, dst))
+    return out
+
+
+# ---------------------------------------------------------------- 4. qingr 索引
 
 def build_qingr_index():
-    """modules/qingr 下的文件名是「字面量百分号编码」，拼 URL 必须把 % 再转义成 %25。"""
-    d = p("modules", "qingr")
+    d = os.path.join(ROOT, "modules", "qingr")
     if not os.path.isdir(d):
         return 0, None
     rows = []
@@ -105,9 +334,7 @@ def build_qingr_index():
             continue
         base = re.sub(r"\.(sgmodule|lpx|module)$", "", fn)
         base = re.sub(r"-[0-9a-f]{6,}$", "", base)
-        name = urllib.parse.unquote(base)
-        url_path = urllib.parse.quote(fn, safe="")
-        rows.append((name, fn, url_path))
+        rows.append((urllib.parse.unquote(base), fn, urllib.parse.quote(fn, safe="")))
 
     out = [
         "# modules/qingr 文件名索引",
@@ -145,37 +372,41 @@ def build_qingr_index():
     return len(rows), dst
 
 
-# ---------------------------------------------------------------- 3. manifest.json
+# ---------------------------------------------------------------- 5. manifest
 
 BASE = "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/"
 
 LOONLAB = [
-    ("知乎", "modules/loonlab/loonlab-plugin-10652bee.lpx", 90, "62 个接口，MITM 只 1 台；把 commercial_api 全量拦截注释掉了，改成逐接口精确删"),
-    ("微博", "modules/loonlab/loonlab-plugin-ae197c04.lpx", 75, "69 个接口，独有 62 个（kelee+rucu6+fmz200 三源合并）"),
+    ("知乎", "modules/loonlab/loonlab-plugin-10652bee.lpx", 90, "62 个接口，MITM 只 1 台"),
+    ("微博", "modules/loonlab/loonlab-plugin-ae197c04.lpx", 75, "69 个接口，独有 62 个"),
     ("闲鱼", "modules/loonlab/loonlab-plugin-25d617c6.lpx", 88, "28 个接口 vs fmz200 的 21"),
     ("腾讯视频", "modules/loonlab/loonlab-plugin-4d0e6c12.lpx", 71, "29 个接口，0 台 MITM"),
-    ("百度网盘", "modules/loonlab/loonlab-plugin-5a48a2c4.lpx", 100, "17/17 全覆盖，其他源只有 8"),
+    ("百度网盘", "modules/loonlab/loonlab-plugin-5a48a2c4.lpx", 100, "17/17 全覆盖"),
     ("拼多多", "modules/loonlab/loonlab-plugin-78e0d6e2.lpx", 74, "39 个接口，独有 16"),
     ("高德地图", "modules/loonlab/loonlab-plugin-2b9a2951.lpx", 64, "27 个接口，MITM 只 1 台"),
     ("网易云音乐", "modules/loonlab/loonlab-plugin-3339cf75.lpx", 69, "11 个接口 vs 其他 8"),
-    ("哔哩哔哩", "modules/loonlab/loonlab-plugin-98bc0fa0.lpx", 83, "25 个接口，独有 1；有 4 个外链 JS，注意断链"),
-    ("小红书", "modules/loonlab/loonlab-plugin-79651793.lpx", 56, "覆盖最全，代价是 10 台 MITM + 3 个外链 JS"),
+    ("哔哩哔哩", "modules/loonlab/loonlab-plugin-98bc0fa0.lpx", 83, "25 个接口，独有 1"),
+    ("小红书", "modules/loonlab/loonlab-plugin-79651793.lpx", 56, "覆盖最全，10 台 MITM"),
     ("酷安", "modules/loonlab/loonlab-plugin-db68e5cc.lpx", 75, "6 个接口 vs 4"),
 ]
 FMZ = [
-    ("爱奇艺", "modules/fmz200/partA/iQIYI.sgmodule", 82, "45 条域名 REJECT，0 脚本；代价是 api.iqiyi.com 整域被拦"),
-    ("淘宝", "modules/fmz200/partT/Taobao.sgmodule", 60, "33 个独有接口，别家一个都没有"),
+    ("爱奇艺", "modules/fmz200/partA/iQIYI.sgmodule", 82, "45 条域名 REJECT，0 脚本"),
+    ("淘宝", "modules/fmz200/partT/Taobao.sgmodule", 60, "33 个独有接口"),
     ("京东", "modules/fmz200/partJ/JD.com.sgmodule", 63, "17 个接口，独有 16"),
-    ("快手", "modules/fmz200/partK/Kuaishou.sgmodule", 69, "9 个独有接口，其余源只有 4"),
+    ("快手", "modules/fmz200/partK/Kuaishou.sgmodule", 69, "9 个独有接口"),
     ("芒果TV", "modules/fmz200/partM/MangoTV.sgmodule", 65, "30 个接口，MITM 只 1 台"),
     ("QQ音乐", "modules/fmz200/partQ/QQMusic.sgmodule", 91, "31 个接口，0 脚本"),
     ("汽水音乐", "modules/fmz200/partQ/QiShuiMusic.sgmodule", 61, "独有 32 个接口"),
     ("喜马拉雅", "modules/fmz200/partX/Ximalaya.sgmodule", 60, "26 个接口，独有 5"),
     ("酷我音乐", "modules/fmz200/partK/KuwoMusic.sgmodule", 58, "独有 17，别家 29%"),
-    ("优酷", "modules/fmz200/partY/Youku.sgmodule", 100, "29/29 全库唯一全覆盖，0 脚本"),
+    ("优酷", "modules/fmz200/partY/Youku.sgmodule", 100, "29/29 全覆盖"),
+    ("斗鱼直播", "modules/fmz200/partD/DouyuLive.sgmodule", 100, "全覆盖"),
+    ("虎牙直播", "modules/fmz200/partH/HuyaLive.sgmodule", 100, "全覆盖"),
+    ("美团", "modules/fmz200/partM/Meituan.sgmodule", 100, "全覆盖"),
+    ("WPS/金山", "modules/fmz200/partJ/KingsoftSeries.sgmodule", 80, "金山系全家桶"),
 ]
 KELEE = [
-    ("得物", "modules/kelee/kelee-得物去广告-97b49486.lpx", 100, "全覆盖，1 台 MITM"),
+    ("得物", "modules/kelee/kelee-得物去广告-97b49486.lpx", 100, "全覆盖"),
     ("瑞幸咖啡", "modules/kelee/kelee-瑞幸咖啡去广告-1dfdd230.lpx", 100, "全覆盖"),
     ("米游社", "modules/kelee/kelee-米游社去广告-07b6df29.lpx", 100, "全覆盖"),
     ("小黑盒", "modules/kelee/kelee-小黑盒去广告-8ce70df1.lpx", 100, "全覆盖"),
@@ -189,37 +420,33 @@ KELEE = [
     ("叮咚买菜", "modules/kelee/kelee-叮咚买菜去广告-5622a746.lpx", 88, "覆盖最高"),
     ("番茄小说", "modules/kelee/kelee-番茄小说去广告-da052ba7.lpx", 62, "0 台 MITM"),
     ("12306", "modules/kelee/kelee-12306去广告-ffefab9b.lpx", 75, "覆盖最高"),
-    ("夸克", "modules/kelee/kelee-夸克去广告-b2f31d98.lpx", 50, "各源持平，选最新"),
+    ("夸克", "modules/kelee/kelee-夸克去广告-b2f31d98.lpx", 50, "各源持平"),
     ("微信公众号", "modules/kelee/kelee-微信公众号去广告-5fbb442e.lpx", 100, "全覆盖"),
     ("微博轻享版", "modules/kelee/kelee-微博轻享版去广告-78f41ea7.lpx", 82, "覆盖最高"),
+    ("网易新闻", "modules/kelee/kelee-网易新闻去广告-827054a3.lpx", 80, "覆盖最高"),
 ]
 
 TOOLS = [
-    ("聚合包（730 款 App 内容改写）", "modules/fmz200/_main/blockAds.module",
-     "2,993 条规则 + 1,470 条改写 + 255 个脚本；价值在改写不在规则"),
-    ("墨鱼去开屏 2.0", "modules/loonlab/loonlab-2.0-305406a1.lpx",
-     "2026-10-22 最新上游，461 条改写；导入异常退 modules/jadkg-egern-bfffde50c6.module"),
-    ("广告平台拦截器", "modules/kelee/kelee-广告平台拦截器-2947d7df.lpx",
-     "341 条域名，比 qingr 的 301 条多；纯 REJECT，放模块列表最下面"),
-    ("HTTPDNS 拦截器", "modules/kelee/kelee-HTTPDNS拦截器-1565be1f.lpx",
-     "73 条，比 qingr 新版 65 / 老版 60 都多"),
-    ("微信小程序去广告", "modules/kelee/kelee-微信小程序去广告-a3e17aa9.lpx",
-     "118 条改写，93 台 MITM——全库最重的模块，非必要不开"),
-    ("优先级补丁（本仓库自建）", "curated/modules/00-override.module",
-     "修正被模块误拦的域名，必须放模块列表最上面"),
+    ("优先级补丁（本仓库自建）", "curated/modules/00-override.yaml", "修正被模块误拦的域名，必须放最上面"),
+    ("聚合包（730 款 App 内容改写）", "modules/fmz200/_main/blockAds.module", "2,993 规则 + 1,470 改写 + 255 脚本"),
+    ("墨鱼去开屏 2.0", "modules/loonlab/loonlab-2.0-305406a1.lpx", "461 条改写，去开屏主力"),
+    ("微信小程序去广告", "modules/kelee/kelee-微信小程序去广告-a3e17aa9.lpx", "118 改写，93 台 MITM"),
+    ("微信本体", "modules/loonlab/loonlab-plugin-06771181.lpx", "173 改写 + 117 台 MITM"),
+    ("广告平台拦截器", "modules/kelee/kelee-广告平台拦截器-2947d7df.lpx", "341 条纯域名 REJECT"),
+    ("HTTPDNS 拦截器", "modules/kelee/kelee-HTTPDNS拦截器-1565be1f.lpx", "73 条纯域名 REJECT"),
+    ("百度贴吧", "modules/qingrex-loonkisssurge-333395eec1.sgmodule", "9 接口，各源最高"),
 ]
 
 RULES = [
-    ("广告 REJECT", "rules/shunt-rules/loon/AdvertisingTest.lsr",
-     "318,626 条，占 8 份广告表并集的 85.7%；Advertising.lsr 独有仅 3 条、yfamilys/ADLite 独有 0 条，都是纯子集"),
-    ("广告补充", "rules/shunt-rules/loon/AdGuardSDNSFilter.lsr",
-     "109,050 条，与上者并集后 +28,175 个域名（+8.8%），增量/体积比最高的一份"),
-    ("国内直连", "curated/rules/cn-full.yaml",
-     "本仓库合并版：域名 108,068 + IP 段 17,958 合到一个文件，避免只挂 cn.yaml 漏 IP"),
-    ("代理兜底", "rules/shunt-rules/loon/Global.lsr",
-     "35,888 条，占并集 60.2%；Proxy.lsr 独有 3 条、gfw.yaml 独有 0 条"),
-    ("分流骨架", "rules/quixoticheart-egern/",
-     "全库唯一 Egern 原生 YAML；有 25 个别人没有的结构件（apple-cn/apple-proxy、iplocation-direct/proxy、tld-proxy、private、cdn、httpdns、apns）"),
+    ("广告总表", "curated/rules/ad-full.yaml", "5 份广告表全并集 + 修 IP 写法，一个文件覆盖 100%"),
+    ("国内直连", "curated/rules/cn-full.yaml", "域名 108,073 + IP 段 17,958 合一"),
+    ("流媒体补充", "curated/rules/extra-media.yaml", "Paramount+/Peacock/Discovery+/ViuTV/HBO Asia…"),
+    ("社交补充", "curated/rules/extra-social.yaml", "Reddit/Pinterest/Tumblr/Slack/Notion + TG/Twitter 全量"),
+    ("开发补充", "curated/rules/extra-dev.yaml", "npm/Docker/GitLab/Dropbox/Cloudflare"),
+    ("云服务补充", "curated/rules/extra-cloud.yaml", "AWS/Oracle/Google Drive/iCloud"),
+    ("游戏补充", "curated/rules/extra-game.yaml", "Steam/Epic/PSN/Xbox/Nintendo/Riot"),
+    ("代理兜底", "rules/shunt-rules/loon/Global.lsr", "35,888 条，占代理表并集 60.2%"),
+    ("分流骨架", "rules/quixoticheart-egern/", "全库唯一 Egern 原生 YAML，25 个独有结构件"),
 ]
 
 
@@ -228,21 +455,15 @@ def build_manifest():
         return [{"app": a, "path": f, "url": BASE + urllib.parse.quote(f, safe="/"),
                  "coverage": c, "reason": r, "source": src} for a, f, c, r in items]
 
-    mods = pack(LOONLAB, "loonlab") + pack(FMZ, "fmz200") + pack(KELEE, "kelee")
-    tools = [{"app": a, "path": f, "url": BASE + urllib.parse.quote(f, safe="/"), "reason": r}
-             for a, f, r in TOOLS]
-    rules = [{"layer": a, "path": f, "url": BASE + urllib.parse.quote(f, safe="/"), "reason": r}
-             for a, f, r in RULES]
-
     doc = {
         "_comment": "精选清单：由 curated/tools/build.py 从 1,753 个模块 / 2,276 个规则集的实测对比中生成",
         "_generated": "2026-10-24",
         "_repo": "https://github.com/tuohai57/egern-mirror",
         "_base_url": BASE,
-        "_priority_note": "Egern 优先级：模块 > 本地配置；模块之间、规则之间均为「上面的优于下面」，纯列表序，没有更具体者优先。",
+        "_priority_note": "Egern 优先级：模块 > 本地配置；模块之间、规则之间均为「上面的优于下面」，纯列表序。",
         "module_order": [
-            "1. curated/modules/00-override.module（优先级补丁，必须最上）",
-            "2. 单 App 精细改写（loonlab / kelee，见 modules）",
+            "1. curated/modules/00-override.yaml（必须最上）",
+            "2. 单 App 精细改写（loonlab / kelee / fmz200）",
             "3. 墨鱼去开屏",
             "4. 聚合包 blockAds.module",
             "5. 广告平台拦截器",
@@ -250,32 +471,40 @@ def build_manifest():
         ],
         "rule_order": [
             "1. private / Lan -> DIRECT",
-            "2. AdvertisingTest + AdGuardSDNSFilter -> REJECT",
-            "3. apple-cn / microsoft-cn / socialmedia-cn / games-cn / douyin / bilibili -> DIRECT",
-            "4. ai / netflix / disney / youtube / spotify / socialmedia -> 策略组",
-            "5. cn-full.yaml -> DIRECT",
-            "6. Global.lsr -> PROXY",
-            "7. GEOIP,CN -> DIRECT",
-            "8. FINAL -> PROXY",
+            "2. ad-full.yaml -> REJECT（DNS 层也挂一份 reject）",
+            "3. 专项直连（apple-cn/microsoft-cn/socialmedia-cn/games-cn/douyin/bilibili/steamcn）",
+            "4. 专项代理（ai/netflix/disney/…/extra-media/extra-social/extra-dev/extra-cloud）",
+            "5. iplocation-direct / speedtest / cdn -> DIRECT",
+            "6. cn-full.yaml -> DIRECT",
+            "7. Global.lsr -> PROXY",
+            "8. geoip CN -> DIRECT",
+            "9. FINAL -> PROXY",
         ],
-        "modules": mods,
-        "tools": tools,
-        "rules": rules,
+        "modules": pack(LOONLAB, "loonlab") + pack(FMZ, "fmz200") + pack(KELEE, "kelee"),
+        "tools": [{"app": a, "path": f, "url": BASE + urllib.parse.quote(f, safe="/"), "reason": r}
+                  for a, f, r in TOOLS],
+        "rules": [{"layer": a, "path": f, "url": BASE + urllib.parse.quote(f, safe="/"), "reason": r}
+                  for a, f, r in RULES],
     }
     dst = os.path.join(CUR, "manifest.json")
     with open(dst, "w", encoding="utf-8", newline="\n") as f:
         json.dump(doc, f, ensure_ascii=False, indent=2)
         f.write("\n")
-    return len(mods) + len(tools), dst
+    return len(doc["modules"]) + len(doc["tools"]), dst
 
 
 def main():
-    nd, ni, dst1 = build_cn_full()
-    print("[1/3] cn-full.yaml      域名 %d + IP %d -> %s" % (nd, ni, os.path.relpath(dst1, ROOT)))
-    nq, dst2 = build_qingr_index()
-    print("[2/3] qingr-index.md    %d 个文件 -> %s" % (nq, os.path.relpath(dst2, ROOT)))
-    nm, dst3 = build_manifest()
-    print("[3/3] manifest.json     %d 条推荐 -> %s" % (nm, os.path.relpath(dst3, ROOT)))
+    n, dst = build_ad_full()
+    print("[1/6] ad-full.yaml       %d 条 -> %s" % (n, os.path.relpath(dst, ROOT)))
+    n, dst = build_cn_full()
+    print("[2/6] cn-full.yaml       %d 条 -> %s" % (n, os.path.relpath(dst, ROOT)))
+    for name, n, dst in build_extra():
+        print("[3/6] %-20s %d 条 -> %s" % (name + ".yaml", n, os.path.relpath(dst, ROOT)))
+    n, dst = build_qingr_index()
+    print("[4/6] qingr-index.md     %d 个文件" % n)
+    n, dst = build_manifest()
+    print("[5/6] manifest.json      %d 条推荐" % n)
+    print("[6/6] done")
     return 0
 
 

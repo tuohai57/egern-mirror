@@ -81,16 +81,22 @@
 ```
 curated/
 ├── README.md                     ← 本文件
-├── Profile.yaml                  ← ★ 完整可用的 Egern 配置（807 行，19 组 / 50 规则 / 33 模块）
+├── Profile.yaml                  ← ★ 完整可用的 Egern 配置（19 组 / 57 规则 / 52 模块）
 ├── manifest.json                 ← 机器可读的精选清单（App → 文件 → 理由 → 现成 URL）
 ├── modules/
 │   ├── 00-override.yaml          ← 自建：优先级补丁（Egern 原生 YAML，推荐）
 │   └── 00-override.module        ← 同上，Surge 格式版（给需要 .module 的场景）
 ├── rules/
+│   ├── ad-full.yaml              ← 自建：5 份广告表全并集（381,808 条）+ 修 IP 写法
 │   ├── cn-full.yaml              ← 自建：国内直连「域名 + IP 段」合一
+│   ├── extra-media.yaml          ← 自建：流媒体补充（Paramount+/Peacock/Discovery+/ViuTV…）
+│   ├── extra-social.yaml         ← 自建：社交补充（Reddit/Pinterest/Tumblr/Slack/Notion）
+│   ├── extra-dev.yaml            ← 自建：开发补充（npm/Docker/GitLab/Dropbox/Cloudflare）
+│   ├── extra-cloud.yaml          ← 自建：云服务（AWS/Oracle/Google Drive/iCloud）
+│   ├── extra-game.yaml           ← 自建：游戏（Steam/Epic/PSN/Xbox/Nintendo/Riot）
 │   └── qingr-index.md            ← 自建：506 个编码文件名的解码索引
 └── tools/
-    └── build.py                  ← 上面三份的生成脚本（只读镜像，可重跑）
+    └── build.py                  ← 上面这些的生成脚本（只读镜像，可重跑）
 ```
 
 ### `Profile.yaml` —— 直接可用的完整配置
@@ -102,13 +108,13 @@ curated/
 | 全局 | `block_quic: true`（QUIC 是"规则不生效"第一大原因）、`hijack_dns`（防 HTTPDNS 绕过）、`include_apns`（防推送断） |
 | DNS | 国内/国外双上游 + `cn-full.yaml` 参与 DNS 分流 + `proxy_nameservers` 防环路 + `block_ips` 只滤 3 个最保险的 |
 | 策略组 | 19 个：订阅 → 兜底 → 5 个地区组 → 广告拦截开关 → AI/流媒体/TikTok/社交/Google/Microsoft/Apple/开发/支付/游戏/国内 |
-| 规则 | 50 条，8 层，每层都标了"为什么在这个位置" |
+| 规则 | 57 条（55 个规则集），9 层，每层都标了"为什么在这个位置" |
 | MITM | 只写 excludes（12 条银行/政务），其余由模块自动合并 |
-| 模块 | 33 个，22 个默认启用，每个都标了覆盖度 / 外链 JS / MITM 台数 |
+| 模块 | 52 个，全部启用，每个都标了覆盖度 / 外链 JS / MITM 台数 |
 
 **唯一要改的**：`policy_groups` → `订阅` → `urls` 里的订阅链接。
 
-首次导入约需拉取 60 MB（48 个规则集 + 33 个模块），建议在 Wi-Fi 下导入。
+首次导入约需拉取 12 MB（55 个规则集 + 52 个模块，其中 ad-full 一个文件 7.7 MB），建议在 Wi-Fi 下导入。
 
 ### `modules/00-override.module`
 

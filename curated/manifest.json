@@ -3,10 +3,10 @@
   "_generated": "2026-10-24",
   "_repo": "https://github.com/tuohai57/egern-mirror",
   "_base_url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/",
-  "_priority_note": "Egern 优先级：模块 > 本地配置；模块之间、规则之间均为「上面的优于下面」，纯列表序，没有更具体者优先。",
+  "_priority_note": "Egern 优先级：模块 > 本地配置；模块之间、规则之间均为「上面的优于下面」，纯列表序。",
   "module_order": [
-    "1. curated/modules/00-override.module（优先级补丁，必须最上）",
-    "2. 单 App 精细改写（loonlab / kelee，见 modules）",
+    "1. curated/modules/00-override.yaml（必须最上）",
+    "2. 单 App 精细改写（loonlab / kelee / fmz200）",
     "3. 墨鱼去开屏",
     "4. 聚合包 blockAds.module",
     "5. 广告平台拦截器",
@@ -14,13 +14,14 @@
   ],
   "rule_order": [
     "1. private / Lan -> DIRECT",
-    "2. AdvertisingTest + AdGuardSDNSFilter -> REJECT",
-    "3. apple-cn / microsoft-cn / socialmedia-cn / games-cn / douyin / bilibili -> DIRECT",
-    "4. ai / netflix / disney / youtube / spotify / socialmedia -> 策略组",
-    "5. cn-full.yaml -> DIRECT",
-    "6. Global.lsr -> PROXY",
-    "7. GEOIP,CN -> DIRECT",
-    "8. FINAL -> PROXY"
+    "2. ad-full.yaml -> REJECT（DNS 层也挂一份 reject）",
+    "3. 专项直连（apple-cn/microsoft-cn/socialmedia-cn/games-cn/douyin/bilibili/steamcn）",
+    "4. 专项代理（ai/netflix/disney/…/extra-media/extra-social/extra-dev/extra-cloud）",
+    "5. iplocation-direct / speedtest / cdn -> DIRECT",
+    "6. cn-full.yaml -> DIRECT",
+    "7. Global.lsr -> PROXY",
+    "8. geoip CN -> DIRECT",
+    "9. FINAL -> PROXY"
   ],
   "modules": [
     {
@@ -28,7 +29,7 @@
       "path": "modules/loonlab/loonlab-plugin-10652bee.lpx",
       "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/loonlab/loonlab-plugin-10652bee.lpx",
       "coverage": 90,
-      "reason": "62 个接口，MITM 只 1 台；把 commercial_api 全量拦截注释掉了，改成逐接口精确删",
+      "reason": "62 个接口，MITM 只 1 台",
       "source": "loonlab"
     },
     {
@@ -36,7 +37,7 @@
       "path": "modules/loonlab/loonlab-plugin-ae197c04.lpx",
       "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/loonlab/loonlab-plugin-ae197c04.lpx",
       "coverage": 75,
-      "reason": "69 个接口，独有 62 个（kelee+rucu6+fmz200 三源合并）",
+      "reason": "69 个接口，独有 62 个",
       "source": "loonlab"
     },
     {
@@ -60,7 +61,7 @@
       "path": "modules/loonlab/loonlab-plugin-5a48a2c4.lpx",
       "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/loonlab/loonlab-plugin-5a48a2c4.lpx",
       "coverage": 100,
-      "reason": "17/17 全覆盖，其他源只有 8",
+      "reason": "17/17 全覆盖",
       "source": "loonlab"
     },
     {
@@ -92,7 +93,7 @@
       "path": "modules/loonlab/loonlab-plugin-98bc0fa0.lpx",
       "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/loonlab/loonlab-plugin-98bc0fa0.lpx",
       "coverage": 83,
-      "reason": "25 个接口，独有 1；有 4 个外链 JS，注意断链",
+      "reason": "25 个接口，独有 1",
       "source": "loonlab"
     },
     {
@@ -100,7 +101,7 @@
       "path": "modules/loonlab/loonlab-plugin-79651793.lpx",
       "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/loonlab/loonlab-plugin-79651793.lpx",
       "coverage": 56,
-      "reason": "覆盖最全，代价是 10 台 MITM + 3 个外链 JS",
+      "reason": "覆盖最全，10 台 MITM",
       "source": "loonlab"
     },
     {
@@ -116,7 +117,7 @@
       "path": "modules/fmz200/partA/iQIYI.sgmodule",
       "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partA/iQIYI.sgmodule",
       "coverage": 82,
-      "reason": "45 条域名 REJECT，0 脚本；代价是 api.iqiyi.com 整域被拦",
+      "reason": "45 条域名 REJECT，0 脚本",
       "source": "fmz200"
     },
     {
@@ -124,7 +125,7 @@
       "path": "modules/fmz200/partT/Taobao.sgmodule",
       "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partT/Taobao.sgmodule",
       "coverage": 60,
-      "reason": "33 个独有接口，别家一个都没有",
+      "reason": "33 个独有接口",
       "source": "fmz200"
     },
     {
@@ -140,7 +141,7 @@
       "path": "modules/fmz200/partK/Kuaishou.sgmodule",
       "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partK/Kuaishou.sgmodule",
       "coverage": 69,
-      "reason": "9 个独有接口，其余源只有 4",
+      "reason": "9 个独有接口",
       "source": "fmz200"
     },
     {
@@ -188,7 +189,39 @@
       "path": "modules/fmz200/partY/Youku.sgmodule",
       "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partY/Youku.sgmodule",
       "coverage": 100,
-      "reason": "29/29 全库唯一全覆盖，0 脚本",
+      "reason": "29/29 全覆盖",
+      "source": "fmz200"
+    },
+    {
+      "app": "斗鱼直播",
+      "path": "modules/fmz200/partD/DouyuLive.sgmodule",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partD/DouyuLive.sgmodule",
+      "coverage": 100,
+      "reason": "全覆盖",
+      "source": "fmz200"
+    },
+    {
+      "app": "虎牙直播",
+      "path": "modules/fmz200/partH/HuyaLive.sgmodule",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partH/HuyaLive.sgmodule",
+      "coverage": 100,
+      "reason": "全覆盖",
+      "source": "fmz200"
+    },
+    {
+      "app": "美团",
+      "path": "modules/fmz200/partM/Meituan.sgmodule",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partM/Meituan.sgmodule",
+      "coverage": 100,
+      "reason": "全覆盖",
+      "source": "fmz200"
+    },
+    {
+      "app": "WPS/金山",
+      "path": "modules/fmz200/partJ/KingsoftSeries.sgmodule",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/partJ/KingsoftSeries.sgmodule",
+      "coverage": 80,
+      "reason": "金山系全家桶",
       "source": "fmz200"
     },
     {
@@ -196,7 +229,7 @@
       "path": "modules/kelee/kelee-得物去广告-97b49486.lpx",
       "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-%E5%BE%97%E7%89%A9%E5%8E%BB%E5%B9%BF%E5%91%8A-97b49486.lpx",
       "coverage": 100,
-      "reason": "全覆盖，1 台 MITM",
+      "reason": "全覆盖",
       "source": "kelee"
     },
     {
@@ -308,7 +341,7 @@
       "path": "modules/kelee/kelee-夸克去广告-b2f31d98.lpx",
       "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-%E5%A4%B8%E5%85%8B%E5%8E%BB%E5%B9%BF%E5%91%8A-b2f31d98.lpx",
       "coverage": 50,
-      "reason": "各源持平，选最新",
+      "reason": "各源持平",
       "source": "kelee"
     },
     {
@@ -326,76 +359,120 @@
       "coverage": 82,
       "reason": "覆盖最高",
       "source": "kelee"
+    },
+    {
+      "app": "网易新闻",
+      "path": "modules/kelee/kelee-网易新闻去广告-827054a3.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-%E7%BD%91%E6%98%93%E6%96%B0%E9%97%BB%E5%8E%BB%E5%B9%BF%E5%91%8A-827054a3.lpx",
+      "coverage": 80,
+      "reason": "覆盖最高",
+      "source": "kelee"
     }
   ],
   "tools": [
     {
+      "app": "优先级补丁（本仓库自建）",
+      "path": "curated/modules/00-override.yaml",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/curated/modules/00-override.yaml",
+      "reason": "修正被模块误拦的域名，必须放最上面"
+    },
+    {
       "app": "聚合包（730 款 App 内容改写）",
       "path": "modules/fmz200/_main/blockAds.module",
       "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/fmz200/_main/blockAds.module",
-      "reason": "2,993 条规则 + 1,470 条改写 + 255 个脚本；价值在改写不在规则"
+      "reason": "2,993 规则 + 1,470 改写 + 255 脚本"
     },
     {
       "app": "墨鱼去开屏 2.0",
       "path": "modules/loonlab/loonlab-2.0-305406a1.lpx",
       "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/loonlab/loonlab-2.0-305406a1.lpx",
-      "reason": "2026-10-22 最新上游，461 条改写；导入异常退 modules/jadkg-egern-bfffde50c6.module"
-    },
-    {
-      "app": "广告平台拦截器",
-      "path": "modules/kelee/kelee-广告平台拦截器-2947d7df.lpx",
-      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-%E5%B9%BF%E5%91%8A%E5%B9%B3%E5%8F%B0%E6%8B%A6%E6%88%AA%E5%99%A8-2947d7df.lpx",
-      "reason": "341 条域名，比 qingr 的 301 条多；纯 REJECT，放模块列表最下面"
-    },
-    {
-      "app": "HTTPDNS 拦截器",
-      "path": "modules/kelee/kelee-HTTPDNS拦截器-1565be1f.lpx",
-      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-HTTPDNS%E6%8B%A6%E6%88%AA%E5%99%A8-1565be1f.lpx",
-      "reason": "73 条，比 qingr 新版 65 / 老版 60 都多"
+      "reason": "461 条改写，去开屏主力"
     },
     {
       "app": "微信小程序去广告",
       "path": "modules/kelee/kelee-微信小程序去广告-a3e17aa9.lpx",
       "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%8E%BB%E5%B9%BF%E5%91%8A-a3e17aa9.lpx",
-      "reason": "118 条改写，93 台 MITM——全库最重的模块，非必要不开"
+      "reason": "118 改写，93 台 MITM"
     },
     {
-      "app": "优先级补丁（本仓库自建）",
-      "path": "curated/modules/00-override.module",
-      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/curated/modules/00-override.module",
-      "reason": "修正被模块误拦的域名，必须放模块列表最上面"
+      "app": "微信本体",
+      "path": "modules/loonlab/loonlab-plugin-06771181.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/loonlab/loonlab-plugin-06771181.lpx",
+      "reason": "173 改写 + 117 台 MITM"
+    },
+    {
+      "app": "广告平台拦截器",
+      "path": "modules/kelee/kelee-广告平台拦截器-2947d7df.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-%E5%B9%BF%E5%91%8A%E5%B9%B3%E5%8F%B0%E6%8B%A6%E6%88%AA%E5%99%A8-2947d7df.lpx",
+      "reason": "341 条纯域名 REJECT"
+    },
+    {
+      "app": "HTTPDNS 拦截器",
+      "path": "modules/kelee/kelee-HTTPDNS拦截器-1565be1f.lpx",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/kelee/kelee-HTTPDNS%E6%8B%A6%E6%88%AA%E5%99%A8-1565be1f.lpx",
+      "reason": "73 条纯域名 REJECT"
+    },
+    {
+      "app": "百度贴吧",
+      "path": "modules/qingrex-loonkisssurge-333395eec1.sgmodule",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/modules/qingrex-loonkisssurge-333395eec1.sgmodule",
+      "reason": "9 接口，各源最高"
     }
   ],
   "rules": [
     {
-      "layer": "广告 REJECT",
-      "path": "rules/shunt-rules/loon/AdvertisingTest.lsr",
-      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/rules/shunt-rules/loon/AdvertisingTest.lsr",
-      "reason": "318,626 条，占 8 份广告表并集的 85.7%；Advertising.lsr 独有仅 3 条、yfamilys/ADLite 独有 0 条，都是纯子集"
-    },
-    {
-      "layer": "广告补充",
-      "path": "rules/shunt-rules/loon/AdGuardSDNSFilter.lsr",
-      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/rules/shunt-rules/loon/AdGuardSDNSFilter.lsr",
-      "reason": "109,050 条，与上者并集后 +28,175 个域名（+8.8%），增量/体积比最高的一份"
+      "layer": "广告总表",
+      "path": "curated/rules/ad-full.yaml",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/curated/rules/ad-full.yaml",
+      "reason": "5 份广告表全并集 + 修 IP 写法，一个文件覆盖 100%"
     },
     {
       "layer": "国内直连",
       "path": "curated/rules/cn-full.yaml",
       "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/curated/rules/cn-full.yaml",
-      "reason": "本仓库合并版：域名 108,068 + IP 段 17,958 合到一个文件，避免只挂 cn.yaml 漏 IP"
+      "reason": "域名 108,073 + IP 段 17,958 合一"
+    },
+    {
+      "layer": "流媒体补充",
+      "path": "curated/rules/extra-media.yaml",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/curated/rules/extra-media.yaml",
+      "reason": "Paramount+/Peacock/Discovery+/ViuTV/HBO Asia…"
+    },
+    {
+      "layer": "社交补充",
+      "path": "curated/rules/extra-social.yaml",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/curated/rules/extra-social.yaml",
+      "reason": "Reddit/Pinterest/Tumblr/Slack/Notion + TG/Twitter 全量"
+    },
+    {
+      "layer": "开发补充",
+      "path": "curated/rules/extra-dev.yaml",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/curated/rules/extra-dev.yaml",
+      "reason": "npm/Docker/GitLab/Dropbox/Cloudflare"
+    },
+    {
+      "layer": "云服务补充",
+      "path": "curated/rules/extra-cloud.yaml",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/curated/rules/extra-cloud.yaml",
+      "reason": "AWS/Oracle/Google Drive/iCloud"
+    },
+    {
+      "layer": "游戏补充",
+      "path": "curated/rules/extra-game.yaml",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/curated/rules/extra-game.yaml",
+      "reason": "Steam/Epic/PSN/Xbox/Nintendo/Riot"
     },
     {
       "layer": "代理兜底",
       "path": "rules/shunt-rules/loon/Global.lsr",
       "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/rules/shunt-rules/loon/Global.lsr",
-      "reason": "35,888 条，占并集 60.2%；Proxy.lsr 独有 3 条、gfw.yaml 独有 0 条"
+      "reason": "35,888 条，占代理表并集 60.2%"
     },
     {
       "layer": "分流骨架",
       "path": "rules/quixoticheart-egern/",
       "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/rules/quixoticheart-egern/",
-      "reason": "全库唯一 Egern 原生 YAML；有 25 个别人没有的结构件（apple-cn/apple-proxy、iplocation-direct/proxy、tld-proxy、private、cdn、httpdns、apns）"
+      "reason": "全库唯一 Egern 原生 YAML，25 个独有结构件"
     }
   ]
 }
