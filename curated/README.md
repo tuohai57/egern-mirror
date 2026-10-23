@@ -81,15 +81,34 @@
 ```
 curated/
 ├── README.md                     ← 本文件
+├── Profile.yaml                  ← ★ 完整可用的 Egern 配置（807 行，19 组 / 50 规则 / 33 模块）
 ├── manifest.json                 ← 机器可读的精选清单（App → 文件 → 理由 → 现成 URL）
 ├── modules/
-│   └── 00-override.module        ← 自建：优先级补丁，修正被误拦的域名
+│   ├── 00-override.yaml          ← 自建：优先级补丁（Egern 原生 YAML，推荐）
+│   └── 00-override.module        ← 同上，Surge 格式版（给需要 .module 的场景）
 ├── rules/
 │   ├── cn-full.yaml              ← 自建：国内直连「域名 + IP 段」合一
 │   └── qingr-index.md            ← 自建：506 个编码文件名的解码索引
 └── tools/
     └── build.py                  ← 上面三份的生成脚本（只读镜像，可重跑）
 ```
+
+### `Profile.yaml` —— 直接可用的完整配置
+
+把上面第二节、第三节的顺序**全部落进了一份配置**，不用你自己拼：
+
+| 部分 | 内容 |
+|---|---|
+| 全局 | `block_quic: true`（QUIC 是"规则不生效"第一大原因）、`hijack_dns`（防 HTTPDNS 绕过）、`include_apns`（防推送断） |
+| DNS | 国内/国外双上游 + `cn-full.yaml` 参与 DNS 分流 + `proxy_nameservers` 防环路 + `block_ips` 只滤 3 个最保险的 |
+| 策略组 | 19 个：订阅 → 兜底 → 5 个地区组 → 广告拦截开关 → AI/流媒体/TikTok/社交/Google/Microsoft/Apple/开发/支付/游戏/国内 |
+| 规则 | 50 条，8 层，每层都标了"为什么在这个位置" |
+| MITM | 只写 excludes（12 条银行/政务），其余由模块自动合并 |
+| 模块 | 33 个，22 个默认启用，每个都标了覆盖度 / 外链 JS / MITM 台数 |
+
+**唯一要改的**：`policy_groups` → `订阅` → `urls` 里的订阅链接。
+
+首次导入约需拉取 60 MB（48 个规则集 + 33 个模块），建议在 Wi-Fi 下导入。
 
 ### `modules/00-override.module`
 

@@ -1,0 +1,115 @@
+# =============================================================================
+# Egern 优先级补丁（原生 YAML 版）
+# =============================================================================
+# ⚠️ 必须放在模块列表【第一位】。放错位置完全不生效，而且不会报错。
+#
+# 为什么需要它：
+#   Egern 的优先级是「模块 > 本地配置」，模块里写死的 REJECT，
+#   你在本地规则里加 DIRECT 是无效的——本地规则救不回模块误拦的域名。
+#   唯一能压住它们的，是放在更上面的另一个模块。
+#
+# 实测背景：全库 1,753 个模块的 rules 共涉及 3,310 个域名（3,204 个 REJECT），
+# 其中 112 个同时出现在国内直连表里——本该直连却被模块强制拦截，且本地改不动。
+# 下面只捞回确实会造成【功能性损坏】的，广告 SDK 一律不动。
+#
+# 本模块不含 scriptings、不含 MITM，纯规则，零开销。
+# =============================================================================
+
+name: Egern 优先级补丁
+description: 修正被其他模块误拦的域名。必须放在模块列表最上面才生效。
+author: egern-mirror / curated
+homepage: https://github.com/tuohai57/egern-mirror/tree/main/curated
+
+rules:
+
+  # ---------------------------------------------------------------------------
+  # A 组：默认启用 —— 拦了会直接坏功能，且与"去广告"目标不冲突
+  # ---------------------------------------------------------------------------
+
+  # 网易七鱼在线客服 SDK。大量 App 的"在线客服 / 联系客服"页走这个域名，
+  # 被"广告平台拦截器"和多个 App 模块 REJECT 后，客服页白屏或一直转圈。
+  - domain_suffix:
+      match: qiyukf.com
+      policy: DIRECT
+      name: 七鱼客服 SDK
+
+  # Apple 系统侧统计（App Store 分析上报）。
+  # 被"广告平台拦截器"REJECT，可能导致 App Store 相关数据异常。
+  - domain_suffix:
+      match: app-analytics-services.com
+      policy: DIRECT
+      name: Apple 系统统计
+
+  # ---------------------------------------------------------------------------
+  # B 组：按需启用 —— 双用途域名，自己权衡（默认 disabled）
+  # 想启用就把 disabled 改成 false
+  # ---------------------------------------------------------------------------
+
+  # 【分享功能 vs 广告】MobTech 的 mob.com 既是 ShareSDK（App 内分享到微信/QQ 的通道），
+  # 也是 MobAds 广告平台。发现某个 App 点"分享到微信"没反应时开这个。
+  - domain_suffix:
+      match: mob.com
+      policy: DIRECT
+      name: MobTech 分享（双用途，谨慎）
+      disabled: true
+
+  # 【推送到达 vs 推送广告】个推。拦它是为了去推送广告，代价是推送可能收不到。
+  - domain_suffix:
+      match: getui.net
+      policy: DIRECT
+      name: 个推推送（双用途，谨慎）
+      disabled: true
+
+  # 【统计上报】Firebase Analytics。拦了省流量，
+  # 但部分 App 的埋点/登录链路会重试，表现为启动慢一拍。
+  - domain_suffix:
+      match: app-measurement.com
+      policy: DIRECT
+      name: Firebase Analytics
+      disabled: true
+
+  # 【正经网站被误收】金山词霸 / 道客巴巴 / 海尔。
+  # 装了这些 App 且发现打不开，再把对应那条改成 false。
+  - domain_suffix:
+      match: iciba.com
+      policy: DIRECT
+      name: 金山词霸
+      disabled: true
+  - domain_suffix:
+      match: docer.com
+      policy: DIRECT
+      name: 道客巴巴
+      disabled: true
+  - domain_suffix:
+      match: ehaier.com
+      policy: DIRECT
+      name: 海尔
+      disabled: true
+
+  # 【快手政企通道】快手某些企业号功能异常时开这个。
+  - domain_suffix:
+      match: kuaishouzt.com
+      policy: DIRECT
+      name: 快手政企
+      disabled: true
+
+
+# =============================================================================
+# C 组：不建议放行 —— 纯广告/统计 SDK，列在这里只为说明"看过，是故意不动的"
+# =============================================================================
+#
+# 友盟系列     umeng.com / umengcloud.com / umtrack0-2.com / umv0.com / umv5.com / umsns.com
+# 穿山甲       pangolin-sdk-toutiao.com / pangolin-sdk-toutiao-b.com / pangolin-sdk-toutiao1.com
+#              pglstatp-toutiao.com
+# 巨量         zijieapi.com / byteadverts.com / byteorge.com
+# 腾讯广点通   gdtimg.com / tencentmind.com
+# Google       doubleclick.net / doubleclick-cn.net / 2mdn-cn.net
+# 百度         cpro.baidustatic.com / mobads.baidu.com / afd.baidu.com / mbd.baidu.com
+# MobTech      mobrtb.com / mobmore.com / medproad.com
+# 其他         adfunlink.com / adtaipo.com / advlion.com / halomobi.com / slyxmobi.com
+#              mentamob.com / iaddata.com / opadlink.com / fancydsp.com / kuaiyiad.com
+#              xinduoad.com / yiweiads.com / deepinstall.com / statsinstall.xyz
+#              readgps.com / lydaas.com / hzjizhun.com / cxwlad.com / iytcdn.com
+#              openlink.cc / oplinking.com / openinstall.com / whalecloud.com
+#
+# 上面这些如果也放行，等于把去广告白做了。
