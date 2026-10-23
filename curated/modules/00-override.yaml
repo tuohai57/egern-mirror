@@ -144,3 +144,12 @@ rules:
 #              openlink.cc / oplinking.com / openinstall.com / whalecloud.com
 #
 # 上面这些如果也放行，等于把去广告白做了。
+
+  # ── D 组：压住模块里写错的 DIRECT ────────────────────────────────────────
+  # 12306 的 kelee 模块带 `DOMAIN, ad.12306.cn, DIRECT`，
+  # 而 ad.12306.cn 是开屏广告接口（本配置第 5 节已 REJECT）。
+  # 模块优先级高于本地规则，不在这里压住，开屏广告会被放出来。
+  - domain:
+      match: ad.12306.cn
+      policy: REJECT
+      name: 12306 开屏广告（压住模块的 DIRECT）
