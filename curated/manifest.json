@@ -5,7 +5,7 @@
   "_base_url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/",
   "_priority_note": "Egern 优先级：模块 > 本地配置；模块之间、规则之间均为「上面的优于下面」，纯列表序。",
   "module_order": [
-    "1. curated/modules/00-override.yaml（必须最上）",
+    "1. curated/modules/00-override-20261024.yaml（必须最上）",
     "2. 单 App 精细改写（loonlab / kelee / fmz200）",
     "3. 墨鱼去开屏",
     "4. 聚合包 blockAds.module",
@@ -372,8 +372,8 @@
   "tools": [
     {
       "app": "优先级补丁（本仓库自建）",
-      "path": "curated/modules/00-override.yaml",
-      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/curated/modules/00-override.yaml",
+      "path": "curated/modules/00-override-20261024.yaml",
+      "url": "https://cdn.jsdelivr.net/gh/tuohai57/egern-mirror@main/curated/modules/00-override-20261024.yaml",
       "reason": "修正被模块误拦的域名，必须放最上面"
     },
     {

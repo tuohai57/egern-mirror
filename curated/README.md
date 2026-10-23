@@ -85,7 +85,7 @@ curated/
 ├── 对比-v9.9与新配置.md            ← 与上一版精修配置的逐项对比
 ├── manifest.json                 ← 机器可读的精选清单（App → 文件 → 理由 → 现成 URL）
 ├── modules/
-│   ├── 00-override.yaml          ← 自建：优先级补丁（Egern 原生 YAML，推荐）
+│   ├── 00-override-20261024.yaml  ← 自建：优先级补丁（Egern 原生 YAML）
 │   └── 00-override.module        ← 同上，Surge 格式版（给需要 .module 的场景）
 ├── rules/
 │   ├── ad-full.yaml              ← 自建：5 份广告表全并集（381,808 条）+ 修 IP 写法
