@@ -190,6 +190,29 @@ def build_ad_full():
         ip |= d
     exact, suffix, keyword, ip = normalize(exact, suffix, keyword, ip)
 
+    # 排除白名单：这些域名在配置里是显式 DIRECT，若留在广告表里，
+    # DNS 层 reject 会无视规则顺序把它们拦死（顺序只管规则层，管不了 DNS 层）。
+    # 清单见 rules/ad-exclude.txt，来自 v9.9 的 145 条手写白名单。
+    excl_path = os.path.join(CUR, "rules", "ad-exclude.txt")
+    if os.path.exists(excl_path):
+        excl = {l.strip().lower() for l in read(excl_path).splitlines()
+                if l.strip() and "/" not in l and not l.strip().startswith("#")}
+
+        def in_wl(d):
+            parts = d.split(".")
+            for i in range(len(parts)):
+                if ".".join(parts[i:]) in excl:
+                    return True
+            return False
+
+        exact = {d for d in exact if not in_wl(d)}
+        suffix = {d for d in suffix if not in_wl(d)}
+        keyword = {k for k in keyword if not in_wl(k)}
+        # 通配符条目（*-ad-sign.byteimg.com）也要按去掉 * 后的基域判断
+        WILDCARD.difference_update(
+            [w for w in list(WILDCARD) if in_wl(w.replace("*", "").strip("."))]
+        )
+
     def parents(d):
         parts = d.split(".")
         for i in range(1, len(parts)):

@@ -17,7 +17,7 @@
 #
 # quixoticheart 的 socialmedia.yaml 已有 Telegram/Twitter/Discord/Line/WhatsApp/FB/IG/LinkedIn，但缺 Reddit / Pinterest / Tumblr / Slack / Notion；这里补上并把前几个的完整域名并进来。
 #
-# 条目：domain_set 7 / domain_suffix_set 689 / domain_keyword_set 6 / domain_wildcard_set 375 / domain_regex_set 4 / ip_cidr_set 65
+# 条目：domain_set 7 / domain_suffix_set 689 / domain_keyword_set 6 / domain_wildcard_set 365 / domain_regex_set 4 / ip_cidr_set 65
 no_resolve: true
 domain_set:
 - api.imem.app
@@ -725,7 +725,6 @@ domain_keyword_set:
 - twitter
 - whatsapp
 domain_wildcard_set:
-- *-ad-sign.byteimg.com
 - *-ad.a.yximgs.com
 - *-applog.fqnovel.com
 - *-datareceiver.aki-game.net
@@ -808,7 +807,6 @@ domain_wildcard_set:
 - appanalysis*.banggood.com
 - apple-*.le.com
 - applog*.matrix.easebar.com
-- at*.doubanio.com
 - attr-logs.*.amazonaws.com
 - auth-*.hismarttv.com
 - ax.*.ifeng.com
@@ -921,8 +919,6 @@ domain_wildcard_set:
 - liveme-sensors-collect2-*.amazonaws.com
 - livetracker.*.pangea-cms.com
 - log*-*.tiktokv.com
-- log*-misc-lf.amemv.com
-- log*-misc-lq.amemv.com
 - log*-normal-*.tiktokv.us
 - log*-normal-lq.toutiaoapi.com
 - log*-normal-useast1a.lemon8-app.com
@@ -932,7 +928,6 @@ domain_wildcard_set:
 - log*.vietnamplus.vn
 - log*.zijieapi.com
 - log-*.epicdn.me
-- log-*.isnssdk.com
 - log-*.previewnetworks.com
 - log-*.zadn.vn
 - log-v*-boot.capcutapi.com
@@ -981,13 +976,10 @@ domain_wildcard_set:
 - nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi
 - opnked*.xyz
 - orderana*.spankbang.com
-- p*-ad-sign.byteimg.com
 - p26.gejulm*.com
-- p2pup*.gamedl.qq.com
 - pangolin-sdk-toutiao*.com
 - pijama.*.elasticbeanstalk.com
 - ping*.bidease.com
-- ping*.qq.com
 - piwik.*.vn
 - pixel*.production-public.tubi.io
 - pixel-*.convertagain.net
@@ -1008,7 +1000,6 @@ domain_wildcard_set:
 - quangcao-*.epicdn.me
 - reachableads-av.*.amazonaws.com
 - report.*.gbqofs.io
-- report.*.qq.com
 - res*.pinpai8.cn
 - rtb-*.anysex.com
 - rtbimp-loadbalancer-*.amazonaws.com
@@ -1066,7 +1057,6 @@ domain_wildcard_set:
 - ubacollect-*.cloud.dbankcloud.cn
 - uc*.atobo.com
 - ulog*.*
-- ulog*.gifshow.com
 - ulog*.kwai-pro.com
 - ulog*.kwaipros.com
 - ulog-*.ksapisrv.com
