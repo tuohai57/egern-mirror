@@ -1614,7 +1614,3327 @@
       "path": "scripts/lylywayr-network-module-e7-bd-91-e7-bb-9c-e8-af-8a-e6-96-ad-e9-9b-b7-e8-be-be.js",
       "sha256": "5d9956ee59df4a224a4279ab6a5d17b48e8025d58892a2fee4c5c1bd7960d4e2",
       "size": 104440
+    },
+    "https://yfamilys.com/rule/115.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "115",
+      "ok": true,
+      "path": "rules/yfamilys/115.list",
+      "sha256": "67646ae62ba0d634925d4cb0f37755116d3aaf99ce1eb9df498fa875a11bb594",
+      "size": 256
+    },
+    "https://yfamilys.com/rule/12306.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "12306",
+      "ok": true,
+      "path": "rules/yfamilys/12306.list",
+      "sha256": "db849e67b3f1e35b414981e4436c11459b23eef4a6eefc796da69f6558e71e03",
+      "size": 387
+    },
+    "https://yfamilys.com/rule/1337x.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "1337x",
+      "ok": true,
+      "path": "rules/yfamilys/1337x.list",
+      "sha256": "afba7712f90725c1b4056ea2c58cde91f106b8ee858f83de14272eb90da90fef",
+      "size": 236
+    },
+    "https://yfamilys.com/rule/17173.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "17173",
+      "ok": true,
+      "path": "rules/yfamilys/17173.list",
+      "sha256": "815981374aacd15e619bd5df2dda971e057437e5045b5a9ebe44063b8499c86d",
+      "size": 1475
+    },
+    "https://yfamilys.com/rule/178.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "178",
+      "ok": true,
+      "path": "rules/yfamilys/178.list",
+      "sha256": "63d4db0aaaa035bb3d02a8a1edb1f11178911f60170ef838c27efa6c04bf3980",
+      "size": 535
+    },
+    "https://yfamilys.com/rule/17zuoye.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "17zuoye",
+      "ok": true,
+      "path": "rules/yfamilys/17zuoye.list",
+      "sha256": "f26bcd066c30618a2d83fab8b2046c9410a60764d5b72790054631de45df2fb8",
+      "size": 876
+    },
+    "https://yfamilys.com/rule/2KGames.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "2KGames",
+      "ok": true,
+      "path": "rules/yfamilys/2KGames.list",
+      "sha256": "504b51b2bb8b0cc3ca0bb2fcbb0df35056621c52102de313322ea0c0e0e4e307",
+      "size": 108
+    },
+    "https://yfamilys.com/rule/360.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "360",
+      "ok": true,
+      "path": "rules/yfamilys/360.list",
+      "sha256": "6021aac8d663cf576bb29681f11be4388559ebf770a1d26bb76430f3f741d0e9",
+      "size": 6633
+    },
+    "https://yfamilys.com/rule/360Cloud.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "360Cloud",
+      "ok": true,
+      "path": "rules/yfamilys/360Cloud.list",
+      "sha256": "7de2b732389df095e07fcc84369d23cec8695ed29bba8d85501af4f6bf13824f",
+      "size": 327
+    },
+    "https://yfamilys.com/rule/36kr.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "36kr",
+      "ok": true,
+      "path": "rules/yfamilys/36kr.list",
+      "sha256": "ae49f6b47967fce6f8e359c67b24c5690f48296740ef8408d14f5332cb541550",
+      "size": 104
+    },
+    "https://yfamilys.com/rule/3Type.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "3Type",
+      "ok": true,
+      "path": "rules/yfamilys/3Type.list",
+      "sha256": "b9522fac9919533b1197e77f611b2497129ed3d2ac50a455fd03bff1b2c14394",
+      "size": 23
+    },
+    "https://yfamilys.com/rule/3dm.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "3dm",
+      "ok": true,
+      "path": "rules/yfamilys/3dm.list",
+      "sha256": "20cc851dec3af013a17e7e941939bdad2859d4aba89073ab827d381e34b011a3",
+      "size": 26
+    },
+    "https://yfamilys.com/rule/4399.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "4399",
+      "ok": true,
+      "path": "rules/yfamilys/4399.list",
+      "sha256": "e517c0681b7f26480fac37af346b5890a6cf1085dee422d54ea849c035c1e970",
+      "size": 324
+    },
+    "https://yfamilys.com/rule/4Paradigm.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "4Paradigm",
+      "ok": true,
+      "path": "rules/yfamilys/4Paradigm.list",
+      "sha256": "aec97fb2bcf25dcf12ba682f8960bd0023b440904383181325d3a2010647f324",
+      "size": 28
+    },
+    "https://yfamilys.com/rule/4chan.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "4chan",
+      "ok": true,
+      "path": "rules/yfamilys/4chan.list",
+      "sha256": "cf6e14efeea2d891a035dba63d74e3a9336d394deca0be7ca5502de5d4e08100",
+      "size": 74
+    },
+    "https://yfamilys.com/rule/51Job.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "51Job",
+      "ok": true,
+      "path": "rules/yfamilys/51Job.list",
+      "sha256": "20a41fd00f8d6c4dfb1ef06fe957463b0acf9361558d238cedc214661e5474f2",
+      "size": 531
+    },
+    "https://yfamilys.com/rule/51nod.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "51nod",
+      "ok": true,
+      "path": "rules/yfamilys/51nod.list",
+      "sha256": "4e62f180a2232b83e54a87aa5a5d3f294355f308925459017b6c8d76a7bf3a8c",
+      "size": 24
+    },
+    "https://yfamilys.com/rule/56.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "56",
+      "ok": true,
+      "path": "rules/yfamilys/56.list",
+      "sha256": "cc306703ade1d4156a0ebf5adc08845a4057cd0141f8cdcb8d726688fd04007f",
+      "size": 249
+    },
+    "https://yfamilys.com/rule/58TongCheng.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "58TongCheng",
+      "ok": true,
+      "path": "rules/yfamilys/58TongCheng.list",
+      "sha256": "33304b4ef9b768711b287b181ebdbd4c594d4e4d646486f0a9d85652798f832c",
+      "size": 1620
+    },
+    "https://yfamilys.com/rule/6JianFang.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "6JianFang",
+      "ok": true,
+      "path": "rules/yfamilys/6JianFang.list",
+      "sha256": "96472a4910ad03efaa25df1fe011870b832a426bd67d574ecdfa9114b5b32c8f",
+      "size": 483
+    },
+    "https://yfamilys.com/rule/6park.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "6park",
+      "ok": true,
+      "path": "rules/yfamilys/6park.list",
+      "sha256": "e8c8f6615cdf5107897cf34df7c72333261161c8630ffe7d5ef599b7d58e1dac",
+      "size": 104
+    },
+    "https://yfamilys.com/rule/8btc.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "8btc",
+      "ok": true,
+      "path": "rules/yfamilys/8btc.list",
+      "sha256": "e3beeeffb9e8ebcf05aace51537011f672761122bb8aa35c989c8d9bec66aec3",
+      "size": 129
+    },
+    "https://yfamilys.com/rule/9News.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "9News",
+      "ok": true,
+      "path": "rules/yfamilys/9News.list",
+      "sha256": "9a9ffe39594c01d022804a7a667215cf1128b9e2a9337848d25495dd7d0432a5",
+      "size": 416
+    },
+    "https://yfamilys.com/rule/9to5.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "9to5",
+      "ok": true,
+      "path": "rules/yfamilys/9to5.list",
+      "sha256": "5a740665b82a07eda3c44a2cf48c44cb891be143864d42ed2da2a58413afa27b",
+      "size": 197
+    },
+    "https://yfamilys.com/rule/ABC.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "ABC",
+      "ok": true,
+      "path": "rules/yfamilys/ABC.list",
+      "sha256": "9db5f0bb6cb8da755c5d73b7c92125963c0f0c3b1c6befd221ff6401401769f6",
+      "size": 159
+    },
+    "https://yfamilys.com/rule/ADLite.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "ADLite",
+      "ok": true,
+      "path": "rules/yfamilys/ADLite.list",
+      "sha256": "c90a69bb4abd0e597a410ddf01edb4145ed2a1a4e01d27e3757ca6edba02e57e",
+      "size": 1972324
+    },
+    "https://yfamilys.com/rule/AFP.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AFP",
+      "ok": true,
+      "path": "rules/yfamilys/AFP.list",
+      "sha256": "9cac8704ee9176ee98189dc1aa7670098414f5501f57e525ada8f77a7bb276b9",
+      "size": 49
+    },
+    "https://yfamilys.com/rule/ALJazeera.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "ALJazeera",
+      "ok": true,
+      "path": "rules/yfamilys/ALJazeera.list",
+      "sha256": "35202a15b248d0187ed161ba8593dfda0d683d67c3476af71f0b04921576941a",
+      "size": 210
+    },
+    "https://yfamilys.com/rule/AMD.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AMD",
+      "ok": true,
+      "path": "rules/yfamilys/AMD.list",
+      "sha256": "5183715b491824ef7e1753f3e97ac582db4d0a0efbea35e6faed66a0ecaf5676",
+      "size": 102
+    },
+    "https://yfamilys.com/rule/AMP.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AMP",
+      "ok": true,
+      "path": "rules/yfamilys/AMP.list",
+      "sha256": "a25f9025962c0aa737a85d5e3483fdc864643d875794cc98b2f2b921c7d7c3a7",
+      "size": 134
+    },
+    "https://yfamilys.com/rule/AOL.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AOL",
+      "ok": true,
+      "path": "rules/yfamilys/AOL.list",
+      "sha256": "bda82d043cec7d67d8759369866f8262ee52939d301f134b19181f686803c8d9",
+      "size": 93
+    },
+    "https://yfamilys.com/rule/APKCombo.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "APKCombo",
+      "ok": true,
+      "path": "rules/yfamilys/APKCombo.list",
+      "sha256": "be2c6ac8c71b16c9d41e62def8f9f6a48b80f165572c7113a86343f77afa6888",
+      "size": 27
+    },
+    "https://yfamilys.com/rule/ASN-CN.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "ASN-CN",
+      "ok": true,
+      "path": "rules/yfamilys/ASN-CN.list",
+      "sha256": "fcc77df8bcfbf98626221ba981f777db2e9f2d853b7a506dc322dea987849a27",
+      "size": 72887
+    },
+    "https://yfamilys.com/rule/ASN-lite.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "ASN-lite",
+      "ok": true,
+      "path": "rules/yfamilys/ASN-lite.list",
+      "sha256": "ee20e9c88a1f7a401b6b95f43b0761ed4a9c5d6129d58490b89b8b86c6023c8d",
+      "size": 9356
+    },
+    "https://yfamilys.com/rule/ATTWatchTV.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "ATTWatchTV",
+      "ok": true,
+      "path": "rules/yfamilys/ATTWatchTV.list",
+      "sha256": "4a2295c5bf60d9b7b76af6882edee115681f9ffbe5fbfe909668ce418c32a0ff",
+      "size": 159
+    },
+    "https://yfamilys.com/rule/Abema.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Abema",
+      "ok": true,
+      "path": "rules/yfamilys/Abema.list",
+      "sha256": "4457f28f02676bad2905f6742ac895afffc932e867e275df8428339975fce0be",
+      "size": 569
+    },
+    "https://yfamilys.com/rule/AbemaTV.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AbemaTV",
+      "ok": true,
+      "path": "rules/yfamilys/AbemaTV.list",
+      "sha256": "11c8498598f0f57dd420633491108bf04eeff34e2a139865125a4f24b478a15f",
+      "size": 749
+    },
+    "https://yfamilys.com/rule/AcFun.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AcFun",
+      "ok": true,
+      "path": "rules/yfamilys/AcFun.list",
+      "sha256": "0d7a4bfc064c343b6fad10e7aa2596a60751ef9d1619cbd5b9590fa0e697a6ef",
+      "size": 114
+    },
+    "https://yfamilys.com/rule/Accuweather.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Accuweather",
+      "ok": true,
+      "path": "rules/yfamilys/Accuweather.list",
+      "sha256": "6318a3c62b87578fcfeb7022b0276f7f35912f0d8ff0da8e10ab4fbdc89af563",
+      "size": 30
+    },
+    "https://yfamilys.com/rule/Acer.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Acer",
+      "ok": true,
+      "path": "rules/yfamilys/Acer.list",
+      "sha256": "f6a20490ef8838011457bf2278cab09b9a406c372af744cf00a7a40cbcbd9e75",
+      "size": 133
+    },
+    "https://yfamilys.com/rule/Acplay.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Acplay",
+      "ok": true,
+      "path": "rules/yfamilys/Acplay.list",
+      "sha256": "4f50a6f2bf818ef5303544ddfa0c97028181a5aa158f1577df97fb83a443bf75",
+      "size": 54
+    },
+    "https://yfamilys.com/rule/Actalis.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Actalis",
+      "ok": true,
+      "path": "rules/yfamilys/Actalis.list",
+      "sha256": "5c2ab9c31a08b60f12dc4e2d974c8ad0bce311bf7c3e5dfb60d2b4b4ff2ab4df",
+      "size": 51
+    },
+    "https://yfamilys.com/rule/AdColony.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AdColony",
+      "ok": true,
+      "path": "rules/yfamilys/AdColony.list",
+      "sha256": "a07ac0273ee336260abc685e3ce952c7d26ecc72f4d1a64ebf74692a216026a9",
+      "size": 27
+    },
+    "https://yfamilys.com/rule/AddToAny.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AddToAny",
+      "ok": true,
+      "path": "rules/yfamilys/AddToAny.list",
+      "sha256": "432153a29615e8404c2bad3ed25725e58249d9ac6975e37700253f5e3f48c755",
+      "size": 27
+    },
+    "https://yfamilys.com/rule/Addthis.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Addthis",
+      "ok": true,
+      "path": "rules/yfamilys/Addthis.list",
+      "sha256": "340b964f840d5d8b5af42af10ce2a3b8fc72fce9ef9535885c1f6a50bdf4a8c6",
+      "size": 85
+    },
+    "https://yfamilys.com/rule/Adidas.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Adidas",
+      "ok": true,
+      "path": "rules/yfamilys/Adidas.list",
+      "sha256": "038430412cb5b23a7e68abd454d8289cf5bf87b5d9320a985a83523d65c74120",
+      "size": 475
+    },
+    "https://yfamilys.com/rule/Adobe.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Adobe",
+      "ok": true,
+      "path": "rules/yfamilys/Adobe.list",
+      "sha256": "ac4f9dd5d80bed964618eafd7b8266bd1cde4fb6dd0f456bc23fe5b8889fd9c4",
+      "size": 4026
+    },
+    "https://yfamilys.com/rule/AdobeActivation.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AdobeActivation",
+      "ok": true,
+      "path": "rules/yfamilys/AdobeActivation.list",
+      "sha256": "51c5823088f3a10afd1eae47a81f68931c20da439daab7677febbfb10bd4d648",
+      "size": 3677
+    },
+    "https://yfamilys.com/rule/Aerogard.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Aerogard",
+      "ok": true,
+      "path": "rules/yfamilys/Aerogard.list",
+      "sha256": "734952ba2e3682774a2f03418a281110b68b7ea5602608f5d27bcd5208d5b7d3",
+      "size": 89
+    },
+    "https://yfamilys.com/rule/Afdian.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Afdian",
+      "ok": true,
+      "path": "rules/yfamilys/Afdian.list",
+      "sha256": "30c94235a754f0fbd260da8c284ddebbb79915c9ff7a029b9aabef3d7b9b6a82",
+      "size": 53
+    },
+    "https://yfamilys.com/rule/Agora.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Agora",
+      "ok": true,
+      "path": "rules/yfamilys/Agora.list",
+      "sha256": "d7160ff63507f53ec8c8044c0b16340464cbe47b347ab2ec3a5b3b747d69a82d",
+      "size": 74
+    },
+    "https://yfamilys.com/rule/AiQiCha.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AiQiCha",
+      "ok": true,
+      "path": "rules/yfamilys/AiQiCha.list",
+      "sha256": "343204e9a4c45888344a13c54813a61a6cae8c0c4b8116603d92615e058da4d7",
+      "size": 32
+    },
+    "https://yfamilys.com/rule/AirChina.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AirChina",
+      "ok": true,
+      "path": "rules/yfamilys/AirChina.list",
+      "sha256": "75e634a36d7c0f000b722eb28a9a28bc4fb1fa28c5084c99d5c6308e2883721d",
+      "size": 62
+    },
+    "https://yfamilys.com/rule/AirWick.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AirWick",
+      "ok": true,
+      "path": "rules/yfamilys/AirWick.list",
+      "sha256": "aa257613f07676e768432abd203ca581d8222540b7d5e74a2269f21090a04248",
+      "size": 1039
+    },
+    "https://yfamilys.com/rule/Akamai.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Akamai",
+      "ok": true,
+      "path": "rules/yfamilys/Akamai.list",
+      "sha256": "7c18b7b750bf82599902f2d6cc3c7e37d008201064adc1d4ee89e2bf2d3a9779",
+      "size": 165
+    },
+    "https://yfamilys.com/rule/AkamaiCloud.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AkamaiCloud",
+      "ok": true,
+      "path": "rules/yfamilys/AkamaiCloud.list",
+      "sha256": "b8855ad7f061885a7f7c0521baa805cb1b8b4bb2d2dd4d27c13b6d487a11c3c7",
+      "size": 10157
+    },
+    "https://yfamilys.com/rule/Ali213.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Ali213",
+      "ok": true,
+      "path": "rules/yfamilys/Ali213.list",
+      "sha256": "df66980fefabe29b780605462fa9c0af1ad04fc8bb05be5e396e13e7b4d2e9d7",
+      "size": 25
+    },
+    "https://yfamilys.com/rule/AliPay.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AliPay",
+      "ok": true,
+      "path": "rules/yfamilys/AliPay.list",
+      "sha256": "7b220f98eb4b21f77f874ed8c0079526f6e98f500814deda09d79a9e8d5d4dc5",
+      "size": 592
+    },
+    "https://yfamilys.com/rule/Alibaba.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Alibaba",
+      "ok": true,
+      "path": "rules/yfamilys/Alibaba.list",
+      "sha256": "77ccb79f1222664af334300f6b9a906abff6fb9095f2887df2f638a5494c2d42",
+      "size": 1886
+    },
+    "https://yfamilys.com/rule/All4.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "All4",
+      "ok": true,
+      "path": "rules/yfamilys/All4.list",
+      "sha256": "47538bb5ef7fc64aec946734f21075bf20e1605b225307acf405db1e16cf1b9a",
+      "size": 71
+    },
+    "https://yfamilys.com/rule/Amazon.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Amazon",
+      "ok": true,
+      "path": "rules/yfamilys/Amazon.list",
+      "sha256": "fcec7ff0d8dd8a5f31345002c2f2867d28075394c639165a7f9c0f8ac2af22d1",
+      "size": 6113
+    },
+    "https://yfamilys.com/rule/AmazonCN.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AmazonCN",
+      "ok": true,
+      "path": "rules/yfamilys/AmazonCN.list",
+      "sha256": "7f716da533b43c31329e4a136e77d4a3eff25693e78e926d7a542ec301e7c75c",
+      "size": 1431
+    },
+    "https://yfamilys.com/rule/AmazonCloud.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AmazonCloud",
+      "ok": true,
+      "path": "rules/yfamilys/AmazonCloud.list",
+      "sha256": "44fa5caeb11a31411308bd58623e8a668edb38749ee41095f7aee19580d5e9e0",
+      "size": 68903
+    },
+    "https://yfamilys.com/rule/AmazonIP.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AmazonIP",
+      "ok": true,
+      "path": "rules/yfamilys/AmazonIP.list",
+      "sha256": "a098b68ae1a5d54d1f1ecfc02edb2044f3d1235048c8b1fe4f7da12a45cda970",
+      "size": 52077
+    },
+    "https://yfamilys.com/rule/AmazonPrimeVideo.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AmazonPrimeVideo",
+      "ok": true,
+      "path": "rules/yfamilys/AmazonPrimeVideo.list",
+      "sha256": "0559375c13a6d9b719c31931bd01860bea25551c6710228da05de6c4df7b619d",
+      "size": 846
+    },
+    "https://yfamilys.com/rule/AmazonTrust.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AmazonTrust",
+      "ok": true,
+      "path": "rules/yfamilys/AmazonTrust.list",
+      "sha256": "851a152b2d0eeb33179867e5c8769669bbeb85052cffc84a53fd1ae287ee4fbb",
+      "size": 78
+    },
+    "https://yfamilys.com/rule/Americasvoice.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Americasvoice",
+      "ok": true,
+      "path": "rules/yfamilys/Americasvoice.list",
+      "sha256": "97e661d9bbe7b362dd3ad957f10711567e66d63b5d0638a1a55e2f8835b6b052",
+      "size": 33
+    },
+    "https://yfamilys.com/rule/AnTianKeJi.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AnTianKeJi",
+      "ok": true,
+      "path": "rules/yfamilys/AnTianKeJi.list",
+      "sha256": "618720b631abbb929d934f8519e659fed4c52af64a942eb07131051cf917e035",
+      "size": 290
+    },
+    "https://yfamilys.com/rule/Anaconda.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Anaconda",
+      "ok": true,
+      "path": "rules/yfamilys/Anaconda.list",
+      "sha256": "71d63799ffcd8fe8603989739593bcae9b9b872b12327667ae4a9a1760eec5a5",
+      "size": 106
+    },
+    "https://yfamilys.com/rule/AnandTech.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AnandTech",
+      "ok": true,
+      "path": "rules/yfamilys/AnandTech.list",
+      "sha256": "aa2d1471575f21f5d27eaac9c5022a7ca765b6e8d8f48619d3c1a35ea0953f98",
+      "size": 28
+    },
+    "https://yfamilys.com/rule/Android.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Android",
+      "ok": true,
+      "path": "rules/yfamilys/Android.list",
+      "sha256": "f9bf9f4958fe2184dd92e0a1a9b8fb501ea3d171716b74da9326b2be5f0bb047",
+      "size": 27
+    },
+    "https://yfamilys.com/rule/Anime.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Anime",
+      "ok": true,
+      "path": "rules/yfamilys/Anime.list",
+      "sha256": "7d1f3ae7be811064ba4dee6e777841b1fcc09d022778c79cc649a50ba2c86256",
+      "size": 341
+    },
+    "https://yfamilys.com/rule/Anjuke.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Anjuke",
+      "ok": true,
+      "path": "rules/yfamilys/Anjuke.list",
+      "sha256": "8af58cf69edc831ecc6e5d673ae565d4219014bb19ccbd20097a5d72698b6f10",
+      "size": 184
+    },
+    "https://yfamilys.com/rule/Anonv.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Anonv",
+      "ok": true,
+      "path": "rules/yfamilys/Anonv.list",
+      "sha256": "092bbea7ee4e7546d78ac2bd17e27cd955f1bea93db5aebd194bc9d06c8c6e4f",
+      "size": 50
+    },
+    "https://yfamilys.com/rule/Anthropic.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Anthropic",
+      "ok": true,
+      "path": "rules/yfamilys/Anthropic.list",
+      "sha256": "123febe25447545fb7572d51db7b045edda38d9d01c7d92f9a9e417c69fff98a",
+      "size": 93
+    },
+    "https://yfamilys.com/rule/AntiAD.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AntiAD",
+      "ok": true,
+      "path": "rules/yfamilys/AntiAD.list",
+      "sha256": "09118364b6445f735858cbb05a566082acfdbb870f649ca43d74994d6f95fa4f",
+      "size": 10121486
+    },
+    "https://yfamilys.com/rule/Antutu.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Antutu",
+      "ok": true,
+      "path": "rules/yfamilys/Antutu.list",
+      "sha256": "1cb79e5ae87644aa182117aadef6ac77fb1585d3e69927971e0ed5bac1bf56f2",
+      "size": 25
+    },
+    "https://yfamilys.com/rule/Apifox.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Apifox",
+      "ok": true,
+      "path": "rules/yfamilys/Apifox.list",
+      "sha256": "b78044dfc1f7789eb01663ad63a10aa935eb32837d7c2faa067532c85aa9d229",
+      "size": 49
+    },
+    "https://yfamilys.com/rule/Apkpure.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Apkpure",
+      "ok": true,
+      "path": "rules/yfamilys/Apkpure.list",
+      "sha256": "06d860fbefc019ec4df42e3917aaae57a66f280e400c99c6d381c4a644c85483",
+      "size": 103
+    },
+    "https://yfamilys.com/rule/AppLovin.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AppLovin",
+      "ok": true,
+      "path": "rules/yfamilys/AppLovin.list",
+      "sha256": "08ba1d4daa9aa6e704985ec13a14c5f0e62c88f8ae5090a0a10327b6b4e9949b",
+      "size": 52
+    },
+    "https://yfamilys.com/rule/AppStore.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AppStore",
+      "ok": true,
+      "path": "rules/yfamilys/AppStore.list",
+      "sha256": "20062ff2d80616e5fbdb360b54c8a9f184e8ec5be47601a4dd79345e8892ec4f",
+      "size": 46
+    },
+    "https://yfamilys.com/rule/Apple.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Apple",
+      "ok": true,
+      "path": "rules/yfamilys/Apple.list",
+      "sha256": "a63a4f699cbdac05a3a0ad251a6755fa726e3c3281c67457edfe8af962a0eb19",
+      "size": 1231
+    },
+    "https://yfamilys.com/rule/AppleDaily.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AppleDaily",
+      "ok": true,
+      "path": "rules/yfamilys/AppleDaily.list",
+      "sha256": "3ba47700832fcc81d43d01790596e32fc53b01de69f4abfc716e45c7d3360762",
+      "size": 925
+    },
+    "https://yfamilys.com/rule/AppleDev.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AppleDev",
+      "ok": true,
+      "path": "rules/yfamilys/AppleDev.list",
+      "sha256": "e9c6011ecc43401df635f2b2688e82850caa2381dbaab8bd0c52fc208accf191",
+      "size": 1382
+    },
+    "https://yfamilys.com/rule/AppleFirmware.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AppleFirmware",
+      "ok": true,
+      "path": "rules/yfamilys/AppleFirmware.list",
+      "sha256": "423b3788b7b4addf8e959a692d149bb28d063725924540d3145c1ff0f3ff4b91",
+      "size": 5217
+    },
+    "https://yfamilys.com/rule/AppleHardware.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AppleHardware",
+      "ok": true,
+      "path": "rules/yfamilys/AppleHardware.list",
+      "sha256": "982f89224e264ea96a9ac84a80b6e4f9c7103d167b6dfa386bc489843608f2c2",
+      "size": 6430
+    },
+    "https://yfamilys.com/rule/AppleID.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AppleID",
+      "ok": true,
+      "path": "rules/yfamilys/AppleID.list",
+      "sha256": "3ca0886fa6dda3a88aa98226a467737859e40dd3d109cd447d4ebab39d7454e3",
+      "size": 98
+    },
+    "https://yfamilys.com/rule/AppleMail.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AppleMail",
+      "ok": true,
+      "path": "rules/yfamilys/AppleMail.list",
+      "sha256": "d66a5501b1cd1dab2d4928590d27f6cd959262879b003aab409035f5caa38dab",
+      "size": 59
+    },
+    "https://yfamilys.com/rule/AppleMedia.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AppleMedia",
+      "ok": true,
+      "path": "rules/yfamilys/AppleMedia.list",
+      "sha256": "5ac47d8098b7481255a8c358680fbcdb93c4b6713b2c2bdffa1052b282141f31",
+      "size": 1606
+    },
+    "https://yfamilys.com/rule/AppleMusic.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AppleMusic",
+      "ok": true,
+      "path": "rules/yfamilys/AppleMusic.list",
+      "sha256": "357ef5cad25d75990c0f54bc69c0af919f44be48be17b61af7719e08ce43e42d",
+      "size": 303
+    },
+    "https://yfamilys.com/rule/AppleNews.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AppleNews",
+      "ok": true,
+      "path": "rules/yfamilys/AppleNews.list",
+      "sha256": "2ebd35c43a58cc28ce4d8534f9ff545ce95869a0c44e5f3412aef30e136de486",
+      "size": 66
+    },
+    "https://yfamilys.com/rule/AppleProxy.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AppleProxy",
+      "ok": true,
+      "path": "rules/yfamilys/AppleProxy.list",
+      "sha256": "80b0c2a76f3ff1484ae4e1880a95ff713d537076f35f2385b72ed23dbb96d561",
+      "size": 1298
+    },
+    "https://yfamilys.com/rule/AppleTV.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AppleTV",
+      "ok": true,
+      "path": "rules/yfamilys/AppleTV.list",
+      "sha256": "709bce97917346b7687a87330c128a0c37154d885dfc462cbe4738030a89ea40",
+      "size": 255
+    },
+    "https://yfamilys.com/rule/Arphic.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Arphic",
+      "ok": true,
+      "path": "rules/yfamilys/Arphic.list",
+      "sha256": "9734823bb0c4954a4c2f86661696786d9989cfd2350c190f05b5ee2e9b7fbf67",
+      "size": 110
+    },
+    "https://yfamilys.com/rule/Asahi.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Asahi",
+      "ok": true,
+      "path": "rules/yfamilys/Asahi.list",
+      "sha256": "a37a81e2c779122df91287b508c81bca0cc0558536782044b272541855cd5efb",
+      "size": 195
+    },
+    "https://yfamilys.com/rule/AsianMedia.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "AsianMedia",
+      "ok": true,
+      "path": "rules/yfamilys/AsianMedia.list",
+      "sha256": "15cab2a612205c556fad0eeca8d335dbfec9323cb849d6b073fc0eec628451c8",
+      "size": 952
+    },
+    "https://yfamilys.com/rule/Atlassian.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Atlassian",
+      "ok": true,
+      "path": "rules/yfamilys/Atlassian.list",
+      "sha256": "e9dc12fd461f0702405b40b850603cdfd9d60106e8d01195142778927b3e974d",
+      "size": 137
+    },
+    "https://yfamilys.com/rule/Atomdata.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Atomdata",
+      "ok": true,
+      "path": "rules/yfamilys/Atomdata.list",
+      "sha256": "f7ca7da883a646b96ae155319526cf8c56b9703692a50c8a5191238f51efb1c5",
+      "size": 86
+    },
+    "https://yfamilys.com/rule/Azure.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Azure",
+      "ok": true,
+      "path": "rules/yfamilys/Azure.list",
+      "sha256": "a5af2fa444bdf6fe9d8ae44c443d65c1e4172fbba69ab47239ff0f8f7e23ed9b",
+      "size": 3479
+    },
+    "https://yfamilys.com/rule/BBC.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "BBC",
+      "ok": true,
+      "path": "rules/yfamilys/BBC.list",
+      "sha256": "8289f946bbd410416954583426a88754b97c2c09f201322b79c4ba209976ac30",
+      "size": 875
+    },
+    "https://yfamilys.com/rule/BMW.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "BMW",
+      "ok": true,
+      "path": "rules/yfamilys/BMW.list",
+      "sha256": "a49457bdbcf9ff5d7ccb6954549e21f86454adaf01caadf0b4d0f31ee778fefc",
+      "size": 21252
+    },
+    "https://yfamilys.com/rule/BOC.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "BOC",
+      "ok": true,
+      "path": "rules/yfamilys/BOC.list",
+      "sha256": "751f78db55a0b5112b248b9d3d1fd153cfb11fceae1c4fa122ac8126f83db459",
+      "size": 612
+    },
+    "https://yfamilys.com/rule/BOCOM.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "BOCOM",
+      "ok": true,
+      "path": "rules/yfamilys/BOCOM.list",
+      "sha256": "19b922df23fab5a62116ab2102fcdb25fe4e064b7dd0f53beb07aba4fd4e3765",
+      "size": 170
+    },
+    "https://yfamilys.com/rule/Bahamut.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Bahamut",
+      "ok": true,
+      "path": "rules/yfamilys/Bahamut.list",
+      "sha256": "29cbb8ce3a83fde848185d913adf87235f5ec15f9b19cb1c31810efdce40b88d",
+      "size": 203
+    },
+    "https://yfamilys.com/rule/BaiDuTieBa.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "BaiDuTieBa",
+      "ok": true,
+      "path": "rules/yfamilys/BaiDuTieBa.list",
+      "sha256": "682994c2f382649445134a37287c10aa68e41b4cab2574de188f1fed3c90cd34",
+      "size": 825
+    },
+    "https://yfamilys.com/rule/BaiFenDian.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "BaiFenDian",
+      "ok": true,
+      "path": "rules/yfamilys/BaiFenDian.list",
+      "sha256": "099ab034b360cc1316b86185a8b35359f8aa6b317ea585845955e238d2f11315",
+      "size": 273
+    },
+    "https://yfamilys.com/rule/BaiShanYunKeJi.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "BaiShanYunKeJi",
+      "ok": true,
+      "path": "rules/yfamilys/BaiShanYunKeJi.list",
+      "sha256": "58df42ee7879c792847127fa1cdc4d532039b6c3f74262da71f152abed6f6c93",
+      "size": 1611
+    },
+    "https://yfamilys.com/rule/Baidu.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Baidu",
+      "ok": true,
+      "path": "rules/yfamilys/Baidu.list",
+      "sha256": "a3602da348fa769c1fcfc4a959ecb2ca22c346eb2143902ba3c4165f43f83d7e",
+      "size": 6823
+    },
+    "https://yfamilys.com/rule/BaiduCloud.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "BaiduCloud",
+      "ok": true,
+      "path": "rules/yfamilys/BaiduCloud.list",
+      "sha256": "0fd2fede1f1d8b25bc70c10bfe30b5d529a3c4b9134262b8b9f466097912e0b2",
+      "size": 1331
+    },
+    "https://yfamilys.com/rule/BaoFengYingYin.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "BaoFengYingYin",
+      "ok": true,
+      "path": "rules/yfamilys/BaoFengYingYin.list",
+      "sha256": "8ef6ece4aae3d76532d1e6dd886193c9d2450d18a86af57e76f9f4b7eebc55e6",
+      "size": 208
+    },
+    "https://yfamilys.com/rule/Battle.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Battle",
+      "ok": true,
+      "path": "rules/yfamilys/Battle.list",
+      "sha256": "f7c9de75c1fc890edeb51bc0cfb2004af5d14912487f553fa39ea62e98ac976e",
+      "size": 248
+    },
+    "https://yfamilys.com/rule/BeStore.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "BeStore",
+      "ok": true,
+      "path": "rules/yfamilys/BeStore.list",
+      "sha256": "16412248362f06cd19022de4b453cc8b95abd735f7188b5633fcc2b2b83975d3",
+      "size": 75
+    },
+    "https://yfamilys.com/rule/Beats.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Beats",
+      "ok": true,
+      "path": "rules/yfamilys/Beats.list",
+      "sha256": "2bb6baf261360f8c41a30a7bee39c993ca0e35acb67cce83eb5d1e37a1948ff3",
+      "size": 25183
+    },
+    "https://yfamilys.com/rule/BesTV.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "BesTV",
+      "ok": true,
+      "path": "rules/yfamilys/BesTV.list",
+      "sha256": "e8da0a22f2f86759e96044d955bf0552144fa09f0c977a66a079be28bf759d5e",
+      "size": 182
+    },
+    "https://yfamilys.com/rule/Bestbuy.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Bestbuy",
+      "ok": true,
+      "path": "rules/yfamilys/Bestbuy.list",
+      "sha256": "6966cc944d69a6f07c2697bc046b8c72d7b826c80a78c242a3fa598f50e5a18a",
+      "size": 2590
+    },
+    "https://yfamilys.com/rule/BianFeng.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "BianFeng",
+      "ok": true,
+      "path": "rules/yfamilys/BianFeng.list",
+      "sha256": "7a182b14efe0c53f5a7ae0d6c72baf578a2d77b547ed9768969fb0f030e000a3",
+      "size": 2759
+    },
+    "https://yfamilys.com/rule/BiliBili.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "BiliBili",
+      "ok": true,
+      "path": "rules/yfamilys/BiliBili.list",
+      "sha256": "b0b6ca542b3e023c5db1568285975886f99dd3d2a98efc12e08a392c78d728b7",
+      "size": 4321
+    },
+    "https://yfamilys.com/rule/BiliBiliIntl.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "BiliBiliIntl",
+      "ok": true,
+      "path": "rules/yfamilys/BiliBiliIntl.list",
+      "sha256": "40502ce8ef7356d89f3c0ab5f78fce58cbbff115950b70c06900086c1e4c5d9d",
+      "size": 26
+    },
+    "https://yfamilys.com/rule/Binance.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Binance",
+      "ok": true,
+      "path": "rules/yfamilys/Binance.list",
+      "sha256": "4fd606a20843edf108801c485fcfb9fb39cb52c20d349cb9fa463278d77c25a7",
+      "size": 324
+    },
+    "https://yfamilys.com/rule/Bing.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Bing",
+      "ok": true,
+      "path": "rules/yfamilys/Bing.list",
+      "sha256": "0b52e12f01d38cc048e5923480852044879545d48df0fef23a92f6e15db51e17",
+      "size": 262
+    },
+    "https://yfamilys.com/rule/Bitauto.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Bitauto",
+      "ok": true,
+      "path": "rules/yfamilys/Bitauto.list",
+      "sha256": "095187d160ae55341a7d5764d7fcf0218ecb5b7e2f23b3cbfabadd237705abb4",
+      "size": 130
+    },
+    "https://yfamilys.com/rule/Blizzard.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Blizzard",
+      "ok": true,
+      "path": "rules/yfamilys/Blizzard.list",
+      "sha256": "16d943ed7bfef29aea64692c22899a9d5c5038da2bd2260a7f0a0353dedee93d",
+      "size": 2131
+    },
+    "https://yfamilys.com/rule/Bloomberg.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Bloomberg",
+      "ok": true,
+      "path": "rules/yfamilys/Bloomberg.list",
+      "sha256": "73effb2dc51ee7c407db05bab2277b839fe1907fad169fda5448e7d8d477b11a",
+      "size": 656
+    },
+    "https://yfamilys.com/rule/Blued.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Blued",
+      "ok": true,
+      "path": "rules/yfamilys/Blued.list",
+      "sha256": "b407baac8e9777e54152c8513a275a2520d0f27d0b421c178308c030c46fb95d",
+      "size": 894
+    },
+    "https://yfamilys.com/rule/BoXun.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "BoXun",
+      "ok": true,
+      "path": "rules/yfamilys/BoXun.list",
+      "sha256": "571172af38c7d0fd755b8d33115e372bea6942f5c3ccebcaa81c53396b6f0e73",
+      "size": 53
+    },
+    "https://yfamilys.com/rule/Bootcss.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Bootcss",
+      "ok": true,
+      "path": "rules/yfamilys/Bootcss.list",
+      "sha256": "34825e2586afbcbb00a9e12341397e8066faa1a6298bdc4c23fd92ca7988a82c",
+      "size": 81
+    },
+    "https://yfamilys.com/rule/BrightCove.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "BrightCove",
+      "ok": true,
+      "path": "rules/yfamilys/BrightCove.list",
+      "sha256": "0fdfeae23b0b702fbd57587fbdf55e865ba0c03c9446aeba70e18856e15e47ed",
+      "size": 421
+    },
+    "https://yfamilys.com/rule/BritboxUK.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "BritboxUK",
+      "ok": true,
+      "path": "rules/yfamilys/BritboxUK.list",
+      "sha256": "0251866e88c22f12d545027b45cae702449851a3633f18f7df8e87c054e20a96",
+      "size": 227
+    },
+    "https://yfamilys.com/rule/Buypass.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Buypass",
+      "ok": true,
+      "path": "rules/yfamilys/Buypass.list",
+      "sha256": "fda3002a00f12e5ff8ebb395dfcbc035bae99589d39f8e4b93906f85a2e9e6e6",
+      "size": 129
+    },
+    "https://yfamilys.com/rule/ByteDance.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "ByteDance",
+      "ok": true,
+      "path": "rules/yfamilys/ByteDance.list",
+      "sha256": "7a3573fbb6c876534b9691a245b5b86dce2a9a3f969db626563ce23292e83e3d",
+      "size": 10565
+    },
+    "https://yfamilys.com/rule/CAS.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "CAS",
+      "ok": true,
+      "path": "rules/yfamilys/CAS.list",
+      "sha256": "351f58afc627f12722bd7165e95f322ee9f39f03f0ccaa48f9bb2feca42bf24f",
+      "size": 1186
+    },
+    "https://yfamilys.com/rule/CBS.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "CBS",
+      "ok": true,
+      "path": "rules/yfamilys/CBS.list",
+      "sha256": "f0fb5b60eaf71b7d4a9da2fb4349102d52585734592c5d050f52464db5877a33",
+      "size": 1013
+    },
+    "https://yfamilys.com/rule/CCB.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "CCB",
+      "ok": true,
+      "path": "rules/yfamilys/CCB.list",
+      "sha256": "4fbb42d559766a02752a129fd1443be36b012c13627b297d26e280ee62534269",
+      "size": 484
+    },
+    "https://yfamilys.com/rule/CCTV.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "CCTV",
+      "ok": true,
+      "path": "rules/yfamilys/CCTV.list",
+      "sha256": "f8d64eae2c634965d2694351d56067d3979106767f7c456f7ae0fea89ad0b1e0",
+      "size": 1119
+    },
+    "https://yfamilys.com/rule/CHT.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "CHT",
+      "ok": true,
+      "path": "rules/yfamilys/CHT.list",
+      "sha256": "4fa4da93c584541c3480fd2d119b5b1f042dc0b07d05b1ce8d9c9cbf0f527768",
+      "size": 177
+    },
+    "https://yfamilys.com/rule/CMB.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "CMB",
+      "ok": true,
+      "path": "rules/yfamilys/CMB.list",
+      "sha256": "8a69b9eccdc463ead05736769ff4cad5646bb7d5ccd5bf6ff58e1dd6a0780c17",
+      "size": 1013
+    },
+    "https://yfamilys.com/rule/CNKI.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "CNKI",
+      "ok": true,
+      "path": "rules/yfamilys/CNKI.list",
+      "sha256": "535d31f09c4dff016786841021c4d8e3ade916e3c15efb164b5690874dfe15ec",
+      "size": 449
+    },
+    "https://yfamilys.com/rule/CableTV.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "CableTV",
+      "ok": true,
+      "path": "rules/yfamilys/CableTV.list",
+      "sha256": "ad89e2bd65f35d72350a01c438182f5c783479b29c726f7b92299ef0e9af4ada",
+      "size": 55
+    },
+    "https://yfamilys.com/rule/CaiXinChuanMei.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "CaiXinChuanMei",
+      "ok": true,
+      "path": "rules/yfamilys/CaiXinChuanMei.list",
+      "sha256": "fdab5c51cb4b128064f35e51e316cb48a41d2d14ccce06cf20a17a2c6145dbb7",
+      "size": 678
+    },
+    "https://yfamilys.com/rule/Cake.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Cake",
+      "ok": true,
+      "path": "rules/yfamilys/Cake.list",
+      "sha256": "1679b2bb92c2d41416ee6c6e6df378052f7546fc0be4e8983c42a6b14c95d070",
+      "size": 213
+    },
+    "https://yfamilys.com/rule/Canonical.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Canonical",
+      "ok": true,
+      "path": "rules/yfamilys/Canonical.list",
+      "sha256": "65f1fa8d0da1ceba6f261ab53e64442d4f099cdf766520d49aff51e2a5fd1126",
+      "size": 367
+    },
+    "https://yfamilys.com/rule/Cerebras.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Cerebras",
+      "ok": true,
+      "path": "rules/yfamilys/Cerebras.list",
+      "sha256": "c15dda5bc8d8acc18c8425f2a24f8379375807b723a0403844c8c7465d14fb20",
+      "size": 26
+    },
+    "https://yfamilys.com/rule/ChatGPT.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "ChatGPT",
+      "ok": true,
+      "path": "rules/yfamilys/ChatGPT.list",
+      "sha256": "413c11ed079810aab35b7776fc54c53a9575eb1e6abffa7cf541b3c7e50d9bd8",
+      "size": 1139
+    },
+    "https://yfamilys.com/rule/ChengTongWangPan.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "ChengTongWangPan",
+      "ok": true,
+      "path": "rules/yfamilys/ChengTongWangPan.list",
+      "sha256": "3fd67a0ddf961e763f6919ef8ce115a7413b11b10bad49d40daded649342f643",
+      "size": 97
+    },
+    "https://yfamilys.com/rule/China.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "China",
+      "ok": true,
+      "path": "rules/yfamilys/China.list",
+      "sha256": "4f76cd66f4d4f4bf399c313d3643078090f3859d2c46bcdfc485232fd4aaa9eb",
+      "size": 1818
+    },
+    "https://yfamilys.com/rule/ChinaMaxNoMedia.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "ChinaMaxNoMedia",
+      "ok": true,
+      "path": "rules/yfamilys/ChinaMaxNoMedia.list",
+      "sha256": "7c571df9917b3d779f8cc107d1d5caed16cdbfeb8768725b6947f30d988b56ed",
+      "size": 456561
+    },
+    "https://yfamilys.com/rule/ChinaMedia.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "ChinaMedia",
+      "ok": true,
+      "path": "rules/yfamilys/ChinaMedia.list",
+      "sha256": "1e03d4cc09c77f14619ee0649f9023f83bf738272239de0c65833a79f4e3e51c",
+      "size": 13893
+    },
+    "https://yfamilys.com/rule/ChinaNoMedia.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "ChinaNoMedia",
+      "ok": true,
+      "path": "rules/yfamilys/ChinaNoMedia.list",
+      "sha256": "99a305f1415fba29ab08425a1eae02529e7ab88345e8718572572fcf8c1ce6e1",
+      "size": 1608
+    },
+    "https://yfamilys.com/rule/ChinaTelecom.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "ChinaTelecom",
+      "ok": true,
+      "path": "rules/yfamilys/ChinaTelecom.list",
+      "sha256": "0a3547dd20fc6838491ca93fa19e4bcbe69aa52450b61ed162334c387ef7ff0a",
+      "size": 2172
+    },
+    "https://yfamilys.com/rule/ChuangKeTie.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "ChuangKeTie",
+      "ok": true,
+      "path": "rules/yfamilys/ChuangKeTie.list",
+      "sha256": "ae6d440b3954d8b0b573c86765e89cb4b219b107603ec7e4d5b25dcf4009ff3a",
+      "size": 125
+    },
+    "https://yfamilys.com/rule/Cisco.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Cisco",
+      "ok": true,
+      "path": "rules/yfamilys/Cisco.list",
+      "sha256": "92666d977603ad5ae8b2a4360157eadd1545c981ea08c43f64bb424d9b49bbab",
+      "size": 3452
+    },
+    "https://yfamilys.com/rule/Claude.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Claude",
+      "ok": true,
+      "path": "rules/yfamilys/Claude.list",
+      "sha256": "e22906098a08537bca78fe642e8dcf401700595c436d131bfdbb9f446c58e19b",
+      "size": 77
+    },
+    "https://yfamilys.com/rule/Cloudflare.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Cloudflare",
+      "ok": true,
+      "path": "rules/yfamilys/Cloudflare.list",
+      "sha256": "cd6570a97e66929d0e3acd37086bb490c4a194f73d00e6639184314817fa640f",
+      "size": 2087
+    },
+    "https://yfamilys.com/rule/Cnet.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Cnet",
+      "ok": true,
+      "path": "rules/yfamilys/Cnet.list",
+      "sha256": "e2a907ac9ba4d868c8a29171d40fd9a878724ef5e47c44fc9258cb1ab95d274e",
+      "size": 23
+    },
+    "https://yfamilys.com/rule/CodeRabbit.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "CodeRabbit",
+      "ok": true,
+      "path": "rules/yfamilys/CodeRabbit.list",
+      "sha256": "0ea79d7559f9fc81fcdbc030641bae1489d5b2135aa5b36bfc0f120f81afa86f",
+      "size": 28
+    },
+    "https://yfamilys.com/rule/Collabora.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Collabora",
+      "ok": true,
+      "path": "rules/yfamilys/Collabora.list",
+      "sha256": "86b5c0b054a2a7a33d81e25f2b019a2771c4df975423dce9301764e0da3f0baf",
+      "size": 120
+    },
+    "https://yfamilys.com/rule/Crypto.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Crypto",
+      "ok": true,
+      "path": "rules/yfamilys/Crypto.list",
+      "sha256": "8ffcab8939b25f612d2396375201ba18c5f5147b91d098419d7c77a28ec489e9",
+      "size": 5408
+    },
+    "https://yfamilys.com/rule/Cryptocurrency.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Cryptocurrency",
+      "ok": true,
+      "path": "rules/yfamilys/Cryptocurrency.list",
+      "sha256": "c16d76a32dfbf0fd3fec5012ff215a5e33c14436a7d21dc192976d5df5ee54c4",
+      "size": 1107
+    },
+    "https://yfamilys.com/rule/CyberTrust.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "CyberTrust",
+      "ok": true,
+      "path": "rules/yfamilys/CyberTrust.list",
+      "sha256": "8f047a667ae09dcba28ec9151b597504a7f015114f171958979d2c8522d4d186",
+      "size": 62
+    },
+    "https://yfamilys.com/rule/DMM.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "DMM",
+      "ok": true,
+      "path": "rules/yfamilys/DMM.list",
+      "sha256": "dd68da756942f1f12328e94fe61f60b8224c6cf087bebbe62f8a5a1e6d8e9043",
+      "size": 567
+    },
+    "https://yfamilys.com/rule/Dailymail.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Dailymail",
+      "ok": true,
+      "path": "rules/yfamilys/Dailymail.list",
+      "sha256": "a0399edd36dd383482357124c08da40d4cd16208509f4d3cf61e86e3367c8a01",
+      "size": 490
+    },
+    "https://yfamilys.com/rule/Dailymotion.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Dailymotion",
+      "ok": true,
+      "path": "rules/yfamilys/Dailymotion.list",
+      "sha256": "b6d01096707082fdf19d8175fc90a03ec5552c2b8f0dca7f14cb36ebd51abdea",
+      "size": 127
+    },
+    "https://yfamilys.com/rule/Dandanplay.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Dandanplay",
+      "ok": true,
+      "path": "rules/yfamilys/Dandanplay.list",
+      "sha256": "010ba564c5657819b1c0498a8caf99240cae00b8c71b9e79aad0b8548ff17d33",
+      "size": 85
+    },
+    "https://yfamilys.com/rule/DeepSeek.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "DeepSeek",
+      "ok": true,
+      "path": "rules/yfamilys/DeepSeek.list",
+      "sha256": "85d9153dab40276739f3e65a467f71e13921aa952632761b581292b8328dbdbc",
+      "size": 51
+    },
+    "https://yfamilys.com/rule/Deezer.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Deezer",
+      "ok": true,
+      "path": "rules/yfamilys/Deezer.list",
+      "sha256": "ba7f27f52976adb7d974ba86ba425f288ab56c1afd2e60abb6d674673b5fa4e1",
+      "size": 68
+    },
+    "https://yfamilys.com/rule/Dettol.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Dettol",
+      "ok": true,
+      "path": "rules/yfamilys/Dettol.list",
+      "sha256": "1bf95d495853bf6624afb51c3f3ed4e47c6a728b635b460d11ec4540cc6fda6d",
+      "size": 951
+    },
+    "https://yfamilys.com/rule/DiDi.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "DiDi",
+      "ok": true,
+      "path": "rules/yfamilys/DiDi.list",
+      "sha256": "c19066135dbeaf403420d13d2d43f8c23de6ae896c37b97d46f0c10133865bee",
+      "size": 708
+    },
+    "https://yfamilys.com/rule/DiLianWangLuo.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "DiLianWangLuo",
+      "ok": true,
+      "path": "rules/yfamilys/DiLianWangLuo.list",
+      "sha256": "283d266e4d7ea3d00f497f0b0f1201b2ac04709f6c82e5184596a1c06ec74b35",
+      "size": 349
+    },
+    "https://yfamilys.com/rule/Dify.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Dify",
+      "ok": true,
+      "path": "rules/yfamilys/Dify.list",
+      "sha256": "2107ef522e7bad81ee932248f1c607621ffd9bac8e6013cb5c6f6e8ba653bfac",
+      "size": 22
+    },
+    "https://yfamilys.com/rule/DigitalOcean.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "DigitalOcean",
+      "ok": true,
+      "path": "rules/yfamilys/DigitalOcean.list",
+      "sha256": "631ce76c8a0b75de277dd3d58f2fee2f663363c909031145e994d64797dc55ff",
+      "size": 117
+    },
+    "https://yfamilys.com/rule/DingXiangYuan.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "DingXiangYuan",
+      "ok": true,
+      "path": "rules/yfamilys/DingXiangYuan.list",
+      "sha256": "ca9afcce020ef03e6f8e2bc40a50e31ee441b2aeb1f4df9f544f205620438465",
+      "size": 385
+    },
+    "https://yfamilys.com/rule/Discord.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Discord",
+      "ok": true,
+      "path": "rules/yfamilys/Discord.list",
+      "sha256": "706943aeceae3cd4b5054de90f4323014c1fcb85af64308d8e492d764f912893",
+      "size": 918
+    },
+    "https://yfamilys.com/rule/Disqus.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Disqus",
+      "ok": true,
+      "path": "rules/yfamilys/Disqus.list",
+      "sha256": "65242fff856dc5e52e808a1998136f6ec042dd2cb3c242e9703a0f93288b917b",
+      "size": 85
+    },
+    "https://yfamilys.com/rule/Docker.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Docker",
+      "ok": true,
+      "path": "rules/yfamilys/Docker.list",
+      "sha256": "f5ed055d31ade18d95947eed10060fb83b31446b93f62204419152761e9fd338",
+      "size": 218
+    },
+    "https://yfamilys.com/rule/DouYin.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "DouYin",
+      "ok": true,
+      "path": "rules/yfamilys/DouYin.list",
+      "sha256": "a5506847aaf6c46c6e58446c6edd336594da50962c16732614949e357649450f",
+      "size": 364
+    },
+    "https://yfamilys.com/rule/Douyu.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Douyu",
+      "ok": true,
+      "path": "rules/yfamilys/Douyu.list",
+      "sha256": "ee436705fe214d17d5f36223962dbdacca33f6cdc0e6e4fc4cbd3f52c4ff3561",
+      "size": 339
+    },
+    "https://yfamilys.com/rule/Dropbox.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Dropbox",
+      "ok": true,
+      "path": "rules/yfamilys/Dropbox.list",
+      "sha256": "7091cf446e61dffa408ec8d174192bc1490d89623dca1148666c30aa7414d127",
+      "size": 541
+    },
+    "https://yfamilys.com/rule/DtDNS.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "DtDNS",
+      "ok": true,
+      "path": "rules/yfamilys/DtDNS.list",
+      "sha256": "4025d92eb1bd7d5e69071ba67a1124b0551f89d00f47995a6bc5504ff49a5937",
+      "size": 426
+    },
+    "https://yfamilys.com/rule/Duolingo.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Duolingo",
+      "ok": true,
+      "path": "rules/yfamilys/Duolingo.list",
+      "sha256": "62ad115482f3d14728157fb47c8317173a5b365cad8e278d01694d95e686876d",
+      "size": 53
+    },
+    "https://yfamilys.com/rule/DynDNS.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "DynDNS",
+      "ok": true,
+      "path": "rules/yfamilys/DynDNS.list",
+      "sha256": "251bf786dd9bcc9a416e65d80aec5d1eae259d1ee305f42325b3557e99a7be97",
+      "size": 213
+    },
+    "https://yfamilys.com/rule/EHGallery.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "EHGallery",
+      "ok": true,
+      "path": "rules/yfamilys/EHGallery.list",
+      "sha256": "8c4d4082174b75edf18e51f01b09c20991d55cf4de0172f96952105c7e4bb951",
+      "size": 195
+    },
+    "https://yfamilys.com/rule/EastMoney.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "EastMoney",
+      "ok": true,
+      "path": "rules/yfamilys/EastMoney.list",
+      "sha256": "fc81201d93b77dabd46ea0deb0477b5bd0b4786a383776ec9ccf35bd925b22a5",
+      "size": 893
+    },
+    "https://yfamilys.com/rule/Electron.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Electron",
+      "ok": true,
+      "path": "rules/yfamilys/Electron.list",
+      "sha256": "94ddc27bd29c0ad0fc88c6d1352de9ea18627f40787f5457a20bec4b316352eb",
+      "size": 29
+    },
+    "https://yfamilys.com/rule/Emby.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Emby",
+      "ok": true,
+      "path": "rules/yfamilys/Emby.list",
+      "sha256": "7aea26bb26d56e8bfb7ffdaece4b6b014303ba583a7e55601f939afc83539631",
+      "size": 1449
+    },
+    "https://yfamilys.com/rule/Emojipedia.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Emojipedia",
+      "ok": true,
+      "path": "rules/yfamilys/Emojipedia.list",
+      "sha256": "d81b97130d212dae3b1edcdcd6a216d86f88353343aa83a7a5be735495f6ca00",
+      "size": 96
+    },
+    "https://yfamilys.com/rule/Entrust.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Entrust",
+      "ok": true,
+      "path": "rules/yfamilys/Entrust.list",
+      "sha256": "bd2fbaf03c71635d11889f0a1d53d428b0ed6c11575969398792ce0ca4bbe41a",
+      "size": 197
+    },
+    "https://yfamilys.com/rule/Espn.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Espn",
+      "ok": true,
+      "path": "rules/yfamilys/Espn.list",
+      "sha256": "4fbfa6a9ca76da9ddb349d9424103d7e3b4e3cd1bc8abfccd222c6848c679239",
+      "size": 293
+    },
+    "https://yfamilys.com/rule/FOXNOW.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "FOXNOW",
+      "ok": true,
+      "path": "rules/yfamilys/FOXNOW.list",
+      "sha256": "0ed6fe4e894e509f676cd9fdff85bf83c21d014425d9066b68bdcc5e9741f781",
+      "size": 94
+    },
+    "https://yfamilys.com/rule/FanFou.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "FanFou",
+      "ok": true,
+      "path": "rules/yfamilys/FanFou.list",
+      "sha256": "0cfefb4663a69f824076232af787b16d1dda64892567bc36e87e7cc33fff6b00",
+      "size": 95
+    },
+    "https://yfamilys.com/rule/Fandom.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Fandom",
+      "ok": true,
+      "path": "rules/yfamilys/Fandom.list",
+      "sha256": "91a86be2fa4c0d9a14c944f626f620d10c909b6be8a7729fd3acf13787013ac0",
+      "size": 323
+    },
+    "https://yfamilys.com/rule/Fedora.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Fedora",
+      "ok": true,
+      "path": "rules/yfamilys/Fedora.list",
+      "sha256": "d44b98f9bc6e90846a669be5503880737ebb4e768acd866e704c3c938ffe4425",
+      "size": 154
+    },
+    "https://yfamilys.com/rule/FengXiaWangLuo.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "FengXiaWangLuo",
+      "ok": true,
+      "path": "rules/yfamilys/FengXiaWangLuo.list",
+      "sha256": "a2119ce276dfe3fbd5b22132ebf6e5f032e98b99546d3c4863c8dfd436c05db2",
+      "size": 195
+    },
+    "https://yfamilys.com/rule/Flickr.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Flickr",
+      "ok": true,
+      "path": "rules/yfamilys/Flickr.list",
+      "sha256": "5ea8b967ad455c0b51c69666e2d3185bab6920c6a6005366b9e9892151bf424b",
+      "size": 124
+    },
+    "https://yfamilys.com/rule/FlipBoard.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "FlipBoard",
+      "ok": true,
+      "path": "rules/yfamilys/FlipBoard.list",
+      "sha256": "639d3b2ea5f010d05e47e7d96767ab50025d0dbfa82b2cf1f5d6f5d9fe6fb435",
+      "size": 55
+    },
+    "https://yfamilys.com/rule/FreeCodeCamp.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "FreeCodeCamp",
+      "ok": true,
+      "path": "rules/yfamilys/FreeCodeCamp.list",
+      "sha256": "bd8e5ebb856b19d85461363ce859ecec31861c395100181a799f281508277b10",
+      "size": 31
+    },
+    "https://yfamilys.com/rule/Game.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Game",
+      "ok": true,
+      "path": "rules/yfamilys/Game.list",
+      "sha256": "1240bcc5ecc3d7588cde90484f983a33f79c593cf4b043f5ce3e65a7dc12a3a8",
+      "size": 19020
+    },
+    "https://yfamilys.com/rule/Geely.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Geely",
+      "ok": true,
+      "path": "rules/yfamilys/Geely.list",
+      "sha256": "6a5f77c4556168ff9f864d2049d020ba6f3ccc6a4d7a02d5ee8464d5677ab762",
+      "size": 1440
+    },
+    "https://yfamilys.com/rule/Gettyimages.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Gettyimages",
+      "ok": true,
+      "path": "rules/yfamilys/Gettyimages.list",
+      "sha256": "e03eaae13a6b86fbf509709217e940995592faf3264cc352d22ef8bad529436b",
+      "size": 747
+    },
+    "https://yfamilys.com/rule/GitBook.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "GitBook",
+      "ok": true,
+      "path": "rules/yfamilys/GitBook.list",
+      "sha256": "e9f172295cb02f2389eb39f093dde44036427a5a823eaa069ef4b5cffbea039e",
+      "size": 85
+    },
+    "https://yfamilys.com/rule/GitLab.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "GitLab",
+      "ok": true,
+      "path": "rules/yfamilys/GitLab.list",
+      "sha256": "dbb0cdeda8d7617e463e8306e4f35fb32d3a76230d5c26d045b2337f0ddf9d79",
+      "size": 195
+    },
+    "https://yfamilys.com/rule/Global.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Global",
+      "ok": true,
+      "path": "rules/yfamilys/Global.list",
+      "sha256": "5e021f72683a78cf23acffbcf735fbcabb7ae37cae322a4c9416fca0fa0e36f1",
+      "size": 911097
+    },
+    "https://yfamilys.com/rule/GlobalScholar.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "GlobalScholar",
+      "ok": true,
+      "path": "rules/yfamilys/GlobalScholar.list",
+      "sha256": "f317e14c94b12ca01856dce364cf3a2e87207d7e2ef5add516313dd51eb2b877",
+      "size": 6467
+    },
+    "https://yfamilys.com/rule/Gog.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Gog",
+      "ok": true,
+      "path": "rules/yfamilys/Gog.list",
+      "sha256": "cdeed4f4a9fb6b123b62e1dd0a0d42896ee6ad85b99ee2c54554d264e3d844e4",
+      "size": 108
+    },
+    "https://yfamilys.com/rule/GoogleFCM.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "GoogleFCM",
+      "ok": true,
+      "path": "rules/yfamilys/GoogleFCM.list",
+      "sha256": "9aa3646abcbebea2326e1c9c482cbed6ce5f6de435d43a29225761b01dd2be65",
+      "size": 1423
+    },
+    "https://yfamilys.com/rule/Grok.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Grok",
+      "ok": true,
+      "path": "rules/yfamilys/Grok.list",
+      "sha256": "a2d8655f0be90c3f68f186af4760fb6df31f379330b7f7cd3ad1921b0418c339",
+      "size": 42
+    },
+    "https://yfamilys.com/rule/Gucci.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Gucci",
+      "ok": true,
+      "path": "rules/yfamilys/Gucci.list",
+      "sha256": "97e015eb18f39f0b7a291f78acdb002eaa605dfeea465672b55c560e20c564ef",
+      "size": 170
+    },
+    "https://yfamilys.com/rule/HBO.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "HBO",
+      "ok": true,
+      "path": "rules/yfamilys/HBO.list",
+      "sha256": "c6482a681cda4a619a76343d62adbcfbfdccf8050e970469a07a6820cc1a5b8e",
+      "size": 1568
+    },
+    "https://yfamilys.com/rule/HKOpenTV.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "HKOpenTV",
+      "ok": true,
+      "path": "rules/yfamilys/HKOpenTV.list",
+      "sha256": "5b92131a9622f09fc71d85c2f473ef19d65c8f33649513e43b21e83499cd05f4",
+      "size": 50
+    },
+    "https://yfamilys.com/rule/HKT.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "HKT",
+      "ok": true,
+      "path": "rules/yfamilys/HKT.list",
+      "sha256": "ed19ccda46389db2403e5381f4b0c78b9b285e3f5d07f860243971224089ba98",
+      "size": 329
+    },
+    "https://yfamilys.com/rule/HKedcity.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "HKedcity",
+      "ok": true,
+      "path": "rules/yfamilys/HKedcity.list",
+      "sha256": "81d2eac87028d22fefc719a3bb3a483cc35fc75bf8e6950f532f31802fc89f99",
+      "size": 83
+    },
+    "https://yfamilys.com/rule/HP.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "HP",
+      "ok": true,
+      "path": "rules/yfamilys/HP.list",
+      "sha256": "5a8ae5fc9e088dac01ec28075c7a65e0c3c633d100e4dd3cd491f9a8197c5287",
+      "size": 121
+    },
+    "https://yfamilys.com/rule/Hanime1.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Hanime1",
+      "ok": true,
+      "path": "rules/yfamilys/Hanime1.list",
+      "sha256": "9bb95064bc4446ae4590467203b80ab31ae598ddd9d826031c3b9ee4c5c798a0",
+      "size": 74
+    },
+    "https://yfamilys.com/rule/HeMa.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "HeMa",
+      "ok": true,
+      "path": "rules/yfamilys/HeMa.list",
+      "sha256": "4b45d781e3232dc4d27af7447b038c242201f796cb4d8133f502d92e3f348654",
+      "size": 313
+    },
+    "https://yfamilys.com/rule/Hearthstone.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Hearthstone",
+      "ok": true,
+      "path": "rules/yfamilys/Hearthstone.list",
+      "sha256": "5a0718e694120f759127b17e346f7ccb4879ec039b9ec2bdb907e50320549d2a",
+      "size": 146
+    },
+    "https://yfamilys.com/rule/Heroku.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Heroku",
+      "ok": true,
+      "path": "rules/yfamilys/Heroku.list",
+      "sha256": "27d5ef254433eba7d6992579d472998a2d2d70887632c50a6d3ce1295ef6e6cb",
+      "size": 322
+    },
+    "https://yfamilys.com/rule/Hkgolden.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Hkgolden",
+      "ok": true,
+      "path": "rules/yfamilys/Hkgolden.list",
+      "sha256": "4ff75d73e9d12e21a66153531da6b5df6b1322eb1243b28e1924771723a2f5f4",
+      "size": 56
+    },
+    "https://yfamilys.com/rule/Hpplay.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Hpplay",
+      "ok": true,
+      "path": "rules/yfamilys/Hpplay.list",
+      "sha256": "b6395f59b2f1dce998f6974e3bf9918bd8c41a685723ca0a2f809cbde749cf17",
+      "size": 140
+    },
+    "https://yfamilys.com/rule/HuYa.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "HuYa",
+      "ok": true,
+      "path": "rules/yfamilys/HuYa.list",
+      "sha256": "0a58412049315815e39c8d0caa626aaf3a43e8a5627b12c87e17017c65f66eeb",
+      "size": 103
+    },
+    "https://yfamilys.com/rule/HuaweiCloud.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "HuaweiCloud",
+      "ok": true,
+      "path": "rules/yfamilys/HuaweiCloud.list",
+      "sha256": "95559b6c89813d4d222dbd046bc34fdec4b239d166e3798fe505988e9cbee0d9",
+      "size": 1068
+    },
+    "https://yfamilys.com/rule/Huffpost.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Huffpost",
+      "ok": true,
+      "path": "rules/yfamilys/Huffpost.list",
+      "sha256": "612921ff764db2b8d48725ef77f9229feba23a8b530094f0fb9ec0e9cae9a92c",
+      "size": 589
+    },
+    "https://yfamilys.com/rule/HuggingFace.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "HuggingFace",
+      "ok": true,
+      "path": "rules/yfamilys/HuggingFace.list",
+      "sha256": "93ac108c376e42fab6faf0a6b436df1c57a3dfebfb09543c973709062df02bb5",
+      "size": 72
+    },
+    "https://yfamilys.com/rule/HuluUSA.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "HuluUSA",
+      "ok": true,
+      "path": "rules/yfamilys/HuluUSA.list",
+      "sha256": "202615ed4a9d3397674d85e69a4f6612047ccab9c87ecebbaccc063ffaef7141",
+      "size": 1475
+    },
+    "https://yfamilys.com/rule/HunanTV.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "HunanTV",
+      "ok": true,
+      "path": "rules/yfamilys/HunanTV.list",
+      "sha256": "9c17acb1b8696f07501378f5b5ef930d504f38422456591c85aa3522fda62e39",
+      "size": 189
+    },
+    "https://yfamilys.com/rule/ICBC.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "ICBC",
+      "ok": true,
+      "path": "rules/yfamilys/ICBC.list",
+      "sha256": "a53a35c080b568852231f81cf3a0b27974410cc70bf750e8c622d9e0e3e39299",
+      "size": 1546
+    },
+    "https://yfamilys.com/rule/IKEA.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "IKEA",
+      "ok": true,
+      "path": "rules/yfamilys/IKEA.list",
+      "sha256": "704d0f72ed0833840177b0745db4c7a487e9f81a1d2f5d8ac31967a9914324c8",
+      "size": 2255
+    },
+    "https://yfamilys.com/rule/IMDB.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "IMDB",
+      "ok": true,
+      "path": "rules/yfamilys/IMDB.list",
+      "sha256": "38d106c1134fa5edd5b1105aed2807bbbc4b4174c0ac6b3b6fa741749691a710",
+      "size": 106
+    },
+    "https://yfamilys.com/rule/IPs-CN.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "IPs-CN",
+      "ok": true,
+      "path": "rules/yfamilys/IPs-CN.list",
+      "sha256": "b5623a6fee1f52eed476301248f985e153079dc950fe8dbee27c747413b6e9c9",
+      "size": 277435
+    },
+    "https://yfamilys.com/rule/Identrust.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Identrust",
+      "ok": true,
+      "path": "rules/yfamilys/Identrust.list",
+      "sha256": "2546da74b1a1d331563154bc464dbb1e65d2f1de11a4cbcb47064f60c236930e",
+      "size": 86
+    },
+    "https://yfamilys.com/rule/Imgur.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Imgur",
+      "ok": true,
+      "path": "rules/yfamilys/Imgur.list",
+      "sha256": "0782b4aea29093b85711a5d3518277ca6a3c7e0a3d16b409e21fd73458c8a678",
+      "size": 51
+    },
+    "https://yfamilys.com/rule/Intercom.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Intercom",
+      "ok": true,
+      "path": "rules/yfamilys/Intercom.list",
+      "sha256": "7ff654c69ecbbe306f08498e5d0d8da3f0f3ea1be261cb30ef472064b5836ff6",
+      "size": 116
+    },
+    "https://yfamilys.com/rule/Javdb.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Javdb",
+      "ok": true,
+      "path": "rules/yfamilys/Javdb.list",
+      "sha256": "6a0c59fd9a2632d38d340d4a94006818fda8116303e91d1805579ecd1995ea67",
+      "size": 78
+    },
+    "https://yfamilys.com/rule/JetBrainsAI.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "JetBrainsAI",
+      "ok": true,
+      "path": "rules/yfamilys/JetBrainsAI.list",
+      "sha256": "8cd3ddc4c6a1475d34f08718151d3faacb024d66e267a887ec4b379e8ee1ed4d",
+      "size": 89
+    },
+    "https://yfamilys.com/rule/Jfrog.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Jfrog",
+      "ok": true,
+      "path": "rules/yfamilys/Jfrog.list",
+      "sha256": "ab410f9a967802f8b47838ab9ca4cfefd1ebb6e870ec5196fb225fc1d146861f",
+      "size": 74
+    },
+    "https://yfamilys.com/rule/JianGuoYun.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "JianGuoYun",
+      "ok": true,
+      "path": "rules/yfamilys/JianGuoYun.list",
+      "sha256": "0c800905758ce48bfb88964e033127b42c712723c81a120c253e49fc9a8380bd",
+      "size": 140
+    },
+    "https://yfamilys.com/rule/JingDong.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "JingDong",
+      "ok": true,
+      "path": "rules/yfamilys/JingDong.list",
+      "sha256": "7ce513512ae4923e5d38468eb9ff18ddb118c4b2aaa8167b0b05ad43e543b447",
+      "size": 7083
+    },
+    "https://yfamilys.com/rule/Jquery.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Jquery",
+      "ok": true,
+      "path": "rules/yfamilys/Jquery.list",
+      "sha256": "668bfd6865f8aaacdae1bcc60dc6893eb5fc5dc3013bdf6d80c962a791aa4041",
+      "size": 83
+    },
+    "https://yfamilys.com/rule/Jsdelivr.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Jsdelivr",
+      "ok": true,
+      "path": "rules/yfamilys/Jsdelivr.list",
+      "sha256": "576f568b0294e7e1409d20d7bac3b4188e6764fde7c8748b2d8fce08ead291f6",
+      "size": 76
+    },
+    "https://yfamilys.com/rule/Jwplayer.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Jwplayer",
+      "ok": true,
+      "path": "rules/yfamilys/Jwplayer.list",
+      "sha256": "ba3f27c4ccb746d934c26778a9d2b1c40b61ce9dec8286f931b583d15b4bca3b",
+      "size": 131
+    },
+    "https://yfamilys.com/rule/KWKG.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "KWKG",
+      "ok": true,
+      "path": "rules/yfamilys/KWKG.list",
+      "sha256": "502bceafc090daca67136ec687dac5b8ece038f82e067cc5cb7e9b98125b4689",
+      "size": 3603
+    },
+    "https://yfamilys.com/rule/Keep.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Keep",
+      "ok": true,
+      "path": "rules/yfamilys/Keep.list",
+      "sha256": "e4f0ffdce0069a5767539f34b7f7fd89f5154122360f9c6792e8088af80d9aa3",
+      "size": 132
+    },
+    "https://yfamilys.com/rule/Kemono.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Kemono",
+      "ok": true,
+      "path": "rules/yfamilys/Kemono.list",
+      "sha256": "363adf66baa7f71793dd972f735dcfdecd83d14f849f494d07335f5a61f31cb2",
+      "size": 101
+    },
+    "https://yfamilys.com/rule/Kindle.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Kindle",
+      "ok": true,
+      "path": "rules/yfamilys/Kindle.list",
+      "sha256": "7fe77adc57732e375b0b69fa006c342130c91b2aa7d3dc1c8d771417d46f7d5e",
+      "size": 545
+    },
+    "https://yfamilys.com/rule/KingsoftCloud.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "KingsoftCloud",
+      "ok": true,
+      "path": "rules/yfamilys/KingsoftCloud.list",
+      "sha256": "21512611e9815580b014ae1a2d7facd23491da286afe8c9050e62a1e5e40bca2",
+      "size": 408
+    },
+    "https://yfamilys.com/rule/Ku6.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Ku6",
+      "ok": true,
+      "path": "rules/yfamilys/Ku6.list",
+      "sha256": "94fd4d46ddd85297bb53cb7d467179896a5fdf50e85a98d610c9640a2527b9e0",
+      "size": 270
+    },
+    "https://yfamilys.com/rule/KuKeMusic.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "KuKeMusic",
+      "ok": true,
+      "path": "rules/yfamilys/KuKeMusic.list",
+      "sha256": "0e70db15be779b827010cd96199bd423da4e08fe37011ff40f2dc942a1d32768",
+      "size": 73
+    },
+    "https://yfamilys.com/rule/KuaiDi100.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "KuaiDi100",
+      "ok": true,
+      "path": "rules/yfamilys/KuaiDi100.list",
+      "sha256": "c7984eaf0be0e4cedc92c04926eb9857cff3758c6324f53d3bc3bcb0f4b5ea5a",
+      "size": 155
+    },
+    "https://yfamilys.com/rule/KuangShi.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "KuangShi",
+      "ok": true,
+      "path": "rules/yfamilys/KuangShi.list",
+      "sha256": "17fc1129db8254ae206dc02f8ba47549da65ed95fc3cbebe3ce163cb445c8ad4",
+      "size": 739
+    },
+    "https://yfamilys.com/rule/KugouKuwo.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "KugouKuwo",
+      "ok": true,
+      "path": "rules/yfamilys/KugouKuwo.list",
+      "sha256": "3af9aeecbfdba057e1d72401cef23bd61e464819044a56b0b9d91e2ec7920d5f",
+      "size": 3606
+    },
+    "https://yfamilys.com/rule/LastPass.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "LastPass",
+      "ok": true,
+      "path": "rules/yfamilys/LastPass.list",
+      "sha256": "0287beb446d1f890f3a9a6ec02a440ba4d1e51d0f8845bf2377f27e12ac3a782",
+      "size": 48
+    },
+    "https://yfamilys.com/rule/LeJu.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "LeJu",
+      "ok": true,
+      "path": "rules/yfamilys/LeJu.list",
+      "sha256": "b09c9f3d38ad482e2b85294ddde097395d1a733ba45c93217f0a5b3f10f7494a",
+      "size": 507
+    },
+    "https://yfamilys.com/rule/Lenovo.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Lenovo",
+      "ok": true,
+      "path": "rules/yfamilys/Lenovo.list",
+      "sha256": "ee9e557a7d707b6bfcde3c322472cab2b9363ffc311c39600e181db88e661454",
+      "size": 846
+    },
+    "https://yfamilys.com/rule/LiTV.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "LiTV",
+      "ok": true,
+      "path": "rules/yfamilys/LiTV.list",
+      "sha256": "df3b4b051016c30c203e0dce29b593e86df6266d96f3f090f5589c81781fbeee",
+      "size": 68
+    },
+    "https://yfamilys.com/rule/LineTV.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "LineTV",
+      "ok": true,
+      "path": "rules/yfamilys/LineTV.list",
+      "sha256": "32e854b9c62784bb1e49e65382142596b4ad4798e64991d5bdabbbe7aed69d75",
+      "size": 285
+    },
+    "https://yfamilys.com/rule/LondonReal.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "LondonReal",
+      "ok": true,
+      "path": "rules/yfamilys/LondonReal.list",
+      "sha256": "07c8ccdfc457113654df7c3227d57a1a01b04f3074ee71664a91debdf09617b5",
+      "size": 61
+    },
+    "https://yfamilys.com/rule/MGTV.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "MGTV",
+      "ok": true,
+      "path": "rules/yfamilys/MGTV.list",
+      "sha256": "5da80283a48329bbdbfea90eaa22bf9e35138d573bcd5d5775ac982a55d1a61b",
+      "size": 72
+    },
+    "https://yfamilys.com/rule/MOOV.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "MOOV",
+      "ok": true,
+      "path": "rules/yfamilys/MOOV.list",
+      "sha256": "35eab2e3aa5aea03ad784d7e444d15092f38817818b5df42f0b9ac60cb592250",
+      "size": 48
+    },
+    "https://yfamilys.com/rule/Mail.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Mail",
+      "ok": true,
+      "path": "rules/yfamilys/Mail.list",
+      "sha256": "8b633c14da1a8b7759adec7bbccf21d2b1f55da03860b047643a3a30d66e8d8b",
+      "size": 332
+    },
+    "https://yfamilys.com/rule/Maocloud.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Maocloud",
+      "ok": true,
+      "path": "rules/yfamilys/Maocloud.list",
+      "sha256": "4a0a776c192f9754c23aaf010dd07d015efcfde7afb5f0fbb09facdc3ab260f6",
+      "size": 84
+    },
+    "https://yfamilys.com/rule/Mastercard.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Mastercard",
+      "ok": true,
+      "path": "rules/yfamilys/Mastercard.list",
+      "sha256": "e5bb421dddacc52592caa1e4e0b4d1ccc2d3ee452804b4c6777d3e510edcdf70",
+      "size": 5892
+    },
+    "https://yfamilys.com/rule/MeiTuan.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "MeiTuan",
+      "ok": true,
+      "path": "rules/yfamilys/MeiTuan.list",
+      "sha256": "6abcbfd2fcf6c66b14750242936b30cebf34fa074bb34676074b1a566a61fb50",
+      "size": 178
+    },
+    "https://yfamilys.com/rule/MicrosoftEdge.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "MicrosoftEdge",
+      "ok": true,
+      "path": "rules/yfamilys/MicrosoftEdge.list",
+      "sha256": "9775c3b021402322bfedecad925890b7be994bcf6706448bc010737c130af75c",
+      "size": 125
+    },
+    "https://yfamilys.com/rule/Mogujie.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Mogujie",
+      "ok": true,
+      "path": "rules/yfamilys/Mogujie.list",
+      "sha256": "6ad4d1f9ffdaf1d9df2a13f08907b93f16a752f0b6bdce3894a9f608e8568430",
+      "size": 263
+    },
+    "https://yfamilys.com/rule/NaSDDNS.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "NaSDDNS",
+      "ok": true,
+      "path": "rules/yfamilys/NaSDDNS.list",
+      "sha256": "5c9ef3c6da9aa52e1f157df6185c7c834f2a4876e7c908bd2d6ac76fd3759527",
+      "size": 1374
+    },
+    "https://yfamilys.com/rule/NetEaseMusic.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "NetEaseMusic",
+      "ok": true,
+      "path": "rules/yfamilys/NetEaseMusic.list",
+      "sha256": "392132b1f81fd7b1aa6f2c005647cd35f6af7cdc93761b0723c1ceb8eb8e7f4a",
+      "size": 1034
+    },
+    "https://yfamilys.com/rule/Nexon.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Nexon",
+      "ok": true,
+      "path": "rules/yfamilys/Nexon.list",
+      "sha256": "40e85fde01e5d1cefd9524b8eb3f7563bb0d94b28bb85387b2e6fe8555202433",
+      "size": 102
+    },
+    "https://yfamilys.com/rule/Nike.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Nike",
+      "ok": true,
+      "path": "rules/yfamilys/Nike.list",
+      "sha256": "b3b09f866f8bc9a3735673714df5921d61a37d83f7fe0f989a64b7c0ee4d9494",
+      "size": 297
+    },
+    "https://yfamilys.com/rule/Nikkei.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Nikkei",
+      "ok": true,
+      "path": "rules/yfamilys/Nikkei.list",
+      "sha256": "1a898b4bc01ade46960f7480ea0ad35440c95129b92d896c060dbe61ff36ae30",
+      "size": 76
+    },
+    "https://yfamilys.com/rule/Oracle.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Oracle",
+      "ok": true,
+      "path": "rules/yfamilys/Oracle.list",
+      "sha256": "0c0fe3297f53f1bc25ac0b12dcbd8dce1b7c9bf4f04ebf1e81100f1521837808",
+      "size": 745
+    },
+    "https://yfamilys.com/rule/Overwatch.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Overwatch",
+      "ok": true,
+      "path": "rules/yfamilys/Overwatch.list",
+      "sha256": "47c55fee435ccae51a509c5fd395502fa136f59a78665b11cf7abfa8ace3ca20",
+      "size": 253
+    },
+    "https://yfamilys.com/rule/PCCW.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "PCCW",
+      "ok": true,
+      "path": "rules/yfamilys/PCCW.list",
+      "sha256": "0709e65e7ea809e35f2f904e6ee97171b7cdf30673d99664cc3d5df1f9a0ffb1",
+      "size": 690
+    },
+    "https://yfamilys.com/rule/PChome.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "PChome",
+      "ok": true,
+      "path": "rules/yfamilys/PChome.list",
+      "sha256": "2abd13aaa3d03a159f55c8069b93b5bb2b8b9b5886dffcea3df4e37291f142ed",
+      "size": 147
+    },
+    "https://yfamilys.com/rule/PSBC.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "PSBC",
+      "ok": true,
+      "path": "rules/yfamilys/PSBC.list",
+      "sha256": "1e63d93f80184b1eb57c1490eee9bf86dc92d1b98e0bf51a543812f0d7f32a99",
+      "size": 75
+    },
+    "https://yfamilys.com/rule/Pandora.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Pandora",
+      "ok": true,
+      "path": "rules/yfamilys/Pandora.list",
+      "sha256": "84323366255a7c75454ebb3bc477d775801872af56f948fbd60e1351c7d516ba",
+      "size": 69
+    },
+    "https://yfamilys.com/rule/Perplexity.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Perplexity",
+      "ok": true,
+      "path": "rules/yfamilys/Perplexity.list",
+      "sha256": "65c1ee742271f14e4df899f0d7da4fb905710942cf2abe85be667237f4d3c921",
+      "size": 153
+    },
+    "https://yfamilys.com/rule/Pinduoduo.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Pinduoduo",
+      "ok": true,
+      "path": "rules/yfamilys/Pinduoduo.list",
+      "sha256": "5c72d6b5f95cb88c69ce2276d709310f46700a565f03b4a05485a1e1e9810fec",
+      "size": 81
+    },
+    "https://yfamilys.com/rule/PrimeVideo.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "PrimeVideo",
+      "ok": true,
+      "path": "rules/yfamilys/PrimeVideo.list",
+      "sha256": "6f30ff4bcf5d38f317f1333298b36fc499d4161bd3f54c700c85e03ac2ffcd73",
+      "size": 541
+    },
+    "https://yfamilys.com/rule/PrivateTracker.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "PrivateTracker",
+      "ok": true,
+      "path": "rules/yfamilys/PrivateTracker.list",
+      "sha256": "f894ddfd5791debca01f07f6bf33c7bc1ac03c6e423e3e1826ea79e9de35cd16",
+      "size": 6620
+    },
+    "https://yfamilys.com/rule/Protonmail.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Protonmail",
+      "ok": true,
+      "path": "rules/yfamilys/Protonmail.list",
+      "sha256": "a77829acb3c9f94a803a962bee7c94498c05b92407e452e84a04c5bad9f6bdd3",
+      "size": 132
+    },
+    "https://yfamilys.com/rule/Qualcomm.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Qualcomm",
+      "ok": true,
+      "path": "rules/yfamilys/Qualcomm.list",
+      "sha256": "e7f8219c1abba00aabc224f49eb39dda0ece5d36273cf7770338b4a55508a6c9",
+      "size": 1331
+    },
+    "https://yfamilys.com/rule/RB.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "RB",
+      "ok": true,
+      "path": "rules/yfamilys/RB.list",
+      "sha256": "406bc8f3e1cee6e19564b65e1f0ef95c300acb355252a829a98b41793ae3ac79",
+      "size": 12387
+    },
+    "https://yfamilys.com/rule/Reddit.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Reddit",
+      "ok": true,
+      "path": "rules/yfamilys/Reddit.list",
+      "sha256": "b6275951a9cfe706af430cf94c4f4844d0c0696067e1a2314db4e1487264837e",
+      "size": 271
+    },
+    "https://yfamilys.com/rule/Rouman5.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Rouman5",
+      "ok": true,
+      "path": "rules/yfamilys/Rouman5.list",
+      "sha256": "4bad4993b46b01c112dc2255425f346bb846c2fd9c71c79e1435e02be09addb2",
+      "size": 101
+    },
+    "https://yfamilys.com/rule/SMG.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "SMG",
+      "ok": true,
+      "path": "rules/yfamilys/SMG.list",
+      "sha256": "591354f4199ec1d5f9b74129f224e785337f94788772ae87c440097425c7973b",
+      "size": 92
+    },
+    "https://yfamilys.com/rule/SMZDM.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "SMZDM",
+      "ok": true,
+      "path": "rules/yfamilys/SMZDM.list",
+      "sha256": "f0f83ac8c003dc6c13afa51aacb46fa609b7ac43aba8e24aa59baa45ecbe27b9",
+      "size": 241
+    },
+    "https://yfamilys.com/rule/STUN.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "STUN",
+      "ok": true,
+      "path": "rules/yfamilys/STUN.list",
+      "sha256": "52bd4db993cf1ef8bbc93df1f748f10e58fb46a1ed9cec5526e599267bc80bc9",
+      "size": 9383
+    },
+    "https://yfamilys.com/rule/Seasun.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Seasun",
+      "ok": true,
+      "path": "rules/yfamilys/Seasun.list",
+      "sha256": "b57d81089ea318be86ff31179bc1367778903dfb7dc4edfbe5f829ea21684e51",
+      "size": 106
+    },
+    "https://yfamilys.com/rule/Shanling.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Shanling",
+      "ok": true,
+      "path": "rules/yfamilys/Shanling.list",
+      "sha256": "0f69d2c9d83dc81bc6181bfa2f4f24925539ea543429fadaaaf0b842a14ad270",
+      "size": 55
+    },
+    "https://yfamilys.com/rule/ShenMa.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "ShenMa",
+      "ok": true,
+      "path": "rules/yfamilys/ShenMa.list",
+      "sha256": "ffade702a11842449614f49f84365d9fd6e686c271e1699b08d2c68181ccc6cb",
+      "size": 349
+    },
+    "https://yfamilys.com/rule/Slack.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Slack",
+      "ok": true,
+      "path": "rules/yfamilys/Slack.list",
+      "sha256": "05632eb394c666dab81931b8794a6eb00acb76459df085ed0ffffc6b2625a4c0",
+      "size": 312
+    },
+    "https://yfamilys.com/rule/SlideShare.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "SlideShare",
+      "ok": true,
+      "path": "rules/yfamilys/SlideShare.list",
+      "sha256": "c8babb0fa558868878117140540c90b5b17649569bbecf5c7861184d48a5f8da",
+      "size": 90
+    },
+    "https://yfamilys.com/rule/SoundCloud.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "SoundCloud",
+      "ok": true,
+      "path": "rules/yfamilys/SoundCloud.list",
+      "sha256": "6743938436ea56775e8ae1cf5a645a426f5be4a1bc5c0de0165bd2e61a1871f8",
+      "size": 100
+    },
+    "https://yfamilys.com/rule/Spotify.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Spotify",
+      "ok": true,
+      "path": "rules/yfamilys/Spotify.list",
+      "sha256": "38ec3e72e9bf0a344c0fcff75abc348fae9cbc22d052913369040630bcc545f6",
+      "size": 978
+    },
+    "https://yfamilys.com/rule/Steam.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Steam",
+      "ok": true,
+      "path": "rules/yfamilys/Steam.list",
+      "sha256": "fc4690f13f3b4f9144702f74a38603ca9c9309b1abf73938cdce73755b28fce6",
+      "size": 1879
+    },
+    "https://yfamilys.com/rule/TVer.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "TVer",
+      "ok": true,
+      "path": "rules/yfamilys/TVer.list",
+      "sha256": "95623d248d2a2fc1254f6269eff19644a02230b2603bcc2bd98f56b445738016",
+      "size": 187
+    },
+    "https://yfamilys.com/rule/TaiWanGood.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "TaiWanGood",
+      "ok": true,
+      "path": "rules/yfamilys/TaiWanGood.list",
+      "sha256": "f375acd9ed633d51b6a6c548d47c43d6017dc4c8db190c84772f755327d57a05",
+      "size": 78
+    },
+    "https://yfamilys.com/rule/TaiheMusic.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "TaiheMusic",
+      "ok": true,
+      "path": "rules/yfamilys/TaiheMusic.list",
+      "sha256": "7610ae9bbed9924e519bd9510cf839baa3209aa4e3e7043af36ae66cd39e1e2d",
+      "size": 229
+    },
+    "https://yfamilys.com/rule/TapTap.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "TapTap",
+      "ok": true,
+      "path": "rules/yfamilys/TapTap.list",
+      "sha256": "0caa27f2ae9975b93e752c93d7c3f732f4efcba1ea0250ac3d8748bfb2c42e45",
+      "size": 45
+    },
+    "https://yfamilys.com/rule/Teams.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Teams",
+      "ok": true,
+      "path": "rules/yfamilys/Teams.list",
+      "sha256": "bd7adf3e7e854122d67b3a9f6295a21b75f54b62be712f71e8448d4b93cac90e",
+      "size": 135
+    },
+    "https://yfamilys.com/rule/ThomsonReuters.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "ThomsonReuters",
+      "ok": true,
+      "path": "rules/yfamilys/ThomsonReuters.list",
+      "sha256": "808fba2ff39ec7d454b505ff54b602f5d72dc1635b1cdf2c33ee01473641189c",
+      "size": 1009
+    },
+    "https://yfamilys.com/rule/TianTianKanKan.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "TianTianKanKan",
+      "ok": true,
+      "path": "rules/yfamilys/TianTianKanKan.list",
+      "sha256": "25b667fcf5d3c87dbe5210e5be12f476a8f188c25ca501e48e0bcd17d2d71dbb",
+      "size": 108
+    },
+    "https://yfamilys.com/rule/TikTok.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "TikTok",
+      "ok": true,
+      "path": "rules/yfamilys/TikTok.list",
+      "sha256": "fad250c0467025653f3a045a221fa610f7042359d9465131de20f02d0eafc756",
+      "size": 981
+    },
+    "https://yfamilys.com/rule/Tonec.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Tonec",
+      "ok": true,
+      "path": "rules/yfamilys/Tonec.list",
+      "sha256": "0de06dff271534f2e67e5cfcd522e2a50a417774738c4d84e2e286e0695138a2",
+      "size": 96
+    },
+    "https://yfamilys.com/rule/USMedia.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "USMedia",
+      "ok": true,
+      "path": "rules/yfamilys/USMedia.list",
+      "sha256": "7ab903c4795898ef5c85d779082da8e00ac21e36170ee5091dc5b082ee399389",
+      "size": 2783
+    },
+    "https://yfamilys.com/rule/Ubisoft.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Ubisoft",
+      "ok": true,
+      "path": "rules/yfamilys/Ubisoft.list",
+      "sha256": "ded562bb0a0dbbc9f6512e796839ca255b463bfb1cfe5d7490f235dc7d507f04",
+      "size": 37
+    },
+    "https://yfamilys.com/rule/Udacity.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Udacity",
+      "ok": true,
+      "path": "rules/yfamilys/Udacity.list",
+      "sha256": "86ebab79cfa5b68bdc2784ce9f3d0b3295124b91dce577b7705ff955abf68d5a",
+      "size": 26
+    },
+    "https://yfamilys.com/rule/UnionPay.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "UnionPay",
+      "ok": true,
+      "path": "rules/yfamilys/UnionPay.list",
+      "sha256": "0debe3092e2e14067698e9a90bc7fc143a255d41c01d886121ddba067003831f",
+      "size": 457
+    },
+    "https://yfamilys.com/rule/Unity.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Unity",
+      "ok": true,
+      "path": "rules/yfamilys/Unity.list",
+      "sha256": "7f4c637b864c6ad9f81bd19f27a96330f472b532fc236c887538a66986e20730",
+      "size": 248
+    },
+    "https://yfamilys.com/rule/Upai.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Upai",
+      "ok": true,
+      "path": "rules/yfamilys/Upai.list",
+      "sha256": "e84b594c558dbe84c6c6f16cfcd853d5e88d01abebc4fd436d6366db638040fa",
+      "size": 145
+    },
+    "https://yfamilys.com/rule/Vancl.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Vancl",
+      "ok": true,
+      "path": "rules/yfamilys/Vancl.list",
+      "sha256": "96cbaf965919fc382dd2375947a2dd50661d352dd80a19ceb9b9ce61f6538716",
+      "size": 75
+    },
+    "https://yfamilys.com/rule/ViuTV.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "ViuTV",
+      "ok": true,
+      "path": "rules/yfamilys/ViuTV.list",
+      "sha256": "5a8c35683d822325fa7834c016ed5a867d3d43170ddb6e7f111daf5ceff810ce",
+      "size": 325
+    },
+    "https://yfamilys.com/rule/VolcengineAI.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "VolcengineAI",
+      "ok": true,
+      "path": "rules/yfamilys/VolcengineAI.list",
+      "sha256": "4cc262d52758787ec0bd0525fcc733122b393c31cc730cd51215ea8f5ca56a14",
+      "size": 58
+    },
+    "https://yfamilys.com/rule/WangSuKeJi.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "WangSuKeJi",
+      "ok": true,
+      "path": "rules/yfamilys/WangSuKeJi.list",
+      "sha256": "e805daf9b2a6627d0c6c5e42311e9c9c6010fd30ec107c8f160e4b9241f81135",
+      "size": 4921
+    },
+    "https://yfamilys.com/rule/WeTV.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "WeTV",
+      "ok": true,
+      "path": "rules/yfamilys/WeTV.list",
+      "sha256": "d82fff19018ade6bae48b8b80b4110cb57f3934603f661c7a93472841d537178",
+      "size": 217
+    },
+    "https://yfamilys.com/rule/Webex.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Webex",
+      "ok": true,
+      "path": "rules/yfamilys/Webex.list",
+      "sha256": "aeb4f1876f393afd3525454b5185c6567b6e3aed4ae42ad09b2a6dbfa47858c6",
+      "size": 407
+    },
+    "https://yfamilys.com/rule/Woolite.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Woolite",
+      "ok": true,
+      "path": "rules/yfamilys/Woolite.list",
+      "sha256": "f41f11bf7760ba0d6360bd0d94b00875b4f0593a55295913d62115a0a6ce21d4",
+      "size": 187
+    },
+    "https://yfamilys.com/rule/Xbox.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Xbox",
+      "ok": true,
+      "path": "rules/yfamilys/Xbox.list",
+      "sha256": "68fa5f4685fb11dffe637d0e3b0f9b97217e10186e2073834a858bc84b49a80b",
+      "size": 1210
+    },
+    "https://yfamilys.com/rule/XieCheng.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "XieCheng",
+      "ok": true,
+      "path": "rules/yfamilys/XieCheng.list",
+      "sha256": "c3d7e2594ae4fa10a4e65342fac7f25b3ab355a8d407598efe9e14e14ea9982c",
+      "size": 745
+    },
+    "https://yfamilys.com/rule/XingKongWuXian.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "XingKongWuXian",
+      "ok": true,
+      "path": "rules/yfamilys/XingKongWuXian.list",
+      "sha256": "a50acd83206b21da36f68a5f5d6d82d3d0b8e89e91238e1c6db1b9513fbfaaa7",
+      "size": 497
+    },
+    "https://yfamilys.com/rule/YYeTs.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "YYeTs",
+      "ok": true,
+      "path": "rules/yfamilys/YYeTs.list",
+      "sha256": "1c147913b33c12556296b619ea689e9e69ed3ce5ea963eb1a175307f5c8b621d",
+      "size": 529
+    },
+    "https://yfamilys.com/rule/Ynet.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Ynet",
+      "ok": true,
+      "path": "rules/yfamilys/Ynet.list",
+      "sha256": "206c3692bc5dcbcee13bab92293fd366627f41b467a44f40969a1cc13cbc12bb",
+      "size": 71
+    },
+    "https://yfamilys.com/rule/Zendesk.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Zendesk",
+      "ok": true,
+      "path": "rules/yfamilys/Zendesk.list",
+      "sha256": "a970a9a2884185cccf59994758be1f2ec55729891b456e9c99f1c1cde03c2cb9",
+      "size": 159
+    },
+    "https://yfamilys.com/rule/ZhangYue.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "ZhangYue",
+      "ok": true,
+      "path": "rules/yfamilys/ZhangYue.list",
+      "sha256": "b613d0384f9dd3c4dc72bec1c8295b024c03890f66aa975813649058e5728f03",
+      "size": 707
+    },
+    "https://yfamilys.com/rule/ZhiYinManKe.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "ZhiYinManKe",
+      "ok": true,
+      "path": "rules/yfamilys/ZhiYinManKe.list",
+      "sha256": "240ca53541b0af9dfc8cdfd9f921dfbec93262d4b1de2a1376914d390b6ed927",
+      "size": 479
+    },
+    "https://yfamilys.com/rule/Zhipu.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Zhipu",
+      "ok": true,
+      "path": "rules/yfamilys/Zhipu.list",
+      "sha256": "987972f5c199aaefa8a7c69603c27e256050e58c0fc9ca63fff294d348eb77c9",
+      "size": 121
+    },
+    "https://yfamilys.com/rule/Zoho.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Zoho",
+      "ok": true,
+      "path": "rules/yfamilys/Zoho.list",
+      "sha256": "aa15c11190a679e29126dd70e533fdafb42b887f55239efbad03460b876b5aad",
+      "size": 364
+    },
+    "https://yfamilys.com/rule/Zoom.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "Zoom",
+      "ok": true,
+      "path": "rules/yfamilys/Zoom.list",
+      "sha256": "7a09a39bd02ea67b63d9da3349a49b9314cb044b202e52d10d6a9c163d39dce0",
+      "size": 71
+    },
+    "https://yfamilys.com/rule/ai.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "ai",
+      "ok": true,
+      "path": "rules/yfamilys/ai.list",
+      "sha256": "101e0da4e98f33e1f406c9b8071bf3ef12cd7f94945f3d3eaf8bc4270a6623d4",
+      "size": 4457
+    },
+    "https://yfamilys.com/rule/eBay.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "eBay",
+      "ok": true,
+      "path": "rules/yfamilys/eBay.list",
+      "sha256": "e6d3924ca724ddbaed8fcd6404b85ff35056d65e068017d067f78aa80c38c433",
+      "size": 1094
+    },
+    "https://yfamilys.com/rule/friDay.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "friDay",
+      "ok": true,
+      "path": "rules/yfamilys/friDay.list",
+      "sha256": "3159d44e4869a6d357d96e899eb166d8f9c15731ebcb42eeef53fe9666b60c74",
+      "size": 49
+    },
+    "https://yfamilys.com/rule/iQIYI.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "iQIYI",
+      "ok": true,
+      "path": "rules/yfamilys/iQIYI.list",
+      "sha256": "b42865b6f20584130d46fa03a8f6a27f8693708c31661651e1648dbf4381333b",
+      "size": 1745
+    },
+    "https://yfamilys.com/rule/iQIYIIntl.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "iQIYIIntl",
+      "ok": true,
+      "path": "rules/yfamilys/iQIYIIntl.list",
+      "sha256": "593bbc66bf2a6eb722126c2d2b41958dccad25cbccc7e6b4fa87a2d3d94cd05b",
+      "size": 651
+    },
+    "https://yfamilys.com/rule/myTVSUPER.list": {
+      "changed": false,
+      "fetched_at": "2026-10-23T17:03:04Z",
+      "kind": "rule",
+      "label": "myTVSUPER",
+      "ok": true,
+      "path": "rules/yfamilys/myTVSUPER.list",
+      "sha256": "cc2633c7003f4b22ad0133df68fab126821b9fc14556214c975c8701f65ed686",
+      "size": 191
     }
   },
-  "generated_at": "2026-10-22T10:01:54Z"
+  "generated_at": "2026-10-23T17:03:04Z"
 }
